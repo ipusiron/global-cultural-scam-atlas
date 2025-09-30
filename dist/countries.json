@@ -160,6 +160,393 @@
             "scarcity",
             "urgency"
           ]
+        },
+        {
+          "id": "jp-002",
+          "title": {
+            "ja": "警察官を装ったキャッシュカード手交型詐欺",
+            "en": "Fake Police Officer: Cash Card Pickup Scam"
+          },
+          "short_desc": {
+            "ja": "警察官や役所職員を装い、捜査名目でキャッシュカードを回収・すり替えする型。",
+            "en": "Scammers pose as police/officials and collect or swap victims' cash cards under pretenses."
+          },
+          "cultural_lever": {
+            "ja": "公的身分・制服への信頼、対立回避",
+            "en": "Trust in official uniforms/authority and conflict avoidance"
+          },
+          "attack_vector": [
+            "phone",
+            "door-to-door",
+            "in-person"
+          ],
+          "targets": [
+            "elder",
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 電話で『あなたの口座が犯罪に悪用』等と不安を煽る → 2) 警察官が自宅へ訪問すると伝達 → 3) 到着後にカード預かり・暗証番号確認 → 4) すり替え・回収",
+            "en": "1) Phone call claims bank account misuse → 2) 'Officer' visit announced → 3) Card collection and PIN request → 4) Swap/collect the card."
+          },
+          "red_flags": {
+            "ja": [
+              "警察や役所がキャッシュカードや暗証番号を求める",
+              "自宅に来てカードを封筒に入れさせる",
+              "至急・秘密厳守を迫る"
+            ],
+            "en": [
+              "Police/officials ask for your card or PIN",
+              "Home visit to seal cards in an envelope",
+              "Urgency and secrecy pressure"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "公式代表番号へ自分で折返し確認",
+              "カード・暗証番号は誰にも渡さない/教えない",
+              "家族・近所・警察相談窓口に即共有"
+            ],
+            "en": [
+              "Independently call the official number to verify",
+              "Never hand over cards/PINs",
+              "Tell family or consult police hotlines"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "cash",
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "公的機関がキャッシュカードや暗証番号を回収・取得することはありません。",
+            "en": "Authorities do not collect your cash card or ask for your PIN."
+          },
+          "references": [
+            {
+              "label": "警察庁 SOS47 手口一覧と対策",
+              "url": "https://www.npa.go.jp/bureau/safetylife/sos47/case/"
+            },
+            {
+              "label": "東京都：最新の特殊詐欺（警察官を騙る手口）",
+              "url": "https://www.seikatubunka.metro.tokyo.lg.jp/tomin_anzen/chian/mijikanahanzai/saisinnotokusyusagi"
+            }
+          ],
+          "tags": [
+            "fake-policeman",
+            "authority-pretext",
+            "doorstep",
+            "urgency",
+            "social-engineering",
+            "tourism"
+          ]
+        },
+        {
+          "id": "jp-003",
+          "title": {
+            "ja": "国税庁・税務署装いフィッシング（未納税通知）",
+            "en": "Tax Agency Impersonation Phishing (Unpaid Tax Notice)"
+          },
+          "short_desc": {
+            "ja": "SMSやメールで未納税を装い、偽サイトへ誘導してカード情報等を詐取。",
+            "en": "SMS/email claims unpaid taxes and links to a spoofed site to steal card/PII."
+          },
+          "cultural_lever": {
+            "ja": "官公庁からの正式通知への信頼、締切遵守の圧力",
+            "en": "Trust in government notices and pressure to meet deadlines"
+          },
+          "attack_vector": [
+            "sms",
+            "email",
+            "website"
+          ],
+          "targets": [
+            "general",
+            "business"
+          ],
+          "scenario": {
+            "ja": "1) 『未納税』『差押え』等の件名でSMS/メール → 2) リンク先で個人・カード情報入力要求 → 3) 課金・不正送金",
+            "en": "1) SMS/email with 'unpaid tax/seizure' → 2) Spoofed page asks for personal/card data → 3) Unauthorized charge/transfer"
+          },
+          "red_flags": {
+            "ja": [
+              "短時間での支払い期限を強調",
+              "ドメインが公式でない/不自然なURL",
+              "ギフトカード・即時送金の要求"
+            ],
+            "en": [
+              "Very short payment deadline",
+              "Non-official domain/odd URL",
+              "Requests gift cards or instant transfers"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "国税庁サイトやe-Taxに自分でアクセスして確認",
+              "リンクは踏まずブックマークや検索から公式へ",
+              "不審なら自治体窓口や税務署へ直接照会"
+            ],
+            "en": [
+              "Verify via official site/e-Tax you navigate to",
+              "Don't click links; use bookmarks/search",
+              "Call tax office using official numbers"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "credit",
+            "e-wallet",
+            "bank-transfer",
+            "gift-card"
+          ],
+          "legal_notes": {
+            "ja": "国税当局がギフトカード購入を求めることはありません。",
+            "en": "Tax authorities do not ask for gift card payments."
+          },
+          "references": [
+            {
+              "label": "フィッシング対策協議会：国税庁をかたるフィッシング注意喚起(2024/05/22)",
+              "url": "https://www.antiphishing.jp/news/alert/nta_20240522.html"
+            },
+            {
+              "label": "国税庁/税務署装い詐欺メールの学内注意喚起（UEC）",
+              "url": "https://www.cc.uec.ac.jp/blogs/news/2024/12/20241229zeimuphishing.html"
+            }
+          ],
+          "tags": [
+            "fake-fee",
+            "authority-pretext",
+            "website",
+            "sms",
+            "email",
+            "urgency"
+          ]
+        },
+        {
+          "id": "jp-004",
+          "title": {
+            "ja": "還付金詐欺（医療費・保険料の払い戻し名目のATM誘導）",
+            "en": "Refund Scam (Medical/Benefit Rebate via ATM)"
+          },
+          "short_desc": {
+            "ja": "自治体や保険者を名乗り還付手続を装ってATMへ誘導し振込操作をさせる。",
+            "en": "Impersonates local offices/insurers to 'process refunds' and guides victims to ATMs to transfer money."
+          },
+          "cultural_lever": {
+            "ja": "公的機関の案内への信頼、手続きの期限意識",
+            "en": "Trust in public offices and urgency around deadlines"
+          },
+          "attack_vector": [
+            "phone",
+            "sms",
+            "in-person"
+          ],
+          "targets": [
+            "elder",
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 『還付期限が迫る』と電話/SMS → 2) 近隣ATMへ誘導 → 3) 操作指示で振込・送金",
+            "en": "1) Call/SMS claims refund deadline → 2) Directs to nearby ATM → 3) Instructs operations to transfer funds"
+          },
+          "red_flags": {
+            "ja": [
+              "ATMで還付はできない",
+              "電話越しに具体的なATM操作を指示",
+              "時間外・即時の手続きを迫る"
+            ],
+            "en": [
+              "Refunds are not issued via ATMs",
+              "Detailed ATM steps over the phone",
+              "Pressure to act immediately/out of hours"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "自治体や保険者の代表番号に自分で確認",
+              "ATMに行かない・電話を切る",
+              "家族や近隣の人に相談"
+            ],
+            "en": [
+              "Independently call the official office",
+              "Do not go to ATMs; hang up",
+              "Consult family/neighbors"
+            ]
+          },
+          "risk_score": 3,
+          "mediums": [
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "公的機関がATMでの還付手続きを案内することはありません。",
+            "en": "Public offices do not process refunds via ATMs."
+          },
+          "references": [
+            {
+              "label": "警察庁 SOS47：手口一覧（還付金詐欺を含む）",
+              "url": "https://www.npa.go.jp/bureau/safetylife/sos47/case/"
+            }
+          ],
+          "tags": [
+            "fake-fee",
+            "authority-pretext",
+            "phone",
+            "urgency"
+          ]
+        },
+        {
+          "id": "jp-005",
+          "title": {
+            "ja": "架空料金請求（コンテンツ未納・利用料名目）",
+            "en": "Fake Billing (Content/Subscription Arrears)"
+          },
+          "short_desc": {
+            "ja": "『サイト利用料の未納』等を口実に、連絡先や銀行・カード情報を詐取。",
+            "en": "Claims unpaid site fees to solicit contact and steal bank/card details."
+          },
+          "cultural_lever": {
+            "ja": "期日遵守・迷惑回避志向につけ込む",
+            "en": "Exploits duty to meet deadlines and avoid trouble"
+          },
+          "attack_vector": [
+            "email",
+            "sms",
+            "website",
+            "phone"
+          ],
+          "targets": [
+            "general",
+            "student",
+            "business"
+          ],
+          "scenario": {
+            "ja": "1) 未納通知のSMS/メール → 2) 偽サポート窓口やサイトへ誘導 → 3) 支払・個人情報の入力を迫る",
+            "en": "1) SMS/email about arrears → 2) Redirect to fake support/site → 3) Press for payment and personal data"
+          },
+          "red_flags": {
+            "ja": [
+              "身に覚えのない請求",
+              "連絡を急かす自動音声・BOT",
+              "URL・差出人が正規と一致しない"
+            ],
+            "en": [
+              "Charges you don't recognize",
+              "Automated voice/BOT urges contact",
+              "Sender/URL not matching official"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "公式アプリやマイページから請求有無を確認",
+              "SMS/メールのリンクは踏まない",
+              "相手が名乗る企業の公式窓口に自分で照会"
+            ],
+            "en": [
+              "Check invoices via official app/portal",
+              "Don't click links in messages",
+              "Call the company via official contacts"
+            ]
+          },
+          "risk_score": 3,
+          "mediums": [
+            "credit",
+            "e-wallet",
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "不当表示や脅迫的な取立ては法令違反の可能性。",
+            "en": "Deceptive claims or threats may violate consumer laws."
+          },
+          "references": [
+            {
+              "label": "警察庁 SOS47：手口一覧",
+              "url": "https://www.npa.go.jp/bureau/safetylife/sos47/case/"
+            }
+          ],
+          "tags": [
+            "fake-fee",
+            "website",
+            "email",
+            "sms",
+            "urgency"
+          ]
+        },
+        {
+          "id": "jp-006",
+          "title": {
+            "ja": "送り付け商法（ネガティブ・オプション）",
+            "en": "Negative Option Scam (Unordered Goods Delivery)"
+          },
+          "short_desc": {
+            "ja": "注文していない商品が届き、代金請求や返品送料を迫られる。特商法の規定対象。",
+            "en": "Unordered goods are delivered; scammers demand payment or return shipping."
+          },
+          "cultural_lever": {
+            "ja": "受取辞退・返品を巡る遠慮や体面、相手に迷惑をかけたくない心理",
+            "en": "Reluctance to refuse/return and desire to avoid causing trouble"
+          },
+          "attack_vector": [
+            "postal",
+            "phone"
+          ],
+          "targets": [
+            "elder",
+            "general",
+            "expat"
+          ],
+          "scenario": {
+            "ja": "1) 未注文品が一方的に届く → 2) 請求書や電話で支払い/返品送料を要求 → 3) 支払うまで督促",
+            "en": "1) Unordered package arrives → 2) Invoice/calls demand payment or return shipping → 3) Persistent dunning"
+          },
+          "red_flags": {
+            "ja": [
+              "注文履歴がないのに着荷",
+              "返品先・事業者情報が不明確",
+              "強い督促・短期期限"
+            ],
+            "en": [
+              "No order history but a package arrives",
+              "Vague seller/return info",
+              "Aggressive dunning and short deadlines"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "特定商取引法の規定を確認（一定期間経過後は処分可）",
+              "事業者情報・契約有無を記録して無視/通報",
+              "消費生活センターへ相談"
+            ],
+            "en": [
+              "Check Japan's Act on Specified Commercial Transactions rules",
+              "Record lack of contract/seller details; ignore/report",
+              "Consult consumer affairs centers"
+            ]
+          },
+          "risk_score": 2,
+          "mediums": [
+            "postal",
+            "cash",
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "特定商取引法：売買契約に基づかない送り付けは受領拒否・処分可（一定要件）。",
+            "en": "Japanese law allows refusal/disposal of unordered goods under certain conditions."
+          },
+          "references": [
+            {
+              "label": "消費者庁：売買契約に基づかないで送付された商品に関するQ&A",
+              "url": "https://www.no-trouble.caa.go.jp/qa/negativeoption.html"
+            },
+            {
+              "label": "消費者庁：特定商取引法ガイド（行政処分の執行状況）",
+              "url": "https://www.no-trouble.caa.go.jp/action/result_1year.html"
+            }
+          ],
+          "tags": [
+            "negative-option",
+            "postal",
+            "fake-fee",
+            "consumer-law"
+          ]
         }
       ]
     },
