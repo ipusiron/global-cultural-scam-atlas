@@ -1,0 +1,16 @@
+{
+  "name": "global-cultural-scam-atlas",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:index": "node tools/build-index.mjs",
+    "build:countries": "node tools/build-countries.mjs",
+    "build": "npm run build:index && npm run build:countries",
+    "validate:schema": "ajv validate -s data/schema.json -d dist/countries.json --strict=false"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-cli": "^5.0.0",
+    "glob": "^11.0.0"
+  }
+}

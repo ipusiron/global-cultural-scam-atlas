@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["version", "last_updated", "countries"],
+  "properties": {
+    "version": { "type": "string" },
+    "last_updated": { "type": "string", "format": "date" },
+    "countries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["country_code","country_name_local","country_name_en","attacks"],
+        "properties": {
+          "country_code": { "type": "string", "pattern": "^[A-Z]{2}$" },
+          "country_name_local": { "type": "string" },
+          "country_name_en": { "type": "string" },
+          "regions": { "type": "array", "items": { "type": "string" } },
+          "language_codes": { "type": "array", "items": { "type": "string" } },
+          "notes": { "type": "string" },
+          "attacks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id","title","short_desc","cultural_lever","attack_vector","targets","scenario","red_flags","mitigations","risk_score","tags"],
+              "properties": {
+                "id": { "type": "string" },
+                "title": {
+                  "type": "object",
+                  "required": ["ja"],
+                  "properties": { "ja": { "type": "string" }, "en": { "type": "string" } }
+                },
+                "short_desc": {
+                  "type": "object",
+                  "required": ["ja"],
+                  "properties": { "ja": { "type": "string" }, "en": { "type": "string" } }
+                },
+                "cultural_lever": {
+                  "type": "object",
+                  "required": ["ja"],
+                  "properties": { "ja": { "type": "string" }, "en": { "type": "string" } }
+                },
+                "attack_vector": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+                "targets": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+                "scenario": {
+                  "type": "object",
+                  "required": ["ja"],
+                  "properties": { "ja": { "type": "string" }, "en": { "type": "string" } }
+                },
+                "red_flags": {
+                  "type": "object",
+                  "required": ["ja"],
+                  "properties": {
+                    "ja": { "type": "array", "items": { "type": "string" } },
+                    "en": { "type": "array", "items": { "type": "string" } }
+                  }
+                },
+                "mitigations": {
+                  "type": "object",
+                  "required": ["ja"],
+                  "properties": {
+                    "ja": { "type": "array", "items": { "type": "string" } },
+                    "en": { "type": "array", "items": { "type": "string" } }
+                  }
+                },
+                "risk_score": { "type": "integer", "minimum": 1, "maximum": 5 },
+                "mediums": { "type": "array", "items": { "type": "string" } },
+                "legal_notes": {
+                  "type": "object",
+                  "properties": { "ja": { "type": "string" }, "en": { "type": "string" } }
+                },
+                "references": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["label","url"],
+                    "properties": {
+                      "label": { "type": "string" },
+                      "url": { "type": "string", "format": "uri" }
+                    }
+                  }
+                },
+                "tags": { "type": "array", "items": { "type": "string" } }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

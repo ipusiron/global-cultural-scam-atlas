@@ -1,0 +1,16 @@
+{
+  "id": "jp-001",
+  "title": { "ja": "親切装う道案内からの押し売り", "en": "Good Samaritan Hard Sell" },
+  "short_desc": { "ja": "観光地で親切装い→店舗へ誘導→高額購入圧力", "en": "Guides tourists to a shop and pressures a costly purchase." },
+  "cultural_lever": { "ja": "対立回避・断りづらさ", "en": "Conflict avoidance; reluctance to refuse" },
+  "attack_vector": ["in-person"],
+  "targets": ["tourist","general"],
+  "scenario": { "ja": "1) 声かけ 2) 案内 3) 購入圧力", "en": "1) Approach 2) Guide 3) Pressure" },
+  "red_flags": { "ja": ["急かされる","限定割引の強調"], "en": ["Rushing","'Limited' discount"] },
+  "mitigations": { "ja": ["即決しない","正規案内所を利用","丁寧に断る定型句を用意"], "en": ["Avoid instant decisions","Use official info desks","Keep polite refusal phrases"] },
+  "risk_score": 3,
+  "mediums": ["cash","credit"],
+  "legal_notes": { "ja": "", "en": "" },
+  "references": [],
+  "tags": ["tourism","pressure-sales","social-engineering","scarcity","urgency"]
+}

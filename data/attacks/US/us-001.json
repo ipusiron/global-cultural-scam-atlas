@@ -1,0 +1,16 @@
+{
+  "id": "us-001",
+  "title": { "ja": "偽テックサポートの遠隔操作誘導", "en": "Fake Tech Support Remote-Control" },
+  "short_desc": { "ja": "警告画面や電話で不安を煽り、遠隔操作と支払い要求", "en": "Scare pop-ups/calls pushing remote control and payment." },
+  "cultural_lever": { "ja": "サービス・サポートへの信頼", "en": "Trust in professional support services" },
+  "attack_vector": ["website","phone"],
+  "targets": ["general","elder"],
+  "scenario": { "ja": "1) 偽警告 2) 電話誘導 3) 遠隔操作 4) 支払要求", "en": "1) Fake alert 2) Phone guidance 3) Remote control 4) Payment request" },
+  "red_flags": { "ja": ["即時対応の強要","ギフトカード決済の要求"], "en": ["Immediate action demanded","Requests gift card payments"] },
+  "mitigations": { "ja": ["公式窓口を自分で検索","遠隔操作は原則拒否"], "en": ["Search official support yourself","Avoid unsolicited remote control"] },
+  "risk_score": 4,
+  "mediums": ["credit","gift-card","e-wallet"],
+  "legal_notes": { "ja": "", "en": "" },
+  "references": [],
+  "tags": ["fake-tech-support","urgency","authority-pretext"]
+}
