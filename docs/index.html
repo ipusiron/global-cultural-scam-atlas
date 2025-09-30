@@ -2,14 +2,104 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Global Cultural Scam Atlas (GCSA)</title>
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-  <h1>Global Cultural Scam Atlas (GCSA)</h1>
-  <p>ここは GCSA の公開ページです。</p>
-  <ul>
-    <li><a href="dist/countries.json">最新データ (countries.json)</a></li>
-    <li><a href="https://github.com/ipusiron/global-cultural-scam-atlas">GitHub リポジトリ</a></li>
-  </ul>
+  <header class="site-header">
+    <h1>Global Cultural Scam Atlas <span class="muted">(GCSA)</span></h1>
+    <div class="controls">
+      <label class="lang">
+        <span>言語 / Language</span>
+        <select id="locale">
+          <option value="ja">日本語</option>
+          <option value="en">English</option>
+        </select>
+      </label>
+      <a class="btn ghost" target="_blank" rel="noopener" href="https://github.com/ipusiron/global-cultural-scam-atlas">GitHub</a>
+      <a class="btn" target="_blank" rel="noopener" href="./dist/countries.json">countries.json</a>
+    </div>
+  </header>
+
+  <section class="filters">
+    <div class="filter">
+      <label for="country">国 / Country</label>
+      <select id="country">
+        <option value="__all__">All</option>
+      </select>
+    </div>
+    <div class="filter">
+      <label for="vector">攻撃ベクタ / Vector</label>
+      <select id="vector">
+        <option value="__all__">All</option>
+        <option value="in-person">in-person</option>
+        <option value="phone">phone</option>
+        <option value="sms">sms</option>
+        <option value="email">email</option>
+        <option value="social">social</option>
+        <option value="website">website</option>
+        <option value="payment-app">payment-app</option>
+        <option value="postal">postal</option>
+        <option value="door-to-door">door-to-door</option>
+        <option value="marketplace">marketplace</option>
+      </select>
+    </div>
+    <div class="filter grow">
+      <label for="q">検索 / Search</label>
+      <input id="q" type="search" placeholder="タイトル・説明・シナリオ・タグを検索…" />
+    </div>
+  </section>
+
+  <section class="summary">
+    <span id="resultCount">0</span> 件の攻撃が表示中
+  </section>
+
+  <main id="cards" class="cards" aria-live="polite"></main>
+
+  <!-- 詳細モーダル -->
+  <dialog id="detailDialog">
+    <article class="modal">
+      <header>
+        <h3 id="dlgTitle">Title</h3>
+        <button id="dlgClose" aria-label="Close">×</button>
+      </header>
+      <div class="modal-body">
+        <div class="kvs">
+          <div><strong>Country:</strong> <span id="dlgCountry"></span></div>
+          <div><strong>Vector:</strong> <span id="dlgVector"></span></div>
+          <div><strong>Targets:</strong> <span id="dlgTargets"></span></div>
+          <div><strong>Risk:</strong> <span id="dlgRisk"></span></div>
+        </div>
+        <p id="dlgShort"></p>
+
+        <h4>文化的レバー / Cultural lever</h4>
+        <p id="dlgLever"></p>
+
+        <h4>シナリオ / Scenario</h4>
+        <p id="dlgScenario"></p>
+
+        <h4>Red Flags</h4>
+        <ul id="dlgFlags"></ul>
+
+        <h4>Mitigations</h4>
+        <ul id="dlgMitigations"></ul>
+
+        <h4>References</h4>
+        <ul id="dlgRefs"></ul>
+      </div>
+      <footer>
+        <button id="dlgOk" class="btn">OK</button>
+      </footer>
+    </article>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="footer">
+      🔗 GitHubリポジトリはこちら（ <a href="https://github.com/ipusiron/global-cultural-scam-atlas" target="_blank">ipusiron/global-cultural-scam-atlas</a> ）
+    </div>
+  </footer>
+
+  <script src="./js/main.js" defer></script>
 </body>
 </html>
