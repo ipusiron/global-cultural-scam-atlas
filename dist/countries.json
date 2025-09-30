@@ -1,0 +1,163 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2025-09-30",
+  "countries": [
+    {
+      "country_code": "JP",
+      "country_name_local": "日本",
+      "country_name_en": "Japan",
+      "regions": [
+        "APAC"
+      ],
+      "language_codes": [
+        "ja",
+        "en"
+      ],
+      "notes": "教育目的。一般化を意図しない注記。",
+      "attacks": [
+        {
+          "id": "jp-001",
+          "title": {
+            "ja": "親切装う道案内からの押し売り",
+            "en": "Good Samaritan Hard Sell"
+          },
+          "short_desc": {
+            "ja": "観光地で親切装い→店舗へ誘導→高額購入圧力",
+            "en": "Guides tourists to a shop and pressures a costly purchase."
+          },
+          "cultural_lever": {
+            "ja": "対立回避・断りづらさ",
+            "en": "Conflict avoidance; reluctance to refuse"
+          },
+          "attack_vector": [
+            "in-person"
+          ],
+          "targets": [
+            "tourist",
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 声かけ 2) 案内 3) 購入圧力",
+            "en": "1) Approach 2) Guide 3) Pressure"
+          },
+          "red_flags": {
+            "ja": [
+              "急かされる",
+              "限定割引の強調"
+            ],
+            "en": [
+              "Rushing",
+              "'Limited' discount"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "即決しない",
+              "正規案内所を利用",
+              "丁寧に断る定型句を用意"
+            ],
+            "en": [
+              "Avoid instant decisions",
+              "Use official info desks",
+              "Keep polite refusal phrases"
+            ]
+          },
+          "risk_score": 3,
+          "mediums": [
+            "cash",
+            "credit"
+          ],
+          "legal_notes": {
+            "ja": "",
+            "en": ""
+          },
+          "references": [],
+          "tags": [
+            "tourism",
+            "pressure-sales",
+            "social-engineering",
+            "scarcity",
+            "urgency"
+          ]
+        }
+      ]
+    },
+    {
+      "country_code": "US",
+      "country_name_local": "United States",
+      "country_name_en": "United States",
+      "regions": [
+        "AMER"
+      ],
+      "language_codes": [
+        "en"
+      ],
+      "notes": "Educational use; does not generalize culture.",
+      "attacks": [
+        {
+          "id": "us-001",
+          "title": {
+            "ja": "偽テックサポートの遠隔操作誘導",
+            "en": "Fake Tech Support Remote-Control"
+          },
+          "short_desc": {
+            "ja": "警告画面や電話で不安を煽り、遠隔操作と支払い要求",
+            "en": "Scare pop-ups/calls pushing remote control and payment."
+          },
+          "cultural_lever": {
+            "ja": "サービス・サポートへの信頼",
+            "en": "Trust in professional support services"
+          },
+          "attack_vector": [
+            "website",
+            "phone"
+          ],
+          "targets": [
+            "general",
+            "elder"
+          ],
+          "scenario": {
+            "ja": "1) 偽警告 2) 電話誘導 3) 遠隔操作 4) 支払要求",
+            "en": "1) Fake alert 2) Phone guidance 3) Remote control 4) Payment request"
+          },
+          "red_flags": {
+            "ja": [
+              "即時対応の強要",
+              "ギフトカード決済の要求"
+            ],
+            "en": [
+              "Immediate action demanded",
+              "Requests gift card payments"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "公式窓口を自分で検索",
+              "遠隔操作は原則拒否"
+            ],
+            "en": [
+              "Search official support yourself",
+              "Avoid unsolicited remote control"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "credit",
+            "gift-card",
+            "e-wallet"
+          ],
+          "legal_notes": {
+            "ja": "",
+            "en": ""
+          },
+          "references": [],
+          "tags": [
+            "fake-tech-support",
+            "urgency",
+            "authority-pretext"
+          ]
+        }
+      ]
+    }
+  ]
+}
