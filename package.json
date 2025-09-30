@@ -6,7 +6,7 @@
     "build:index": "node tools/build-index.mjs",
     "build:countries": "node tools/build-countries.mjs",
     "build": "npm run build:index && npm run build:countries",
-    "validate:schema": "ajv validate -s data/schema.json -d dist/countries.json --strict=false"
+    "validate:schema": "ajv -c ajv2020 validate -s data/schema.json -d dist/countries.json --strict=false"
   },
   "devDependencies": {
     "ajv": "^8.17.1",
