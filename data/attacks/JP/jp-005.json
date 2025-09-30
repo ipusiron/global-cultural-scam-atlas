@@ -1,0 +1,27 @@
+{
+  "id": "jp-005",
+  "title": { "ja": "架空料金請求（コンテンツ未納・利用料名目）", "en": "Fake Billing (Content/Subscription Arrears)" },
+  "short_desc": { "ja": "『サイト利用料の未納』等を口実に、連絡先や銀行・カード情報を詐取。", "en": "Claims unpaid site fees to solicit contact and steal bank/card details." },
+  "cultural_lever": { "ja": "期日遵守・迷惑回避志向につけ込む", "en": "Exploits duty to meet deadlines and avoid trouble" },
+  "attack_vector": ["email","sms","website","phone"],
+  "targets": ["general","student","business"],
+  "scenario": {
+    "ja": "1) 未納通知のSMS/メール → 2) 偽サポート窓口やサイトへ誘導 → 3) 支払・個人情報の入力を迫る",
+    "en": "1) SMS/email about arrears → 2) Redirect to fake support/site → 3) Press for payment and personal data"
+  },
+  "red_flags": {
+    "ja": ["身に覚えのない請求","連絡を急かす自動音声・BOT","URL・差出人が正規と一致しない"],
+    "en": ["Charges you don't recognize","Automated voice/BOT urges contact","Sender/URL not matching official"]
+  },
+  "mitigations": {
+    "ja": ["公式アプリやマイページから請求有無を確認","SMS/メールのリンクは踏まない","相手が名乗る企業の公式窓口に自分で照会"],
+    "en": ["Check invoices via official app/portal","Don't click links in messages","Call the company via official contacts"]
+  },
+  "risk_score": 3,
+  "mediums": ["credit","e-wallet","bank-transfer"],
+  "legal_notes": { "ja": "不当表示や脅迫的な取立ては法令違反の可能性。", "en": "Deceptive claims or threats may violate consumer laws." },
+  "references": [
+    { "label": "警察庁 SOS47：手口一覧", "url": "https://www.npa.go.jp/bureau/safetylife/sos47/case/" }
+  ],
+  "tags": ["fake-fee","website","email","sms","urgency"]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "jp-004",
+  "title": { "ja": "還付金詐欺（医療費・保険料の払い戻し名目のATM誘導）", "en": "Refund Scam (Medical/Benefit Rebate via ATM)" },
+  "short_desc": { "ja": "自治体や保険者を名乗り還付手続を装ってATMへ誘導し振込操作をさせる。", "en": "Impersonates local offices/insurers to 'process refunds' and guides victims to ATMs to transfer money." },
+  "cultural_lever": { "ja": "公的機関の案内への信頼、手続きの期限意識", "en": "Trust in public offices and urgency around deadlines" },
+  "attack_vector": ["phone","sms","in-person"],
+  "targets": ["elder","general"],
+  "scenario": {
+    "ja": "1) 『還付期限が迫る』と電話/SMS → 2) 近隣ATMへ誘導 → 3) 操作指示で振込・送金",
+    "en": "1) Call/SMS claims refund deadline → 2) Directs to nearby ATM → 3) Instructs operations to transfer funds"
+  },
+  "red_flags": {
+    "ja": ["ATMで還付はできない","電話越しに具体的なATM操作を指示","時間外・即時の手続きを迫る"],
+    "en": ["Refunds are not issued via ATMs","Detailed ATM steps over the phone","Pressure to act immediately/out of hours"]
+  },
+  "mitigations": {
+    "ja": ["自治体や保険者の代表番号に自分で確認","ATMに行かない・電話を切る","家族や近隣の人に相談"],
+    "en": ["Independently call the official office","Do not go to ATMs; hang up","Consult family/neighbors"]
+  },
+  "risk_score": 3,
+  "mediums": ["bank-transfer"],
+  "legal_notes": { "ja": "公的機関がATMでの還付手続きを案内することはありません。", "en": "Public offices do not process refunds via ATMs." },
+  "references": [
+    { "label": "警察庁 SOS47：手口一覧（還付金詐欺を含む）", "url": "https://www.npa.go.jp/bureau/safetylife/sos47/case/" }
+  ],
+  "tags": ["fake-fee","authority-pretext","phone","urgency"]
+}

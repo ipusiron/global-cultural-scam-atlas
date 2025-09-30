@@ -1,0 +1,28 @@
+{
+  "id": "jp-002",
+  "title": { "ja": "警察官を装ったキャッシュカード手交型詐欺", "en": "Fake Police Officer: Cash Card Pickup Scam" },
+  "short_desc": { "ja": "警察官や役所職員を装い、捜査名目でキャッシュカードを回収・すり替えする型。", "en": "Scammers pose as police/officials and collect or swap victims' cash cards under pretenses." },
+  "cultural_lever": { "ja": "公的身分・制服への信頼、対立回避", "en": "Trust in official uniforms/authority and conflict avoidance" },
+  "attack_vector": ["phone","door-to-door","in-person"],
+  "targets": ["elder","general"],
+  "scenario": {
+    "ja": "1) 電話で『あなたの口座が犯罪に悪用』等と不安を煽る → 2) 警察官が自宅へ訪問すると伝達 → 3) 到着後にカード預かり・暗証番号確認 → 4) すり替え・回収",
+    "en": "1) Phone call claims bank account misuse → 2) 'Officer' visit announced → 3) Card collection and PIN request → 4) Swap/collect the card."
+  },
+  "red_flags": {
+    "ja": ["警察や役所がキャッシュカードや暗証番号を求める","自宅に来てカードを封筒に入れさせる","至急・秘密厳守を迫る"],
+    "en": ["Police/officials ask for your card or PIN","Home visit to seal cards in an envelope","Urgency and secrecy pressure"]
+  },
+  "mitigations": {
+    "ja": ["公式代表番号へ自分で折返し確認","カード・暗証番号は誰にも渡さない/教えない","家族・近所・警察相談窓口に即共有"],
+    "en": ["Independently call the official number to verify","Never hand over cards/PINs","Tell family or consult police hotlines"]
+  },
+  "risk_score": 4,
+  "mediums": ["cash","bank-transfer"],
+  "legal_notes": { "ja": "公的機関がキャッシュカードや暗証番号を回収・取得することはありません。", "en": "Authorities do not collect your cash card or ask for your PIN." },
+  "references": [
+    { "label": "警察庁 SOS47 手口一覧と対策", "url": "https://www.npa.go.jp/bureau/safetylife/sos47/case/" },
+    { "label": "東京都：最新の特殊詐欺（警察官を騙る手口）", "url": "https://www.seikatubunka.metro.tokyo.lg.jp/tomin_anzen/chian/mijikanahanzai/saisinnotokusyusagi" }
+  ],
+  "tags": ["fake-policeman","authority-pretext","doorstep","urgency","social-engineering","tourism"]
+}
