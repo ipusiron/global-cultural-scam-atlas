@@ -3,6 +3,87 @@
   "last_updated": "2025-09-30",
   "countries": [
     {
+      "country_code": "IN",
+      "country_name_local": "IN",
+      "country_name_en": "IN",
+      "regions": [],
+      "language_codes": [
+        "en"
+      ],
+      "notes": "",
+      "attacks": [
+        {
+          "id": "in-001",
+          "title": {
+            "ja": "宗教行事に便乗した寄付要請詐欺",
+            "en": "Donation Scam around Religious Festivals"
+          },
+          "short_desc": {
+            "ja": "祭礼名目で寄付を迫る。領収証や組織実在性が不透明",
+            "en": "Pushes donations under festival pretexts; opaque receipts/orgs."
+          },
+          "cultural_lever": {
+            "ja": "宗教的権威・寄付慣行の信頼",
+            "en": "Religious authority and donation norms"
+          },
+          "attack_vector": [
+            "in-person",
+            "social",
+            "sms"
+          ],
+          "targets": [
+            "general",
+            "business"
+          ],
+          "scenario": {
+            "ja": "1) 行事名を挙げ寄付要請 2) 即時支払いを促す",
+            "en": "1) Names festival to seek donations 2) Pushes immediate pay"
+          },
+          "red_flags": {
+            "ja": [
+              "領収証の不備",
+              "公式サイト・登録情報なし"
+            ],
+            "en": [
+              "Poor receipts",
+              "No official registration or site"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "公的登録確認",
+              "公式チャネル経由で寄付"
+            ],
+            "en": [
+              "Check public registration",
+              "Donate via official channels"
+            ]
+          },
+          "risk_score": 3,
+          "mediums": [
+            "cash",
+            "bank-transfer",
+            "qr-pay"
+          ],
+          "legal_notes": {
+            "ja": "",
+            "en": ""
+          },
+          "references": [
+            {
+              "label": "CERT-In Advisory",
+              "url": "https://www.cert-in.org.in/"
+            }
+          ],
+          "tags": [
+            "charity",
+            "religious-pretext",
+            "social-proof"
+          ]
+        }
+      ]
+    },
+    {
       "country_code": "JP",
       "country_name_local": "日本",
       "country_name_en": "Japan",
