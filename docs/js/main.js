@@ -11,7 +11,7 @@ const i18n = {
     'filter.country': '国 / Country',
     'filter.vector': '攻撃ベクター / Vector',
     'filter.search': '検索 / Search',
-    'filter.reset': 'リセット / Reset',
+    'filter.reset': 'リセット',
     'search.placeholder': 'タイトル・説明・シナリオ・タグを検索…',
     'summary.attacks': '件の攻撃が表示中',
     'modal.country': 'Country:',
