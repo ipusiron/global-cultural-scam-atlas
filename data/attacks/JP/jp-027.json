@@ -1,0 +1,80 @@
+{
+  "id": "jp-027",
+  "title": {
+    "ja": "AI生成偽動画による恐喝",
+    "en": "AI-Generated Deepfake Video Blackmail"
+  },
+  "short_desc": {
+    "ja": "68%が本物と見分け困難なディープフェイク動画で脅迫。2024年被害急増。",
+    "en": "Blackmail using deepfakes 68% indistinguishable from real. Surging in 2024."
+  },
+  "cultural_lever": {
+    "ja": "体面重視・スキャンダル回避・内密解決志向・羞恥心の強さ",
+    "en": "Face-saving culture, scandal avoidance, and preference for private resolution"
+  },
+  "attack_vector": [
+    "email",
+    "social"
+  ],
+  "targets": [
+    "business",
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) SNSから顔写真収集 2) AI偽動画生成 3) 不適切な内容で脅迫 4) 口止め料要求",
+    "en": "1) Collect photos from SNS 2) Generate fake videos 3) Threaten with inappropriate content 4) Demand hush money"
+  },
+  "red_flags": {
+    "ja": [
+      "身に覚えのない動画",
+      "顔と体の違和感",
+      "暗号資産での支払い要求",
+      "短期間での決断強要"
+    ],
+    "en": [
+      "Unknown video content",
+      "Face/body mismatches",
+      "Cryptocurrency payment demands",
+      "Rushed decision pressure"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "即座に警察相談",
+      "支払い拒否",
+      "SNS公開情報の制限",
+      "ディープフェイク検出ツール利用"
+    ],
+    "en": [
+      "Consult police immediately",
+      "Never pay blackmail",
+      "Limit SNS public info",
+      "Use deepfake detection tools"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "cryptocurrency",
+    "bank-transfer"
+  ],
+  "legal_notes": {
+    "ja": "名誉毀損・恐喝罪に該当。AI偽造物への法整備進行中。",
+    "en": "Constitutes defamation and extortion. AI forgery laws under development."
+  },
+  "references": [
+    {
+      "label": "総務省：偽・誤情報の流通対策",
+      "url": "https://www.soumu.go.jp/johotsusintokei/whitepaper/ja/r06/html/nd141210.html"
+    },
+    {
+      "label": "トレンドマイクロ：ディープフェイクを悪用した攻撃",
+      "url": "https://www.trendmicro.com/ja_jp/research/25/g/deepfake-it-til-you-make-it.html"
+    }
+  ],
+  "tags": [
+    "deepfake",
+    "blackmail",
+    "AI-generated",
+    "sextortion"
+  ]
+}

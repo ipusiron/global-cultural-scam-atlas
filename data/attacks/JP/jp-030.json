@@ -1,0 +1,84 @@
+{
+  "id": "jp-030",
+  "title": {
+    "ja": "ハイブリッド型複合詐欺",
+    "en": "Hybrid Multi-Vector Fraud"
+  },
+  "short_desc": {
+    "ja": "デジタルと物理的手法を組み合わせた段階的な複合攻撃。",
+    "en": "Sequential attacks combining digital and physical tactics."
+  },
+  "cultural_lever": {
+    "ja": "段階的な信頼構築への弱さ・既成事実への従順・沈没費用の誤謬",
+    "en": "Vulnerability to gradual trust building and sunk cost fallacy"
+  },
+  "attack_vector": [
+    "social",
+    "phone",
+    "email",
+    "in-person"
+  ],
+  "targets": [
+    "elderly",
+    "business",
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) SNSで関係構築 2) フィッシングで情報収集 3) AI音声で本人装い 4) 物理的接触で最終詐取",
+    "en": "1) Build SNS relationship 2) Phishing for info 3) AI voice impersonation 4) Physical contact for final theft"
+  },
+  "red_flags": {
+    "ja": [
+      "複数経路からの接触",
+      "段階的な要求エスカレート",
+      "異なる手法の連続使用",
+      "時間をかけた信頼構築"
+    ],
+    "en": [
+      "Multi-channel contact",
+      "Escalating requests",
+      "Sequential different tactics",
+      "Long-term trust building"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "全接触履歴の記録",
+      "第三者への相談",
+      "段階的要求への警戒",
+      "複合的な検証実施"
+    ],
+    "en": [
+      "Document all contacts",
+      "Consult third parties",
+      "Beware escalating requests",
+      "Multi-factor verification"
+    ]
+  },
+  "risk_score": 5,
+  "mediums": [
+    "bank-transfer",
+    "cryptocurrency",
+    "cash"
+  ],
+  "legal_notes": {
+    "ja": "組織犯罪処罰法・複数の刑法違反が複合的に適用。",
+    "en": "Organized crime laws and multiple criminal codes apply."
+  },
+  "references": [
+    {
+      "label": "警察庁：サイバー空間の脅威情勢",
+      "url": "https://www.npa.go.jp/publications/statistics/cybersecurity/"
+    },
+    {
+      "label": "NISC：サイバーセキュリティ2024",
+      "url": "https://www.nisc.go.jp/pdf/policy/kihon-s/cs2024.pdf"
+    }
+  ],
+  "tags": [
+    "hybrid-attack",
+    "multi-vector",
+    "advanced-persistent",
+    "combined-tactics"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "jp-023",
+  "title": {
+    "ja": "AIディープフェイク音声詐欺",
+    "en": "AI Deepfake Voice Fraud"
+  },
+  "short_desc": {
+    "ja": "3-5秒の音声から85%精度で声を複製。2024-25年で50社20億円超被害。",
+    "en": "85% accurate voice cloning from 3-5 seconds. 50 companies lost 2B+ yen in 2024-25."
+  },
+  "cultural_lever": {
+    "ja": "上司や家族の声への無条件の信頼・緊急時の判断力低下",
+    "en": "Unconditional trust in familiar voices and reduced judgment under urgency"
+  },
+  "attack_vector": [
+    "phone",
+    "social"
+  ],
+  "targets": [
+    "business",
+    "elderly",
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) SNS等から音声サンプル収集 2) AI音声合成 3) 緊急事態を装い電話 4) 送金指示や情報要求",
+    "en": "1) Collect voice samples from SNS 2) AI voice synthesis 3) Call with emergency pretext 4) Request money transfer"
+  },
+  "red_flags": {
+    "ja": [
+      "声質に微妙な違和感",
+      "緊急送金の要求",
+      "普段と異なる連絡先",
+      "本人確認の拒否"
+    ],
+    "en": [
+      "Subtle voice quality issues",
+      "Urgent transfer requests",
+      "Unusual contact methods",
+      "Refuses verification"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "事前の合言葉設定",
+      "ビデオ通話で確認",
+      "別ルートで本人確認",
+      "送金前の冷静な判断"
+    ],
+    "en": [
+      "Set family passwords",
+      "Verify via video call",
+      "Confirm through other channels",
+      "Pause before transferring"
+    ]
+  },
+  "risk_score": 5,
+  "mediums": [
+    "bank-transfer",
+    "cryptocurrency"
+  ],
+  "legal_notes": {
+    "ja": "企業の法人口座を標的に数億円規模の被害が発生。",
+    "en": "Corporate accounts targeted with hundreds of millions in losses."
+  },
+  "references": [
+    {
+      "label": "Google Cloud：AI音声なりすまし脅威",
+      "url": "https://cloud.google.com/blog/ja/topics/threat-intelligence/ai-powered-voice-spoofing-vishing-attacks"
+    },
+    {
+      "label": "トレンドマイクロ：ディープフェイク実態調査2024",
+      "url": "https://www.trendmicro.com/ja_jp/jp-security/24/g/securitytrend-20240703-02.html"
+    }
+  ],
+  "tags": [
+    "deepfake",
+    "AI-fraud",
+    "voice-cloning",
+    "impersonation"
+  ]
+}

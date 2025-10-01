@@ -1,0 +1,78 @@
+{
+  "id": "jp-029",
+  "title": {
+    "ja": "偽セキュリティ監査員による侵入",
+    "en": "Fake Security Auditor Physical Intrusion"
+  },
+  "short_desc": {
+    "ja": "セキュリティ監査や点検を装い、企業に物理侵入して情報窃取。",
+    "en": "Impersonate security auditors for physical access to steal corporate data."
+  },
+  "cultural_lever": {
+    "ja": "権威への従順・専門家信頼・コンプライアンス重視・対立回避",
+    "en": "Authority compliance, expert trust, and conflict avoidance"
+  },
+  "attack_vector": [
+    "in-person",
+    "phone"
+  ],
+  "targets": [
+    "business"
+  ],
+  "scenario": {
+    "ja": "1) 事前調査で企業情報収集 2) 監査員を装い訪問 3) サーバー室等へアクセス 4) USBやカメラで情報窃取",
+    "en": "1) Research company info 2) Visit as auditor 3) Access server rooms 4) Steal data via USB/camera"
+  },
+  "red_flags": {
+    "ja": [
+      "事前連絡なしの訪問",
+      "身分証明が曖昧",
+      "過度な情報要求",
+      "単独行動の要求"
+    ],
+    "en": [
+      "Unscheduled visits",
+      "Vague credentials",
+      "Excessive info requests",
+      "Request to work alone"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "訪問者の事前確認徹底",
+      "エスコート制度導入",
+      "監査会社へ直接確認",
+      "重要エリアへの入室記録"
+    ],
+    "en": [
+      "Verify all visitors",
+      "Implement escort policy",
+      "Confirm with audit company",
+      "Log critical area access"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "cash"
+  ],
+  "legal_notes": {
+    "ja": "建造物侵入罪・不正アクセス禁止法違反・営業秘密侵害。",
+    "en": "Trespassing, unauthorized access, and trade secret theft."
+  },
+  "references": [
+    {
+      "label": "IPA：標的型攻撃対策",
+      "url": "https://www.ipa.go.jp/security/10threats/10threats2024.html"
+    },
+    {
+      "label": "NISC：重要インフラのサイバーセキュリティ",
+      "url": "https://www.nisc.go.jp/pdf/policy/infra/infra_rt4.pdf"
+    }
+  ],
+  "tags": [
+    "physical-intrusion",
+    "impersonation",
+    "corporate-espionage",
+    "social-engineering"
+  ]
+}

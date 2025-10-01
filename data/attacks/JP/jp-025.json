@@ -1,0 +1,79 @@
+{
+  "id": "jp-025",
+  "title": {
+    "ja": "トラッシング（ゴミ漁り）情報窃取",
+    "en": "Trashing (Dumpster Diving) Information Theft"
+  },
+  "short_desc": {
+    "ja": "物理的ゴミから機密情報を収集し、なりすましや恐喝に利用。",
+    "en": "Collect confidential data from physical garbage for impersonation and extortion."
+  },
+  "cultural_lever": {
+    "ja": "ゴミ分別の厳格さ・プライバシー意識の低さ・物理セキュリティの軽視",
+    "en": "Strict garbage sorting culture and underestimation of physical security"
+  },
+  "attack_vector": [
+    "in-person"
+  ],
+  "targets": [
+    "business",
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) 企業・個人宅のゴミを物色 2) 請求書・名簿・メモ等収集 3) 情報を元になりすまし 4) 詐欺や恐喝に利用",
+    "en": "1) Search company/home garbage 2) Collect bills/lists/notes 3) Impersonate using info 4) Use for fraud"
+  },
+  "red_flags": {
+    "ja": [
+      "ゴミ収集日以外の物色",
+      "不審者のゴミ袋持ち去り",
+      "個人情報の不正利用",
+      "知らない請求や連絡"
+    ],
+    "en": [
+      "Garbage searching off-schedule",
+      "Suspicious garbage removal",
+      "Unauthorized info usage",
+      "Unknown bills or contacts"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "シュレッダー処理徹底",
+      "機密文書の溶解処理",
+      "個人情報の墨塗り",
+      "セキュリティ業者利用"
+    ],
+    "en": [
+      "Thorough shredding",
+      "Dissolve confidential docs",
+      "Blackout personal info",
+      "Use security services"
+    ]
+  },
+  "risk_score": 3,
+  "mediums": [
+    "cash",
+    "bank-transfer"
+  ],
+  "legal_notes": {
+    "ja": "廃棄物処理法・個人情報保護法に関連する違法行為。",
+    "en": "Violates waste management and personal information protection laws."
+  },
+  "references": [
+    {
+      "label": "IPA：物理的セキュリティ対策",
+      "url": "https://www.ipa.go.jp/security/10threats/10threats2024.html"
+    },
+    {
+      "label": "NISC：サイバーセキュリティ2024",
+      "url": "https://www.nisc.go.jp/pdf/policy/kihon-s/cs2024.pdf"
+    }
+  ],
+  "tags": [
+    "trashing",
+    "physical-security",
+    "dumpster-diving",
+    "information-theft"
+  ]
+}

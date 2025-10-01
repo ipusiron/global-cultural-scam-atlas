@@ -1,0 +1,80 @@
+{
+  "id": "jp-024",
+  "title": {
+    "ja": "ビッシング（音声フィッシング）",
+    "en": "Vishing (Voice Phishing)"
+  },
+  "short_desc": {
+    "ja": "自動音声システムで銀行を装い口座情報詐取。2024年後半で442%増加。",
+    "en": "Automated voice systems impersonate banks. 442% surge in late 2024."
+  },
+  "cultural_lever": {
+    "ja": "金融機関への信頼・自動音声への慣れ・セキュリティ意識の過信",
+    "en": "Trust in financial institutions and overconfidence in security awareness"
+  },
+  "attack_vector": [
+    "phone"
+  ],
+  "targets": [
+    "elderly",
+    "business",
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) 銀行名乗る自動音声着信 2) 不正利用の虚偽警告 3) 暗証番号入力誘導 4) 口座情報窃取・不正送金",
+    "en": "1) Auto-call claiming bank 2) False fraud alert 3) PIN entry prompt 4) Account theft and transfer"
+  },
+  "red_flags": {
+    "ja": [
+      "着信での暗証番号要求",
+      "自動音声での緊急連絡",
+      "プッシュ番号での情報入力",
+      "折り返し電話の拒否"
+    ],
+    "en": [
+      "PIN requests on incoming calls",
+      "Automated emergency calls",
+      "Keypad info entry requests",
+      "Refuses callback verification"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "銀行は着信で暗証番号要求しない",
+      "公式番号へ折り返し",
+      "自動音声での入力拒否",
+      "口座の定期確認"
+    ],
+    "en": [
+      "Banks never ask PIN on calls",
+      "Call back official numbers",
+      "Never enter info via keypad",
+      "Regular account monitoring"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "bank-transfer",
+    "credit"
+  ],
+  "legal_notes": {
+    "ja": "法人口座を標的に数億円規模の被害が継続発生中。",
+    "en": "Corporate accounts continuously targeted with massive losses."
+  },
+  "references": [
+    {
+      "label": "金融庁：フィッシング詐欺に関する注意喚起",
+      "url": "https://www.fsa.go.jp/ordinary/internet-bank/index.html"
+    },
+    {
+      "label": "全国銀行協会：振り込め詐欺等の対策",
+      "url": "https://www.zenginkyo.or.jp/hanzai/"
+    }
+  ],
+  "tags": [
+    "vishing",
+    "voice-phishing",
+    "automated-fraud",
+    "banking"
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "jp-022",
+  "title": {
+    "ja": "闇バイト勧誘詐欺",
+    "en": "Illegal Part-time Job (Yami-Baito) Recruitment Scam"
+  },
+  "short_desc": {
+    "ja": "SNSで高額報酬を餌に若者を犯罪実行役に勧誘。2024年被害額718億円超。",
+    "en": "Recruits youth via SNS for crime with high pay promises. Over 71.8B yen damage in 2024."
+  },
+  "cultural_lever": {
+    "ja": "経済的困窮・簡単に稼げる仕事への憧れ・匿名性への過信",
+    "en": "Economic hardship, desire for easy money, and overconfidence in anonymity"
+  },
+  "attack_vector": [
+    "social",
+    "phone"
+  ],
+  "targets": [
+    "student",
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) SNSで「高額・即日即金・ホワイト案件」募集 2) テレグラム等へ誘導 3) 個人情報取得 4) 犯罪実行強要・脅迫",
+    "en": "1) SNS ads for 'high pay, instant cash' 2) Move to Telegram 3) Collect personal info 4) Force criminal acts"
+  },
+  "red_flags": {
+    "ja": [
+      "仕事内容が不明確",
+      "異常に高額な報酬",
+      "匿名アプリへの誘導",
+      "身分証の写真要求"
+    ],
+    "en": [
+      "Vague job description",
+      "Abnormally high pay",
+      "Move to anonymous apps",
+      "ID photo requests"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "正規の求人サイト利用",
+      "匿名アプリでの連絡拒否",
+      "警察へ即座に相談",
+      "個人情報提供前に確認"
+    ],
+    "en": [
+      "Use legitimate job sites",
+      "Refuse anonymous app communication",
+      "Consult police immediately",
+      "Verify before sharing personal info"
+    ]
+  },
+  "risk_score": 5,
+  "mediums": [
+    "cash",
+    "cryptocurrency"
+  ],
+  "legal_notes": {
+    "ja": "特殊詐欺の実行犯は重罪。令和6年検挙6,576件。",
+    "en": "Participating in special fraud is a serious crime. 6,576 arrests in 2024."
+  },
+  "references": [
+    {
+      "label": "警察庁：闇バイトの危険性",
+      "url": "https://www.npa.go.jp/bureau/safetylife/yamibaito/hanzaishaboshu.html"
+    },
+    {
+      "label": "警察庁：令和6年特殊詐欺統計",
+      "url": "https://www.npa.go.jp/bureau/criminal/souni/tokusyusagi/hurikomesagi_toukei2024.pdf"
+    }
+  ],
+  "tags": [
+    "yami-baito",
+    "recruitment",
+    "organized-crime",
+    "youth-exploitation"
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "id": "jp-026",
+  "title": {
+    "ja": "偽鍵業者による物理侵入",
+    "en": "Fake Locksmith Physical Intrusion"
+  },
+  "short_desc": {
+    "ja": "緊急開錠を装い高額請求や、合鍵作成で後日侵入・窃盗。",
+    "en": "Overcharge for emergency unlocking or create duplicate keys for later burglary."
+  },
+  "cultural_lever": {
+    "ja": "緊急時の判断力低下・業者への盲目的信頼・トラブル回避志向",
+    "en": "Reduced judgment in emergencies and blind trust in service providers"
+  },
+  "attack_vector": [
+    "phone",
+    "in-person"
+  ],
+  "targets": [
+    "elderly",
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) ネット広告で集客 2) 緊急出張で高額請求 3) 合鍵を密かに作成 4) 後日侵入して窃盗",
+    "en": "1) Attract via online ads 2) Emergency visit overcharge 3) Secretly make duplicate 4) Later burglary"
+  },
+  "red_flags": {
+    "ja": [
+      "異常に安い広告価格",
+      "身分証明の拒否",
+      "現金のみの支払い要求",
+      "作業内容の不透明さ"
+    ],
+    "en": [
+      "Suspiciously cheap ads",
+      "Refuses ID verification",
+      "Cash-only payment",
+      "Unclear work details"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "信頼できる業者を事前登録",
+      "複数見積もり取得",
+      "作業立ち会い徹底",
+      "鍵交換も検討"
+    ],
+    "en": [
+      "Pre-register trusted locksmiths",
+      "Get multiple quotes",
+      "Always supervise work",
+      "Consider lock replacement"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "cash"
+  ],
+  "legal_notes": {
+    "ja": "住居侵入罪・窃盗罪に該当。消費者契約法違反の可能性。",
+    "en": "Constitutes breaking and entering, theft. Violates consumer contract laws."
+  },
+  "references": [
+    {
+      "label": "国民生活センター：鍵開けサービスのトラブル",
+      "url": "https://www.kokusen.go.jp/"
+    },
+    {
+      "label": "警察庁：住宅侵入犯罪の防止",
+      "url": "https://www.npa.go.jp/bureau/safetylife/"
+    }
+  ],
+  "tags": [
+    "locksmith-fraud",
+    "physical-intrusion",
+    "emergency-exploitation",
+    "burglary"
+  ]
+}

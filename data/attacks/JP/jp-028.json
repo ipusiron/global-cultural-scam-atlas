@@ -1,0 +1,79 @@
+{
+  "id": "jp-028",
+  "title": {
+    "ja": "SNS型投資詐欺の共犯者勧誘",
+    "en": "SNS Investment Fraud Accomplice Recruitment"
+  },
+  "short_desc": {
+    "ja": "SNSで投資詐欺の出し子・受け子を募集。TAIT捜査3,582件。",
+    "en": "Recruit money mules for investment fraud via SNS. TAIT tracking 3,582 cases."
+  },
+  "cultural_lever": {
+    "ja": "投資ブーム・FOMO（機会損失恐怖）・集団心理・成功者への憧れ",
+    "en": "Investment boom, FOMO, group psychology, and admiration for success"
+  },
+  "attack_vector": [
+    "social"
+  ],
+  "targets": [
+    "student",
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) 投資成功体験をSNS投稿 2) DM勧誘 3) 口座貸しや現金受取依頼 4) マネーロンダリング加担",
+    "en": "1) Post fake success stories 2) DM recruitment 3) Request account lending 4) Money laundering involvement"
+  },
+  "red_flags": {
+    "ja": [
+      "簡単な作業で高報酬",
+      "口座や名義の貸し出し要求",
+      "現金や暗号資産の受取依頼",
+      "違法性の隠蔽"
+    ],
+    "en": [
+      "Easy work high pay",
+      "Account lending requests",
+      "Cash/crypto receiving tasks",
+      "Concealing illegality"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "口座貸しは犯罪",
+      "投資話は金融庁確認",
+      "匿名取引の拒否",
+      "不審な勧誘は通報"
+    ],
+    "en": [
+      "Account lending is criminal",
+      "Verify with FSA",
+      "Refuse anonymous transactions",
+      "Report suspicious recruitment"
+    ]
+  },
+  "risk_score": 5,
+  "mediums": [
+    "bank-transfer",
+    "cryptocurrency"
+  ],
+  "legal_notes": {
+    "ja": "犯罪収益移転防止法違反。特殊詐欺連合捜査班が全国展開。",
+    "en": "Violates anti-money laundering laws. National TAIT task force deployed."
+  },
+  "references": [
+    {
+      "label": "警察庁：SNS型投資・ロマンス詐欺",
+      "url": "https://www.npa.go.jp/bureau/criminal/souni/tokusyusagi/"
+    },
+    {
+      "label": "金融庁：投資詐欺に関する注意喚起",
+      "url": "https://www.fsa.go.jp/ordinary/chuui/"
+    }
+  ],
+  "tags": [
+    "investment-fraud",
+    "money-mule",
+    "SNS-recruitment",
+    "organized-crime"
+  ]
+}
