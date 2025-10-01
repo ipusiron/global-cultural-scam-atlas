@@ -25,7 +25,7 @@ const i18n = {
     'modal.references': 'References',
     'footer.github': '🔗 GitHubリポジトリはこちら（',
     'footer.github_close': '）',
-    'card.details': '詳細 / Details',
+    'card.details': '詳細',
     'tooltip.json': '集約された攻撃事例データベース（JSON形式）をダウンロード'
   },
   en: {
@@ -73,6 +73,7 @@ const els = {
   resultCount: document.getElementById('resultCount'),
   dlg: document.getElementById('detailDialog'),
   dlgTitle: document.getElementById('dlgTitle'),
+  dlgId: document.getElementById('dlgId'),
   dlgCountry: document.getElementById('dlgCountry'),
   dlgVector: document.getElementById('dlgVector'),
   dlgTargets: document.getElementById('dlgTargets'),
@@ -309,6 +310,7 @@ function renderCard({country, atk, tTitle, tShort}){
 
 function openDetail(country, atk){
   els.dlgTitle.textContent = pickLang(atk.title);
+  els.dlgId.textContent = atk.id || '';
   els.dlgCountry.textContent = `${country.country_code} / ${state.locale==='ja'?country.country_name_local:country.country_name_en}`;
   els.dlgVector.textContent = (atk.attack_vector||[]).join(', ');
   els.dlgTargets.textContent = (atk.targets||[]).join(', ');

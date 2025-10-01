@@ -497,79 +497,6 @@
             "expat"
           ],
           "scenario": {
-            "ja": "1) 未注文品が届く → 2) 請求・返品送料の要求 → 3) 督促",
-            "en": "1) Unordered package → 2) Demand payment/return fee → 3) Persistent dunning"
-          },
-          "red_flags": {
-            "ja": [
-              "注文履歴なし",
-              "販売者情報が不明確",
-              "強い督促"
-            ],
-            "en": [
-              "No order history",
-              "Vague seller info",
-              "Aggressive dunning"
-            ]
-          },
-          "mitigations": {
-            "ja": [
-              "特商法の規定を確認",
-              "受領拒否・無視/通報",
-              "消費生活センター相談"
-            ],
-            "en": [
-              "Check legal rules",
-              "Refuse/ignore/report",
-              "Consult consumer centers"
-            ]
-          },
-          "risk_score": 2,
-          "mediums": [
-            "postal",
-            "cash",
-            "bank-transfer"
-          ],
-          "legal_notes": {
-            "ja": "特定商取引法の規定により、売買契約がない場合は受領拒否可。",
-            "en": "Under Japanese law, refusal/disposal allowed in certain cases."
-          },
-          "references": [
-            {
-              "label": "消費者庁：送り付け商法（ネガティブ・オプション）",
-              "url": "https://www.no-trouble.caa.go.jp/qa/negativeoption.html"
-            }
-          ],
-          "tags": [
-            "negative-option",
-            "postal",
-            "consumer-law"
-          ]
-        },
-        {
-          "id": "jp-006",
-          "title": {
-            "ja": "送り付け商法（ネガティブ・オプション）",
-            "en": "Negative Option Scam (Unordered Goods Delivery)"
-          },
-          "short_desc": {
-            "ja": "注文していない商品が届き、代金請求や返品送料を迫られる。特商法の規定対象。",
-            "en": "Unordered goods are delivered; scammers demand payment or return shipping."
-          },
-          "cultural_lever": {
-            "ja": "受取辞退・返品を巡る遠慮や体面、相手に迷惑をかけたくない心理",
-            "en": "Reluctance to refuse/return and desire to avoid causing trouble"
-          },
-          "attack_vector": [
-            "postal",
-            "phone"
-          ],
-          "targets": [
-            "elder",
-            "general",
-            "expat"
-          ],
-          "scenario": {
             "ja": "1) 未注文品が一方的に届く → 2) 請求書や電話で支払い/返品送料を要求 → 3) 支払うまで督促",
             "en": "1) Unordered package arrives → 2) Invoice/calls demand payment or return shipping → 3) Persistent dunning"
           },
@@ -1336,7 +1263,7 @@
               "Donate via official sites"
             ]
           },
-          "risk_score": 2,
+          "risk_score": 1,
           "mediums": [
             "cash",
             "e-wallet"
@@ -1654,6 +1581,799 @@
             "disaster-pretext",
             "social",
             "urgency"
+          ]
+        },
+        {
+          "id": "jp-021",
+          "title": {
+            "ja": "送り付け商法（ネガティブ・オプション）",
+            "en": "Negative Option Scam (Unordered Goods Delivery)"
+          },
+          "short_desc": {
+            "ja": "注文していない商品が届き、代金請求や返品送料を迫られる。特商法の規定対象。",
+            "en": "Unordered goods are delivered; scammers demand payment or return shipping."
+          },
+          "cultural_lever": {
+            "ja": "受取辞退・返品を巡る遠慮や体面、相手に迷惑をかけたくない心理",
+            "en": "Reluctance to refuse/return and desire to avoid causing trouble"
+          },
+          "attack_vector": [
+            "postal",
+            "phone"
+          ],
+          "targets": [
+            "elder",
+            "general",
+            "expat"
+          ],
+          "scenario": {
+            "ja": "1) 未注文品が届く → 2) 請求・返品送料の要求 → 3) 督促",
+            "en": "1) Unordered package → 2) Demand payment/return fee → 3) Persistent dunning"
+          },
+          "red_flags": {
+            "ja": [
+              "注文履歴なし",
+              "販売者情報が不明確",
+              "強い督促"
+            ],
+            "en": [
+              "No order history",
+              "Vague seller info",
+              "Aggressive dunning"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "特商法の規定を確認",
+              "受領拒否・無視/通報",
+              "消費生活センター相談"
+            ],
+            "en": [
+              "Check legal rules",
+              "Refuse/ignore/report",
+              "Consult consumer centers"
+            ]
+          },
+          "risk_score": 2,
+          "mediums": [
+            "postal",
+            "cash",
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "特定商取引法の規定により、売買契約がない場合は受領拒否可。",
+            "en": "Under Japanese law, refusal/disposal allowed in certain cases."
+          },
+          "references": [
+            {
+              "label": "消費者庁：送り付け商法（ネガティブ・オプション）",
+              "url": "https://www.no-trouble.caa.go.jp/qa/negativeoption.html"
+            }
+          ],
+          "tags": [
+            "negative-option",
+            "postal",
+            "consumer-law"
+          ]
+        },
+        {
+          "id": "jp-022",
+          "title": {
+            "ja": "闇バイト勧誘詐欺",
+            "en": "Illegal Part-time Job (Yami-Baito) Recruitment Scam"
+          },
+          "short_desc": {
+            "ja": "SNSで高額報酬を餌に若者を犯罪実行役に勧誘。2024年被害額718億円超。",
+            "en": "Recruits youth via SNS for crime with high pay promises. Over 71.8B yen damage in 2024."
+          },
+          "cultural_lever": {
+            "ja": "経済的困窮・簡単に稼げる仕事への憧れ・匿名性への過信",
+            "en": "Economic hardship, desire for easy money, and overconfidence in anonymity"
+          },
+          "attack_vector": [
+            "social",
+            "phone"
+          ],
+          "targets": [
+            "student",
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) SNSで「高額・即日即金・ホワイト案件」募集 2) テレグラム等へ誘導 3) 個人情報取得 4) 犯罪実行強要・脅迫",
+            "en": "1) SNS ads for 'high pay, instant cash' 2) Move to Telegram 3) Collect personal info 4) Force criminal acts"
+          },
+          "red_flags": {
+            "ja": [
+              "仕事内容が不明確",
+              "異常に高額な報酬",
+              "匿名アプリへの誘導",
+              "身分証の写真要求"
+            ],
+            "en": [
+              "Vague job description",
+              "Abnormally high pay",
+              "Move to anonymous apps",
+              "ID photo requests"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "正規の求人サイト利用",
+              "匿名アプリでの連絡拒否",
+              "警察へ即座に相談",
+              "個人情報提供前に確認"
+            ],
+            "en": [
+              "Use legitimate job sites",
+              "Refuse anonymous app communication",
+              "Consult police immediately",
+              "Verify before sharing personal info"
+            ]
+          },
+          "risk_score": 5,
+          "mediums": [
+            "cash",
+            "cryptocurrency"
+          ],
+          "legal_notes": {
+            "ja": "特殊詐欺の実行犯は重罪。令和6年検挙6,576件。",
+            "en": "Participating in special fraud is a serious crime. 6,576 arrests in 2024."
+          },
+          "references": [
+            {
+              "label": "警察庁：闇バイトの危険性",
+              "url": "https://www.npa.go.jp/bureau/safetylife/yamibaito/hanzaishaboshu.html"
+            },
+            {
+              "label": "警察庁：令和6年特殊詐欺統計",
+              "url": "https://www.npa.go.jp/bureau/criminal/souni/tokusyusagi/hurikomesagi_toukei2024.pdf"
+            }
+          ],
+          "tags": [
+            "yami-baito",
+            "recruitment",
+            "organized-crime",
+            "youth-exploitation"
+          ]
+        },
+        {
+          "id": "jp-023",
+          "title": {
+            "ja": "AIディープフェイク音声詐欺",
+            "en": "AI Deepfake Voice Fraud"
+          },
+          "short_desc": {
+            "ja": "3-5秒の音声から85%精度で声を複製。2024-25年で50社20億円超被害。",
+            "en": "85% accurate voice cloning from 3-5 seconds. 50 companies lost 2B+ yen in 2024-25."
+          },
+          "cultural_lever": {
+            "ja": "上司や家族の声への無条件の信頼・緊急時の判断力低下",
+            "en": "Unconditional trust in familiar voices and reduced judgment under urgency"
+          },
+          "attack_vector": [
+            "phone",
+            "social"
+          ],
+          "targets": [
+            "business",
+            "elderly",
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) SNS等から音声サンプル収集 2) AI音声合成 3) 緊急事態を装い電話 4) 送金指示や情報要求",
+            "en": "1) Collect voice samples from SNS 2) AI voice synthesis 3) Call with emergency pretext 4) Request money transfer"
+          },
+          "red_flags": {
+            "ja": [
+              "声質に微妙な違和感",
+              "緊急送金の要求",
+              "普段と異なる連絡先",
+              "本人確認の拒否"
+            ],
+            "en": [
+              "Subtle voice quality issues",
+              "Urgent transfer requests",
+              "Unusual contact methods",
+              "Refuses verification"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "事前の合言葉設定",
+              "ビデオ通話で確認",
+              "別ルートで本人確認",
+              "送金前の冷静な判断"
+            ],
+            "en": [
+              "Set family passwords",
+              "Verify via video call",
+              "Confirm through other channels",
+              "Pause before transferring"
+            ]
+          },
+          "risk_score": 5,
+          "mediums": [
+            "bank-transfer",
+            "cryptocurrency"
+          ],
+          "legal_notes": {
+            "ja": "企業の法人口座を標的に数億円規模の被害が発生。",
+            "en": "Corporate accounts targeted with hundreds of millions in losses."
+          },
+          "references": [
+            {
+              "label": "Google Cloud：AI音声なりすまし脅威",
+              "url": "https://cloud.google.com/blog/ja/topics/threat-intelligence/ai-powered-voice-spoofing-vishing-attacks"
+            },
+            {
+              "label": "トレンドマイクロ：ディープフェイク実態調査2024",
+              "url": "https://www.trendmicro.com/ja_jp/jp-security/24/g/securitytrend-20240703-02.html"
+            }
+          ],
+          "tags": [
+            "deepfake",
+            "AI-fraud",
+            "voice-cloning",
+            "impersonation"
+          ]
+        },
+        {
+          "id": "jp-024",
+          "title": {
+            "ja": "ビッシング（音声フィッシング）",
+            "en": "Vishing (Voice Phishing)"
+          },
+          "short_desc": {
+            "ja": "自動音声システムで銀行を装い口座情報詐取。2024年後半で442%増加。",
+            "en": "Automated voice systems impersonate banks. 442% surge in late 2024."
+          },
+          "cultural_lever": {
+            "ja": "金融機関への信頼・自動音声への慣れ・セキュリティ意識の過信",
+            "en": "Trust in financial institutions and overconfidence in security awareness"
+          },
+          "attack_vector": [
+            "phone"
+          ],
+          "targets": [
+            "elderly",
+            "business",
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 銀行名乗る自動音声着信 2) 不正利用の虚偽警告 3) 暗証番号入力誘導 4) 口座情報窃取・不正送金",
+            "en": "1) Auto-call claiming bank 2) False fraud alert 3) PIN entry prompt 4) Account theft and transfer"
+          },
+          "red_flags": {
+            "ja": [
+              "着信での暗証番号要求",
+              "自動音声での緊急連絡",
+              "プッシュ番号での情報入力",
+              "折り返し電話の拒否"
+            ],
+            "en": [
+              "PIN requests on incoming calls",
+              "Automated emergency calls",
+              "Keypad info entry requests",
+              "Refuses callback verification"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "銀行は着信で暗証番号要求しない",
+              "公式番号へ折り返し",
+              "自動音声での入力拒否",
+              "口座の定期確認"
+            ],
+            "en": [
+              "Banks never ask PIN on calls",
+              "Call back official numbers",
+              "Never enter info via keypad",
+              "Regular account monitoring"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "bank-transfer",
+            "credit"
+          ],
+          "legal_notes": {
+            "ja": "法人口座を標的に数億円規模の被害が継続発生中。",
+            "en": "Corporate accounts continuously targeted with massive losses."
+          },
+          "references": [
+            {
+              "label": "金融庁：フィッシング詐欺に関する注意喚起",
+              "url": "https://www.fsa.go.jp/ordinary/internet-bank/index.html"
+            },
+            {
+              "label": "全国銀行協会：振り込め詐欺等の対策",
+              "url": "https://www.zenginkyo.or.jp/hanzai/"
+            }
+          ],
+          "tags": [
+            "vishing",
+            "voice-phishing",
+            "automated-fraud",
+            "banking"
+          ]
+        },
+        {
+          "id": "jp-025",
+          "title": {
+            "ja": "トラッシング（ゴミ漁り）情報窃取",
+            "en": "Trashing (Dumpster Diving) Information Theft"
+          },
+          "short_desc": {
+            "ja": "物理的ゴミから機密情報を収集し、なりすましや恐喝に利用。",
+            "en": "Collect confidential data from physical garbage for impersonation and extortion."
+          },
+          "cultural_lever": {
+            "ja": "ゴミ分別の厳格さ・プライバシー意識の低さ・物理セキュリティの軽視",
+            "en": "Strict garbage sorting culture and underestimation of physical security"
+          },
+          "attack_vector": [
+            "in-person"
+          ],
+          "targets": [
+            "business",
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 企業・個人宅のゴミを物色 2) 請求書・名簿・メモ等収集 3) 情報を元になりすまし 4) 詐欺や恐喝に利用",
+            "en": "1) Search company/home garbage 2) Collect bills/lists/notes 3) Impersonate using info 4) Use for fraud"
+          },
+          "red_flags": {
+            "ja": [
+              "ゴミ収集日以外の物色",
+              "不審者のゴミ袋持ち去り",
+              "個人情報の不正利用",
+              "知らない請求や連絡"
+            ],
+            "en": [
+              "Garbage searching off-schedule",
+              "Suspicious garbage removal",
+              "Unauthorized info usage",
+              "Unknown bills or contacts"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "シュレッダー処理徹底",
+              "機密文書の溶解処理",
+              "個人情報の墨塗り",
+              "セキュリティ業者利用"
+            ],
+            "en": [
+              "Thorough shredding",
+              "Dissolve confidential docs",
+              "Blackout personal info",
+              "Use security services"
+            ]
+          },
+          "risk_score": 3,
+          "mediums": [
+            "cash",
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "廃棄物処理法・個人情報保護法に関連する違法行為。",
+            "en": "Violates waste management and personal information protection laws."
+          },
+          "references": [
+            {
+              "label": "IPA：物理的セキュリティ対策",
+              "url": "https://www.ipa.go.jp/security/10threats/10threats2024.html"
+            },
+            {
+              "label": "NISC：サイバーセキュリティ2024",
+              "url": "https://www.nisc.go.jp/pdf/policy/kihon-s/cs2024.pdf"
+            }
+          ],
+          "tags": [
+            "trashing",
+            "physical-security",
+            "dumpster-diving",
+            "information-theft"
+          ]
+        },
+        {
+          "id": "jp-026",
+          "title": {
+            "ja": "偽鍵業者による物理侵入",
+            "en": "Fake Locksmith Physical Intrusion"
+          },
+          "short_desc": {
+            "ja": "緊急開錠を装い高額請求や、合鍵作成で後日侵入・窃盗。",
+            "en": "Overcharge for emergency unlocking or create duplicate keys for later burglary."
+          },
+          "cultural_lever": {
+            "ja": "緊急時の判断力低下・業者への盲目的信頼・トラブル回避志向",
+            "en": "Reduced judgment in emergencies and blind trust in service providers"
+          },
+          "attack_vector": [
+            "phone",
+            "in-person"
+          ],
+          "targets": [
+            "elderly",
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) ネット広告で集客 2) 緊急出張で高額請求 3) 合鍵を密かに作成 4) 後日侵入して窃盗",
+            "en": "1) Attract via online ads 2) Emergency visit overcharge 3) Secretly make duplicate 4) Later burglary"
+          },
+          "red_flags": {
+            "ja": [
+              "異常に安い広告価格",
+              "身分証明の拒否",
+              "現金のみの支払い要求",
+              "作業内容の不透明さ"
+            ],
+            "en": [
+              "Suspiciously cheap ads",
+              "Refuses ID verification",
+              "Cash-only payment",
+              "Unclear work details"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "信頼できる業者を事前登録",
+              "複数見積もり取得",
+              "作業立ち会い徹底",
+              "鍵交換も検討"
+            ],
+            "en": [
+              "Pre-register trusted locksmiths",
+              "Get multiple quotes",
+              "Always supervise work",
+              "Consider lock replacement"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "cash"
+          ],
+          "legal_notes": {
+            "ja": "住居侵入罪・窃盗罪に該当。消費者契約法違反の可能性。",
+            "en": "Constitutes breaking and entering, theft. Violates consumer contract laws."
+          },
+          "references": [
+            {
+              "label": "国民生活センター：鍵開けサービスのトラブル",
+              "url": "https://www.kokusen.go.jp/"
+            },
+            {
+              "label": "警察庁：住宅侵入犯罪の防止",
+              "url": "https://www.npa.go.jp/bureau/safetylife/"
+            }
+          ],
+          "tags": [
+            "locksmith-fraud",
+            "physical-intrusion",
+            "emergency-exploitation",
+            "burglary"
+          ]
+        },
+        {
+          "id": "jp-027",
+          "title": {
+            "ja": "AI生成偽動画による恐喝",
+            "en": "AI-Generated Deepfake Video Blackmail"
+          },
+          "short_desc": {
+            "ja": "68%が本物と見分け困難なディープフェイク動画で脅迫。2024年被害急増。",
+            "en": "Blackmail using deepfakes 68% indistinguishable from real. Surging in 2024."
+          },
+          "cultural_lever": {
+            "ja": "体面重視・スキャンダル回避・内密解決志向・羞恥心の強さ",
+            "en": "Face-saving culture, scandal avoidance, and preference for private resolution"
+          },
+          "attack_vector": [
+            "email",
+            "social"
+          ],
+          "targets": [
+            "business",
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) SNSから顔写真収集 2) AI偽動画生成 3) 不適切な内容で脅迫 4) 口止め料要求",
+            "en": "1) Collect photos from SNS 2) Generate fake videos 3) Threaten with inappropriate content 4) Demand hush money"
+          },
+          "red_flags": {
+            "ja": [
+              "身に覚えのない動画",
+              "顔と体の違和感",
+              "暗号資産での支払い要求",
+              "短期間での決断強要"
+            ],
+            "en": [
+              "Unknown video content",
+              "Face/body mismatches",
+              "Cryptocurrency payment demands",
+              "Rushed decision pressure"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "即座に警察相談",
+              "支払い拒否",
+              "SNS公開情報の制限",
+              "ディープフェイク検出ツール利用"
+            ],
+            "en": [
+              "Consult police immediately",
+              "Never pay blackmail",
+              "Limit SNS public info",
+              "Use deepfake detection tools"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "cryptocurrency",
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "名誉毀損・恐喝罪に該当。AI偽造物への法整備進行中。",
+            "en": "Constitutes defamation and extortion. AI forgery laws under development."
+          },
+          "references": [
+            {
+              "label": "総務省：偽・誤情報の流通対策",
+              "url": "https://www.soumu.go.jp/johotsusintokei/whitepaper/ja/r06/html/nd141210.html"
+            },
+            {
+              "label": "トレンドマイクロ：ディープフェイクを悪用した攻撃",
+              "url": "https://www.trendmicro.com/ja_jp/research/25/g/deepfake-it-til-you-make-it.html"
+            }
+          ],
+          "tags": [
+            "deepfake",
+            "blackmail",
+            "AI-generated",
+            "sextortion"
+          ]
+        },
+        {
+          "id": "jp-028",
+          "title": {
+            "ja": "SNS型投資詐欺の共犯者勧誘",
+            "en": "SNS Investment Fraud Accomplice Recruitment"
+          },
+          "short_desc": {
+            "ja": "SNSで投資詐欺の出し子・受け子を募集。TAIT捜査3,582件。",
+            "en": "Recruit money mules for investment fraud via SNS. TAIT tracking 3,582 cases."
+          },
+          "cultural_lever": {
+            "ja": "投資ブーム・FOMO（機会損失恐怖）・集団心理・成功者への憧れ",
+            "en": "Investment boom, FOMO, group psychology, and admiration for success"
+          },
+          "attack_vector": [
+            "social"
+          ],
+          "targets": [
+            "student",
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 投資成功体験をSNS投稿 2) DM勧誘 3) 口座貸しや現金受取依頼 4) マネーロンダリング加担",
+            "en": "1) Post fake success stories 2) DM recruitment 3) Request account lending 4) Money laundering involvement"
+          },
+          "red_flags": {
+            "ja": [
+              "簡単な作業で高報酬",
+              "口座や名義の貸し出し要求",
+              "現金や暗号資産の受取依頼",
+              "違法性の隠蔽"
+            ],
+            "en": [
+              "Easy work high pay",
+              "Account lending requests",
+              "Cash/crypto receiving tasks",
+              "Concealing illegality"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "口座貸しは犯罪",
+              "投資話は金融庁確認",
+              "匿名取引の拒否",
+              "不審な勧誘は通報"
+            ],
+            "en": [
+              "Account lending is criminal",
+              "Verify with FSA",
+              "Refuse anonymous transactions",
+              "Report suspicious recruitment"
+            ]
+          },
+          "risk_score": 5,
+          "mediums": [
+            "bank-transfer",
+            "cryptocurrency"
+          ],
+          "legal_notes": {
+            "ja": "犯罪収益移転防止法違反。特殊詐欺連合捜査班が全国展開。",
+            "en": "Violates anti-money laundering laws. National TAIT task force deployed."
+          },
+          "references": [
+            {
+              "label": "警察庁：SNS型投資・ロマンス詐欺",
+              "url": "https://www.npa.go.jp/bureau/criminal/souni/tokusyusagi/"
+            },
+            {
+              "label": "金融庁：投資詐欺に関する注意喚起",
+              "url": "https://www.fsa.go.jp/ordinary/chuui/"
+            }
+          ],
+          "tags": [
+            "investment-fraud",
+            "money-mule",
+            "SNS-recruitment",
+            "organized-crime"
+          ]
+        },
+        {
+          "id": "jp-029",
+          "title": {
+            "ja": "偽セキュリティ監査員による侵入",
+            "en": "Fake Security Auditor Physical Intrusion"
+          },
+          "short_desc": {
+            "ja": "セキュリティ監査や点検を装い、企業に物理侵入して情報窃取。",
+            "en": "Impersonate security auditors for physical access to steal corporate data."
+          },
+          "cultural_lever": {
+            "ja": "権威への従順・専門家信頼・コンプライアンス重視・対立回避",
+            "en": "Authority compliance, expert trust, and conflict avoidance"
+          },
+          "attack_vector": [
+            "in-person",
+            "phone"
+          ],
+          "targets": [
+            "business"
+          ],
+          "scenario": {
+            "ja": "1) 事前調査で企業情報収集 2) 監査員を装い訪問 3) サーバー室等へアクセス 4) USBやカメラで情報窃取",
+            "en": "1) Research company info 2) Visit as auditor 3) Access server rooms 4) Steal data via USB/camera"
+          },
+          "red_flags": {
+            "ja": [
+              "事前連絡なしの訪問",
+              "身分証明が曖昧",
+              "過度な情報要求",
+              "単独行動の要求"
+            ],
+            "en": [
+              "Unscheduled visits",
+              "Vague credentials",
+              "Excessive info requests",
+              "Request to work alone"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "訪問者の事前確認徹底",
+              "エスコート制度導入",
+              "監査会社へ直接確認",
+              "重要エリアへの入室記録"
+            ],
+            "en": [
+              "Verify all visitors",
+              "Implement escort policy",
+              "Confirm with audit company",
+              "Log critical area access"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "cash"
+          ],
+          "legal_notes": {
+            "ja": "建造物侵入罪・不正アクセス禁止法違反・営業秘密侵害。",
+            "en": "Trespassing, unauthorized access, and trade secret theft."
+          },
+          "references": [
+            {
+              "label": "IPA：標的型攻撃対策",
+              "url": "https://www.ipa.go.jp/security/10threats/10threats2024.html"
+            },
+            {
+              "label": "NISC：重要インフラのサイバーセキュリティ",
+              "url": "https://www.nisc.go.jp/pdf/policy/infra/infra_rt4.pdf"
+            }
+          ],
+          "tags": [
+            "physical-intrusion",
+            "impersonation",
+            "corporate-espionage",
+            "social-engineering"
+          ]
+        },
+        {
+          "id": "jp-030",
+          "title": {
+            "ja": "ハイブリッド型複合詐欺",
+            "en": "Hybrid Multi-Vector Fraud"
+          },
+          "short_desc": {
+            "ja": "デジタルと物理的手法を組み合わせた段階的な複合攻撃。",
+            "en": "Sequential attacks combining digital and physical tactics."
+          },
+          "cultural_lever": {
+            "ja": "段階的な信頼構築への弱さ・既成事実への従順・沈没費用の誤謬",
+            "en": "Vulnerability to gradual trust building and sunk cost fallacy"
+          },
+          "attack_vector": [
+            "social",
+            "phone",
+            "email",
+            "in-person"
+          ],
+          "targets": [
+            "elderly",
+            "business",
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) SNSで関係構築 2) フィッシングで情報収集 3) AI音声で本人装い 4) 物理的接触で最終詐取",
+            "en": "1) Build SNS relationship 2) Phishing for info 3) AI voice impersonation 4) Physical contact for final theft"
+          },
+          "red_flags": {
+            "ja": [
+              "複数経路からの接触",
+              "段階的な要求エスカレート",
+              "異なる手法の連続使用",
+              "時間をかけた信頼構築"
+            ],
+            "en": [
+              "Multi-channel contact",
+              "Escalating requests",
+              "Sequential different tactics",
+              "Long-term trust building"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "全接触履歴の記録",
+              "第三者への相談",
+              "段階的要求への警戒",
+              "複合的な検証実施"
+            ],
+            "en": [
+              "Document all contacts",
+              "Consult third parties",
+              "Beware escalating requests",
+              "Multi-factor verification"
+            ]
+          },
+          "risk_score": 5,
+          "mediums": [
+            "bank-transfer",
+            "cryptocurrency",
+            "cash"
+          ],
+          "legal_notes": {
+            "ja": "組織犯罪処罰法・複数の刑法違反が複合的に適用。",
+            "en": "Organized crime laws and multiple criminal codes apply."
+          },
+          "references": [
+            {
+              "label": "警察庁：サイバー空間の脅威情勢",
+              "url": "https://www.npa.go.jp/publications/statistics/cybersecurity/"
+            },
+            {
+              "label": "NISC：サイバーセキュリティ2024",
+              "url": "https://www.nisc.go.jp/pdf/policy/kihon-s/cs2024.pdf"
+            }
+          ],
+          "tags": [
+            "hybrid-attack",
+            "multi-vector",
+            "advanced-persistent",
+            "combined-tactics"
           ]
         }
       ]
