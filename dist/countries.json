@@ -1,16 +1,19 @@
 {
   "version": "1.0.0",
-  "last_updated": "2025-09-30",
+  "last_updated": "2025-10-01",
   "countries": [
     {
       "country_code": "IN",
-      "country_name_local": "IN",
-      "country_name_en": "IN",
-      "regions": [],
+      "country_name_local": "भारत",
+      "country_name_en": "India",
+      "regions": [
+        "APAC"
+      ],
       "language_codes": [
+        "hi",
         "en"
       ],
-      "notes": "",
+      "notes": "Educational use; does not generalize culture.",
       "attacks": [
         {
           "id": "in-001",
@@ -494,6 +497,79 @@
             "expat"
           ],
           "scenario": {
+            "ja": "1) 未注文品が届く → 2) 請求・返品送料の要求 → 3) 督促",
+            "en": "1) Unordered package → 2) Demand payment/return fee → 3) Persistent dunning"
+          },
+          "red_flags": {
+            "ja": [
+              "注文履歴なし",
+              "販売者情報が不明確",
+              "強い督促"
+            ],
+            "en": [
+              "No order history",
+              "Vague seller info",
+              "Aggressive dunning"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "特商法の規定を確認",
+              "受領拒否・無視/通報",
+              "消費生活センター相談"
+            ],
+            "en": [
+              "Check legal rules",
+              "Refuse/ignore/report",
+              "Consult consumer centers"
+            ]
+          },
+          "risk_score": 2,
+          "mediums": [
+            "postal",
+            "cash",
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "特定商取引法の規定により、売買契約がない場合は受領拒否可。",
+            "en": "Under Japanese law, refusal/disposal allowed in certain cases."
+          },
+          "references": [
+            {
+              "label": "消費者庁：送り付け商法（ネガティブ・オプション）",
+              "url": "https://www.no-trouble.caa.go.jp/qa/negativeoption.html"
+            }
+          ],
+          "tags": [
+            "negative-option",
+            "postal",
+            "consumer-law"
+          ]
+        },
+        {
+          "id": "jp-006",
+          "title": {
+            "ja": "送り付け商法（ネガティブ・オプション）",
+            "en": "Negative Option Scam (Unordered Goods Delivery)"
+          },
+          "short_desc": {
+            "ja": "注文していない商品が届き、代金請求や返品送料を迫られる。特商法の規定対象。",
+            "en": "Unordered goods are delivered; scammers demand payment or return shipping."
+          },
+          "cultural_lever": {
+            "ja": "受取辞退・返品を巡る遠慮や体面、相手に迷惑をかけたくない心理",
+            "en": "Reluctance to refuse/return and desire to avoid causing trouble"
+          },
+          "attack_vector": [
+            "postal",
+            "phone"
+          ],
+          "targets": [
+            "elder",
+            "general",
+            "expat"
+          ],
+          "scenario": {
             "ja": "1) 未注文品が一方的に届く → 2) 請求書や電話で支払い/返品送料を要求 → 3) 支払うまで督促",
             "en": "1) Unordered package arrives → 2) Invoice/calls demand payment or return shipping → 3) Persistent dunning"
           },
@@ -546,6 +622,1038 @@
             "postal",
             "fake-fee",
             "consumer-law"
+          ]
+        },
+        {
+          "id": "jp-007",
+          "title": {
+            "ja": "オレオレ詐欺（家族装い・緊急費用）",
+            "en": "It's-me Scam (Family Impersonation Emergency)"
+          },
+          "short_desc": {
+            "ja": "家族を装い、事故・トラブルを口実に至急の送金を迫る。",
+            "en": "Impersonates a family member, urging urgent payments for 'accidents' or trouble."
+          },
+          "cultural_lever": {
+            "ja": "家族への責任感・孝行心・恥の回避",
+            "en": "Strong family duty, filial piety, and shame avoidance"
+          },
+          "attack_vector": [
+            "phone",
+            "sms"
+          ],
+          "targets": [
+            "elder",
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 『オレだよ』で接近 → 2) 緊急費用の名目提示 → 3) 振込/現金手渡しを要求",
+            "en": "1) 'It's me' approach → 2) Urgent expense pretext → 3) Wire/cash handover"
+          },
+          "red_flags": {
+            "ja": [
+              "声が違う理由を述べる（風邪等）",
+              "秘密厳守を求める",
+              "至急の送金要求"
+            ],
+            "en": [
+              "Excuses for voice difference",
+              "Demands secrecy",
+              "Urgent payment request"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "家族の既知番号へ折返し確認",
+              "第三者と共有",
+              "送金前に必ず本人確認"
+            ],
+            "en": [
+              "Call known numbers to verify",
+              "Consult third parties",
+              "Verify identity before paying"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "bank-transfer",
+            "cash",
+            "gift-card"
+          ],
+          "legal_notes": {
+            "ja": "",
+            "en": ""
+          },
+          "references": [
+            {
+              "label": "警察庁：特殊詐欺対策（SOS47）",
+              "url": "https://www.npa.go.jp/bureau/safetylife/sos47/"
+            }
+          ],
+          "tags": [
+            "family-emergency",
+            "urgency",
+            "phone",
+            "authority-pretext"
+          ]
+        },
+        {
+          "id": "jp-008",
+          "title": {
+            "ja": "偽テックサポート詐欺（ポップアップ→電話）",
+            "en": "Fake Tech Support (Pop-up to Phone Call)"
+          },
+          "short_desc": {
+            "ja": "警告ポップアップや通知で不安を煽り、電話や遠隔操作、有料サポートへ誘導。",
+            "en": "Scare pop-ups push calls, remote access, and paid support subscriptions."
+          },
+          "cultural_lever": {
+            "ja": "専門家・サポートへの信頼",
+            "en": "Trust in professional support"
+          },
+          "attack_vector": [
+            "website",
+            "phone",
+            "email"
+          ],
+          "targets": [
+            "general",
+            "elder"
+          ],
+          "scenario": {
+            "ja": "1) 偽警告表示 → 2) 指定番号へ電話 → 3) 遠隔操作許可 → 4) 有料契約/決済",
+            "en": "1) Fake alert → 2) Call number → 3) Grant remote access → 4) Pay for bogus fixes"
+          },
+          "red_flags": {
+            "ja": [
+              "今すぐ電話/クリックの誘導",
+              "リモート接続を要求",
+              "ギフトカードでの支払い要求"
+            ],
+            "en": [
+              "Call/click now pressure",
+              "Requests remote access",
+              "Asks gift card payments"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "公式窓口は自分で検索",
+              "リモートは拒否",
+              "決済前に家族/知人へ相談"
+            ],
+            "en": [
+              "Find official contacts yourself",
+              "Decline remote access",
+              "Consult before payment"
+            ]
+          },
+          "risk_score": 3,
+          "mediums": [
+            "credit",
+            "gift-card",
+            "e-wallet"
+          ],
+          "legal_notes": {
+            "ja": "",
+            "en": ""
+          },
+          "references": [
+            {
+              "label": "総務省 国民のための情報セキュリティサイト：不審な警告画面",
+              "url": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/security/"
+            },
+            {
+              "label": "フィッシング対策協議会",
+              "url": "https://www.antiphishing.jp/"
+            }
+          ],
+          "tags": [
+            "fake-tech-support",
+            "website",
+            "phone",
+            "urgency"
+          ]
+        },
+        {
+          "id": "jp-009",
+          "title": {
+            "ja": "宅配業者装い不在通知SMS（偽サイト誘導）",
+            "en": "Delivery Company Impersonation SMS (Fake Missed Delivery)"
+          },
+          "short_desc": {
+            "ja": "不在通知を装ったSMSで偽サイトへ誘導し、ID/カード情報を詐取。",
+            "en": "SMS 'missed delivery' links to a fake site to steal IDs/card data."
+          },
+          "cultural_lever": {
+            "ja": "時間厳守・受取責任感",
+            "en": "Punctuality and responsibility to receive parcels"
+          },
+          "attack_vector": [
+            "sms",
+            "website"
+          ],
+          "targets": [
+            "general",
+            "student",
+            "expat"
+          ],
+          "scenario": {
+            "ja": "1) 不在通知SMS → 2) 偽サイトで再配達設定名目 → 3) 個人/決済情報入力を誘導",
+            "en": "1) SMS → 2) Fake site 'reschedule' → 3) Collect personal/payment data"
+          },
+          "red_flags": {
+            "ja": [
+              "URLが公式と異なる",
+              "アプリ外のログイン/決済要求",
+              "短時間の認証催促"
+            ],
+            "en": [
+              "URL mismatch",
+              "Login/payment outside official app",
+              "Short-timed prompts"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "配送会社公式アプリ/サイトから確認",
+              "SMSリンクは開かない",
+              "不審なら公式窓口に照会"
+            ],
+            "en": [
+              "Use official app/site",
+              "Don't open SMS links",
+              "Contact official support"
+            ]
+          },
+          "risk_score": 3,
+          "mediums": [
+            "credit",
+            "e-wallet"
+          ],
+          "legal_notes": {
+            "ja": "",
+            "en": ""
+          },
+          "references": [
+            {
+              "label": "フィッシング対策協議会（宅配便不在連絡を装う手口）",
+              "url": "https://www.antiphishing.jp/"
+            }
+          ],
+          "tags": [
+            "delivery",
+            "sms",
+            "website",
+            "phishing"
+          ]
+        },
+        {
+          "id": "jp-010",
+          "title": {
+            "ja": "客引き・ぼったくりバー（観光地）",
+            "en": "Street Solicitation & Overcharging Bars (Tourist Areas)"
+          },
+          "short_desc": {
+            "ja": "親切に装い案内・割引を強調し入店させ、高額請求や退出困難に。",
+            "en": "Friendly guides push 'discounts', then overcharge or make leaving difficult."
+          },
+          "cultural_lever": {
+            "ja": "対立回避・断りづらさ・体面",
+            "en": "Conflict avoidance and reluctance to refuse"
+          },
+          "attack_vector": [
+            "in-person",
+            "street",
+            "door-to-door"
+          ],
+          "targets": [
+            "tourist",
+            "expat",
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 路上の声かけ → 2) 安さ/特典を強調し入店 → 3) 会計時に高額請求",
+            "en": "1) Street approach → 2) Highlight 'cheap/special' → 3) Overcharge at bill"
+          },
+          "red_flags": {
+            "ja": [
+              "メニュー/料金の不提示",
+              "入店前見積り拒否",
+              "出口での威圧"
+            ],
+            "en": [
+              "No menu/prices",
+              "Refuses quotes",
+              "Intimidation at exit"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "口コミ/公的情報で店選び",
+              "料金は入店前に確認",
+              "危険なら110番通報"
+            ],
+            "en": [
+              "Choose vetted venues",
+              "Confirm prices before entry",
+              "Call police if threatened"
+            ]
+          },
+          "risk_score": 3,
+          "mediums": [
+            "cash",
+            "credit"
+          ],
+          "legal_notes": {
+            "ja": "",
+            "en": ""
+          },
+          "references": [
+            {
+              "label": "東京都消費生活総合センター：繁華街の客引きトラブル",
+              "url": "https://www.shouhiseikatu.metro.tokyo.lg.jp/"
+            }
+          ],
+          "tags": [
+            "pressure-sales",
+            "tourism",
+            "street"
+          ]
+        },
+        {
+          "id": "jp-011",
+          "title": {
+            "ja": "フリマアプリ偽決済リンク詐欺",
+            "en": "Marketplace Fake Payment Link Scam"
+          },
+          "short_desc": {
+            "ja": "取引メッセージで偽サイトの支払いリンクを送り、決済情報を詐取。",
+            "en": "Sends fake payment links in chat to steal payment details."
+          },
+          "cultural_lever": {
+            "ja": "円滑な取引志向・相手への配慮",
+            "en": "Preference for smooth dealings and politeness"
+          },
+          "attack_vector": [
+            "marketplace",
+            "social",
+            "website"
+          ],
+          "targets": [
+            "general",
+            "student"
+          ],
+          "scenario": {
+            "ja": "1) 出品者/購入者を装い偽リンク送付 → 2) 外部サイトで決済入力 → 3) 情報窃取",
+            "en": "1) Impersonate buyer/seller → 2) External fake payment page → 3) Data theft"
+          },
+          "red_flags": {
+            "ja": [
+              "公式外URLでの決済誘導",
+              "急がせる/値引きちらつかせる",
+              "外部メッセンジャーへ誘導"
+            ],
+            "en": [
+              "Off-platform payment",
+              "Rushing/discount bait",
+              "Moving to external messenger"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "アプリ内決済以外は拒否",
+              "リンク先ドメイン確認",
+              "事務局に通報"
+            ],
+            "en": [
+              "Use in-app payments only",
+              "Verify domain",
+              "Report to platform"
+            ]
+          },
+          "risk_score": 3,
+          "mediums": [
+            "e-wallet",
+            "credit"
+          ],
+          "legal_notes": {
+            "ja": "",
+            "en": ""
+          },
+          "references": [
+            {
+              "label": "国民生活センター：フリマアプリのトラブル",
+              "url": "https://www.kokusen.go.jp/"
+            }
+          ],
+          "tags": [
+            "marketplace",
+            "phishing",
+            "social-engineering"
+          ]
+        },
+        {
+          "id": "jp-012",
+          "title": {
+            "ja": "チケット詐欺（SNS前払い・譲渡装い）",
+            "en": "Ticket Scam (SNS Prepayment & Fake Transfers)"
+          },
+          "short_desc": {
+            "ja": "入手困難なコンサート等のチケットを装い、前払い後に連絡が途絶える。",
+            "en": "Claims to sell rare event tickets; disappears after prepayment."
+          },
+          "cultural_lever": {
+            "ja": "行列・希少性への信頼、譲渡文化",
+            "en": "Trust in scarcity/queuing culture and transfers"
+          },
+          "attack_vector": [
+            "social",
+            "website"
+          ],
+          "targets": [
+            "general",
+            "student"
+          ],
+          "scenario": {
+            "ja": "1) SNSで募集/DM接触 → 2) 先払い依頼 → 3) 電子チケット送付偽装/音信不通",
+            "en": "1) SNS post/DM → 2) Ask prepayment → 3) Fake e-ticket or ghosting"
+          },
+          "red_flags": {
+            "ja": [
+              "相場より極端に安い",
+              "本人確認や実券提示を拒否",
+              "外部送金手段の指定"
+            ],
+            "en": [
+              "Too cheap",
+              "Refuses proof of ticket",
+              "Asks off-platform payment"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "公式リセール/認定プラットフォーム利用",
+              "前払いは避ける",
+              "身分証・購入履歴の提示を求める"
+            ],
+            "en": [
+              "Use official resale platforms",
+              "Avoid prepayment",
+              "Request ID/purchase proof"
+            ]
+          },
+          "risk_score": 3,
+          "mediums": [
+            "bank-transfer",
+            "e-wallet",
+            "crypto"
+          ],
+          "legal_notes": {
+            "ja": "",
+            "en": ""
+          },
+          "references": [
+            {
+              "label": "警視庁：チケット詐欺の注意喚起",
+              "url": "https://www.keishicho.metro.tokyo.lg.jp/"
+            }
+          ],
+          "tags": [
+            "ticket",
+            "social",
+            "prepayment",
+            "scarcity"
+          ]
+        },
+        {
+          "id": "jp-013",
+          "title": {
+            "ja": "闇両替・違法両替の持ちかけ（観光地）",
+            "en": "Informal Currency Exchange Approaches"
+          },
+          "short_desc": {
+            "ja": "路上での好条件両替を持ちかけ、偽札や過少返金などの被害。",
+            "en": "Street 'good-rate' exchanges leading to counterfeit notes or short-changing."
+          },
+          "cultural_lever": {
+            "ja": "面子・断りにくさ、親切の返報性",
+            "en": "Face-saving, reluctance to refuse, reciprocity"
+          },
+          "attack_vector": [
+            "in-person",
+            "street"
+          ],
+          "targets": [
+            "tourist",
+            "expat"
+          ],
+          "scenario": {
+            "ja": "1) 親切な声かけ → 2) 好条件を提示 → 3) 両替時に偽札/過少返金",
+            "en": "1) Friendly approach → 2) Offer great rate → 3) Counterfeit/short-change"
+          },
+          "red_flags": {
+            "ja": [
+              "公的両替所以外での取引",
+              "レシートなし",
+              "人目の少ない場所へ誘導"
+            ],
+            "en": [
+              "Non-official exchange",
+              "No receipt",
+              "Secluded locations"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "銀行/公的両替所のみ利用",
+              "受取額を場で確認",
+              "怪しければ断る"
+            ],
+            "en": [
+              "Use banks/official counters",
+              "Count on the spot",
+              "Decline if suspicious"
+            ]
+          },
+          "risk_score": 2,
+          "mediums": [
+            "cash"
+          ],
+          "legal_notes": {
+            "ja": "",
+            "en": ""
+          },
+          "references": [
+            {
+              "label": "観光庁：訪日旅行の安全情報",
+              "url": "https://www.mlit.go.jp/kankocho/"
+            }
+          ],
+          "tags": [
+            "tourism",
+            "street",
+            "cash"
+          ]
+        },
+        {
+          "id": "jp-014",
+          "title": {
+            "ja": "偽投資助言グループ（SNS/メッセージ誘導）",
+            "en": "Fake Investment Advisory Groups (SNS/Chat Lures)"
+          },
+          "short_desc": {
+            "ja": "SNS投稿やDMで投資講座/シグナル配信を装い、外部グループに誘導し入金させる。",
+            "en": "SNS posts/DMs lure to groups claiming signals/courses and solicit deposits."
+          },
+          "cultural_lever": {
+            "ja": "権威・成功者への同調、集団での安心感",
+            "en": "Deference to 'experts' and herd reassurance"
+          },
+          "attack_vector": [
+            "social",
+            "website",
+            "email"
+          ],
+          "targets": [
+            "general",
+            "business",
+            "student"
+          ],
+          "scenario": {
+            "ja": "1) SNSで実績を誇示 → 2) LINE/Telegramへ誘導 → 3) 外部口座/暗号資産へ入金誘導",
+            "en": "1) Show 'track record' → 2) Move to chat apps → 3) Ask deposits to external/crypto"
+          },
+          "red_flags": {
+            "ja": [
+              "確実・保証の表現",
+              "異常な高利回り",
+              "出金遅延/拒否"
+            ],
+            "en": [
+              "Guaranteed returns",
+              "Unreal high ROI",
+              "Withdrawal delays/denials"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "登録事業者か確認（金融庁）",
+              "小額でテスト・出金可否確認",
+              "第三者に相談"
+            ],
+            "en": [
+              "Check registration (FSA)",
+              "Test small & withdrawal first",
+              "Consult third parties"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "bank-transfer",
+            "crypto",
+            "e-wallet"
+          ],
+          "legal_notes": {
+            "ja": "無登録での助言・勧誘は違法の可能性。",
+            "en": "Unregistered advisory/solicitation may be illegal."
+          },
+          "references": [
+            {
+              "label": "金融庁：無登録業者にご注意",
+              "url": "https://www.fsa.go.jp/"
+            }
+          ],
+          "tags": [
+            "investment",
+            "social",
+            "crypto",
+            "authority-pretext"
+          ]
+        },
+        {
+          "id": "jp-015",
+          "title": {
+            "ja": "自己啓発セミナー偽装のマルチ商法",
+            "en": "Multi-Level Marketing Disguised as Self-Help Seminars"
+          },
+          "short_desc": {
+            "ja": "自己投資/成功哲学を謳い、実態は高額商材や会員勧誘が主目的。",
+            "en": "Self-help rhetoric but pushes costly products and recruitment."
+          },
+          "cultural_lever": {
+            "ja": "上昇志向・仲間意識・成功者への同調",
+            "en": "Aspiration, group identity, deference to 'successful' people"
+          },
+          "attack_vector": [
+            "in-person",
+            "social",
+            "website"
+          ],
+          "targets": [
+            "student",
+            "general",
+            "business"
+          ],
+          "scenario": {
+            "ja": "1) 無料セミナーに誘導 → 2) 高額教材/会員を勧誘 → 3) 継続的な支払い",
+            "en": "1) Free seminar → 2) Pitch high-priced materials/membership → 3) Ongoing payments"
+          },
+          "red_flags": {
+            "ja": [
+              "確実な成功を強調",
+              "出自不明の体験談",
+              "高額な継続支払い"
+            ],
+            "en": [
+              "Guaranteed success claims",
+              "Unverifiable testimonials",
+              "High recurring costs"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "クーリングオフ制度の確認",
+              "即決を避ける",
+              "第三者と相談"
+            ],
+            "en": [
+              "Know cooling-off rights",
+              "Avoid on-the-spot decisions",
+              "Consult others"
+            ]
+          },
+          "risk_score": 3,
+          "mediums": [
+            "credit",
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "特定商取引法の対象となる場合あり。",
+            "en": "May fall under Act on Specified Commercial Transactions."
+          },
+          "references": [
+            {
+              "label": "消費者庁：連鎖販売取引（マルチ商法）",
+              "url": "https://www.no-trouble.caa.go.jp/what/renhan.html"
+            }
+          ],
+          "tags": [
+            "mlm",
+            "seminar",
+            "pressure-sales"
+          ]
+        },
+        {
+          "id": "jp-016",
+          "title": {
+            "ja": "街頭募金の偽装（寄付詐欺）",
+            "en": "Street Charity Impersonation"
+          },
+          "short_desc": {
+            "ja": "慈善/災害支援を装い募金を集めるが、実体がない/不透明。",
+            "en": "Collects donations for 'charity/disaster relief' with opaque or fake entities."
+          },
+          "cultural_lever": {
+            "ja": "寄付・ボランティアへの共感、同調圧力",
+            "en": "Empathy for charity and social pressure"
+          },
+          "attack_vector": [
+            "in-person",
+            "street",
+            "social"
+          ],
+          "targets": [
+            "general",
+            "tourist",
+            "student"
+          ],
+          "scenario": {
+            "ja": "1) 街頭でプラカード/制服風 → 2) 口頭説明で募金箱へ誘導 → 3) 領収書なし/団体不明",
+            "en": "1) Street placards/uniform-like → 2) Oral pitch → 3) No receipt/unclear org"
+          },
+          "red_flags": {
+            "ja": [
+              "法人登録や活動実績の不明確",
+              "領収書なし",
+              "ウェブ/連絡先がない"
+            ],
+            "en": [
+              "No legal registration",
+              "No receipts",
+              "No website/contacts"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "公的に登録された団体へ寄付",
+              "領収書・活動報告を確認",
+              "公式サイト経由で寄付"
+            ],
+            "en": [
+              "Donate to registered orgs",
+              "Check receipts/activity reports",
+              "Donate via official sites"
+            ]
+          },
+          "risk_score": 2,
+          "mediums": [
+            "cash",
+            "e-wallet"
+          ],
+          "legal_notes": {
+            "ja": "",
+            "en": ""
+          },
+          "references": [
+            {
+              "label": "日本赤十字社：義援金・寄付情報",
+              "url": "https://www.jrc.or.jp/"
+            }
+          ],
+          "tags": [
+            "charity",
+            "street",
+            "festival-pretext"
+          ]
+        },
+        {
+          "id": "jp-017",
+          "title": {
+            "ja": "高額リフォーム/害虫駆除の不当勧誘",
+            "en": "High-priced Home Repair/Pest Control Solicitation"
+          },
+          "short_desc": {
+            "ja": "無料点検を装い不安を煽り、不要/過大な工事・駆除契約を結ばせる。",
+            "en": "Free 'inspection' stokes fear to push unnecessary/overpriced contracts."
+          },
+          "cultural_lever": {
+            "ja": "家の体面・近隣への配慮、対立回避",
+            "en": "Home pride, neighbor consideration, conflict avoidance"
+          },
+          "attack_vector": [
+            "door-to-door",
+            "phone"
+          ],
+          "targets": [
+            "elder",
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 飛び込み点検 → 2) 写真等で不安喚起 → 3) 即日契約を迫る",
+            "en": "1) Cold 'inspection' → 2) Fear-mongering with photos → 3) Push same-day contract"
+          },
+          "red_flags": {
+            "ja": [
+              "即決を迫る",
+              "見積りや比較を拒む",
+              "会社情報・施工実績が不明確"
+            ],
+            "en": [
+              "Pressure to decide now",
+              "Refuses estimates/competition",
+              "Opaque company info"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "複数社で相見積もり",
+              "クーリングオフの確認",
+              "自治体/消費生活センター相談"
+            ],
+            "en": [
+              "Get multiple quotes",
+              "Know cooling-off rights",
+              "Consult local consumer centers"
+            ]
+          },
+          "risk_score": 3,
+          "mediums": [
+            "bank-transfer",
+            "cash",
+            "credit"
+          ],
+          "legal_notes": {
+            "ja": "特定商取引法の訪問販売に該当の可能性。",
+            "en": "May fall under door-to-door sales regulations."
+          },
+          "references": [
+            {
+              "label": "消費者庁：訪問販売の注意点",
+              "url": "https://www.no-trouble.caa.go.jp/what/kojin/hanbai.html"
+            }
+          ],
+          "tags": [
+            "doorstep",
+            "pressure-sales",
+            "housing"
+          ]
+        },
+        {
+          "id": "jp-018",
+          "title": {
+            "ja": "公的給付金・支援金をかたる偽サイト",
+            "en": "Fake Public Benefits Application Sites"
+          },
+          "short_desc": {
+            "ja": "給付申請を装い、個人情報や口座情報を入力させて詐取。",
+            "en": "Spoofed benefits sites steal personal and bank details."
+          },
+          "cultural_lever": {
+            "ja": "公的機関の権威・手続期限のプレッシャー",
+            "en": "Government authority and deadline pressure"
+          },
+          "attack_vector": [
+            "website",
+            "email",
+            "sms"
+          ],
+          "targets": [
+            "general",
+            "immigrant",
+            "business"
+          ],
+          "scenario": {
+            "ja": "1) 給付案内のメール/SNS → 2) 偽申請サイトへ誘導 → 3) 口座・本人情報の入力",
+            "en": "1) Benefit notice → 2) Link to fake application → 3) Collect bank/ID info"
+          },
+          "red_flags": {
+            "ja": [
+              "公式ドメインでない",
+              "妙に簡単な手続き",
+              "最短即時振込を強調"
+            ],
+            "en": [
+              "Non-official domain",
+              "Too-simplified steps",
+              "'Instant transfer' emphasis"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "官公庁公式ポータルから確認",
+              "リンクは踏まず検索/ブックマークでアクセス",
+              "不審なら窓口に直接照会"
+            ],
+            "en": [
+              "Use official portals",
+              "Don't click links; navigate yourself",
+              "Call offices directly"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "bank-transfer",
+            "e-wallet"
+          ],
+          "legal_notes": {
+            "ja": "",
+            "en": ""
+          },
+          "references": [
+            {
+              "label": "デジタル庁：注意喚起・偽サイト",
+              "url": "https://www.digital.go.jp/"
+            },
+            {
+              "label": "フィッシング対策協議会",
+              "url": "https://www.antiphishing.jp/"
+            }
+          ],
+          "tags": [
+            "government",
+            "website",
+            "phishing",
+            "fake-fee"
+          ]
+        },
+        {
+          "id": "jp-019",
+          "title": {
+            "ja": "偽ブランド品・海賊版の路上販売",
+            "en": "Counterfeit Brand Goods / Pirated Media Street Sales"
+          },
+          "short_desc": {
+            "ja": "観光地等で正規品と誤認させる違法販売。返品不可・品質不良。",
+            "en": "Illicit street sales misrepresent items as genuine; no refund, poor quality."
+          },
+          "cultural_lever": {
+            "ja": "お土産文化・値引きへの期待",
+            "en": "Souvenir culture and discount expectations"
+          },
+          "attack_vector": [
+            "street",
+            "market"
+          ],
+          "targets": [
+            "tourist",
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 値引きで関心喚起 → 2) 真贋を曖昧に説明 → 3) 売り切りで連絡不能",
+            "en": "1) Discount lure → 2) Vague authenticity claims → 3) One-off, unreachable seller"
+          },
+          "red_flags": {
+            "ja": [
+              "極端な安さ",
+              "保証・領収書なし",
+              "店舗情報なし"
+            ],
+            "en": [
+              "Extremely low price",
+              "No warranty/receipt",
+              "No store info"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "正規販売店以外で高額品を買わない",
+              "領収書・販売者情報を確認",
+              "少額でも真贋不明は避ける"
+            ],
+            "en": [
+              "Avoid high-value buys off authorized stores",
+              "Get receipts/seller info",
+              "Avoid dubious items"
+            ]
+          },
+          "risk_score": 2,
+          "mediums": [
+            "cash"
+          ],
+          "legal_notes": {
+            "ja": "",
+            "en": ""
+          },
+          "references": [
+            {
+              "label": "特許庁：偽ブランド対策・知的財産",
+              "url": "https://www.jpo.go.jp/"
+            }
+          ],
+          "tags": [
+            "counterfeit",
+            "tourism",
+            "street"
+          ]
+        },
+        {
+          "id": "jp-020",
+          "title": {
+            "ja": "災害便乗の寄付・義援金詐欺",
+            "en": "Disaster Relief Donation Scams"
+          },
+          "short_desc": {
+            "ja": "災害発生直後に寄付を装い、即時支払い・秘密厳守を迫る。",
+            "en": "Right after disasters, scammers solicit urgent secret donations."
+          },
+          "cultural_lever": {
+            "ja": "助け合い・共感の文化、同調圧力",
+            "en": "Mutual aid and social empathy"
+          },
+          "attack_vector": [
+            "social",
+            "email",
+            "in-person"
+          ],
+          "targets": [
+            "general",
+            "business",
+            "tourist"
+          ],
+          "scenario": {
+            "ja": "1) 災害の写真や体験談で感情喚起 → 2) 寄付リンク・口座提示 → 3) 追跡不能な手段を要求",
+            "en": "1) Emotional imagery → 2) Donation links/accounts → 3) Untraceable methods"
+          },
+          "red_flags": {
+            "ja": [
+              "急がせる/秘密厳守",
+              "ギフトカード/仮想通貨を要求",
+              "団体の実在性が不明"
+            ],
+            "en": [
+              "Urgency/secrecy",
+              "Gift cards/crypto",
+              "Opaque organization"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "公的団体に直接寄付",
+              "登録・実績を確認",
+              "即時送金は避ける"
+            ],
+            "en": [
+              "Donate directly to recognized orgs",
+              "Verify registration/track record",
+              "Avoid instant transfers"
+            ]
+          },
+          "risk_score": 3,
+          "mediums": [
+            "bank-transfer",
+            "e-wallet",
+            "crypto"
+          ],
+          "legal_notes": {
+            "ja": "",
+            "en": ""
+          },
+          "references": [
+            {
+              "label": "内閣府 防災：災害関連情報",
+              "url": "https://www.bousai.go.jp/"
+            },
+            {
+              "label": "日本赤十字社：義援金",
+              "url": "https://www.jrc.or.jp/"
+            }
+          ],
+          "tags": [
+            "charity",
+            "disaster-pretext",
+            "social",
+            "urgency"
           ]
         }
       ]
@@ -623,6 +1731,1469 @@
             "fake-tech-support",
             "urgency",
             "authority-pretext"
+          ]
+        },
+        {
+          "id": "us-002",
+          "title": {
+            "ja": "IRS税務詐欺の脅迫",
+            "en": "IRS Tax Scam Threats"
+          },
+          "short_desc": {
+            "ja": "偽IRS職員が逮捕や資産差押えで脅迫し即時支払い要求",
+            "en": "Fake IRS agents threaten arrest or asset seizure for immediate payment"
+          },
+          "cultural_lever": {
+            "ja": "政府機関への恐怖・税務問題への不安",
+            "en": "Fear of government authority and tax compliance anxiety"
+          },
+          "attack_vector": [
+            "phone",
+            "email"
+          ],
+          "targets": [
+            "general",
+            "elderly"
+          ],
+          "scenario": {
+            "ja": "1) IRS職員を名乗る電話 2) 未納税の虚偽通知 3) 逮捕・差押えの脅迫 4) 即時支払い要求",
+            "en": "1) Call claiming to be IRS 2) False tax debt claim 3) Arrest/seizure threats 4) Demand immediate payment"
+          },
+          "red_flags": {
+            "ja": [
+              "攻撃的な口調",
+              "ギフトカード・電信送金要求",
+              "caller IDの偽装"
+            ],
+            "en": [
+              "Aggressive tone",
+              "Gift cards or wire transfer demands",
+              "Spoofed caller ID"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "IRSは初回連絡を郵送で行う",
+              "IRS.govで確認",
+              "脅迫的な電話は即切断"
+            ],
+            "en": [
+              "IRS first contacts by mail",
+              "Verify at IRS.gov",
+              "Hang up on threatening calls"
+            ]
+          },
+          "risk_score": 5,
+          "mediums": [
+            "gift-cards",
+            "bank-transfer",
+            "cryptocurrency"
+          ],
+          "legal_notes": {
+            "ja": "FTCへの報告推奨",
+            "en": "Report to FTC recommended"
+          },
+          "references": [
+            {
+              "label": "IRS Tax Scam Consumer Alert",
+              "url": "https://www.irs.gov/newsroom/tax-scams-consumer-alerts"
+            },
+            {
+              "label": "FTC Scam Alerts",
+              "url": "https://consumer.ftc.gov/features/scam-alerts"
+            }
+          ],
+          "tags": [
+            "impersonation",
+            "authority-pretext",
+            "urgency",
+            "fear-based"
+          ]
+        },
+        {
+          "id": "us-003",
+          "title": {
+            "ja": "Windows/Microsoft偽装サポート詐欺",
+            "en": "Windows/Microsoft Impersonation Support Scam"
+          },
+          "short_desc": {
+            "ja": "偽のエラー画面から電話誘導し遠隔操作で情報窃取",
+            "en": "Fake error screens lead to phone calls and remote access theft"
+          },
+          "cultural_lever": {
+            "ja": "大手IT企業への信頼・技術的不安",
+            "en": "Trust in major tech brands and technical insecurity"
+          },
+          "attack_vector": [
+            "email",
+            "phone",
+            "social"
+          ],
+          "targets": [
+            "elderly",
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 偽エラー画面表示 2) サポート番号へ誘導 3) 遠隔操作ツール導入 4) 修理費請求",
+            "en": "1) Fake error popup 2) Call support number 3) Install remote tool 4) Charge for repairs"
+          },
+          "red_flags": {
+            "ja": [
+              "ポップアップの電話番号",
+              "前払い要求",
+              "パスワード要求"
+            ],
+            "en": [
+              "Phone number in popup",
+              "Upfront payment",
+              "Password requests"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "Microsoftは電話勧誘しない",
+              "公式サイトから連絡先確認",
+              "遠隔操作は拒否"
+            ],
+            "en": [
+              "Microsoft doesn't cold call",
+              "Check official site for contacts",
+              "Refuse remote access"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "credit",
+            "gift-cards",
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "",
+            "en": ""
+          },
+          "references": [
+            {
+              "label": "Microsoft Tech Support Scam",
+              "url": "https://support.microsoft.com/en-us/windows/protect-yourself-from-tech-support-scams"
+            },
+            {
+              "label": "FBI IC3 Report",
+              "url": "https://www.ic3.gov/Home/Scams"
+            }
+          ],
+          "tags": [
+            "tech-support",
+            "impersonation",
+            "remote-access",
+            "brand-exploitation"
+          ]
+        },
+        {
+          "id": "us-004",
+          "title": {
+            "ja": "オンライン恋愛詐欺",
+            "en": "Online Romance Scam"
+          },
+          "short_desc": {
+            "ja": "偽の恋愛関係を築き金銭要求や投資勧誘",
+            "en": "Build fake romantic relationships for money requests and investments"
+          },
+          "cultural_lever": {
+            "ja": "孤独感・真の愛への渇望",
+            "en": "Loneliness and desire for genuine connection"
+          },
+          "attack_vector": [
+            "social",
+            "email"
+          ],
+          "targets": [
+            "elderly",
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 魅力的プロフィールで接触 2) 数週間の関係構築 3) 緊急事態を装い送金要求 4) 繰り返し要求",
+            "en": "1) Attractive profile contact 2) Build relationship for weeks 3) Emergency money request 4) Repeated requests"
+          },
+          "red_flags": {
+            "ja": [
+              "会うことを避ける",
+              "早すぎる愛の告白",
+              "金銭的援助要求",
+              "投資話を持ち掛ける"
+            ],
+            "en": [
+              "Avoids meeting",
+              "Professes love quickly",
+              "Asks for money",
+              "Pushes investments"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "ビデオ通話で本人確認",
+              "金銭要求は即拒否",
+              "逆画像検索で写真確認"
+            ],
+            "en": [
+              "Verify via video call",
+              "Never send money",
+              "Reverse image search photos"
+            ]
+          },
+          "risk_score": 5,
+          "mediums": [
+            "bank-transfer",
+            "cryptocurrency",
+            "gift-cards"
+          ],
+          "legal_notes": {
+            "ja": "FBI IC3に報告可能",
+            "en": "Report to FBI IC3"
+          },
+          "references": [
+            {
+              "label": "FTC Romance Scams",
+              "url": "https://consumer.ftc.gov/articles/what-you-need-know-about-romance-scams"
+            },
+            {
+              "label": "FBI Romance Scam Warning",
+              "url": "https://www.fbi.gov/scams-and-safety/common-scams-and-crimes/romance-scams"
+            }
+          ],
+          "tags": [
+            "romance",
+            "emotional-manipulation",
+            "long-con",
+            "trust-exploitation"
+          ]
+        },
+        {
+          "id": "us-005",
+          "title": {
+            "ja": "祖父母詐欺（孫を装う緊急詐欺）",
+            "en": "Grandparent Scam (Emergency Impersonation)"
+          },
+          "short_desc": {
+            "ja": "孫や親族を装い緊急事態で送金要求",
+            "en": "Impersonate grandchildren in crisis needing urgent money"
+          },
+          "cultural_lever": {
+            "ja": "家族愛・緊急時の援助本能",
+            "en": "Family bonds and instinct to help loved ones in crisis"
+          },
+          "attack_vector": [
+            "phone"
+          ],
+          "targets": [
+            "elderly"
+          ],
+          "scenario": {
+            "ja": "1) 孫を名乗る電話 2) 事故・逮捕等の緊急事態 3) 秘密厳守を要求 4) 即時送金指示",
+            "en": "1) Call claiming to be grandchild 2) Accident/arrest emergency 3) Request secrecy 4) Urgent money transfer"
+          },
+          "red_flags": {
+            "ja": [
+              "声が違うと言い訳",
+              "秘密厳守の強要",
+              "現金・ギフトカード要求"
+            ],
+            "en": [
+              "Excuses for different voice",
+              "Demands secrecy",
+              "Cash or gift card requests"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "本人に別ルートで確認",
+              "合言葉を事前設定",
+              "家族と情報共有"
+            ],
+            "en": [
+              "Verify through another channel",
+              "Set family passwords",
+              "Share with other family"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "cash",
+            "bank-transfer",
+            "gift-cards"
+          ],
+          "legal_notes": {
+            "ja": "",
+            "en": ""
+          },
+          "references": [
+            {
+              "label": "AARP Grandparent Scam",
+              "url": "https://www.aarp.org/money/scams-fraud/info-2019/grandparent.html"
+            },
+            {
+              "label": "FTC Family Emergency Scams",
+              "url": "https://consumer.ftc.gov/articles/family-emergency-scams"
+            }
+          ],
+          "tags": [
+            "impersonation",
+            "family-exploitation",
+            "urgency",
+            "emotional-manipulation"
+          ]
+        },
+        {
+          "id": "us-006",
+          "title": {
+            "ja": "偽チャリティ詐欺",
+            "en": "Fake Charity Fraud"
+          },
+          "short_desc": {
+            "ja": "災害や社会問題を悪用した偽の寄付募集",
+            "en": "Exploit disasters and causes with fake donation requests"
+          },
+          "cultural_lever": {
+            "ja": "慈善活動への積極性・助け合い精神",
+            "en": "Charitable giving culture and desire to help others"
+          },
+          "attack_vector": [
+            "phone",
+            "email",
+            "social"
+          ],
+          "targets": [
+            "general",
+            "elderly"
+          ],
+          "scenario": {
+            "ja": "1) 災害直後に募金呼びかけ 2) 感情に訴える内容 3) 緊急性を強調 4) 即時寄付要求",
+            "en": "1) Solicit after disasters 2) Emotional appeals 3) Emphasize urgency 4) Request immediate donation"
+          },
+          "red_flags": {
+            "ja": [
+              "高圧的な勧誘",
+              "現金・ギフトカード要求",
+              "団体情報が不明確"
+            ],
+            "en": [
+              "High-pressure tactics",
+              "Cash or gift card requests",
+              "Vague organization details"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "CharityNavigator.orgで確認",
+              "公式サイトから直接寄付",
+              "領収書を要求"
+            ],
+            "en": [
+              "Check CharityNavigator.org",
+              "Donate directly via official sites",
+              "Request receipts"
+            ]
+          },
+          "risk_score": 3,
+          "mediums": [
+            "credit",
+            "bank-transfer",
+            "gift-cards"
+          ],
+          "legal_notes": {
+            "ja": "",
+            "en": ""
+          },
+          "references": [
+            {
+              "label": "FTC Charity Scams",
+              "url": "https://consumer.ftc.gov/articles/charity-scams"
+            },
+            {
+              "label": "Charity Navigator",
+              "url": "https://www.charitynavigator.org/"
+            }
+          ],
+          "tags": [
+            "charity-fraud",
+            "disaster-exploitation",
+            "emotional-manipulation",
+            "urgency"
+          ]
+        },
+        {
+          "id": "us-007",
+          "title": {
+            "ja": "Medicare/医療保険詐欺",
+            "en": "Medicare/Health Insurance Scam"
+          },
+          "short_desc": {
+            "ja": "新しいMedicareカードや補償を餌に個人情報窃取",
+            "en": "Steal personal info using new Medicare cards or coverage as bait"
+          },
+          "cultural_lever": {
+            "ja": "医療費への不安・制度の複雑さ",
+            "en": "Healthcare cost anxiety and system complexity"
+          },
+          "attack_vector": [
+            "phone",
+            "email"
+          ],
+          "targets": [
+            "elderly"
+          ],
+          "scenario": {
+            "ja": "1) Medicare代理人を名乗る 2) 新カード発行や補償確認 3) 個人情報要求 4) 医療ID窃取",
+            "en": "1) Claim to be Medicare agent 2) New card or coverage verification 3) Request personal info 4) Steal medical ID"
+          },
+          "red_flags": {
+            "ja": [
+              "Medicare番号の電話確認",
+              "手数料の要求",
+              "期限切迫の脅し"
+            ],
+            "en": [
+              "Phone verification of Medicare number",
+              "Fee requests",
+              "Deadline threats"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "Medicareは電話勧誘しない",
+              "1-800-MEDICAREで確認",
+              "個人情報は提供しない"
+            ],
+            "en": [
+              "Medicare doesn't cold call",
+              "Verify at 1-800-MEDICARE",
+              "Never give personal info"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "credit",
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "医療ID窃盗は重罪",
+            "en": "Medical ID theft is a felony"
+          },
+          "references": [
+            {
+              "label": "Medicare.gov Fraud",
+              "url": "https://www.medicare.gov/basics/reporting-medicare-fraud"
+            },
+            {
+              "label": "HHS OIG Medicare Fraud",
+              "url": "https://oig.hhs.gov/fraud/consumer-alerts/fraud-alert-medicare/"
+            }
+          ],
+          "tags": [
+            "medicare",
+            "healthcare",
+            "identity-theft",
+            "impersonation"
+          ]
+        },
+        {
+          "id": "us-008",
+          "title": {
+            "ja": "学生ローン免除詐欺",
+            "en": "Student Loan Forgiveness Scam"
+          },
+          "short_desc": {
+            "ja": "偽のローン免除プログラムで手数料詐取",
+            "en": "Charge fees for fake loan forgiveness programs"
+          },
+          "cultural_lever": {
+            "ja": "学生ローン負担への絶望・救済への期待",
+            "en": "Student debt burden and hope for relief"
+          },
+          "attack_vector": [
+            "phone",
+            "email",
+            "social"
+          ],
+          "targets": [
+            "student",
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) ローン免除の電話/メール 2) 政府プログラムを装う 3) 前払い手数料要求 4) 個人情報収集",
+            "en": "1) Call/email about forgiveness 2) Pose as government program 3) Request upfront fees 4) Collect personal data"
+          },
+          "red_flags": {
+            "ja": [
+              "前払い手数料",
+              "即決の圧力",
+              "政府機関を装う企業"
+            ],
+            "en": [
+              "Upfront fees",
+              "Pressure to act now",
+              "Companies posing as government"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "StudentAid.govのみ信頼",
+              "手数料は不要と認識",
+              "FSA IDは共有しない"
+            ],
+            "en": [
+              "Only trust StudentAid.gov",
+              "Know fees aren't required",
+              "Never share FSA ID"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "credit",
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "",
+            "en": ""
+          },
+          "references": [
+            {
+              "label": "Federal Student Aid Scam Alert",
+              "url": "https://studentaid.gov/resources/scams"
+            },
+            {
+              "label": "FTC Student Loan Scams",
+              "url": "https://consumer.ftc.gov/articles/student-loan-scams"
+            }
+          ],
+          "tags": [
+            "student-loans",
+            "debt-relief",
+            "impersonation",
+            "advance-fee"
+          ]
+        },
+        {
+          "id": "us-009",
+          "title": {
+            "ja": "陪審員義務詐欺",
+            "en": "Jury Duty Scam"
+          },
+          "short_desc": {
+            "ja": "陪審員欠席で罰金や逮捕と脅迫し支払い要求",
+            "en": "Threaten fines or arrest for missing jury duty to demand payment"
+          },
+          "cultural_lever": {
+            "ja": "法的義務への恐怖・司法制度への敬意",
+            "en": "Fear of legal consequences and respect for judicial system"
+          },
+          "attack_vector": [
+            "phone"
+          ],
+          "targets": [
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 裁判所職員を名乗る 2) 陪審員欠席の虚偽主張 3) 逮捕令状があると脅迫 4) 罰金の即時支払い要求",
+            "en": "1) Pose as court official 2) False claim of missed jury duty 3) Threaten arrest warrant 4) Demand immediate fine payment"
+          },
+          "red_flags": {
+            "ja": [
+              "電話での罰金要求",
+              "ギフトカード支払い",
+              "個人情報の確認要求"
+            ],
+            "en": [
+              "Phone payment demands",
+              "Gift card payments",
+              "Requests for personal info"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "裁判所は電話で罰金請求しない",
+              "全て郵送で通知",
+              "地方裁判所に直接確認"
+            ],
+            "en": [
+              "Courts don't demand payment by phone",
+              "All notices by mail",
+              "Verify with local court directly"
+            ]
+          },
+          "risk_score": 3,
+          "mediums": [
+            "gift-cards",
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "",
+            "en": ""
+          },
+          "references": [
+            {
+              "label": "US Courts Jury Scam Alert",
+              "url": "https://www.uscourts.gov/services-forms/jury-service/juror-scams"
+            },
+            {
+              "label": "FBI Jury Duty Scam",
+              "url": "https://www.fbi.gov/how-we-can-help-you/safety-resources/scams-and-safety/common-scams-and-crimes/jury-duty-scam"
+            }
+          ],
+          "tags": [
+            "jury-duty",
+            "legal-threat",
+            "impersonation",
+            "authority-pretext"
+          ]
+        },
+        {
+          "id": "us-010",
+          "title": {
+            "ja": "公共料金停止脅迫詐欺",
+            "en": "Utility Shutoff Threat Scam"
+          },
+          "short_desc": {
+            "ja": "電気・ガス・水道の即時停止を脅し緊急支払い要求",
+            "en": "Threaten immediate utility shutoff to demand urgent payment"
+          },
+          "cultural_lever": {
+            "ja": "生活必需サービスへの依存・停止への恐怖",
+            "en": "Dependence on essential services and fear of disconnection"
+          },
+          "attack_vector": [
+            "phone",
+            "email"
+          ],
+          "targets": [
+            "general",
+            "business"
+          ],
+          "scenario": {
+            "ja": "1) 電力会社を名乗る電話 2) 料金未納の虚偽通知 3) 1時間以内の停止脅迫 4) 即時支払い指示",
+            "en": "1) Call posing as utility company 2) False unpaid bill claim 3) Threaten shutoff within hour 4) Demand immediate payment"
+          },
+          "red_flags": {
+            "ja": [
+              "即時停止の脅迫",
+              "プリペイドカード要求",
+              "特定の支払い場所指定"
+            ],
+            "en": [
+              "Immediate shutoff threats",
+              "Prepaid card demands",
+              "Specific payment location"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "公共料金会社に直接確認",
+              "請求書で支払い状況確認",
+              "脅迫的な要求は無視"
+            ],
+            "en": [
+              "Call utility company directly",
+              "Check bill payment status",
+              "Ignore threatening demands"
+            ]
+          },
+          "risk_score": 3,
+          "mediums": [
+            "gift-cards",
+            "cryptocurrency",
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "",
+            "en": ""
+          },
+          "references": [
+            {
+              "label": "FTC Utility Scams",
+              "url": "https://consumer.ftc.gov/articles/utility-scams"
+            },
+            {
+              "label": "Utilities United Against Scams",
+              "url": "https://www.utilitiesunited.org/"
+            }
+          ],
+          "tags": [
+            "utility",
+            "urgency",
+            "essential-service",
+            "fear-based"
+          ]
+        },
+        {
+          "id": "us-011",
+          "title": {
+            "ja": "社会保障番号停止詐欺",
+            "en": "Social Security Number Suspension Scam"
+          },
+          "short_desc": {
+            "ja": "SSN停止や犯罪関与を脅し個人情報・金銭詐取",
+            "en": "Threaten SSN suspension or criminal activity to steal info and money"
+          },
+          "cultural_lever": {
+            "ja": "社会保障番号の重要性・政府機関への恐怖",
+            "en": "SSN importance and fear of government authority"
+          },
+          "attack_vector": [
+            "phone",
+            "email"
+          ],
+          "targets": [
+            "elderly",
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) SSA職員を名乗る 2) SSN犯罪利用の虚偽通知 3) 番号停止の脅迫 4) 確認と称し情報要求",
+            "en": "1) Pose as SSA official 2) False criminal activity claim 3) Threaten SSN suspension 4) Request info for verification"
+          },
+          "red_flags": {
+            "ja": [
+              "SSN停止の脅迫",
+              "即時対応の要求",
+              "支払いや個人情報要求"
+            ],
+            "en": [
+              "SSN suspension threats",
+              "Urgent action demands",
+              "Payment or info requests"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "SSAは電話で脅迫しない",
+              "SSNは停止されない",
+              "1-800-772-1213で確認"
+            ],
+            "en": [
+              "SSA doesn't threaten by phone",
+              "SSNs can't be suspended",
+              "Verify at 1-800-772-1213"
+            ]
+          },
+          "risk_score": 5,
+          "mediums": [
+            "gift-cards",
+            "bank-transfer",
+            "cryptocurrency"
+          ],
+          "legal_notes": {
+            "ja": "SSA OIGに報告推奨",
+            "en": "Report to SSA OIG"
+          },
+          "references": [
+            {
+              "label": "SSA Scam Alert",
+              "url": "https://www.ssa.gov/scam/"
+            },
+            {
+              "label": "FTC SSN Scams",
+              "url": "https://consumer.ftc.gov/articles/your-social-security-number-isnt-suspended"
+            }
+          ],
+          "tags": [
+            "social-security",
+            "identity-theft",
+            "government-impersonation",
+            "fear-based"
+          ]
+        },
+        {
+          "id": "us-012",
+          "title": {
+            "ja": "宝くじ・懸賞当選詐欺",
+            "en": "Lottery/Sweepstakes Winner Scam"
+          },
+          "short_desc": {
+            "ja": "高額当選通知で手数料や税金を前払い要求",
+            "en": "Notify of big wins requiring upfront fees or taxes"
+          },
+          "cultural_lever": {
+            "ja": "一攫千金への夢・幸運への期待",
+            "en": "Get-rich-quick dreams and hope for windfall"
+          },
+          "attack_vector": [
+            "phone",
+            "email",
+            "social"
+          ],
+          "targets": [
+            "elderly",
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 高額当選の通知 2) 参加していない懸賞 3) 税金・手数料の前払い要求 4) 段階的な追加請求",
+            "en": "1) Big win notification 2) Contest never entered 3) Request taxes/fees upfront 4) Escalating payment demands"
+          },
+          "red_flags": {
+            "ja": [
+              "参加していない懸賞",
+              "前払い要求",
+              "秘密厳守の指示",
+              "海外からの通知"
+            ],
+            "en": [
+              "Contest never entered",
+              "Upfront payment",
+              "Keep it secret demands",
+              "Foreign notifications"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "正規宝くじは前払い不要",
+              "参加記録を確認",
+              "PCH等の公式サイト確認"
+            ],
+            "en": [
+              "Real lotteries don't require payment",
+              "Check participation records",
+              "Verify at official sites like PCH"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "bank-transfer",
+            "gift-cards",
+            "cash"
+          ],
+          "legal_notes": {
+            "ja": "",
+            "en": ""
+          },
+          "references": [
+            {
+              "label": "FTC Prize Scams",
+              "url": "https://consumer.ftc.gov/articles/prize-scams"
+            },
+            {
+              "label": "PCH Scam Protection",
+              "url": "https://info.pch.com/scam-alerts"
+            }
+          ],
+          "tags": [
+            "lottery",
+            "sweepstakes",
+            "advance-fee",
+            "greed-exploitation"
+          ]
+        },
+        {
+          "id": "us-013",
+          "title": {
+            "ja": "在宅ワーク詐欺",
+            "en": "Work-from-Home Job Scam"
+          },
+          "short_desc": {
+            "ja": "高収入在宅ワークを餌に初期費用や個人情報詐取",
+            "en": "Promise high-paying remote work to steal fees or personal info"
+          },
+          "cultural_lever": {
+            "ja": "柔軟な働き方への需要・副収入への期待",
+            "en": "Desire for flexible work and supplemental income"
+          },
+          "attack_vector": [
+            "email",
+            "social"
+          ],
+          "targets": [
+            "general",
+            "student"
+          ],
+          "scenario": {
+            "ja": "1) 高収入在宅ワーク広告 2) 簡単な仕事で高報酬 3) 研修費や機材費要求 4) 小切手詐欺に利用",
+            "en": "1) High-paying remote job ad 2) Easy work big money 3) Training or equipment fees 4) Check cashing schemes"
+          },
+          "red_flags": {
+            "ja": [
+              "前払い費用",
+              "個人口座使用指示",
+              "仕事内容が曖昧",
+              "面接なし即採用"
+            ],
+            "en": [
+              "Upfront fees",
+              "Use personal account",
+              "Vague job description",
+              "No interview instant hire"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "正規企業は費用請求しない",
+              "BBBで企業確認",
+              "小切手換金は拒否"
+            ],
+            "en": [
+              "Real employers don't charge fees",
+              "Check BBB ratings",
+              "Never cash checks for others"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "credit",
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "",
+            "en": ""
+          },
+          "references": [
+            {
+              "label": "FTC Job Scams",
+              "url": "https://consumer.ftc.gov/articles/job-scams"
+            },
+            {
+              "label": "BBB Employment Scams",
+              "url": "https://www.bbb.org/article/news-releases/22666-bbb-tip-employment-scams"
+            }
+          ],
+          "tags": [
+            "employment",
+            "work-from-home",
+            "advance-fee",
+            "money-mule"
+          ]
+        },
+        {
+          "id": "us-014",
+          "title": {
+            "ja": "賃貸物件詐欺",
+            "en": "Rental Property Scam"
+          },
+          "short_desc": {
+            "ja": "存在しない物件や他人の物件で敷金・礼金詐取",
+            "en": "Collect deposits for non-existent or others' properties"
+          },
+          "cultural_lever": {
+            "ja": "住宅市場の競争・良物件への焦り",
+            "en": "Competitive housing market and fear of missing out"
+          },
+          "attack_vector": [
+            "email",
+            "social"
+          ],
+          "targets": [
+            "general",
+            "student"
+          ],
+          "scenario": {
+            "ja": "1) 格安優良物件掲載 2) 海外在住等の理由 3) 内見前の敷金要求 4) 送金後連絡途絶",
+            "en": "1) List great deals 2) Owner abroad excuse 3) Deposit before viewing 4) Disappear after payment"
+          },
+          "red_flags": {
+            "ja": [
+              "相場より大幅に安い",
+              "内見拒否",
+              "海外送金要求",
+              "急かす態度"
+            ],
+            "en": [
+              "Way below market price",
+              "No viewing allowed",
+              "Wire transfer abroad",
+              "Pressure to act fast"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "内見前の支払い拒否",
+              "所有者確認",
+              "現地不動産業者利用"
+            ],
+            "en": [
+              "Never pay before viewing",
+              "Verify ownership",
+              "Use local real estate agents"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "bank-transfer",
+            "cash",
+            "cryptocurrency"
+          ],
+          "legal_notes": {
+            "ja": "",
+            "en": ""
+          },
+          "references": [
+            {
+              "label": "FTC Rental Scams",
+              "url": "https://consumer.ftc.gov/articles/rental-scams"
+            },
+            {
+              "label": "FBI Rental Fraud",
+              "url": "https://www.fbi.gov/how-we-can-help-you/safety-resources/scams-and-safety/common-scams-and-crimes/real-estate-fraud"
+            }
+          ],
+          "tags": [
+            "rental",
+            "real-estate",
+            "advance-fee",
+            "phantom-goods"
+          ]
+        },
+        {
+          "id": "us-015",
+          "title": {
+            "ja": "退役軍人給付金詐欺",
+            "en": "Veterans Benefits Scam"
+          },
+          "short_desc": {
+            "ja": "VA給付金申請支援を装い手数料や個人情報詐取",
+            "en": "Pose as VA benefit helpers to steal fees and personal info"
+          },
+          "cultural_lever": {
+            "ja": "退役軍人への敬意・複雑な給付制度",
+            "en": "Respect for veterans and complex benefits system"
+          },
+          "attack_vector": [
+            "phone",
+            "email"
+          ],
+          "targets": [
+            "elderly"
+          ],
+          "scenario": {
+            "ja": "1) VA代理人を装う 2) 給付金増額を約束 3) 申請手数料要求 4) 個人情報・DD214要求",
+            "en": "1) Pose as VA agent 2) Promise increased benefits 3) Charge application fees 4) Request personal info/DD214"
+          },
+          "red_flags": {
+            "ja": [
+              "給付申請の手数料",
+              "即決の圧力",
+              "非公式チャネル",
+              "個人情報の電話確認"
+            ],
+            "en": [
+              "Fees for benefit claims",
+              "Pressure to act now",
+              "Unofficial channels",
+              "Phone verification of info"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "VAは手数料請求しない",
+              "VA.govのみ利用",
+              "VSO経由で申請"
+            ],
+            "en": [
+              "VA doesn't charge fees",
+              "Only use VA.gov",
+              "Apply through VSOs"
+            ]
+          },
+          "risk_score": 3,
+          "mediums": [
+            "credit",
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "退役軍人への詐欺は重罪",
+            "en": "Fraud against veterans is a felony"
+          },
+          "references": [
+            {
+              "label": "VA Benefits Scam Alert",
+              "url": "https://www.va.gov/resources/avoiding-scams-and-fraud/"
+            },
+            {
+              "label": "FTC Veterans Scams",
+              "url": "https://consumer.ftc.gov/articles/veterans-scams"
+            }
+          ],
+          "tags": [
+            "veterans",
+            "benefits-fraud",
+            "impersonation",
+            "advance-fee"
+          ]
+        },
+        {
+          "id": "us-016",
+          "title": {
+            "ja": "暗号通貨投資詐欺",
+            "en": "Cryptocurrency Investment Scam"
+          },
+          "short_desc": {
+            "ja": "高リターン保証や有名人偽装で暗号資産詐取",
+            "en": "Promise guaranteed returns or impersonate celebrities to steal crypto"
+          },
+          "cultural_lever": {
+            "ja": "投資ブーム・FOMO（機会損失の恐怖）",
+            "en": "Investment hype and fear of missing out (FOMO)"
+          },
+          "attack_vector": [
+            "social",
+            "email"
+          ],
+          "targets": [
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 高リターン投資勧誘 2) 有名人推薦を偽装 3) 限定機会を強調 4) 暗号資産送金後消失",
+            "en": "1) Pitch high returns 2) Fake celebrity endorsement 3) Limited time offer 4) Disappear after crypto transfer"
+          },
+          "red_flags": {
+            "ja": [
+              "保証されたリターン",
+              "有名人の突然の推薦",
+              "プレッシャー戦術",
+              "規制のない取引所"
+            ],
+            "en": [
+              "Guaranteed returns",
+              "Sudden celebrity endorsements",
+              "Pressure tactics",
+              "Unregulated exchanges"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "SEC登録確認",
+              "公式チャネル確認",
+              "保証リターンは詐欺"
+            ],
+            "en": [
+              "Check SEC registration",
+              "Verify official channels",
+              "Guaranteed returns are scams"
+            ]
+          },
+          "risk_score": 5,
+          "mediums": [
+            "cryptocurrency"
+          ],
+          "legal_notes": {
+            "ja": "",
+            "en": ""
+          },
+          "references": [
+            {
+              "label": "FTC Crypto Scams",
+              "url": "https://consumer.ftc.gov/articles/what-know-about-cryptocurrency-and-scams"
+            },
+            {
+              "label": "SEC Crypto Fraud",
+              "url": "https://www.investor.gov/protect-your-investments/fraud/types-fraud/digital-asset-and-crypto-investment-scams"
+            }
+          ],
+          "tags": [
+            "cryptocurrency",
+            "investment-fraud",
+            "celebrity-impersonation",
+            "FOMO"
+          ]
+        },
+        {
+          "id": "us-017",
+          "title": {
+            "ja": "COVID-19ワクチン/治療詐欺",
+            "en": "COVID-19 Vaccine/Treatment Scam"
+          },
+          "short_desc": {
+            "ja": "偽のワクチン予約や治療薬販売で金銭・情報詐取",
+            "en": "Fake vaccine appointments or treatments to steal money and data"
+          },
+          "cultural_lever": {
+            "ja": "健康への不安・医療アクセスへの需要",
+            "en": "Health anxiety and demand for medical access"
+          },
+          "attack_vector": [
+            "phone",
+            "email",
+            "social"
+          ],
+          "targets": [
+            "elderly",
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) ワクチン優先予約提供 2) 手数料や保険情報要求 3) 偽の治療薬販売 4) 個人医療情報窃取",
+            "en": "1) Offer priority vaccine access 2) Request fees or insurance info 3) Sell fake treatments 4) Steal medical data"
+          },
+          "red_flags": {
+            "ja": [
+              "ワクチンの支払い要求",
+              "未承認治療薬",
+              "個人情報の電話確認"
+            ],
+            "en": [
+              "Payment for vaccines",
+              "Unapproved treatments",
+              "Phone verification of personal info"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "公式医療機関のみ利用",
+              "CDCガイドライン確認",
+              "ワクチンは無料"
+            ],
+            "en": [
+              "Use official healthcare only",
+              "Check CDC guidelines",
+              "Vaccines are free"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "credit",
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "",
+            "en": ""
+          },
+          "references": [
+            {
+              "label": "FTC COVID-19 Scams",
+              "url": "https://consumer.ftc.gov/features/coronavirus-scams-what-ftc-doing"
+            },
+            {
+              "label": "CDC Vaccine Scam Warning",
+              "url": "https://www.cdc.gov/vaccines/covid-19/index.html"
+            }
+          ],
+          "tags": [
+            "covid-19",
+            "healthcare",
+            "vaccine-fraud",
+            "panic-exploitation"
+          ]
+        },
+        {
+          "id": "us-018",
+          "title": {
+            "ja": "ギフトカード支払い詐欺",
+            "en": "Gift Card Payment Scam"
+          },
+          "short_desc": {
+            "ja": "政府機関や企業を装いギフトカードでの支払い要求",
+            "en": "Impersonate officials demanding payment via gift cards"
+          },
+          "cultural_lever": {
+            "ja": "権威への従順・即座の問題解決欲求",
+            "en": "Authority compliance and desire for quick resolution"
+          },
+          "attack_vector": [
+            "phone",
+            "email"
+          ],
+          "targets": [
+            "elderly",
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 緊急問題を通知 2) ギフトカード購入指示 3) カード番号とPIN要求 4) 即座に換金し消失",
+            "en": "1) Notify of urgent issue 2) Direct to buy gift cards 3) Request card numbers and PINs 4) Cash out immediately"
+          },
+          "red_flags": {
+            "ja": [
+              "ギフトカード支払い要求",
+              "特定店舗指定",
+              "番号読み上げ要求"
+            ],
+            "en": [
+              "Gift card payment demands",
+              "Specific store instructions",
+              "Read numbers over phone"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "政府はギフトカード要求しない",
+              "正規の支払い方法確認",
+              "カード番号は共有しない"
+            ],
+            "en": [
+              "Government never asks for gift cards",
+              "Verify legitimate payment methods",
+              "Never share card numbers"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "gift-cards"
+          ],
+          "legal_notes": {
+            "ja": "",
+            "en": ""
+          },
+          "references": [
+            {
+              "label": "FTC Gift Card Scams",
+              "url": "https://consumer.ftc.gov/articles/gift-card-scams"
+            },
+            {
+              "label": "AARP Gift Card Alert",
+              "url": "https://www.aarp.org/money/scams-fraud/info-2021/gift-card.html"
+            }
+          ],
+          "tags": [
+            "gift-cards",
+            "payment-fraud",
+            "impersonation",
+            "urgency"
+          ]
+        },
+        {
+          "id": "us-019",
+          "title": {
+            "ja": "偽小切手・過払い詐欺",
+            "en": "Fake Check/Overpayment Scam"
+          },
+          "short_desc": {
+            "ja": "偽の小切手を送付し差額返金や商品発送を要求",
+            "en": "Send fake checks requesting refund of overpayment or goods"
+          },
+          "cultural_lever": {
+            "ja": "銀行システムへの信頼・誠実な取引への期待",
+            "en": "Trust in banking system and expectation of honest dealings"
+          },
+          "attack_vector": [
+            "email",
+            "social"
+          ],
+          "targets": [
+            "general",
+            "business"
+          ],
+          "scenario": {
+            "ja": "1) 商品購入や仕事依頼 2) 過払い小切手送付 3) 差額返金要求 4) 小切手不渡り後に損失",
+            "en": "1) Purchase or job offer 2) Send overpayment check 3) Request refund difference 4) Check bounces causing loss"
+          },
+          "red_flags": {
+            "ja": [
+              "過払いの小切手",
+              "急な返金要求",
+              "海外からの小切手",
+              "金額の不一致"
+            ],
+            "en": [
+              "Overpayment checks",
+              "Urgent refund requests",
+              "Foreign checks",
+              "Amount discrepancies"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "小切手決済待機",
+              "過払いは拒否",
+              "銀行で真贋確認"
+            ],
+            "en": [
+              "Wait for check to clear",
+              "Refuse overpayments",
+              "Verify with bank"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "bank-transfer",
+            "cash"
+          ],
+          "legal_notes": {
+            "ja": "小切手詐欺は連邦犯罪",
+            "en": "Check fraud is a federal crime"
+          },
+          "references": [
+            {
+              "label": "FTC Fake Check Scams",
+              "url": "https://consumer.ftc.gov/articles/fake-check-scams"
+            },
+            {
+              "label": "USPS Check Fraud",
+              "url": "https://www.uspis.gov/news/scam-article/fake-check-scams"
+            }
+          ],
+          "tags": [
+            "fake-check",
+            "overpayment",
+            "advance-fee",
+            "banking-fraud"
+          ]
+        },
+        {
+          "id": "us-020",
+          "title": {
+            "ja": "データ漏洩による個人情報盗用",
+            "en": "Identity Theft via Data Breach Notification"
+          },
+          "short_desc": {
+            "ja": "偽のデータ漏洩通知で個人情報確認を要求",
+            "en": "Fake breach alerts requesting personal info verification"
+          },
+          "cultural_lever": {
+            "ja": "プライバシー侵害への恐怖・迅速な対応欲求",
+            "en": "Fear of privacy violation and desire for quick action"
+          },
+          "attack_vector": [
+            "email",
+            "phone"
+          ],
+          "targets": [
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) データ漏洩の虚偽通知 2) アカウント保護を名目 3) 個人情報確認要求 4) フィッシングサイト誘導",
+            "en": "1) False breach notification 2) Claim account protection needed 3) Request info verification 4) Direct to phishing site"
+          },
+          "red_flags": {
+            "ja": [
+              "パニックを煽る文面",
+              "リンククリック要求",
+              "個人情報の再入力",
+              "送信元の不審なアドレス"
+            ],
+            "en": [
+              "Panic-inducing language",
+              "Click link demands",
+              "Re-enter personal info",
+              "Suspicious sender address"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "企業サイトで直接確認",
+              "リンクはクリックしない",
+              "信用監視サービス利用"
+            ],
+            "en": [
+              "Check company site directly",
+              "Don't click links",
+              "Use credit monitoring"
+            ]
+          },
+          "risk_score": 5,
+          "mediums": [
+            "credit"
+          ],
+          "legal_notes": {
+            "ja": "ID窃盗は連邦犯罪",
+            "en": "ID theft is a federal crime"
+          },
+          "references": [
+            {
+              "label": "FTC Identity Theft",
+              "url": "https://consumer.ftc.gov/features/identity-theft"
+            },
+            {
+              "label": "IdentityTheft.gov",
+              "url": "https://www.identitytheft.gov/"
+            }
+          ],
+          "tags": [
+            "data-breach",
+            "identity-theft",
+            "phishing",
+            "panic-exploitation"
           ]
         }
       ]
