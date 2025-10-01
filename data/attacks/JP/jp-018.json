@@ -1,0 +1,78 @@
+{
+  "id": "jp-018",
+  "title": {
+    "ja": "公的給付金・支援金をかたる偽サイト",
+    "en": "Fake Public Benefits Application Sites"
+  },
+  "short_desc": {
+    "ja": "給付申請を装い、個人情報や口座情報を入力させて詐取。",
+    "en": "Spoofed benefits sites steal personal and bank details."
+  },
+  "cultural_lever": {
+    "ja": "公的機関の権威・手続期限のプレッシャー",
+    "en": "Government authority and deadline pressure"
+  },
+  "attack_vector": [
+    "website",
+    "email",
+    "sms"
+  ],
+  "targets": [
+    "general",
+    "immigrant",
+    "business"
+  ],
+  "scenario": {
+    "ja": "1) 給付案内のメール/SNS → 2) 偽申請サイトへ誘導 → 3) 口座・本人情報の入力",
+    "en": "1) Benefit notice → 2) Link to fake application → 3) Collect bank/ID info"
+  },
+  "red_flags": {
+    "ja": [
+      "公式ドメインでない",
+      "妙に簡単な手続き",
+      "最短即時振込を強調"
+    ],
+    "en": [
+      "Non-official domain",
+      "Too-simplified steps",
+      "'Instant transfer' emphasis"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "官公庁公式ポータルから確認",
+      "リンクは踏まず検索/ブックマークでアクセス",
+      "不審なら窓口に直接照会"
+    ],
+    "en": [
+      "Use official portals",
+      "Don't click links; navigate yourself",
+      "Call offices directly"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "bank-transfer",
+    "e-wallet"
+  ],
+  "legal_notes": {
+    "ja": "",
+    "en": ""
+  },
+  "references": [
+    {
+      "label": "デジタル庁：注意喚起・偽サイト",
+      "url": "https://www.digital.go.jp/"
+    },
+    {
+      "label": "フィッシング対策協議会",
+      "url": "https://www.antiphishing.jp/"
+    }
+  ],
+  "tags": [
+    "government",
+    "website",
+    "phishing",
+    "fake-fee"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "jp-014",
+  "title": {
+    "ja": "偽投資助言グループ（SNS/メッセージ誘導）",
+    "en": "Fake Investment Advisory Groups (SNS/Chat Lures)"
+  },
+  "short_desc": {
+    "ja": "SNS投稿やDMで投資講座/シグナル配信を装い、外部グループに誘導し入金させる。",
+    "en": "SNS posts/DMs lure to groups claiming signals/courses and solicit deposits."
+  },
+  "cultural_lever": {
+    "ja": "権威・成功者への同調、集団での安心感",
+    "en": "Deference to 'experts' and herd reassurance"
+  },
+  "attack_vector": [
+    "social",
+    "website",
+    "email"
+  ],
+  "targets": [
+    "general",
+    "business",
+    "student"
+  ],
+  "scenario": {
+    "ja": "1) SNSで実績を誇示 → 2) LINE/Telegramへ誘導 → 3) 外部口座/暗号資産へ入金誘導",
+    "en": "1) Show 'track record' → 2) Move to chat apps → 3) Ask deposits to external/crypto"
+  },
+  "red_flags": {
+    "ja": [
+      "確実・保証の表現",
+      "異常な高利回り",
+      "出金遅延/拒否"
+    ],
+    "en": [
+      "Guaranteed returns",
+      "Unreal high ROI",
+      "Withdrawal delays/denials"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "登録事業者か確認（金融庁）",
+      "小額でテスト・出金可否確認",
+      "第三者に相談"
+    ],
+    "en": [
+      "Check registration (FSA)",
+      "Test small & withdrawal first",
+      "Consult third parties"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "bank-transfer",
+    "crypto",
+    "e-wallet"
+  ],
+  "legal_notes": {
+    "ja": "無登録での助言・勧誘は違法の可能性。",
+    "en": "Unregistered advisory/solicitation may be illegal."
+  },
+  "references": [
+    {
+      "label": "金融庁：無登録業者にご注意",
+      "url": "https://www.fsa.go.jp/"
+    }
+  ],
+  "tags": [
+    "investment",
+    "social",
+    "crypto",
+    "authority-pretext"
+  ]
+}

@@ -17,17 +17,11 @@ demo: https://ipusiron.github.io/global-cultural-scam-atlas/
 ![GitHub license](https://img.shields.io/github/license/ipusiron/global-cultural-scam-atlas)
 [![GitHub Pages](https://img.shields.io/badge/demo-GitHub%20Pages-blue?logo=github)](https://ipusiron.github.io/global-cultural-scam-atlas/)
 
+**Day082 - 生成AIで作るセキュリティツール100**
+
 **Global Cultural Scam Atlas(GCSA)** は、各国・地域で観測される **文化・慣習の文脈を悪用したソーシャルエンジニアリング** を、教育目的で整理する **オープンなデータベース** です。
 
 特定の国民性を一般化する意図はなく、**「攻撃者がその傾向を悪用しうる」** という観点で事例を記述します。
-
-### 本プロジェクトの特徴
-
-**ツール自体はシンプル、データこそが価値**
-本プロジェクトの本質は、各攻撃事例を構造化した **JSONデータベース** にあります。フロントエンドは軽量なHTML/CSS/JavaScriptで構成され、複雑なフレームワークは使用していません。
-
-**GitHub + CIによる品質管理**
-データベースをGitHub上で公開・管理するにあたり、継続的インテグレーション（CI）を活用することで品質を担保しています。このCI環境により、スキーマ検証・自動ビルド・デプロイが自動化され、やや複雑な構成となっていますが、データの正確性と一貫性を保つために不可欠な仕組みです。
 
 ---
 
@@ -37,9 +31,20 @@ demo: https://ipusiron.github.io/global-cultural-scam-atlas/
 
 ブラウザーで直接お試しいただけます。
 
+---
+
+## ✨ 本プロジェクトの特徴
+
+**ツール自体はシンプル、データこそが価値**
+本プロジェクトの本質は、各攻撃事例を構造化した **JSONデータベース** にあります。フロントエンドは軽量なHTML/CSS/JavaScriptで構成され、複雑なフレームワークは使用していません。
+
+**GitHub + CIによる品質管理**
+データベースをGitHub上で公開・管理するにあたり、継続的インテグレーション（CI）を活用することで品質を担保しています。このCI環境により、スキーマ検証・自動ビルド・デプロイが自動化され、やや複雑な構成となっていますが、データの正確性と一貫性を保つために不可欠な仕組みです。
+
+
 ### 主な機能
 
-- **多言語対応**: 日本語/英語の切り替え（ボタン一つで全UI・データを切り替え）
+- **多言語対応**: 日本語/英語の切り替え（ボタン1つで全UI・データを切り替え）
 - **テーマ切り替え**: ライト/ダークモード対応（システム設定を自動検出）
 - **高度なフィルタリング**:
   - 国別フィルター
@@ -206,10 +211,6 @@ const phoneScams = data.countries.flatMap(c => c.attacks)
   .filter(atk => atk.attack_vector.includes('phone'));
 ```
 
-### ライセンス
-
-このデータはMITライセンスで公開されています。自由に利用・改変・再配布できますが、出典の明記を推奨します。
-
 ---
 
 ## ⚙️ データ生成とCI/CDの仕組み
@@ -292,9 +293,11 @@ const phoneScams = data.countries.flatMap(c => c.attacks)
 
 **CIを活用することで、データの正確性・一貫性を維持しながら、誰でも安心してデータを追加・更新できる環境を実現しています。**
 
-### セキュリティ対策
+---
 
-GitHub Pagesで公開するにあたり、以下のセキュリティ対策を実装しています：
+## セキュリティ対策
+
+GitHub Pagesで公開するにあたり、以下のセキュリティ対策を実装しています。
 
 **1. Content Security Policy (CSP)**
 - スクリプトとスタイルシートは同一オリジンのみ許可

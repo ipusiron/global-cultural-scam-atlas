@@ -1,0 +1,19 @@
+{
+  "id": "us-007",
+  "title": { "ja": "Medicare/医療保険詐欺", "en": "Medicare/Health Insurance Scam" },
+  "short_desc": { "ja": "新しいMedicareカードや補償を餌に個人情報窃取", "en": "Steal personal info using new Medicare cards or coverage as bait" },
+  "cultural_lever": { "ja": "医療費への不安・制度の複雑さ", "en": "Healthcare cost anxiety and system complexity" },
+  "attack_vector": ["phone", "email"],
+  "targets": ["elderly"],
+  "scenario": { "ja": "1) Medicare代理人を名乗る 2) 新カード発行や補償確認 3) 個人情報要求 4) 医療ID窃取", "en": "1) Claim to be Medicare agent 2) New card or coverage verification 3) Request personal info 4) Steal medical ID" },
+  "red_flags": { "ja": ["Medicare番号の電話確認", "手数料の要求", "期限切迫の脅し"], "en": ["Phone verification of Medicare number", "Fee requests", "Deadline threats"] },
+  "mitigations": { "ja": ["Medicareは電話勧誘しない", "1-800-MEDICAREで確認", "個人情報は提供しない"], "en": ["Medicare doesn't cold call", "Verify at 1-800-MEDICARE", "Never give personal info"] },
+  "risk_score": 4,
+  "mediums": ["credit", "bank-transfer"],
+  "legal_notes": { "ja": "医療ID窃盗は重罪", "en": "Medical ID theft is a felony" },
+  "references": [
+    { "label": "Medicare.gov Fraud", "url": "https://www.medicare.gov/basics/reporting-medicare-fraud" },
+    { "label": "HHS OIG Medicare Fraud", "url": "https://oig.hhs.gov/fraud/consumer-alerts/fraud-alert-medicare/" }
+  ],
+  "tags": ["medicare", "healthcare", "identity-theft", "impersonation"]
+}

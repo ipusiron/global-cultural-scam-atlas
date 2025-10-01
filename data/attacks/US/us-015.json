@@ -1,0 +1,19 @@
+{
+  "id": "us-015",
+  "title": { "ja": "退役軍人給付金詐欺", "en": "Veterans Benefits Scam" },
+  "short_desc": { "ja": "VA給付金申請支援を装い手数料や個人情報詐取", "en": "Pose as VA benefit helpers to steal fees and personal info" },
+  "cultural_lever": { "ja": "退役軍人への敬意・複雑な給付制度", "en": "Respect for veterans and complex benefits system" },
+  "attack_vector": ["phone", "email"],
+  "targets": ["elderly"],
+  "scenario": { "ja": "1) VA代理人を装う 2) 給付金増額を約束 3) 申請手数料要求 4) 個人情報・DD214要求", "en": "1) Pose as VA agent 2) Promise increased benefits 3) Charge application fees 4) Request personal info/DD214" },
+  "red_flags": { "ja": ["給付申請の手数料", "即決の圧力", "非公式チャネル", "個人情報の電話確認"], "en": ["Fees for benefit claims", "Pressure to act now", "Unofficial channels", "Phone verification of info"] },
+  "mitigations": { "ja": ["VAは手数料請求しない", "VA.govのみ利用", "VSO経由で申請"], "en": ["VA doesn't charge fees", "Only use VA.gov", "Apply through VSOs"] },
+  "risk_score": 3,
+  "mediums": ["credit", "bank-transfer"],
+  "legal_notes": { "ja": "退役軍人への詐欺は重罪", "en": "Fraud against veterans is a felony" },
+  "references": [
+    { "label": "VA Benefits Scam Alert", "url": "https://www.va.gov/resources/avoiding-scams-and-fraud/" },
+    { "label": "FTC Veterans Scams", "url": "https://consumer.ftc.gov/articles/veterans-scams" }
+  ],
+  "tags": ["veterans", "benefits-fraud", "impersonation", "advance-fee"]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "us-004",
+  "title": { "ja": "オンライン恋愛詐欺", "en": "Online Romance Scam" },
+  "short_desc": { "ja": "偽の恋愛関係を築き金銭要求や投資勧誘", "en": "Build fake romantic relationships for money requests and investments" },
+  "cultural_lever": { "ja": "孤独感・真の愛への渇望", "en": "Loneliness and desire for genuine connection" },
+  "attack_vector": ["social", "email"],
+  "targets": ["elderly", "general"],
+  "scenario": { "ja": "1) 魅力的プロフィールで接触 2) 数週間の関係構築 3) 緊急事態を装い送金要求 4) 繰り返し要求", "en": "1) Attractive profile contact 2) Build relationship for weeks 3) Emergency money request 4) Repeated requests" },
+  "red_flags": { "ja": ["会うことを避ける", "早すぎる愛の告白", "金銭的援助要求", "投資話を持ち掛ける"], "en": ["Avoids meeting", "Professes love quickly", "Asks for money", "Pushes investments"] },
+  "mitigations": { "ja": ["ビデオ通話で本人確認", "金銭要求は即拒否", "逆画像検索で写真確認"], "en": ["Verify via video call", "Never send money", "Reverse image search photos"] },
+  "risk_score": 5,
+  "mediums": ["bank-transfer", "cryptocurrency", "gift-cards"],
+  "legal_notes": { "ja": "FBI IC3に報告可能", "en": "Report to FBI IC3" },
+  "references": [
+    { "label": "FTC Romance Scams", "url": "https://consumer.ftc.gov/articles/what-you-need-know-about-romance-scams" },
+    { "label": "FBI Romance Scam Warning", "url": "https://www.fbi.gov/scams-and-safety/common-scams-and-crimes/romance-scams" }
+  ],
+  "tags": ["romance", "emotional-manipulation", "long-con", "trust-exploitation"]
+}

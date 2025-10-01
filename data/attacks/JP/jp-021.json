@@ -1,0 +1,73 @@
+{
+  "id": "jp-006",
+  "title": {
+    "ja": "送り付け商法（ネガティブ・オプション）",
+    "en": "Negative Option Scam (Unordered Goods Delivery)"
+  },
+  "short_desc": {
+    "ja": "注文していない商品が届き、代金請求や返品送料を迫られる。特商法の規定対象。",
+    "en": "Unordered goods are delivered; scammers demand payment or return shipping."
+  },
+  "cultural_lever": {
+    "ja": "受取辞退・返品を巡る遠慮や体面、相手に迷惑をかけたくない心理",
+    "en": "Reluctance to refuse/return and desire to avoid causing trouble"
+  },
+  "attack_vector": [
+    "postal",
+    "phone"
+  ],
+  "targets": [
+    "elder",
+    "general",
+    "expat"
+  ],
+  "scenario": {
+    "ja": "1) 未注文品が届く → 2) 請求・返品送料の要求 → 3) 督促",
+    "en": "1) Unordered package → 2) Demand payment/return fee → 3) Persistent dunning"
+  },
+  "red_flags": {
+    "ja": [
+      "注文履歴なし",
+      "販売者情報が不明確",
+      "強い督促"
+    ],
+    "en": [
+      "No order history",
+      "Vague seller info",
+      "Aggressive dunning"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "特商法の規定を確認",
+      "受領拒否・無視/通報",
+      "消費生活センター相談"
+    ],
+    "en": [
+      "Check legal rules",
+      "Refuse/ignore/report",
+      "Consult consumer centers"
+    ]
+  },
+  "risk_score": 2,
+  "mediums": [
+    "postal",
+    "cash",
+    "bank-transfer"
+  ],
+  "legal_notes": {
+    "ja": "特定商取引法の規定により、売買契約がない場合は受領拒否可。",
+    "en": "Under Japanese law, refusal/disposal allowed in certain cases."
+  },
+  "references": [
+    {
+      "label": "消費者庁：送り付け商法（ネガティブ・オプション）",
+      "url": "https://www.no-trouble.caa.go.jp/qa/negativeoption.html"
+    }
+  ],
+  "tags": [
+    "negative-option",
+    "postal",
+    "consumer-law"
+  ]
+}

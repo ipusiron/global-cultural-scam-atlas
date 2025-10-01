@@ -1,0 +1,73 @@
+{
+  "id": "jp-015",
+  "title": {
+    "ja": "自己啓発セミナー偽装のマルチ商法",
+    "en": "Multi-Level Marketing Disguised as Self-Help Seminars"
+  },
+  "short_desc": {
+    "ja": "自己投資/成功哲学を謳い、実態は高額商材や会員勧誘が主目的。",
+    "en": "Self-help rhetoric but pushes costly products and recruitment."
+  },
+  "cultural_lever": {
+    "ja": "上昇志向・仲間意識・成功者への同調",
+    "en": "Aspiration, group identity, deference to 'successful' people"
+  },
+  "attack_vector": [
+    "in-person",
+    "social",
+    "website"
+  ],
+  "targets": [
+    "student",
+    "general",
+    "business"
+  ],
+  "scenario": {
+    "ja": "1) 無料セミナーに誘導 → 2) 高額教材/会員を勧誘 → 3) 継続的な支払い",
+    "en": "1) Free seminar → 2) Pitch high-priced materials/membership → 3) Ongoing payments"
+  },
+  "red_flags": {
+    "ja": [
+      "確実な成功を強調",
+      "出自不明の体験談",
+      "高額な継続支払い"
+    ],
+    "en": [
+      "Guaranteed success claims",
+      "Unverifiable testimonials",
+      "High recurring costs"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "クーリングオフ制度の確認",
+      "即決を避ける",
+      "第三者と相談"
+    ],
+    "en": [
+      "Know cooling-off rights",
+      "Avoid on-the-spot decisions",
+      "Consult others"
+    ]
+  },
+  "risk_score": 3,
+  "mediums": [
+    "credit",
+    "bank-transfer"
+  ],
+  "legal_notes": {
+    "ja": "特定商取引法の対象となる場合あり。",
+    "en": "May fall under Act on Specified Commercial Transactions."
+  },
+  "references": [
+    {
+      "label": "消費者庁：連鎖販売取引（マルチ商法）",
+      "url": "https://www.no-trouble.caa.go.jp/what/renhan.html"
+    }
+  ],
+  "tags": [
+    "mlm",
+    "seminar",
+    "pressure-sales"
+  ]
+}

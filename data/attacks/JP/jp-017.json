@@ -1,0 +1,72 @@
+{
+  "id": "jp-017",
+  "title": {
+    "ja": "高額リフォーム/害虫駆除の不当勧誘",
+    "en": "High-priced Home Repair/Pest Control Solicitation"
+  },
+  "short_desc": {
+    "ja": "無料点検を装い不安を煽り、不要/過大な工事・駆除契約を結ばせる。",
+    "en": "Free 'inspection' stokes fear to push unnecessary/overpriced contracts."
+  },
+  "cultural_lever": {
+    "ja": "家の体面・近隣への配慮、対立回避",
+    "en": "Home pride, neighbor consideration, conflict avoidance"
+  },
+  "attack_vector": [
+    "door-to-door",
+    "phone"
+  ],
+  "targets": [
+    "elder",
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) 飛び込み点検 → 2) 写真等で不安喚起 → 3) 即日契約を迫る",
+    "en": "1) Cold 'inspection' → 2) Fear-mongering with photos → 3) Push same-day contract"
+  },
+  "red_flags": {
+    "ja": [
+      "即決を迫る",
+      "見積りや比較を拒む",
+      "会社情報・施工実績が不明確"
+    ],
+    "en": [
+      "Pressure to decide now",
+      "Refuses estimates/competition",
+      "Opaque company info"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "複数社で相見積もり",
+      "クーリングオフの確認",
+      "自治体/消費生活センター相談"
+    ],
+    "en": [
+      "Get multiple quotes",
+      "Know cooling-off rights",
+      "Consult local consumer centers"
+    ]
+  },
+  "risk_score": 3,
+  "mediums": [
+    "bank-transfer",
+    "cash",
+    "credit"
+  ],
+  "legal_notes": {
+    "ja": "特定商取引法の訪問販売に該当の可能性。",
+    "en": "May fall under door-to-door sales regulations."
+  },
+  "references": [
+    {
+      "label": "消費者庁：訪問販売の注意点",
+      "url": "https://www.no-trouble.caa.go.jp/what/kojin/hanbai.html"
+    }
+  ],
+  "tags": [
+    "doorstep",
+    "pressure-sales",
+    "housing"
+  ]
+}

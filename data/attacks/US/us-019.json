@@ -1,0 +1,19 @@
+{
+  "id": "us-019",
+  "title": { "ja": "偽小切手・過払い詐欺", "en": "Fake Check/Overpayment Scam" },
+  "short_desc": { "ja": "偽の小切手を送付し差額返金や商品発送を要求", "en": "Send fake checks requesting refund of overpayment or goods" },
+  "cultural_lever": { "ja": "銀行システムへの信頼・誠実な取引への期待", "en": "Trust in banking system and expectation of honest dealings" },
+  "attack_vector": ["email", "social"],
+  "targets": ["general", "business"],
+  "scenario": { "ja": "1) 商品購入や仕事依頼 2) 過払い小切手送付 3) 差額返金要求 4) 小切手不渡り後に損失", "en": "1) Purchase or job offer 2) Send overpayment check 3) Request refund difference 4) Check bounces causing loss" },
+  "red_flags": { "ja": ["過払いの小切手", "急な返金要求", "海外からの小切手", "金額の不一致"], "en": ["Overpayment checks", "Urgent refund requests", "Foreign checks", "Amount discrepancies"] },
+  "mitigations": { "ja": ["小切手決済待機", "過払いは拒否", "銀行で真贋確認"], "en": ["Wait for check to clear", "Refuse overpayments", "Verify with bank"] },
+  "risk_score": 4,
+  "mediums": ["bank-transfer", "cash"],
+  "legal_notes": { "ja": "小切手詐欺は連邦犯罪", "en": "Check fraud is a federal crime" },
+  "references": [
+    { "label": "FTC Fake Check Scams", "url": "https://consumer.ftc.gov/articles/fake-check-scams" },
+    { "label": "USPS Check Fraud", "url": "https://www.uspis.gov/news/scam-article/fake-check-scams" }
+  ],
+  "tags": ["fake-check", "overpayment", "advance-fee", "banking-fraud"]
+}

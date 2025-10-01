@@ -1,0 +1,79 @@
+{
+  "id": "jp-020",
+  "title": {
+    "ja": "災害便乗の寄付・義援金詐欺",
+    "en": "Disaster Relief Donation Scams"
+  },
+  "short_desc": {
+    "ja": "災害発生直後に寄付を装い、即時支払い・秘密厳守を迫る。",
+    "en": "Right after disasters, scammers solicit urgent secret donations."
+  },
+  "cultural_lever": {
+    "ja": "助け合い・共感の文化、同調圧力",
+    "en": "Mutual aid and social empathy"
+  },
+  "attack_vector": [
+    "social",
+    "email",
+    "in-person"
+  ],
+  "targets": [
+    "general",
+    "business",
+    "tourist"
+  ],
+  "scenario": {
+    "ja": "1) 災害の写真や体験談で感情喚起 → 2) 寄付リンク・口座提示 → 3) 追跡不能な手段を要求",
+    "en": "1) Emotional imagery → 2) Donation links/accounts → 3) Untraceable methods"
+  },
+  "red_flags": {
+    "ja": [
+      "急がせる/秘密厳守",
+      "ギフトカード/仮想通貨を要求",
+      "団体の実在性が不明"
+    ],
+    "en": [
+      "Urgency/secrecy",
+      "Gift cards/crypto",
+      "Opaque organization"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "公的団体に直接寄付",
+      "登録・実績を確認",
+      "即時送金は避ける"
+    ],
+    "en": [
+      "Donate directly to recognized orgs",
+      "Verify registration/track record",
+      "Avoid instant transfers"
+    ]
+  },
+  "risk_score": 3,
+  "mediums": [
+    "bank-transfer",
+    "e-wallet",
+    "crypto"
+  ],
+  "legal_notes": {
+    "ja": "",
+    "en": ""
+  },
+  "references": [
+    {
+      "label": "内閣府 防災：災害関連情報",
+      "url": "https://www.bousai.go.jp/"
+    },
+    {
+      "label": "日本赤十字社：義援金",
+      "url": "https://www.jrc.or.jp/"
+    }
+  ],
+  "tags": [
+    "charity",
+    "disaster-pretext",
+    "social",
+    "urgency"
+  ]
+}

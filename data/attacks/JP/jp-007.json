@@ -1,0 +1,73 @@
+{
+  "id": "jp-007",
+  "title": {
+    "ja": "オレオレ詐欺（家族装い・緊急費用）",
+    "en": "It's-me Scam (Family Impersonation Emergency)"
+  },
+  "short_desc": {
+    "ja": "家族を装い、事故・トラブルを口実に至急の送金を迫る。",
+    "en": "Impersonates a family member, urging urgent payments for 'accidents' or trouble."
+  },
+  "cultural_lever": {
+    "ja": "家族への責任感・孝行心・恥の回避",
+    "en": "Strong family duty, filial piety, and shame avoidance"
+  },
+  "attack_vector": [
+    "phone",
+    "sms"
+  ],
+  "targets": [
+    "elder",
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) 『オレだよ』で接近 → 2) 緊急費用の名目提示 → 3) 振込/現金手渡しを要求",
+    "en": "1) 'It's me' approach → 2) Urgent expense pretext → 3) Wire/cash handover"
+  },
+  "red_flags": {
+    "ja": [
+      "声が違う理由を述べる（風邪等）",
+      "秘密厳守を求める",
+      "至急の送金要求"
+    ],
+    "en": [
+      "Excuses for voice difference",
+      "Demands secrecy",
+      "Urgent payment request"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "家族の既知番号へ折返し確認",
+      "第三者と共有",
+      "送金前に必ず本人確認"
+    ],
+    "en": [
+      "Call known numbers to verify",
+      "Consult third parties",
+      "Verify identity before paying"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "bank-transfer",
+    "cash",
+    "gift-card"
+  ],
+  "legal_notes": {
+    "ja": "",
+    "en": ""
+  },
+  "references": [
+    {
+      "label": "警察庁：特殊詐欺対策（SOS47）",
+      "url": "https://www.npa.go.jp/bureau/safetylife/sos47/"
+    }
+  ],
+  "tags": [
+    "family-emergency",
+    "urgency",
+    "phone",
+    "authority-pretext"
+  ]
+}

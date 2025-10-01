@@ -1,0 +1,78 @@
+{
+  "id": "jp-008",
+  "title": {
+    "ja": "偽テックサポート詐欺（ポップアップ→電話）",
+    "en": "Fake Tech Support (Pop-up to Phone Call)"
+  },
+  "short_desc": {
+    "ja": "警告ポップアップや通知で不安を煽り、電話や遠隔操作、有料サポートへ誘導。",
+    "en": "Scare pop-ups push calls, remote access, and paid support subscriptions."
+  },
+  "cultural_lever": {
+    "ja": "専門家・サポートへの信頼",
+    "en": "Trust in professional support"
+  },
+  "attack_vector": [
+    "website",
+    "phone",
+    "email"
+  ],
+  "targets": [
+    "general",
+    "elder"
+  ],
+  "scenario": {
+    "ja": "1) 偽警告表示 → 2) 指定番号へ電話 → 3) 遠隔操作許可 → 4) 有料契約/決済",
+    "en": "1) Fake alert → 2) Call number → 3) Grant remote access → 4) Pay for bogus fixes"
+  },
+  "red_flags": {
+    "ja": [
+      "今すぐ電話/クリックの誘導",
+      "リモート接続を要求",
+      "ギフトカードでの支払い要求"
+    ],
+    "en": [
+      "Call/click now pressure",
+      "Requests remote access",
+      "Asks gift card payments"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "公式窓口は自分で検索",
+      "リモートは拒否",
+      "決済前に家族/知人へ相談"
+    ],
+    "en": [
+      "Find official contacts yourself",
+      "Decline remote access",
+      "Consult before payment"
+    ]
+  },
+  "risk_score": 3,
+  "mediums": [
+    "credit",
+    "gift-card",
+    "e-wallet"
+  ],
+  "legal_notes": {
+    "ja": "",
+    "en": ""
+  },
+  "references": [
+    {
+      "label": "総務省 国民のための情報セキュリティサイト：不審な警告画面",
+      "url": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/security/"
+    },
+    {
+      "label": "フィッシング対策協議会",
+      "url": "https://www.antiphishing.jp/"
+    }
+  ],
+  "tags": [
+    "fake-tech-support",
+    "website",
+    "phone",
+    "urgency"
+  ]
+}

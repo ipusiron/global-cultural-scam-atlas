@@ -1,0 +1,19 @@
+{
+  "id": "us-003",
+  "title": { "ja": "Windows/Microsoft偽装サポート詐欺", "en": "Windows/Microsoft Impersonation Support Scam" },
+  "short_desc": { "ja": "偽のエラー画面から電話誘導し遠隔操作で情報窃取", "en": "Fake error screens lead to phone calls and remote access theft" },
+  "cultural_lever": { "ja": "大手IT企業への信頼・技術的不安", "en": "Trust in major tech brands and technical insecurity" },
+  "attack_vector": ["email", "phone", "social"],
+  "targets": ["elderly", "general"],
+  "scenario": { "ja": "1) 偽エラー画面表示 2) サポート番号へ誘導 3) 遠隔操作ツール導入 4) 修理費請求", "en": "1) Fake error popup 2) Call support number 3) Install remote tool 4) Charge for repairs" },
+  "red_flags": { "ja": ["ポップアップの電話番号", "前払い要求", "パスワード要求"], "en": ["Phone number in popup", "Upfront payment", "Password requests"] },
+  "mitigations": { "ja": ["Microsoftは電話勧誘しない", "公式サイトから連絡先確認", "遠隔操作は拒否"], "en": ["Microsoft doesn't cold call", "Check official site for contacts", "Refuse remote access"] },
+  "risk_score": 4,
+  "mediums": ["credit", "gift-cards", "bank-transfer"],
+  "legal_notes": { "ja": "", "en": "" },
+  "references": [
+    { "label": "Microsoft Tech Support Scam", "url": "https://support.microsoft.com/en-us/windows/protect-yourself-from-tech-support-scams" },
+    { "label": "FBI IC3 Report", "url": "https://www.ic3.gov/Home/Scams" }
+  ],
+  "tags": ["tech-support", "impersonation", "remote-access", "brand-exploitation"]
+}

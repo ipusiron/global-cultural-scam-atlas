@@ -1,0 +1,73 @@
+{
+  "id": "jp-009",
+  "title": {
+    "ja": "宅配業者装い不在通知SMS（偽サイト誘導）",
+    "en": "Delivery Company Impersonation SMS (Fake Missed Delivery)"
+  },
+  "short_desc": {
+    "ja": "不在通知を装ったSMSで偽サイトへ誘導し、ID/カード情報を詐取。",
+    "en": "SMS 'missed delivery' links to a fake site to steal IDs/card data."
+  },
+  "cultural_lever": {
+    "ja": "時間厳守・受取責任感",
+    "en": "Punctuality and responsibility to receive parcels"
+  },
+  "attack_vector": [
+    "sms",
+    "website"
+  ],
+  "targets": [
+    "general",
+    "student",
+    "expat"
+  ],
+  "scenario": {
+    "ja": "1) 不在通知SMS → 2) 偽サイトで再配達設定名目 → 3) 個人/決済情報入力を誘導",
+    "en": "1) SMS → 2) Fake site 'reschedule' → 3) Collect personal/payment data"
+  },
+  "red_flags": {
+    "ja": [
+      "URLが公式と異なる",
+      "アプリ外のログイン/決済要求",
+      "短時間の認証催促"
+    ],
+    "en": [
+      "URL mismatch",
+      "Login/payment outside official app",
+      "Short-timed prompts"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "配送会社公式アプリ/サイトから確認",
+      "SMSリンクは開かない",
+      "不審なら公式窓口に照会"
+    ],
+    "en": [
+      "Use official app/site",
+      "Don't open SMS links",
+      "Contact official support"
+    ]
+  },
+  "risk_score": 3,
+  "mediums": [
+    "credit",
+    "e-wallet"
+  ],
+  "legal_notes": {
+    "ja": "",
+    "en": ""
+  },
+  "references": [
+    {
+      "label": "フィッシング対策協議会（宅配便不在連絡を装う手口）",
+      "url": "https://www.antiphishing.jp/"
+    }
+  ],
+  "tags": [
+    "delivery",
+    "sms",
+    "website",
+    "phishing"
+  ]
+}

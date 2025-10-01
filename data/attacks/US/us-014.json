@@ -1,0 +1,19 @@
+{
+  "id": "us-014",
+  "title": { "ja": "賃貸物件詐欺", "en": "Rental Property Scam" },
+  "short_desc": { "ja": "存在しない物件や他人の物件で敷金・礼金詐取", "en": "Collect deposits for non-existent or others' properties" },
+  "cultural_lever": { "ja": "住宅市場の競争・良物件への焦り", "en": "Competitive housing market and fear of missing out" },
+  "attack_vector": ["email", "social"],
+  "targets": ["general", "student"],
+  "scenario": { "ja": "1) 格安優良物件掲載 2) 海外在住等の理由 3) 内見前の敷金要求 4) 送金後連絡途絶", "en": "1) List great deals 2) Owner abroad excuse 3) Deposit before viewing 4) Disappear after payment" },
+  "red_flags": { "ja": ["相場より大幅に安い", "内見拒否", "海外送金要求", "急かす態度"], "en": ["Way below market price", "No viewing allowed", "Wire transfer abroad", "Pressure to act fast"] },
+  "mitigations": { "ja": ["内見前の支払い拒否", "所有者確認", "現地不動産業者利用"], "en": ["Never pay before viewing", "Verify ownership", "Use local real estate agents"] },
+  "risk_score": 4,
+  "mediums": ["bank-transfer", "cash", "cryptocurrency"],
+  "legal_notes": { "ja": "", "en": "" },
+  "references": [
+    { "label": "FTC Rental Scams", "url": "https://consumer.ftc.gov/articles/rental-scams" },
+    { "label": "FBI Rental Fraud", "url": "https://www.fbi.gov/how-we-can-help-you/safety-resources/scams-and-safety/common-scams-and-crimes/real-estate-fraud" }
+  ],
+  "tags": ["rental", "real-estate", "advance-fee", "phantom-goods"]
+}

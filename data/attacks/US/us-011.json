@@ -1,0 +1,19 @@
+{
+  "id": "us-011",
+  "title": { "ja": "社会保障番号停止詐欺", "en": "Social Security Number Suspension Scam" },
+  "short_desc": { "ja": "SSN停止や犯罪関与を脅し個人情報・金銭詐取", "en": "Threaten SSN suspension or criminal activity to steal info and money" },
+  "cultural_lever": { "ja": "社会保障番号の重要性・政府機関への恐怖", "en": "SSN importance and fear of government authority" },
+  "attack_vector": ["phone", "email"],
+  "targets": ["elderly", "general"],
+  "scenario": { "ja": "1) SSA職員を名乗る 2) SSN犯罪利用の虚偽通知 3) 番号停止の脅迫 4) 確認と称し情報要求", "en": "1) Pose as SSA official 2) False criminal activity claim 3) Threaten SSN suspension 4) Request info for verification" },
+  "red_flags": { "ja": ["SSN停止の脅迫", "即時対応の要求", "支払いや個人情報要求"], "en": ["SSN suspension threats", "Urgent action demands", "Payment or info requests"] },
+  "mitigations": { "ja": ["SSAは電話で脅迫しない", "SSNは停止されない", "1-800-772-1213で確認"], "en": ["SSA doesn't threaten by phone", "SSNs can't be suspended", "Verify at 1-800-772-1213"] },
+  "risk_score": 5,
+  "mediums": ["gift-cards", "bank-transfer", "cryptocurrency"],
+  "legal_notes": { "ja": "SSA OIGに報告推奨", "en": "Report to SSA OIG" },
+  "references": [
+    { "label": "SSA Scam Alert", "url": "https://www.ssa.gov/scam/" },
+    { "label": "FTC SSN Scams", "url": "https://consumer.ftc.gov/articles/your-social-security-number-isnt-suspended" }
+  ],
+  "tags": ["social-security", "identity-theft", "government-impersonation", "fear-based"]
+}

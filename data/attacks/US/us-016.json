@@ -1,0 +1,19 @@
+{
+  "id": "us-016",
+  "title": { "ja": "暗号通貨投資詐欺", "en": "Cryptocurrency Investment Scam" },
+  "short_desc": { "ja": "高リターン保証や有名人偽装で暗号資産詐取", "en": "Promise guaranteed returns or impersonate celebrities to steal crypto" },
+  "cultural_lever": { "ja": "投資ブーム・FOMO（機会損失の恐怖）", "en": "Investment hype and fear of missing out (FOMO)" },
+  "attack_vector": ["social", "email"],
+  "targets": ["general"],
+  "scenario": { "ja": "1) 高リターン投資勧誘 2) 有名人推薦を偽装 3) 限定機会を強調 4) 暗号資産送金後消失", "en": "1) Pitch high returns 2) Fake celebrity endorsement 3) Limited time offer 4) Disappear after crypto transfer" },
+  "red_flags": { "ja": ["保証されたリターン", "有名人の突然の推薦", "プレッシャー戦術", "規制のない取引所"], "en": ["Guaranteed returns", "Sudden celebrity endorsements", "Pressure tactics", "Unregulated exchanges"] },
+  "mitigations": { "ja": ["SEC登録確認", "公式チャネル確認", "保証リターンは詐欺"], "en": ["Check SEC registration", "Verify official channels", "Guaranteed returns are scams"] },
+  "risk_score": 5,
+  "mediums": ["cryptocurrency"],
+  "legal_notes": { "ja": "", "en": "" },
+  "references": [
+    { "label": "FTC Crypto Scams", "url": "https://consumer.ftc.gov/articles/what-know-about-cryptocurrency-and-scams" },
+    { "label": "SEC Crypto Fraud", "url": "https://www.investor.gov/protect-your-investments/fraud/types-fraud/digital-asset-and-crypto-investment-scams" }
+  ],
+  "tags": ["cryptocurrency", "investment-fraud", "celebrity-impersonation", "FOMO"]
+}

@@ -1,0 +1,72 @@
+{
+  "id": "jp-011",
+  "title": {
+    "ja": "フリマアプリ偽決済リンク詐欺",
+    "en": "Marketplace Fake Payment Link Scam"
+  },
+  "short_desc": {
+    "ja": "取引メッセージで偽サイトの支払いリンクを送り、決済情報を詐取。",
+    "en": "Sends fake payment links in chat to steal payment details."
+  },
+  "cultural_lever": {
+    "ja": "円滑な取引志向・相手への配慮",
+    "en": "Preference for smooth dealings and politeness"
+  },
+  "attack_vector": [
+    "marketplace",
+    "social",
+    "website"
+  ],
+  "targets": [
+    "general",
+    "student"
+  ],
+  "scenario": {
+    "ja": "1) 出品者/購入者を装い偽リンク送付 → 2) 外部サイトで決済入力 → 3) 情報窃取",
+    "en": "1) Impersonate buyer/seller → 2) External fake payment page → 3) Data theft"
+  },
+  "red_flags": {
+    "ja": [
+      "公式外URLでの決済誘導",
+      "急がせる/値引きちらつかせる",
+      "外部メッセンジャーへ誘導"
+    ],
+    "en": [
+      "Off-platform payment",
+      "Rushing/discount bait",
+      "Moving to external messenger"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "アプリ内決済以外は拒否",
+      "リンク先ドメイン確認",
+      "事務局に通報"
+    ],
+    "en": [
+      "Use in-app payments only",
+      "Verify domain",
+      "Report to platform"
+    ]
+  },
+  "risk_score": 3,
+  "mediums": [
+    "e-wallet",
+    "credit"
+  ],
+  "legal_notes": {
+    "ja": "",
+    "en": ""
+  },
+  "references": [
+    {
+      "label": "国民生活センター：フリマアプリのトラブル",
+      "url": "https://www.kokusen.go.jp/"
+    }
+  ],
+  "tags": [
+    "marketplace",
+    "phishing",
+    "social-engineering"
+  ]
+}

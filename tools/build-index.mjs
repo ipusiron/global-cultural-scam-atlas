@@ -9,7 +9,8 @@ const run = async () => {
 
   for (const file of files) {
     const json = JSON.parse(await fs.readFile(file, "utf-8"));
-    const cc = file.split("/")[2]; // e.g., JP
+    const parts = file.replace(/\\/g, '/').split("/");
+    const cc = parts[2]; // e.g., JP
     if (!index[cc]) index[cc] = [];
     index[cc].push(json.id);
   }

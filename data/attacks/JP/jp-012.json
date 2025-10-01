@@ -1,0 +1,73 @@
+{
+  "id": "jp-012",
+  "title": {
+    "ja": "チケット詐欺（SNS前払い・譲渡装い）",
+    "en": "Ticket Scam (SNS Prepayment & Fake Transfers)"
+  },
+  "short_desc": {
+    "ja": "入手困難なコンサート等のチケットを装い、前払い後に連絡が途絶える。",
+    "en": "Claims to sell rare event tickets; disappears after prepayment."
+  },
+  "cultural_lever": {
+    "ja": "行列・希少性への信頼、譲渡文化",
+    "en": "Trust in scarcity/queuing culture and transfers"
+  },
+  "attack_vector": [
+    "social",
+    "website"
+  ],
+  "targets": [
+    "general",
+    "student"
+  ],
+  "scenario": {
+    "ja": "1) SNSで募集/DM接触 → 2) 先払い依頼 → 3) 電子チケット送付偽装/音信不通",
+    "en": "1) SNS post/DM → 2) Ask prepayment → 3) Fake e-ticket or ghosting"
+  },
+  "red_flags": {
+    "ja": [
+      "相場より極端に安い",
+      "本人確認や実券提示を拒否",
+      "外部送金手段の指定"
+    ],
+    "en": [
+      "Too cheap",
+      "Refuses proof of ticket",
+      "Asks off-platform payment"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "公式リセール/認定プラットフォーム利用",
+      "前払いは避ける",
+      "身分証・購入履歴の提示を求める"
+    ],
+    "en": [
+      "Use official resale platforms",
+      "Avoid prepayment",
+      "Request ID/purchase proof"
+    ]
+  },
+  "risk_score": 3,
+  "mediums": [
+    "bank-transfer",
+    "e-wallet",
+    "crypto"
+  ],
+  "legal_notes": {
+    "ja": "",
+    "en": ""
+  },
+  "references": [
+    {
+      "label": "警視庁：チケット詐欺の注意喚起",
+      "url": "https://www.keishicho.metro.tokyo.lg.jp/"
+    }
+  ],
+  "tags": [
+    "ticket",
+    "social",
+    "prepayment",
+    "scarcity"
+  ]
+}

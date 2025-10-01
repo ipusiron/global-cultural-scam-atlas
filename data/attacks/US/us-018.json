@@ -1,0 +1,19 @@
+{
+  "id": "us-018",
+  "title": { "ja": "ギフトカード支払い詐欺", "en": "Gift Card Payment Scam" },
+  "short_desc": { "ja": "政府機関や企業を装いギフトカードでの支払い要求", "en": "Impersonate officials demanding payment via gift cards" },
+  "cultural_lever": { "ja": "権威への従順・即座の問題解決欲求", "en": "Authority compliance and desire for quick resolution" },
+  "attack_vector": ["phone", "email"],
+  "targets": ["elderly", "general"],
+  "scenario": { "ja": "1) 緊急問題を通知 2) ギフトカード購入指示 3) カード番号とPIN要求 4) 即座に換金し消失", "en": "1) Notify of urgent issue 2) Direct to buy gift cards 3) Request card numbers and PINs 4) Cash out immediately" },
+  "red_flags": { "ja": ["ギフトカード支払い要求", "特定店舗指定", "番号読み上げ要求"], "en": ["Gift card payment demands", "Specific store instructions", "Read numbers over phone"] },
+  "mitigations": { "ja": ["政府はギフトカード要求しない", "正規の支払い方法確認", "カード番号は共有しない"], "en": ["Government never asks for gift cards", "Verify legitimate payment methods", "Never share card numbers"] },
+  "risk_score": 4,
+  "mediums": ["gift-cards"],
+  "legal_notes": { "ja": "", "en": "" },
+  "references": [
+    { "label": "FTC Gift Card Scams", "url": "https://consumer.ftc.gov/articles/gift-card-scams" },
+    { "label": "AARP Gift Card Alert", "url": "https://www.aarp.org/money/scams-fraud/info-2021/gift-card.html" }
+  ],
+  "tags": ["gift-cards", "payment-fraud", "impersonation", "urgency"]
+}

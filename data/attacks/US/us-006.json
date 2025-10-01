@@ -1,0 +1,19 @@
+{
+  "id": "us-006",
+  "title": { "ja": "偽チャリティ詐欺", "en": "Fake Charity Fraud" },
+  "short_desc": { "ja": "災害や社会問題を悪用した偽の寄付募集", "en": "Exploit disasters and causes with fake donation requests" },
+  "cultural_lever": { "ja": "慈善活動への積極性・助け合い精神", "en": "Charitable giving culture and desire to help others" },
+  "attack_vector": ["phone", "email", "social"],
+  "targets": ["general", "elderly"],
+  "scenario": { "ja": "1) 災害直後に募金呼びかけ 2) 感情に訴える内容 3) 緊急性を強調 4) 即時寄付要求", "en": "1) Solicit after disasters 2) Emotional appeals 3) Emphasize urgency 4) Request immediate donation" },
+  "red_flags": { "ja": ["高圧的な勧誘", "現金・ギフトカード要求", "団体情報が不明確"], "en": ["High-pressure tactics", "Cash or gift card requests", "Vague organization details"] },
+  "mitigations": { "ja": ["CharityNavigator.orgで確認", "公式サイトから直接寄付", "領収書を要求"], "en": ["Check CharityNavigator.org", "Donate directly via official sites", "Request receipts"] },
+  "risk_score": 3,
+  "mediums": ["credit", "bank-transfer", "gift-cards"],
+  "legal_notes": { "ja": "", "en": "" },
+  "references": [
+    { "label": "FTC Charity Scams", "url": "https://consumer.ftc.gov/articles/charity-scams" },
+    { "label": "Charity Navigator", "url": "https://www.charitynavigator.org/" }
+  ],
+  "tags": ["charity-fraud", "disaster-exploitation", "emotional-manipulation", "urgency"]
+}

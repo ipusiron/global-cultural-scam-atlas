@@ -1,0 +1,70 @@
+{
+  "id": "jp-013",
+  "title": {
+    "ja": "闇両替・違法両替の持ちかけ（観光地）",
+    "en": "Informal Currency Exchange Approaches"
+  },
+  "short_desc": {
+    "ja": "路上での好条件両替を持ちかけ、偽札や過少返金などの被害。",
+    "en": "Street 'good-rate' exchanges leading to counterfeit notes or short-changing."
+  },
+  "cultural_lever": {
+    "ja": "面子・断りにくさ、親切の返報性",
+    "en": "Face-saving, reluctance to refuse, reciprocity"
+  },
+  "attack_vector": [
+    "in-person",
+    "street"
+  ],
+  "targets": [
+    "tourist",
+    "expat"
+  ],
+  "scenario": {
+    "ja": "1) 親切な声かけ → 2) 好条件を提示 → 3) 両替時に偽札/過少返金",
+    "en": "1) Friendly approach → 2) Offer great rate → 3) Counterfeit/short-change"
+  },
+  "red_flags": {
+    "ja": [
+      "公的両替所以外での取引",
+      "レシートなし",
+      "人目の少ない場所へ誘導"
+    ],
+    "en": [
+      "Non-official exchange",
+      "No receipt",
+      "Secluded locations"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "銀行/公的両替所のみ利用",
+      "受取額を場で確認",
+      "怪しければ断る"
+    ],
+    "en": [
+      "Use banks/official counters",
+      "Count on the spot",
+      "Decline if suspicious"
+    ]
+  },
+  "risk_score": 2,
+  "mediums": [
+    "cash"
+  ],
+  "legal_notes": {
+    "ja": "",
+    "en": ""
+  },
+  "references": [
+    {
+      "label": "観光庁：訪日旅行の安全情報",
+      "url": "https://www.mlit.go.jp/kankocho/"
+    }
+  ],
+  "tags": [
+    "tourism",
+    "street",
+    "cash"
+  ]
+}

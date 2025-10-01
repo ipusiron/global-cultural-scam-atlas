@@ -1,0 +1,73 @@
+{
+  "id": "jp-016",
+  "title": {
+    "ja": "街頭募金の偽装（寄付詐欺）",
+    "en": "Street Charity Impersonation"
+  },
+  "short_desc": {
+    "ja": "慈善/災害支援を装い募金を集めるが、実体がない/不透明。",
+    "en": "Collects donations for 'charity/disaster relief' with opaque or fake entities."
+  },
+  "cultural_lever": {
+    "ja": "寄付・ボランティアへの共感、同調圧力",
+    "en": "Empathy for charity and social pressure"
+  },
+  "attack_vector": [
+    "in-person",
+    "street",
+    "social"
+  ],
+  "targets": [
+    "general",
+    "tourist",
+    "student"
+  ],
+  "scenario": {
+    "ja": "1) 街頭でプラカード/制服風 → 2) 口頭説明で募金箱へ誘導 → 3) 領収書なし/団体不明",
+    "en": "1) Street placards/uniform-like → 2) Oral pitch → 3) No receipt/unclear org"
+  },
+  "red_flags": {
+    "ja": [
+      "法人登録や活動実績の不明確",
+      "領収書なし",
+      "ウェブ/連絡先がない"
+    ],
+    "en": [
+      "No legal registration",
+      "No receipts",
+      "No website/contacts"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "公的に登録された団体へ寄付",
+      "領収書・活動報告を確認",
+      "公式サイト経由で寄付"
+    ],
+    "en": [
+      "Donate to registered orgs",
+      "Check receipts/activity reports",
+      "Donate via official sites"
+    ]
+  },
+  "risk_score": 2,
+  "mediums": [
+    "cash",
+    "e-wallet"
+  ],
+  "legal_notes": {
+    "ja": "",
+    "en": ""
+  },
+  "references": [
+    {
+      "label": "日本赤十字社：義援金・寄付情報",
+      "url": "https://www.jrc.or.jp/"
+    }
+  ],
+  "tags": [
+    "charity",
+    "street",
+    "festival-pretext"
+  ]
+}

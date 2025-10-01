@@ -1,0 +1,19 @@
+{
+  "id": "us-013",
+  "title": { "ja": "在宅ワーク詐欺", "en": "Work-from-Home Job Scam" },
+  "short_desc": { "ja": "高収入在宅ワークを餌に初期費用や個人情報詐取", "en": "Promise high-paying remote work to steal fees or personal info" },
+  "cultural_lever": { "ja": "柔軟な働き方への需要・副収入への期待", "en": "Desire for flexible work and supplemental income" },
+  "attack_vector": ["email", "social"],
+  "targets": ["general", "student"],
+  "scenario": { "ja": "1) 高収入在宅ワーク広告 2) 簡単な仕事で高報酬 3) 研修費や機材費要求 4) 小切手詐欺に利用", "en": "1) High-paying remote job ad 2) Easy work big money 3) Training or equipment fees 4) Check cashing schemes" },
+  "red_flags": { "ja": ["前払い費用", "個人口座使用指示", "仕事内容が曖昧", "面接なし即採用"], "en": ["Upfront fees", "Use personal account", "Vague job description", "No interview instant hire"] },
+  "mitigations": { "ja": ["正規企業は費用請求しない", "BBBで企業確認", "小切手換金は拒否"], "en": ["Real employers don't charge fees", "Check BBB ratings", "Never cash checks for others"] },
+  "risk_score": 4,
+  "mediums": ["credit", "bank-transfer"],
+  "legal_notes": { "ja": "", "en": "" },
+  "references": [
+    { "label": "FTC Job Scams", "url": "https://consumer.ftc.gov/articles/job-scams" },
+    { "label": "BBB Employment Scams", "url": "https://www.bbb.org/article/news-releases/22666-bbb-tip-employment-scams" }
+  ],
+  "tags": ["employment", "work-from-home", "advance-fee", "money-mule"]
+}

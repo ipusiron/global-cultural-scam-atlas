@@ -1,0 +1,70 @@
+{
+  "id": "jp-019",
+  "title": {
+    "ja": "偽ブランド品・海賊版の路上販売",
+    "en": "Counterfeit Brand Goods / Pirated Media Street Sales"
+  },
+  "short_desc": {
+    "ja": "観光地等で正規品と誤認させる違法販売。返品不可・品質不良。",
+    "en": "Illicit street sales misrepresent items as genuine; no refund, poor quality."
+  },
+  "cultural_lever": {
+    "ja": "お土産文化・値引きへの期待",
+    "en": "Souvenir culture and discount expectations"
+  },
+  "attack_vector": [
+    "street",
+    "market"
+  ],
+  "targets": [
+    "tourist",
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) 値引きで関心喚起 → 2) 真贋を曖昧に説明 → 3) 売り切りで連絡不能",
+    "en": "1) Discount lure → 2) Vague authenticity claims → 3) One-off, unreachable seller"
+  },
+  "red_flags": {
+    "ja": [
+      "極端な安さ",
+      "保証・領収書なし",
+      "店舗情報なし"
+    ],
+    "en": [
+      "Extremely low price",
+      "No warranty/receipt",
+      "No store info"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "正規販売店以外で高額品を買わない",
+      "領収書・販売者情報を確認",
+      "少額でも真贋不明は避ける"
+    ],
+    "en": [
+      "Avoid high-value buys off authorized stores",
+      "Get receipts/seller info",
+      "Avoid dubious items"
+    ]
+  },
+  "risk_score": 2,
+  "mediums": [
+    "cash"
+  ],
+  "legal_notes": {
+    "ja": "",
+    "en": ""
+  },
+  "references": [
+    {
+      "label": "特許庁：偽ブランド対策・知的財産",
+      "url": "https://www.jpo.go.jp/"
+    }
+  ],
+  "tags": [
+    "counterfeit",
+    "tourism",
+    "street"
+  ]
+}

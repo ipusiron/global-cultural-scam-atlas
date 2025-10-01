@@ -1,0 +1,19 @@
+{
+  "id": "us-002",
+  "title": { "ja": "IRS税務詐欺の脅迫", "en": "IRS Tax Scam Threats" },
+  "short_desc": { "ja": "偽IRS職員が逮捕や資産差押えで脅迫し即時支払い要求", "en": "Fake IRS agents threaten arrest or asset seizure for immediate payment" },
+  "cultural_lever": { "ja": "政府機関への恐怖・税務問題への不安", "en": "Fear of government authority and tax compliance anxiety" },
+  "attack_vector": ["phone", "email"],
+  "targets": ["general", "elderly"],
+  "scenario": { "ja": "1) IRS職員を名乗る電話 2) 未納税の虚偽通知 3) 逮捕・差押えの脅迫 4) 即時支払い要求", "en": "1) Call claiming to be IRS 2) False tax debt claim 3) Arrest/seizure threats 4) Demand immediate payment" },
+  "red_flags": { "ja": ["攻撃的な口調", "ギフトカード・電信送金要求", "caller IDの偽装"], "en": ["Aggressive tone", "Gift cards or wire transfer demands", "Spoofed caller ID"] },
+  "mitigations": { "ja": ["IRSは初回連絡を郵送で行う", "IRS.govで確認", "脅迫的な電話は即切断"], "en": ["IRS first contacts by mail", "Verify at IRS.gov", "Hang up on threatening calls"] },
+  "risk_score": 5,
+  "mediums": ["gift-cards", "bank-transfer", "cryptocurrency"],
+  "legal_notes": { "ja": "FTCへの報告推奨", "en": "Report to FTC recommended" },
+  "references": [
+    { "label": "IRS Tax Scam Consumer Alert", "url": "https://www.irs.gov/newsroom/tax-scams-consumer-alerts" },
+    { "label": "FTC Scam Alerts", "url": "https://consumer.ftc.gov/features/scam-alerts" }
+  ],
+  "tags": ["impersonation", "authority-pretext", "urgency", "fear-based"]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "us-012",
+  "title": { "ja": "宝くじ・懸賞当選詐欺", "en": "Lottery/Sweepstakes Winner Scam" },
+  "short_desc": { "ja": "高額当選通知で手数料や税金を前払い要求", "en": "Notify of big wins requiring upfront fees or taxes" },
+  "cultural_lever": { "ja": "一攫千金への夢・幸運への期待", "en": "Get-rich-quick dreams and hope for windfall" },
+  "attack_vector": ["phone", "email", "social"],
+  "targets": ["elderly", "general"],
+  "scenario": { "ja": "1) 高額当選の通知 2) 参加していない懸賞 3) 税金・手数料の前払い要求 4) 段階的な追加請求", "en": "1) Big win notification 2) Contest never entered 3) Request taxes/fees upfront 4) Escalating payment demands" },
+  "red_flags": { "ja": ["参加していない懸賞", "前払い要求", "秘密厳守の指示", "海外からの通知"], "en": ["Contest never entered", "Upfront payment", "Keep it secret demands", "Foreign notifications"] },
+  "mitigations": { "ja": ["正規宝くじは前払い不要", "参加記録を確認", "PCH等の公式サイト確認"], "en": ["Real lotteries don't require payment", "Check participation records", "Verify at official sites like PCH"] },
+  "risk_score": 4,
+  "mediums": ["bank-transfer", "gift-cards", "cash"],
+  "legal_notes": { "ja": "", "en": "" },
+  "references": [
+    { "label": "FTC Prize Scams", "url": "https://consumer.ftc.gov/articles/prize-scams" },
+    { "label": "PCH Scam Protection", "url": "https://info.pch.com/scam-alerts" }
+  ],
+  "tags": ["lottery", "sweepstakes", "advance-fee", "greed-exploitation"]
+}

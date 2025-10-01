@@ -1,0 +1,73 @@
+{
+  "id": "jp-010",
+  "title": {
+    "ja": "客引き・ぼったくりバー（観光地）",
+    "en": "Street Solicitation & Overcharging Bars (Tourist Areas)"
+  },
+  "short_desc": {
+    "ja": "親切に装い案内・割引を強調し入店させ、高額請求や退出困難に。",
+    "en": "Friendly guides push 'discounts', then overcharge or make leaving difficult."
+  },
+  "cultural_lever": {
+    "ja": "対立回避・断りづらさ・体面",
+    "en": "Conflict avoidance and reluctance to refuse"
+  },
+  "attack_vector": [
+    "in-person",
+    "street",
+    "door-to-door"
+  ],
+  "targets": [
+    "tourist",
+    "expat",
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) 路上の声かけ → 2) 安さ/特典を強調し入店 → 3) 会計時に高額請求",
+    "en": "1) Street approach → 2) Highlight 'cheap/special' → 3) Overcharge at bill"
+  },
+  "red_flags": {
+    "ja": [
+      "メニュー/料金の不提示",
+      "入店前見積り拒否",
+      "出口での威圧"
+    ],
+    "en": [
+      "No menu/prices",
+      "Refuses quotes",
+      "Intimidation at exit"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "口コミ/公的情報で店選び",
+      "料金は入店前に確認",
+      "危険なら110番通報"
+    ],
+    "en": [
+      "Choose vetted venues",
+      "Confirm prices before entry",
+      "Call police if threatened"
+    ]
+  },
+  "risk_score": 3,
+  "mediums": [
+    "cash",
+    "credit"
+  ],
+  "legal_notes": {
+    "ja": "",
+    "en": ""
+  },
+  "references": [
+    {
+      "label": "東京都消費生活総合センター：繁華街の客引きトラブル",
+      "url": "https://www.shouhiseikatu.metro.tokyo.lg.jp/"
+    }
+  ],
+  "tags": [
+    "pressure-sales",
+    "tourism",
+    "street"
+  ]
+}

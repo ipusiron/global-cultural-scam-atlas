@@ -1,0 +1,19 @@
+{
+  "id": "us-020",
+  "title": { "ja": "データ漏洩による個人情報盗用", "en": "Identity Theft via Data Breach Notification" },
+  "short_desc": { "ja": "偽のデータ漏洩通知で個人情報確認を要求", "en": "Fake breach alerts requesting personal info verification" },
+  "cultural_lever": { "ja": "プライバシー侵害への恐怖・迅速な対応欲求", "en": "Fear of privacy violation and desire for quick action" },
+  "attack_vector": ["email", "phone"],
+  "targets": ["general"],
+  "scenario": { "ja": "1) データ漏洩の虚偽通知 2) アカウント保護を名目 3) 個人情報確認要求 4) フィッシングサイト誘導", "en": "1) False breach notification 2) Claim account protection needed 3) Request info verification 4) Direct to phishing site" },
+  "red_flags": { "ja": ["パニックを煽る文面", "リンククリック要求", "個人情報の再入力", "送信元の不審なアドレス"], "en": ["Panic-inducing language", "Click link demands", "Re-enter personal info", "Suspicious sender address"] },
+  "mitigations": { "ja": ["企業サイトで直接確認", "リンクはクリックしない", "信用監視サービス利用"], "en": ["Check company site directly", "Don't click links", "Use credit monitoring"] },
+  "risk_score": 5,
+  "mediums": ["credit"],
+  "legal_notes": { "ja": "ID窃盗は連邦犯罪", "en": "ID theft is a federal crime" },
+  "references": [
+    { "label": "FTC Identity Theft", "url": "https://consumer.ftc.gov/features/identity-theft" },
+    { "label": "IdentityTheft.gov", "url": "https://www.identitytheft.gov/" }
+  ],
+  "tags": ["data-breach", "identity-theft", "phishing", "panic-exploitation"]
+}

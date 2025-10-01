@@ -1,0 +1,19 @@
+{
+  "id": "us-009",
+  "title": { "ja": "陪審員義務詐欺", "en": "Jury Duty Scam" },
+  "short_desc": { "ja": "陪審員欠席で罰金や逮捕と脅迫し支払い要求", "en": "Threaten fines or arrest for missing jury duty to demand payment" },
+  "cultural_lever": { "ja": "法的義務への恐怖・司法制度への敬意", "en": "Fear of legal consequences and respect for judicial system" },
+  "attack_vector": ["phone"],
+  "targets": ["general"],
+  "scenario": { "ja": "1) 裁判所職員を名乗る 2) 陪審員欠席の虚偽主張 3) 逮捕令状があると脅迫 4) 罰金の即時支払い要求", "en": "1) Pose as court official 2) False claim of missed jury duty 3) Threaten arrest warrant 4) Demand immediate fine payment" },
+  "red_flags": { "ja": ["電話での罰金要求", "ギフトカード支払い", "個人情報の確認要求"], "en": ["Phone payment demands", "Gift card payments", "Requests for personal info"] },
+  "mitigations": { "ja": ["裁判所は電話で罰金請求しない", "全て郵送で通知", "地方裁判所に直接確認"], "en": ["Courts don't demand payment by phone", "All notices by mail", "Verify with local court directly"] },
+  "risk_score": 3,
+  "mediums": ["gift-cards", "bank-transfer"],
+  "legal_notes": { "ja": "", "en": "" },
+  "references": [
+    { "label": "US Courts Jury Scam Alert", "url": "https://www.uscourts.gov/services-forms/jury-service/juror-scams" },
+    { "label": "FBI Jury Duty Scam", "url": "https://www.fbi.gov/how-we-can-help-you/safety-resources/scams-and-safety/common-scams-and-crimes/jury-duty-scam" }
+  ],
+  "tags": ["jury-duty", "legal-threat", "impersonation", "authority-pretext"]
+}

@@ -5,6 +5,7 @@ const OUT = "dist/countries.json";
 
 // 最小の国メタ（必要なら将来別ファイル化）
 const COUNTRY_META = {
+  IN: { country_name_local: "भारत", country_name_en: "India", regions: ["APAC"], language_codes: ["hi","en"], notes: "Educational use; does not generalize culture." },
   JP: { country_name_local: "日本", country_name_en: "Japan", regions: ["APAC"], language_codes: ["ja","en"], notes: "教育目的。一般化を意図しない注記。" },
   US: { country_name_local: "United States", country_name_en: "United States", regions: ["AMER"], language_codes: ["en"], notes: "Educational use; does not generalize culture." }
 };
@@ -16,7 +17,8 @@ const run = async () => {
   const grouped = {};
 
   for (const file of files) {
-    const cc = file.split("/")[2]; // ISO2
+    const parts = file.replace(/\\/g, '/').split("/");
+    const cc = parts[2]; // ISO2
     const obj = JSON.parse(await fs.readFile(file, "utf-8"));
     if (!grouped[cc]) grouped[cc] = [];
     grouped[cc].push(obj);

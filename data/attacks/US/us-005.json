@@ -1,0 +1,19 @@
+{
+  "id": "us-005",
+  "title": { "ja": "祖父母詐欺（孫を装う緊急詐欺）", "en": "Grandparent Scam (Emergency Impersonation)" },
+  "short_desc": { "ja": "孫や親族を装い緊急事態で送金要求", "en": "Impersonate grandchildren in crisis needing urgent money" },
+  "cultural_lever": { "ja": "家族愛・緊急時の援助本能", "en": "Family bonds and instinct to help loved ones in crisis" },
+  "attack_vector": ["phone"],
+  "targets": ["elderly"],
+  "scenario": { "ja": "1) 孫を名乗る電話 2) 事故・逮捕等の緊急事態 3) 秘密厳守を要求 4) 即時送金指示", "en": "1) Call claiming to be grandchild 2) Accident/arrest emergency 3) Request secrecy 4) Urgent money transfer" },
+  "red_flags": { "ja": ["声が違うと言い訳", "秘密厳守の強要", "現金・ギフトカード要求"], "en": ["Excuses for different voice", "Demands secrecy", "Cash or gift card requests"] },
+  "mitigations": { "ja": ["本人に別ルートで確認", "合言葉を事前設定", "家族と情報共有"], "en": ["Verify through another channel", "Set family passwords", "Share with other family"] },
+  "risk_score": 4,
+  "mediums": ["cash", "bank-transfer", "gift-cards"],
+  "legal_notes": { "ja": "", "en": "" },
+  "references": [
+    { "label": "AARP Grandparent Scam", "url": "https://www.aarp.org/money/scams-fraud/info-2019/grandparent.html" },
+    { "label": "FTC Family Emergency Scams", "url": "https://consumer.ftc.gov/articles/family-emergency-scams" }
+  ],
+  "tags": ["impersonation", "family-exploitation", "urgency", "emotional-manipulation"]
+}
