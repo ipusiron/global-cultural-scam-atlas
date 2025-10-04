@@ -1,0 +1,91 @@
+{
+  "id": "jp-032",
+  "title": {
+    "ja": "金融機関・大手企業を騙るフィッシング詐欺",
+    "en": "Financial Institution & Major Brand Phishing"
+  },
+  "short_desc": {
+    "ja": "銀行・証券会社・EC・クレジットカード等を装いID・パスワード・カード番号を詐取",
+    "en": "Impersonates banks, securities, e-commerce, credit cards to steal credentials"
+  },
+  "cultural_lever": {
+    "ja": "大手ブランド・金融機関への信頼・緊急対応の必要性認識",
+    "en": "Trust in major brands and financial institutions, urgency perception"
+  },
+  "attack_vector": [
+    "email",
+    "sms",
+    "website"
+  ],
+  "targets": [
+    "general",
+    "business",
+    "elderly"
+  ],
+  "scenario": {
+    "ja": "1) 不正利用・アカウント停止等の緊急通知 2) 偽サイトへのリンク誘導 3) ID・パスワード・カード番号等の入力要求 4) 不正送金・カード不正利用の実行",
+    "en": "1) Urgent notice of fraud or account suspension 2) Redirect to fake website 3) Request credentials and card numbers 4) Execute unauthorized transfers or card fraud"
+  },
+  "red_flags": {
+    "ja": [
+      "メール・SMSのリンクから認証ページへ誘導",
+      "緊急の対応を迫る文面",
+      "URLが公式ドメインと微妙に異なる",
+      "宅配便不在通知を装ったSMS",
+      "クレジットカードブランドからの不審な通知"
+    ],
+    "en": [
+      "Email/SMS links to login pages",
+      "Urgent action required messaging",
+      "URL differs slightly from official domain",
+      "Fake delivery notification SMS",
+      "Suspicious credit card brand notices"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "ID・パスワード入力はブックマークやアプリから公式サイトにアクセス",
+      "メール・SMSのリンクからは絶対にアクセスしない",
+      "URLの正確性を必ず確認(https、ドメイン名)",
+      "ウイルス対策ソフトでフィッシングサイトをブロック",
+      "定常的に多い標的:SBI証券・Amazon・Apple・ANA等に特に注意",
+      "不審な通知は公式窓口に電話で確認"
+    ],
+    "en": [
+      "Access official sites via bookmarks or apps only for login",
+      "Never click email/SMS links",
+      "Always verify URL accuracy (https, domain name)",
+      "Use antivirus software to block phishing sites",
+      "Be extra cautious with frequent targets: SBI Securities, Amazon, Apple, ANA",
+      "Verify suspicious notices by calling official numbers"
+    ]
+  },
+  "risk_score": 5,
+  "mediums": [
+    "bank-transfer",
+    "credit",
+    "e-wallet"
+  ],
+  "legal_notes": {
+    "ja": "詐欺罪・不正アクセス禁止法違反・不正送金・割賦販売法違反等が適用される。",
+    "en": "Violations include fraud, unauthorized access, illegal fund transfers, and payment card fraud laws."
+  },
+  "references": [
+    {
+      "label": "フィッシング対策協議会",
+      "url": "https://www.antiphishing.jp/"
+    },
+    {
+      "label": "ソースネクスト：キ・ケ・ンの取説",
+      "url": "https://www.sourcenext.com/product/security/blog/"
+    }
+  ],
+  "tags": [
+    "phishing",
+    "brand-impersonation",
+    "credential-theft",
+    "urgency",
+    "financial-fraud",
+    "sms-phishing"
+  ]
+}

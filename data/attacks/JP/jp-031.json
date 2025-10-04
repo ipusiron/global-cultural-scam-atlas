@@ -1,0 +1,86 @@
+{
+  "id": "jp-031",
+  "title": {
+    "ja": "国勢調査を装った個人情報詐取",
+    "en": "Census Impersonation Scam"
+  },
+  "short_desc": {
+    "ja": "国勢調査を装い、年収・預金・マイナンバー等の個人情報を詐取",
+    "en": "Impersonates census to steal income, savings, ID numbers, etc."
+  },
+  "cultural_lever": {
+    "ja": "行政機関への信頼・公的調査への協力意識",
+    "en": "Trust in government agencies and civic duty to cooperate"
+  },
+  "attack_vector": [
+    "in-person",
+    "email",
+    "phone",
+    "website"
+  ],
+  "targets": [
+    "general",
+    "elderly"
+  ],
+  "scenario": {
+    "ja": "1) 調査員や行政機関を装い接触 2) 年収・預金額・クレジットカード番号・マイナンバー・銀行口座等の聞き出し 3) 偽サイトで情報入力を誘導",
+    "en": "1) Contact as census taker or government agency 2) Request income, savings, credit card, ID numbers, bank accounts 3) Direct to fake website for data entry"
+  },
+  "red_flags": {
+    "ja": [
+      "年収・預金額・クレジットカード番号の質問",
+      "マイナンバーや銀行口座番号の要求",
+      "メールのリンクから回答を促す",
+      "調査員証の提示拒否・不自然な調査員証"
+    ],
+    "en": [
+      "Asks for income, savings, credit card numbers",
+      "Requests ID numbers or bank accounts",
+      "Directs to email links for responses",
+      "Refuses to show credentials or has fake credentials"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "調査員証(顔写真・所属・氏名入り)の確認を必ず実施",
+      "国勢調査では年収・預金額・クレジットカード番号・マイナンバー・銀行口座は絶対に聞かれないことを理解",
+      "オンライン回答は公式QRコードまたは検索サイトで「国勢調査オンライン」と検索してアクセス",
+      "メール・SMSのリンクからは絶対にアクセスしない",
+      "不審な接触は総務省や消費者庁に確認"
+    ],
+    "en": [
+      "Always verify census taker credentials (photo ID with affiliation and name)",
+      "Understand that legitimate census NEVER asks for income, savings, credit cards, ID numbers, or bank accounts",
+      "Access online forms via official QR code or search 'census online'",
+      "Never click email/SMS links",
+      "Verify suspicious contacts with government agencies"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "identity-theft",
+    "credit",
+    "bank-transfer"
+  ],
+  "legal_notes": {
+    "ja": "詐欺罪・個人情報保護法違反・不正アクセス禁止法違反等が適用される可能性。",
+    "en": "May violate fraud, privacy protection, and unauthorized access laws."
+  },
+  "references": [
+    {
+      "label": "消費者庁：国勢調査を装った詐欺にご注意",
+      "url": "https://www.caa.go.jp/policies/policy/consumer_policy/caution/caution_017/"
+    },
+    {
+      "label": "総務省：令和7年国勢調査 不審な調査にご注意ください",
+      "url": "https://www.kokusei2025.go.jp/caution/"
+    }
+  ],
+  "tags": [
+    "government-impersonation",
+    "identity-theft",
+    "phishing",
+    "authority-pretext",
+    "civic-duty-exploitation"
+  ]
+}
