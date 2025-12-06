@@ -1,11 +1,38 @@
 <!--
 ---
-title: Global Cultural Scam Atlas (GCSA)
-category: social-engineering
-difficulty: 2
-description: An educational, citation-driven database of scams that exploit cultural contexts across countries.
-tags: [atlas, database, social-engineering, education, javascript]
-demo: https://ipusiron.github.io/global-cultural-scam-atlas/
+id: day082
+slug: global-cultural-scam-atlas
+
+title: "Global Cultural Scam Atlas (GCSA)"
+
+subtitle_ja: "文化文脈に基づく攻撃事例のデータベース"
+subtitle_en: "An educational database of scams exploiting cultural contexts"
+
+description_ja: "各国・地域で観測される文化・慣習の文脈を悪用したソーシャルエンジニアリングを、教育目的で整理するオープンなデータベース"
+description_en: "An educational, citation-driven database of social engineering attacks that exploit cultural contexts across countries"
+
+category_ja:
+  - ソーシャルエンジニアリング
+  - データベース
+category_en:
+  - Social Engineering
+  - Database
+
+difficulty: 4
+
+tags:
+  - atlas
+  - database
+  - social-engineering
+  - education
+  - javascript
+  - json
+  - i18n
+
+repo_url: "https://github.com/ipusiron/global-cultural-scam-atlas"
+demo_url: "https://ipusiron.github.io/global-cultural-scam-atlas/"
+
+hub: true
 ---
 -->
 
@@ -35,11 +62,15 @@ demo: https://ipusiron.github.io/global-cultural-scam-atlas/
 
 ## ✨ 本プロジェクトの特徴
 
-**ツール自体はシンプル、データこそが価値**
-本プロジェクトの本質は、各攻撃事例を構造化した **JSONデータベース** にあります。フロントエンドは軽量なHTML/CSS/JavaScriptで構成され、複雑なフレームワークは使用していません。
+### ツール自体はシンプル、データこそが価値
 
-**GitHub + CIによる品質管理**
-データベースをGitHub上で公開・管理するにあたり、継続的インテグレーション（CI）を活用することで品質を担保しています。このCI環境により、スキーマ検証・自動ビルド・デプロイが自動化され、やや複雑な構成となっていますが、データの正確性と一貫性を保つために不可欠な仕組みです。
+本プロジェクトの本質は、各攻撃事例を構造化した **JSONデータベース** にあります。
+フロントエンドは軽量なHTML/CSS/JavaScriptで構成され、複雑なフレームワークは使用していません。
+
+### GitHub + CIによる品質管理
+
+データベースをGitHub上で公開・管理するにあたり、継続的インテグレーション（CI）を活用することで品質を担保しています。
+このCI環境により、スキーマ検証・自動ビルド・デプロイが自動化され、やや複雑な構成となっていますが、データの正確性と一貫性を保つために不可欠な仕組みです。
 
 
 ### 主な機能
@@ -68,6 +99,8 @@ demo: https://ipusiron.github.io/global-cultural-scam-atlas/
 ## 🎯 目的
 - 旅行者・生活者・教育機関・実務家が **Red Flags（兆候）** と **Mitigations（対策）** を素早く学べる。
 - データは **一次情報（公的機関、CERT、学術）** を中心に継続更新。
+
+---
 
 ## 💡 活用シナリオ
 
@@ -104,10 +137,14 @@ demo: https://ipusiron.github.io/global-cultural-scam-atlas/
 
 **効果**: オープンデータを活用した研究により、学術的知見の蓄積と新たな防御策の提案が可能に。
 
+---
+
 ## 📊 データ構造（概要）
 - **1攻撃 = 1ファイル**（`data/attacks/{ISO2}/{id}.json`）
 - ビルド時に **`dist/countries.json`** へ集約（ツール内配信用）
 - スキーマ：`data/schema.json`
+
+---
 
 ## 🔧 推奨方式（Recommended Approach）の採用理由
 本リポジトリでは **「1攻撃=1ファイルで管理し、ビルド時に集約するハイブリッド運用」** を採用します。理由は以下です。

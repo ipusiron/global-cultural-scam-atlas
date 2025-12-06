@@ -70,7 +70,7 @@ When adding attacks for a new country:
 3. Currently configured countries:
    - JP (Japan): APAC region, ja/en languages
    - US (United States): AMER region, en language
-   - IN (India): Added attacks but metadata not yet in `COUNTRY_META`
+   - IN (India): APAC region, hi/en languages
 
 ## Content Guidelines (docs/content-guidelines.md)
 
@@ -99,7 +99,7 @@ npm run build:countries   # Only build countries.json
 
 ### Controlled Vocabulary
 When creating attack files, use these values:
-- **attack_vector**: `in-person`, `phone`, `email`, `social`, `mixed`
+- **attack_vector**: `in-person`, `phone`, `email`, `sms`, `social`, `website`, `payment-app`, `postal`, `door-to-door`, `marketplace`, `mixed`
 - **targets**: `tourist`, `general`, `elderly`, `business`, `student`
 - **mediums**: `cash`, `credit`, `bank-transfer`, `cryptocurrency`, `gift-cards`
 - **risk_score**: Integer 1-5 (1=lowest, 5=highest risk)
