@@ -8,7 +8,7 @@ title: "Global Cultural Scam Atlas (GCSA)"
 subtitle_ja: "文化文脈に基づく攻撃事例のデータベース"
 subtitle_en: "An educational database of scams exploiting cultural contexts"
 
-description_ja: "各国・地域で観測される文化・慣習の文脈を悪用したソーシャルエンジニアリングを、教育目的で整理するオープンなデータベース"
+description_ja: "各国・地域で観測される文化・慣習の文脈を悪用したソーシャルエンジニアリング事例を、1攻撃=1 JSONで管理し、CIで集約して公開する教育用データベース"
 description_en: "An educational, citation-driven database of social engineering attacks that exploit cultural contexts across countries"
 
 category_ja:
@@ -36,6 +36,8 @@ hub: true
 ---
 -->
 
+[English](README.en.md) · 日本語
+
 # Global Cultural Scam Atlas (GCSA) - 文化文脈に基づく攻撃事例のデータベース
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/ipusiron/global-cultural-scam-atlas?style=social)
@@ -46,9 +48,9 @@ hub: true
 
 **Day082 - 生成AIで作るセキュリティツール100**
 
-**Global Cultural Scam Atlas(GCSA)** は、各国・地域で観測される **文化・慣習の文脈を悪用したソーシャルエンジニアリング** を、教育目的で整理する **オープンなデータベース** です。
+**Global Cultural Scam Atlas (GCSA)** は、各国・地域で観測される文化・慣習の文脈を悪用したソーシャルエンジニアリング事例を教育目的で整理したオープンなデータベースです。特定の国民性を一般化する意図はなく、「攻撃者がその傾向を悪用しうる」という観点で事例を記述します。
 
-特定の国民性を一般化する意図はなく、**「攻撃者がその傾向を悪用しうる」** という観点で事例を記述します。
+1攻撃を1つのJSONファイルとして `data/attacks/{ISO2}/{id}.json` に蓄積し、GitHub Actionsで `dist/countries.json` に集約します。閲覧用のUIは依存ゼロのvanilla JSで、GitHub Pagesで配信します。
 
 ---
 
@@ -60,390 +62,308 @@ hub: true
 
 ---
 
-## ✨ 本プロジェクトの特徴
-
-### ツール自体はシンプル、データこそが価値
-
-本プロジェクトの本質は、各攻撃事例を構造化した **JSONデータベース** にあります。
-フロントエンドは軽量なHTML/CSS/JavaScriptで構成され、複雑なフレームワークは使用していません。
-
-### GitHub + CIによる品質管理
-
-データベースをGitHub上で公開・管理するにあたり、継続的インテグレーション（CI）を活用することで品質を担保しています。
-このCI環境により、スキーマ検証・自動ビルド・デプロイが自動化され、やや複雑な構成となっていますが、データの正確性と一貫性を保つために不可欠な仕組みです。
-
-
-### 主な機能
-
-- **多言語対応**: 日本語/英語の切り替え（ボタン1つで全UI・データを切り替え）
-- **テーマ切り替え**: ライト/ダークモード対応（システム設定を自動検出）
-- **高度なフィルタリング**:
-  - 国別フィルター
-  - 攻撃ベクター別フィルター（in-person, phone, email, socialなど）
-  - 全文検索（タイトル・説明・シナリオ・タグを横断検索）
-  - フィルターリセット機能
-- **視覚的なリスク表示**: 5段階のリスクスコアを色分け表示（★1〜5）
-- **詳細モーダル**: 各攻撃の詳細情報（Cultural Lever、Scenario、Red Flags、Mitigations、Referencesなど）
-- **レスポンシブデザイン**: デスクトップ・タブレット・スマートフォンに対応
-- **アクセシビリティ**: キーボード操作対応、aria-label設定
-
----
-
 ## 📸 スクリーンショット
 
->![日本の攻撃を一覧表示](assets/screenshot.png)
->*日本の攻撃を一覧表示*
+> ![日本語ライトテーマで初期表示（53件）](assets/screenshot.png)
+> *日本語・ライトテーマで初期表示（全53件）*
+
+> ![日本語ライトテーマで詳細モーダルを開いた状態](assets/screenshot2.png)
+> *jp-001 の詳細モーダル（Red Flags と Mitigations）*
+
+> ![日本語ダークテーマで初期表示](assets/screenshot3.png)
+> *ダークテーマに切り替えた表示*
 
 ---
 
-## 🎯 目的
-- 旅行者・生活者・教育機関・実務家が **Red Flags（兆候）** と **Mitigations（対策）** を素早く学べる。
-- データは **一次情報（公的機関、CERT、学術）** を中心に継続更新。
+## ✨ 特徴
+
+- 1攻撃=1 JSONファイルで管理し、PR単位でレビューができる。
+- JSON Schemaによる構造検証をCIで自動実行する。
+- 日本語と英語の表示切替に対応し、UI文言とデータの両方が切り替わる。
+- フィルター（国・攻撃ベクター・全文検索）とフィルターリセットを提供する。
+- リスクスコア（1〜5）を色分けで示す。
+- 外部APIやCDNに依存しない静的サイトとして動作する。
+- データは `dist/countries.json` として誰でも取得できる。
 
 ---
 
-## 💡 活用シナリオ
+## 📖 使い方
 
-### 1. 海外旅行前の安全対策学習
-**状況**: 日本人旅行者がアジア諸国へ2週間の旅行を計画している。
+### 公開版をブラウザーで使う
 
-**活用方法**:
-- 渡航先の国コードでフィルタリングし、その国で報告されている攻撃事例を一覧表示
-- `attack_vector: in-person` でフィルタリングして、現地で遭遇しやすい対面型の詐欺を確認
-- 各攻撃の「Red Flags（警告兆候）」をスマートフォンにメモし、現地で警戒すべきポイントを把握
-- 「Mitigations（対策）」を事前に読み、断り方や対応フレーズを準備
+デモページを開き、国・攻撃ベクター・検索語で絞り込みます。カードの「詳細」ボタンを押すとモーダルでRed Flags・Mitigations・Referencesを確認できます。右上のボタンでテーマ（ライト/ダーク）と言語（JA/EN）を切り替えられます。
 
-**効果**: 事前知識により警戒心が高まり、詐欺被害のリスクを大幅に軽減。現地での判断力向上。
+### URLで初期言語を指定する
 
-### 2. グローバル企業の社員研修教材
-**状況**: 多国籍企業が海外赴任者向けのセキュリティ研修を実施。
+`?lang=ja` または `?lang=en` を付けてアクセスすると、保存値やブラウザー設定より優先してその言語で表示します。
 
-**活用方法**:
-- 赴任先国の攻撃事例データをAPIで取得し、社内研修システムに統合
-- `risk_score >= 4` の高リスク攻撃を優先的に研修カリキュラムに組み込む
-- `attack_vector: phone`, `email`, `social` など、リモートワーク環境で遭遇しやすい攻撃を重点的に解説
-- 各国の「Cultural Lever（文化的レバー）」を理解することで、なぜその国でその手口が有効なのかを深く学習
+### ローカルで動かす
 
-**効果**: 実例ベースの研修により、従業員の危機意識が向上。文化的背景の理解により、現地での適応力も強化。
+依存を入れてビルドし、`docs/` をHTTPで配信します（`file://` では `fetch` が動かないためHTTP配信が必要です）。
 
-### 3. セキュリティ研究者のトレンド分析
-**状況**: サイバーセキュリティ研究者が、ソーシャルエンジニアリングの地域別傾向を分析。
-
-**活用方法**:
-- `dist/countries.json` を定期的にダウンロードし、攻撃パターンの時系列変化を追跡
-- `attack_vector`, `targets`, `tags` の出現頻度を分析し、地域ごとの攻撃手法の違いを可視化
-- 複数国で共通する `cultural_lever` を抽出し、文化横断的な脆弱性を研究
-- 新興の攻撃手法（新しい `tags` や `mediums`）を早期発見し、論文や警告レポートを執筆
-
-**効果**: オープンデータを活用した研究により、学術的知見の蓄積と新たな防御策の提案が可能に。
-
----
-
-## 📊 データ構造（概要）
-- **1攻撃 = 1ファイル**（`data/attacks/{ISO2}/{id}.json`）
-- ビルド時に **`dist/countries.json`** へ集約（ツール内配信用）
-- スキーマ：`data/schema.json`
-
----
-
-## 🔧 推奨方式（Recommended Approach）の採用理由
-本リポジトリでは **「1攻撃=1ファイルで管理し、ビルド時に集約するハイブリッド運用」** を採用します。理由は以下です。
-
-1. **並行編集に強い**：差分が小さく、PRレビューが攻撃単位で完結。衝突が減る。  
-2. **トレーサビリティ向上**：出典・変更履歴・責任範囲を攻撃ファイルごとに明確化。  
-3. **ローカライズ容易**：各ファイルに `ja`/`en` を内包し、翻訳粒度を制御。  
-4. **配信効率**：編集は分割、公開は集約でクライアント負荷を最小化。  
-5. **CIで品質担保**：スキーマ検証・語彙Lint・リンクチェックをファイル単位で実行し、不整合の流出を防止。
-
----
-
-## 💻 データの利用方法（開発者向け）
-
-本プロジェクトの集約データ **`dist/countries.json`** を利用して、独自のアプリケーションやツールを構築できます。APIキー不要で、誰でも自由にアクセス可能です。
-
-### データの取得
-
-公開されているJSONファイルを直接取得できます：
-
-```javascript
-const response = await fetch('https://ipusiron.github.io/global-cultural-scam-atlas/dist/countries.json');
-const data = await response.json();
-console.log(data);
+```bash
+npm install
+npm run build:local        # dist/countries.json を docs/dist/ にコピー
+python -m http.server 8000 --directory docs
+# http://localhost:8000/ を開く
 ```
 
-### データ構造
+---
 
-```javascript
-{
-  "version": "1.0.0",
-  "last_updated": "2025-01-15",
-  "countries": [
-    {
-      "country_code": "JP",
-      "country_name_local": "日本",
-      "country_name_en": "Japan",
-      "regions": ["APAC"],
-      "language_codes": ["ja", "en"],
-      "notes": "教育目的。一般化を意図しない注記。",
-      "attacks": [
-        {
-          "id": "jp-001",
-          "title": { "ja": "親切装う道案内からの押し売り", "en": "Good Samaritan Hard Sell" },
-          "short_desc": { "ja": "観光地で親切装い→店舗へ誘導→高額購入圧力", "en": "..." },
-          "cultural_lever": { "ja": "対立回避・断りづらさ", "en": "..." },
-          "attack_vector": ["in-person"],
-          "targets": ["tourist", "general"],
-          "scenario": { "ja": "...", "en": "..." },
-          "red_flags": { "ja": ["急かされる", "限定割引の強調"], "en": ["..."] },
-          "mitigations": { "ja": ["即決しない", "正規案内所を利用"], "en": ["..."] },
-          "risk_score": 3,
-          "mediums": ["cash", "credit"],
-          "legal_notes": { "ja": "", "en": "" },
-          "references": [
-            { "label": "参考記事", "url": "https://example.com" }
-          ],
-          "tags": ["tourism", "pressure-sales", "social-engineering"]
-        }
-      ]
-    }
-  ]
-}
-```
+## 📐 画面構成
+
+| 領域 | 役割 |
+|------|------|
+| ヘッダー | タイトル・テーマ切替・言語切替・countries.jsonダウンロードリンク |
+| フィルター | 国セレクト・攻撃ベクターセレクト・全文検索・リセット |
+| サマリー | 現在表示中の件数（`aria-live` で更新を通知） |
+| カード一覧 | 攻撃ごとのカード（タイトル・国・リスク・ベクター・ターゲット・詳細ボタン） |
+| 詳細モーダル | ID・文化的レバー・シナリオ・Red Flags・Mitigations・References |
+| フッター | GitHubリポジトリーへのリンク |
+
+---
+
+## 🎯 ユースケース
+
+### 教育
+
+- 情報リテラシーやセキュリティの授業で、国ごとの手口を並べて「権威・緊急性・互恵・同調」といった共通の心理が、文化の衣をまとって現れることを学ぶ。
+- 比較文化や異文化コミュニケーションの授業で、「文化的レバー」の項目から各国の慣習を逆引きする。
+
+### 仕事（セキュリティ以外）
+
+- 海外赴任や出張者向けの研修で、行き先の国に絞って配布する。
+- 旅行会社や留学エージェントが注意喚起資料の素材にする。
+- カスタマーサポートが外国人の利用者から被害相談を受けたとき、手口を照合して説明する。
+- 越境ECや国際送金の不正対策担当者が、国ごとの傾向を把握する。
+
+### 暮らし・家庭
+
+- 海外旅行の前に行き先の国を絞って読む。
+- 留学する家族と共有する。
+- 日本に来る外国人の友人に、日本の手口（JP）を英語表示で見せる。
+
+### 趣味・創作
+
+- ミステリーやサスペンスの創作で、現実味のある詐欺の筋書きを調べる。
+- 脱出ゲームやボードゲームのシナリオ素材にする。
+- データが日英併記なので、語学の対訳教材として読む。
+
+### 研究・調べもの
+
+- 攻撃ベクター × ターゲット × 文化的レバーで手口を類型化する。
+- `countries.json` をそのまま分析ノートブックに読み込む。
+- 事例の追加履歴を時系列で追い、流行の推移を見る。
+
+### 組み合わせ
+
+- Day081の [Emotion-Based Scam Detector](https://ipusiron.github.io/emotion-based-scam-detector/) に事例のシナリオ文を貼り、感情に訴える文面の判定を練習する。
+- 自分の事例をJSONで追加してPRを出し、データベースを育てる（`docs/content-guidelines.md` に従う）。
+
+### 限界
+
+事例は執筆時点の観測であり、網羅ではありません。法的な助言ではありません。国民性の一般化には使わないでください（詳しくは `docs/content-guidelines.md` の方針を参照）。
+
+---
+
+## 📊 データ構造
+
+- 1攻撃=1ファイル（`data/attacks/{ISO2}/{id}.json`）。
+- ID形式は `^[a-z]{2}-\d{3}$`（例: `jp-001`）。
+- ビルド時に `dist/countries.json` に集約する。
+- 配布データの構造定義は `data/schema.json`（JSON Schema draft-07）。
 
 ### 主要フィールド
 
 | フィールド | 型 | 説明 |
 |-----------|-----|------|
-| `id` | String | 攻撃の一意識別子（例: `jp-001`） |
-| `title` | Object | 攻撃の名称（多言語対応：`ja`, `en`） |
-| `short_desc` | Object | 短い説明文（多言語対応） |
-| `cultural_lever` | Object | 悪用される文化的傾向（多言語対応） |
-| `attack_vector` | Array | 攻撃経路（`in-person`, `phone`, `email`, `sms`, `social`, `website`, `payment-app`, `postal`, `door-to-door`, `marketplace`） |
-| `targets` | Array | 標的（`tourist`, `elderly`, `student`, `general`など） |
-| `scenario` | Object | 攻撃の流れ（多言語対応） |
-| `red_flags` | Object | 警告兆候のリスト（多言語対応） |
-| `mitigations` | Object | 対策のリスト（多言語対応） |
-| `risk_score` | Number | リスクスコア（1〜5、5が最高リスク） |
-| `mediums` | Array | 決済手段（`cash`, `credit`, `bank-transfer`など） |
-| `legal_notes` | Object | 法的注記（多言語対応、オプション） |
-| `references` | Array | 参考文献・出典のリスト（`label`, `url`を含むオブジェクト配列） |
-| `tags` | Array | タグ（`tourism`, `pressure-sales`, `social-engineering`, `scarcity`, `urgency`など） |
+| `id` | string | 攻撃の一意識別子（例: `jp-001`） |
+| `title` | object | 攻撃の名称（`ja`, `en`） |
+| `short_desc` | object | 短い説明文（`ja`, `en`） |
+| `cultural_lever` | object | 悪用される文化的傾向（`ja`, `en`） |
+| `attack_vector` | array | 攻撃経路（`in-person`, `phone`, `email`, `sms`, `social`, `website`, `payment-app`, `postal`, `door-to-door`, `marketplace`） |
+| `targets` | array | 標的（`tourist`, `elderly`, `student`, `general`, `business`） |
+| `scenario` | object | 攻撃の流れ（`ja`, `en`） |
+| `red_flags` | object | 警告兆候のリスト（`ja`, `en`） |
+| `mitigations` | object | 対策のリスト（`ja`, `en`） |
+| `risk_score` | integer | リスクスコア（1〜5） |
+| `mediums` | array | 決済手段（`cash`, `credit`, `bank-transfer`, `cryptocurrency`, `gift-cards`） |
+| `legal_notes` | object | 法的注記（`ja`, `en`、省略可） |
+| `references` | array | 出典（`{label, url}`） |
+| `tags` | array | タグ |
 
-### 利用例
+### 現在の収録件数
 
-**特定の国の攻撃を取得：**
+| 国 | 件数 |
+|----|------|
+| JP（日本） | 32 |
+| US（アメリカ） | 20 |
+| IN（インド） | 1 |
+| **合計** | **53** |
+
+---
+
+## 💻 データの利用方法
+
+集約データ `dist/countries.json` は公開されており、APIキーなしで取得できます。
+
 ```javascript
-const jpAttacks = data.countries.find(c => c.country_code === 'JP').attacks;
-```
-
-**リスクスコアでフィルタリング：**
-```javascript
-const highRisk = data.countries.flatMap(c => c.attacks)
-  .filter(atk => atk.risk_score >= 4);
-```
-
-**attack_vectorで検索：**
-```javascript
+const url = 'https://ipusiron.github.io/global-cultural-scam-atlas/dist/countries.json';
+const data = await (await fetch(url)).json();
+// 特定の国の攻撃を取得
+const jp = data.countries.find(c => c.country_code === 'JP').attacks;
+// リスクスコアで絞り込む
+const highRisk = data.countries.flatMap(c => c.attacks).filter(a => a.risk_score >= 4);
+// attack_vector で検索
 const phoneScams = data.countries.flatMap(c => c.attacks)
-  .filter(atk => atk.attack_vector.includes('phone'));
+  .filter(a => a.attack_vector.includes('phone'));
 ```
 
 ---
 
-## ⚙️ データ生成とCI/CDの仕組み
+## ⚙️ データ生成とCI/CD
 
-**本プロジェクトの核心はデータです。** ツール自体は軽量なHTML/CSS/JavaScriptで構成されたシンプルな構造ですが、データベースをGitHub上で公開・管理するために、**CI（継続的インテグレーション）を活用した品質管理体制** を整えています。このCI環境が、やや複雑に見える構成の理由です。
+### ビルド
 
-本プロジェクトで公開される **`dist/countries.json`** は、リポジトリ内の個別攻撃データを自動で集約して生成しています。
+- `npm run build:index` で `data/index.json` を生成する。
+- `npm run build:countries` で `dist/countries.json` を生成する。
+- `npm run build` は両者をまとめて実行する。
+- `npm run validate:schema` で `data/schema.json` に準拠しているか検証する。
+- `npm run build:local` はビルド後に `dist/countries.json` を `docs/dist/` にコピーし、ローカルHTTPサーバーで配信できるようにする。
 
-ユーザーがアクセスするURL:
+### ワークフロー
 
-👉 **[https://ipusiron.github.io/global-cultural-scam-atlas/dist/countries.json](https://ipusiron.github.io/global-cultural-scam-atlas/dist/countries.json)**
-
-### データからデプロイまでの流れ
-
-1. **ソースデータ**
-   - 各攻撃は **1ファイル単位**で管理されます（例: `data/attacks/JP/jp-001.json`, `data/attacks/US/us-001.json`）。
-
-2. **ビルドスクリプト**
-   - `tools/build-countries.mjs` が全攻撃ファイルを読み込み、国ごとにグルーピング。
-   - メタ情報（`version`, `last_updated`, `countries[]`）を加えて **`dist/countries.json`** を生成します。
-
-   抜粋:
-   ```js
-   const files = await glob("data/attacks/*/*.json");
-   const grouped = {};
-   // 国ごとにまとめて countries[] を構築
-   const out = {
-     version: "1.0.0",
-     last_updated: today(),
-     countries
-   };
-   await fs.writeFile("dist/countries.json", JSON.stringify(out, null, 2));
-   ```
-
-3. **package.jsonスクリプト**
-
-	```js
-	"scripts": {
-  		"build:index": "node tools/build-index.mjs",
-  		"build:countries": "node tools/build-countries.mjs",
-		"build": "npm run build:index && npm run build:countries"
-	}
-	```
-   - `npm run build` 実行で `dist/countries.json` が生成されます。
-
-4. **CI/CD（GitHub Actions）**
-
-   本プロジェクトでは、**データの品質担保と自動デプロイ** のために2つのワークフローを運用しています。
-
-   **a. `.github/workflows/ci.yml`（品質チェック）**
-   - PR作成時・`main`ブランチへのpush時に自動実行
-   - `npm run build` でデータを集約
-   - `npm run validate:schema` で `dist/countries.json` がスキーマに準拠しているか検証
-   - これにより、不正なデータ形式やスキーマ違反を本番環境に流入させません
-
-   **b. `.github/workflows/pages.yml`（自動デプロイ）**
-   - `main` ブランチへのpush時に起動
-   - ワークフローの中で `npm run build` が実行され、`dist/countries.json` が生成されます
-   - 生成された `dist/countries.json` と `docs/index.html` などの静的資産を `public/` にコピーします
-   - `peaceiris/actions-gh-pages` を用いて **`gh-pages` ブランチ**へ自動デプロイされます
-
-5. **公開**
-
-- GitHubの **Settings → Pages** にて、Sourceを `gh-pages / (root)` に設定します。  
-- 数十秒後、GitHub Pagesにより自動的に公開されます。  
-- 公開URL例:  
-  - トップページ → [https://ipusiron.github.io/global-cultural-scam-atlas/](https://ipusiron.github.io/global-cultural-scam-atlas/)  
-  - 集約データ → [https://ipusiron.github.io/global-cultural-scam-atlas/dist/countries.json](https://ipusiron.github.io/global-cultural-scam-atlas/dist/countries.json)  
-
-### まとめ
-
-本プロジェクトは、**シンプルなツール構造** と **堅牢なデータ管理** を両立させています。
-
-- **ツール**: 軽量なHTML/CSS/JavaScript（フレームワークなし）
-- **データ**: JSON形式で構造化された攻撃事例データベース（`data/attacks/{ISO2}/{id}.json`）
-- **品質管理**: CIによるスキーマ検証（`.github/workflows/ci.yml`）
-- **生成先**: `dist/countries.json`（ビルド時に自動集約）
-- **公開ブランチ**: `gh-pages`
-- **公開手段**: GitHub Actions + GitHub Pages（`.github/workflows/pages.yml`）
-
-**CIを活用することで、データの正確性・一貫性を維持しながら、誰でも安心してデータを追加・更新できる環境を実現しています。**
+| ファイル | 役割 |
+|---------|------|
+| `.github/workflows/ci.yml` | `main` へのpushとPRで `npm run build` と `npm run validate:schema` を実行する |
+| `.github/workflows/test.yml` | `main` へのpushとPRで `npm test`（Node 22）を実行する |
+| `.github/workflows/pages.yml` | `main` へのpushで `dist/countries.json` を含めてGitHub Pagesにデプロイする |
 
 ---
 
-## セキュリティ対策
+## 🧪 テスト
 
-GitHub Pagesで公開するにあたり、以下のセキュリティ対策を実装しています。
+本リポジトリーは依存ゼロで `node --test` を実行します（Node 22以上）。
 
-**1. Content Security Policy (CSP)**
-- スクリプトとスタイルシートは同一オリジンのみ許可
-- インラインスクリプトを禁止し、XSS攻撃を防止
-- 外部リソースの読み込みを制限
+```bash
+npm test
+```
 
-**2. セキュアなHTTPヘッダー**
-- `X-Frame-Options: DENY` - クリックジャッキング防止
-- `X-Content-Type-Options: nosniff` - MIMEタイプスニッフィング防止
-- `Referrer-Policy: no-referrer-when-downgrade` - リファラー情報の適切な制御
-- `.htaccess` によるApache環境でのセキュリティヘッダー設定
+テストは以下を検証します。
 
-**3. データ検証とサニタイゼーション**
-- JSONデータの構造検証を実行時に実施
-- すべてのユーザー表示データをHTMLエスケープ
-- 外部リンクのURL検証（http/httpsのみ許可）
-- `rel="noopener noreferrer"` による外部リンクの安全化
+- `test/core.test.js`: 絞り込み・リスクのクランプ・URLサニタイズ・HTMLエスケープ・ロケール解決・テーマ解決。
+- `test/i18n.test.js`: `ja` と `en` のキー集合の一致、英語値に日本語文字が混入しないこと。
+- `test/data.test.js`: 全攻撃JSONのID形式、ファイル名との一致、国ごとの件数、`risk_score` の範囲。
+- `test/html.test.js`: `docs/index.html` のCSP・meta・favicon・noscript・id・module script・全角括弧の有無。
+- `test/contrast.test.js`: ライト・ダーク両テーマで `(fg,bg)(fg,card)(muted,bg)(muted,card)(accent,bg)(accent,card)` の6組がWCAG 4.5:1以上であること。
+- `test/format.test.js`: ファイルごとの最長行と最小行数。
+- `test/readme.test.js`: このREADMEの構造・画像参照・禁止語・ディレクトリー構造の網羅。
 
-**4. 安全なデータ取得**
-- `fetch` APIで `same-origin` モードを使用
-- JSON.parse前のデータ検証
-
-これらの対策により、静的サイトでありながら高いセキュリティレベルを維持しています。
+GitHub Actionsの `test` ワークフローが `push` と `pull_request` で同じ `npm test` を実行します。
 
 ---
 
-## ⚠️ 免責
+## 🔒 セキュリティ
 
-本データは教育目的であり、特定の国・文化・人々を一般化する意図はありません。出典は可能な限り一次情報を示し、リンク切れや更新は随時対応します。
+本サイトは静的サイトとしてGitHub Pagesで配信します。GitHub Pagesは任意のレスポンスヘッダーを設定できないため、`X-Frame-Options` や `Strict-Transport-Security` などHTTPヘッダーで指定するセキュリティ対策はこのプロジェクトでは適用できません。実装している対策と、その制約は以下のとおりです。
+
+実装している対策
+
+- meta `Content-Security-Policy`: `default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'`。外部スクリプト・外部スタイル・外部フォント・外部fetchをすべて禁止する。
+- すべてのユーザー表示値をHTMLエスケープする。外部リンクは `sanitizeUrl()` でhttp/httpsのみ許可する。
+- 外部APIやCDNに接続しない。追跡タグも入れない。
+- `rel="noopener noreferrer"` を外部リンクに付与する。
+- referrerポリシーを `no-referrer` に設定する。
+
+制約
+
+- meta要素の `Content-Security-Policy` では `frame-ancestors` が無視される。クリックジャッキング対策をヘッダーで指定することはできない。
+- meta `http-equiv="X-Frame-Options"` と `X-Content-Type-Options` はブラウザーが無視する（HTTPヘッダー専用）。本リポジトリーはこれらのmetaを置かない。
+- `.htaccess` もGitHub Pagesでは解釈されない。本リポジトリーには置かない。
 
 ---
 
-## 📁 ディレクトリー構成
+## ⚠️ 注意・免責
+
+本データは教育目的であり、特定の国・文化・人々を一般化する意図はありません。法的・医療的助言ではありません。出典は可能な限り一次情報を示し、リンク切れや更新は随時対応します。
+
+---
+
+## 📁 ディレクトリー構造
 
 ```
 global-cultural-scam-atlas/
 ├── .github/
 │   └── workflows/
-│       ├── ci.yml              # 品質チェック（スキーマ検証）
-│       └── pages.yml           # GitHub Pagesへの自動デプロイ
-│
+│       ├── ci.yml                       # ビルドとスキーマ検証
+│       ├── pages.yml                    # GitHub Pages への自動デプロイ
+│       └── test.yml                     # Node 22 で npm test を実行
+├── .gitignore                           # 無視ファイル定義
+├── assets/
+│   ├── screenshot.png                   # 日本語ライトの初期表示
+│   ├── screenshot2.png                  # 日本語ライトで詳細モーダル
+│   ├── screenshot3.png                  # 日本語ダークの初期表示
+│   └── en/
+│       └── screenshot.png               # 英語ライトの初期表示
+├── CHANGELOG.md                         # 変更履歴（日英併記）
+├── CLAUDE.md                            # Claude Code 向け開発ガイド
 ├── data/
-│   ├── attacks/                # 攻撃事例データ（1攻撃=1ファイル）
-│   │   ├── JP/                 # 日本の攻撃事例
-│   │   │   ├── jp-001.json
-│   │   │   ├── jp-002.json
-│   │   │   └── ...
-│   │   ├── US/                 # アメリカの攻撃事例
-│   │   │   └── us-001.json
-│   │   ├── IN/                 # インドの攻撃事例
+│   ├── attacks/                         # 1攻撃=1 JSON のソースデータ
+│   │   ├── IN/                          # インドの攻撃（1 件）
 │   │   │   └── in-001.json
-│   │   └── ...                 # 他の国（追加予定）
-│   │
-│   ├── index.json              # 攻撃IDのインデックス（ビルド生成）
-│   └── schema.json             # JSONスキーマ定義（draft-07）
-│
-├── docs/                       # 公開用静的サイト
-│   ├── index.html              # メインページ
-│   ├── style.css               # スタイルシート
+│   │   ├── JP/                          # 日本の攻撃（32 件、jp-001.json 〜 jp-032.json）
+│   │   │   ├── jp-001.json
+│   │   │   └── …
+│   │   └── US/                          # 米国の攻撃（20 件、us-001.json 〜 us-020.json）
+│   │       ├── us-001.json
+│   │       └── …
+│   ├── index.json                       # 攻撃IDのインデックス（ビルド生成）
+│   └── schema.json                      # JSON Schema（draft-07、id 形式を pattern で固定）
+├── docs/                                # GitHub Pages の公開ルート
+│   ├── content-guidelines.md            # 事例を追加・編集するときの方針
+│   ├── index.html                       # UI 本体（CSP・noscript・favicon を含む）
 │   ├── js/
-│   │   └── main.js             # フロントエンドロジック
-│   ├── .htaccess               # Apacheセキュリティヘッダー
-│   └── content-guidelines.md   # コンテンツ編集ガイドライン
-│
-├── dist/                       # ビルド生成物（公開データ）
-│   └── countries.json          # 集約された攻撃データベース
-│
-├── tools/                      # ビルドスクリプト
-│   ├── build-index.mjs         # data/index.json 生成
-│   └── build-countries.mjs     # dist/countries.json 生成
-│
-├── CLAUDE.md                   # Claude Code向けガイド
-├── README.md                   # プロジェクト説明
-├── LICENSE                     # MITライセンス
-├── package.json                # npm設定・スクリプト定義
-└── package-lock.json           # 依存関係ロック
+│   │   ├── gcsa-core.js                 # 純粋ロジック（テスト対象）
+│   │   ├── gcsa-messages.js             # i18n 辞書（ja/en）
+│   │   └── main.js                      # DOM 連結（ロード・絞り込み・描画）
+│   └── style.css                        # スタイル（ライト/ダーク・レスポンシブ）
+├── LICENSE                              # MIT ライセンス
+├── package.json                         # npm スクリプト定義（test / build / build:local 等）
+├── package-lock.json                    # 依存のロックファイル
+├── README.en.md                         # 英語版 README
+├── README.md                            # このファイル
+├── test/
+│   ├── contrast.test.js                 # WCAG コントラスト比の検証
+│   ├── core.test.js                     # gcsa-core.js の単体テスト
+│   ├── data.test.js                     # 攻撃 JSON の形式・件数検証
+│   ├── format.test.js                   # 行長と最小行数の検証
+│   ├── html.test.js                     # docs/index.html の構造検証
+│   ├── i18n.test.js                     # ja/en 辞書の整合検証
+│   └── readme.test.js                   # README と README.en.md の構造検証
+└── tools/
+    ├── build-countries.mjs              # dist/countries.json を生成
+    ├── build-index.mjs                  # data/index.json を生成
+    └── copy-local.mjs                   # ローカル配信用に docs/dist/ へコピー
 ```
 
-### 主要ファイルの役割
+---
 
-| ファイル/ディレクトリ | 役割 |
-|---------------------|------|
-| `data/attacks/{ISO2}/{id}.json` | 個別の攻撃事例データ（編集対象） |
-| `data/schema.json` | 攻撃データのJSON Schema定義（draft-07準拠） |
-| `tools/build-index.mjs` | `data/index.json`を生成（国別攻撃IDインデックス） |
-| `tools/build-countries.mjs` | 個別データを集約して`dist/countries.json`を生成 |
-| `dist/countries.json` | API公開用の集約データ（自動生成） |
-| `docs/index.html` | Webインターフェイス（多言語・テーマ切り替え対応） |
-| `docs/style.css` | スタイルシート（ライト/ダークモード対応） |
-| `docs/js/main.js` | フロントエンドロジック（検索・フィルタリング・i18n） |
-| `docs/.htaccess` | Apacheセキュリティヘッダー設定 |
-| `docs/content-guidelines.md` | コンテンツ編集ガイドライン |
-| `.github/workflows/ci.yml` | PRとpush時のスキーマ検証 |
-| `.github/workflows/pages.yml` | GitHub Pagesへの自動デプロイ |
-| `CLAUDE.md` | Claude Code向け開発ガイド |
+## 💻 動作環境
+
+- Node.js 22以上（`npm test` と各ビルドスクリプトで必要）。
+- モダンブラウザー（Chromium系・Firefox・Safariの最新版）。
+- 追加の依存はありません。ランタイム依存は0、`devDependencies` は `ajv` と `ajv-cli` と `glob` のみです。
 
 ---
 
 ## 📄 ライセンス
 
-MIT License – 詳細は [LICENSE](LICENSE) を参照してください。
+MIT License - 詳細は [LICENSE](LICENSE) を参照してください。
 
 ---
 
-## 🛠 このツールについて
+## 🛠️ このツールについて
 
-本ツールは、「生成AIで作るセキュリティツール100」プロジェクトの一環として開発されました。
-このプロジェクトでは、AIの支援を活用しながら、セキュリティに関連するさまざまなツールを100日間にわたり制作・公開していく取り組みを行っています。
-
-プロジェクトの詳細や他のツールについては、以下のページをご覧ください。
+本ツールは、「生成AIで作るセキュリティツール100」プロジェクトの一環として作成されました。このプロジェクトでは、AIの支援を活用しながら、セキュリティに関連するツールを100日間にわたり制作・公開していくチャレンジに取り組んでいます。プロジェクトの詳細や他のツールについては、以下のページをご覧ください。
 
 🔗 [https://akademeia.info/?page_id=42163](https://akademeia.info/?page_id=42163)
