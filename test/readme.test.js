@@ -41,9 +41,16 @@ test('README.md YAML metadata is enclosed in an HTML comment with required keys'
   }
 });
 
-test('README.md starts with the English-link line (above the HTML comment)', () => {
-  const firstNonEmpty = JA.split(/\r?\n/).find(l => l.trim().length > 0);
-  assert.equal(firstNonEmpty, '[English](README.en.md) · 日本語');
+test('README.md keeps the YAML comment first and puts the English-link line right after it', () => {
+  const lines = JA.split(/\r?\n/);
+  const firstNonEmpty = lines.find(l => l.trim().length > 0);
+  assert.equal(firstNonEmpty, '<!--', 'the YAML HTML comment must be the first line (hackinglab.online reads it)');
+  const end = lines.indexOf('-->');
+  assert.ok(end > 0, 'comment end not found');
+  const next = lines.slice(end + 1).find(l => l.trim().length > 0);
+  assert.equal(next, '[English](README.en.md) · 日本語');
+  const h1 = lines.findIndex(l => l.startsWith('# '));
+  assert.ok(h1 > end, 'H1 must come after the link line');
 });
 
 test('README.en.md starts with the Japanese-link line (no YAML)', () => {
