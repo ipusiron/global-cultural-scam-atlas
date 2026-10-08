@@ -1,4 +1,3 @@
-[English](README.en.md) · 日本語
 <!--
 ---
 id: day082
@@ -36,6 +35,8 @@ demo_url: "https://ipusiron.github.io/global-cultural-scam-atlas/"
 hub: true
 ---
 -->
+
+[English](README.en.md) · 日本語
 
 # Global Cultural Scam Atlas (GCSA) - 文化文脈に基づく攻撃事例のデータベース
 
