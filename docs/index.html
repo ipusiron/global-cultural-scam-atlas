@@ -3,22 +3,27 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://ipusiron.github.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-Frame-Options" content="DENY">
-  <meta name="referrer" content="no-referrer-when-downgrade">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'">
+  <meta name="referrer" content="no-referrer">
   <title>Global Cultural Scam Atlas (GCSA)</title>
+  <link rel="icon" href="data:," />
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
+  <noscript>
+    <p class="noscript">
+      JavaScript が必要です / JavaScript is required to use this page.
+    </p>
+  </noscript>
+
   <header class="site-header">
     <div class="header-left">
       <h1>Global Cultural Scam Atlas <span class="muted">(GCSA)</span></h1>
       <p class="tagline" data-i18n="tagline">文化・慣習の文脈を悪用したソーシャルエンジニアリングの教育データベース</p>
     </div>
     <div class="controls">
-      <button id="themeToggle" class="btn ghost" aria-label="Toggle theme">🌙</button>
-      <button id="localeToggle" class="btn ghost" aria-label="Toggle language">🌐 JA</button>
+      <button id="themeToggle" type="button" class="btn ghost icon-btn" aria-label="Toggle theme">🌙</button>
+      <button id="localeToggle" type="button" class="btn ghost" aria-label="Toggle language">🌐 JA</button>
       <a class="btn" target="_blank" rel="noopener noreferrer" href="./dist/countries.json" id="jsonLink" data-tooltip="集約された攻撃事例データベース（JSON形式）をダウンロード">countries.json</a>
     </div>
   </header>
@@ -27,7 +32,6 @@
     <div class="filter">
       <label for="country" data-i18n="filter.country">国 / Country</label>
       <select id="country">
-        <option value="__all__">All</option>
       </select>
     </div>
     <div class="filter">
@@ -50,10 +54,10 @@
       <label for="q" data-i18n="filter.search">検索 / Search</label>
       <div class="search-wrapper">
         <input id="q" type="search" data-i18n-placeholder="search.placeholder" placeholder="タイトル・説明・シナリオ・タグを検索…" />
-        <button id="searchClear" class="search-clear" aria-label="Clear search">×</button>
+        <button id="searchClear" type="button" class="search-clear icon-btn" data-i18n-aria="aria.searchClear" aria-label="Clear search">×</button>
       </div>
     </div>
-    <button id="resetFilters" class="btn ghost filter-reset" data-i18n="filter.reset">リセット</button>
+    <button id="resetFilters" type="button" class="btn ghost filter-reset" data-i18n="filter.reset">リセット</button>
   </section>
 
   <section class="summary">
@@ -62,12 +66,12 @@
 
   <main id="cards" class="cards" aria-live="polite"></main>
 
-  <!-- 詳細モーダル -->
+  <!-- Detail modal: only × to close; no OK button -->
   <dialog id="detailDialog">
     <article class="modal">
       <header>
         <h3 id="dlgTitle">Title</h3>
-        <button id="dlgClose" aria-label="Close">×</button>
+        <button id="dlgClose" type="button" class="icon-btn" data-i18n-aria="aria.dialogClose" aria-label="Close">×</button>
       </header>
       <div class="modal-body">
         <div class="kvs">
@@ -94,16 +98,13 @@
         <h4 data-i18n="modal.references">References</h4>
         <ul id="dlgRefs"></ul>
       </div>
-      <footer>
-        <button id="dlgOk" class="btn">OK</button>
-      </footer>
     </article>
   </dialog>
 
   <footer class="site-footer">
-    <span data-i18n="footer.github">🔗 GitHubリポジトリはこちら（</span> <a href="https://github.com/ipusiron/global-cultural-scam-atlas" target="_blank" rel="noopener noreferrer">ipusiron/global-cultural-scam-atlas</a> <span data-i18n="footer.github_close">）</span>
+    <span id="footerLinkPrefix">🔗 GitHub リポジトリー: </span><a id="footerLinkAnchor" href="https://github.com/ipusiron/global-cultural-scam-atlas" target="_blank" rel="noopener noreferrer">ipusiron/global-cultural-scam-atlas</a>
   </footer>
 
-  <script src="./js/main.js" defer></script>
+  <script type="module" src="./js/main.js"></script>
 </body>
 </html>
