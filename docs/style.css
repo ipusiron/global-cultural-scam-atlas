@@ -284,3 +284,6 @@ dialog::backdrop{background:rgba(0,0,0,.6)}
 @media (max-width:640px){
   .stats-pair{grid-template-columns:1fr;}
 }
+
+/* hidden 属性を display 指定より優先する（.cards の grid と .stats-view の flex が勝ち、統計タブで一覧が隠れなかった） */
+[hidden]{display:none !important;}
