@@ -1,0 +1,80 @@
+{
+  "id": "au-004",
+  "title": {
+    "ja": "有名ブランド・著名人を利用した投資詐欺",
+    "en": "Branded Fake-Investment Scam"
+  },
+  "short_desc": {
+    "ja": "既存の金融業者・公人・AI 偽ニュースで装い投資資金を奪う",
+    "en": "Fake brands, celebrity ads, and AI news lure investment funds."
+  },
+  "cultural_lever": {
+    "ja": "著名金融機関と公人の信用への錯覚",
+    "en": "Misplaced trust in known brands and public figures"
+  },
+  "attack_vector": [
+    "social",
+    "website",
+    "email"
+  ],
+  "targets": [
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) 広告で既存金融業者や著名人を装う 2) 偽の比較サイト・ニュース記事へ誘導 3) 偽の投資商品で入金させる 4) 送金後に連絡途絶",
+    "en": "1) Ads impersonate known firms or figures 2) Direct to fake comparison sites or news 3) Push fake investment 4) Vanish after deposit"
+  },
+  "red_flags": {
+    "ja": [
+      "著名銀行・著名人の推奨",
+      "AI生成の記事・レビュー・比較サイト",
+      "高利回りの『保証』"
+    ],
+    "en": [
+      "Celebrity endorsements",
+      "AI-generated reviews, articles or comparison sites",
+      "'Guaranteed' high returns"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "ASIC の Investor Alert List で業者を照合",
+      "大きな入金前に信頼できる第三者に確認",
+      "広告リンクを踏まず公式サイトを手入力"
+    ],
+    "en": [
+      "Check ASIC's Investor Alert List",
+      "Have a trusted person review before large deposits",
+      "Type the official URL instead of clicking ads"
+    ]
+  },
+  "risk_score": 5,
+  "mediums": [
+    "bank-transfer",
+    "cryptocurrency"
+  ],
+  "legal_notes": {
+    "ja": "Scamwatch と ASIC へ報告。2025年に豪州で837百万豪ドルの投資詐欺被害",
+    "en": "Report to Scamwatch and ASIC; AU$837M lost in 2025"
+  },
+  "references": [
+    {
+      "label": "ASIC MoneySmart: Investment scams",
+      "url": "https://moneysmart.gov.au/financial-scams/investment-scams",
+      "publisher": "ASIC MoneySmart",
+      "accessed": "2026-10-09",
+      "quote": "Scammers are sophisticated. They use professional-looking websites, social media, advertising and AI technology to make scams appear genuine. Investment scams generally involve fake financial services and products offered by someone who isn’t who they claim to be. ... The scammer may pretend to represent a bank, investment company or financial services business. They may steal the identity of a genuine financial adviser or a well-known public figure."
+    }
+  ],
+  "tags": [
+    "investment-fraud",
+    "impersonation",
+    "ai-abuse",
+    "celebrity-impersonation"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "ASIC MoneySmart が、装う相手（bank, investment company or ... well-known public figure）、経路（social media, advertising）、手法（AI technology）を具体的に記述。NASC の2025年統計で837百万豪ドルの損失のため risk_score=5"
+  }
+}

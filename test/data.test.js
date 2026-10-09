@@ -1,6 +1,6 @@
 // Tests for data/attacks (one JSON per attack):
 //  - id matches the file name and ^[a-z]{2}-\d{3}$
-//  - per-country counts (JP=32, US=20, IN=1, GB=7, total=60)
+//  - per-country counts (JP=32, US=20, IN=1, GB=7, AU=7, total=67)
 //  - risk_score is an integer in [1,5]
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
@@ -8,7 +8,7 @@ import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
 const ROOT = path.resolve('data/attacks');
-const EXPECTED_COUNTS = { JP: 32, US: 20, IN: 1, GB: 7 };
+const EXPECTED_COUNTS = { JP: 32, US: 20, IN: 1, GB: 7, AU: 7 };
 const ID_PATTERN = /^[a-z]{2}-\d{3}$/;
 
 const VECTOR_VOCAB = new Set([
@@ -46,7 +46,7 @@ test('per-country attack counts match the README table', async () => {
     total += files.length;
   }
   assert.equal(total, Object.values(EXPECTED_COUNTS).reduce((a, b) => a + b, 0));
-  assert.equal(total, 60);
+  assert.equal(total, 67);
 });
 
 test('every attack id matches the file name and the ^[a-z]{2}-\\d{3}$ pattern', async () => {

@@ -1,0 +1,79 @@
+{
+  "id": "au-005",
+  "title": {
+    "ja": "偽の債券・定期預金（Imposter bond）詐欺",
+    "en": "Imposter Bond Investment Scam"
+  },
+  "short_desc": {
+    "ja": "有名銀行の『低リスク債券』を装い偽の比較サイト経由で入金させる",
+    "en": "Fake 'low-risk bonds' lure deposits via fake comparison sites."
+  },
+  "cultural_lever": {
+    "ja": "『安全資産』『豪州国債』という安心感",
+    "en": "Perceived safety of bonds and government debt"
+  },
+  "attack_vector": [
+    "social",
+    "website",
+    "phone"
+  ],
+  "targets": [
+    "general",
+    "elderly"
+  ],
+  "scenario": {
+    "ja": "1) 有名銀行名で接触 2) 低リスク『Treasury bonds』を提案 3) 偽の比較サイト経由で情報収集 4) 入金後に消失",
+    "en": "1) Contact in a known bank's name 2) Offer low-risk 'Treasury bonds' 3) Collect data via fake comparison site 4) Vanish after deposit"
+  },
+  "red_flags": {
+    "ja": [
+      "既存の有名銀行名を名乗る急な接触",
+      "送金先口座名が運用会社名と一致しない",
+      "偽の比較サイトから入力した個人情報の確認要求"
+    ],
+    "en": [
+      "Unexpected contact in a known bank's name",
+      "Account name differs from investment firm",
+      "Verification requests via a fake comparison site"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "送金先口座名が業者名と一致するか確認",
+      "ASIC の Investor Alert List で業者照合",
+      "BSB コードが提示銀行と一致するか確認"
+    ],
+    "en": [
+      "Check the destination account matches the firm",
+      "Verify on ASIC's Investor Alert List",
+      "Check the BSB matches the stated bank"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "bank-transfer"
+  ],
+  "legal_notes": {
+    "ja": "Scamwatch と ASIC へ報告。送金先口座名の照合が重要",
+    "en": "Report to Scamwatch and ASIC; verify destination account name"
+  },
+  "references": [
+    {
+      "label": "ASIC MoneySmart: Imposter bond investment scams",
+      "url": "https://moneysmart.gov.au/financial-scams/imposter-bond-investment-scams",
+      "publisher": "ASIC MoneySmart",
+      "accessed": "2026-10-09",
+      "quote": "A scammer may contact you with an investment offer, claiming to be from a well-known bank or investment company. The people you speak to can seem knowledgeable, offering what appears to be a 'full service' brokerage. ... Scammers commonly set up fake comparison websites to lure investors. ... Be wary of surprise contact and independently verify who you are dealing with."
+    }
+  ],
+  "tags": [
+    "investment-fraud",
+    "impersonation",
+    "authority-pretext"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "ASIC MoneySmart が、装う相手（well-known bank or investment company）、経路（fake comparison websites）、推奨対策（independently verify）を明示"
+  }
+}

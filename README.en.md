@@ -27,7 +27,7 @@ Open it directly in a browser.
 ## 📸 Screenshots
 
 > ![English light theme, initial view](assets/en/screenshot.png)
-> *English, light theme, initial view (60 attacks; verification badge on each card).*
+> *English, light theme, initial view (67 attacks; verification badge on each card).*
 
 > ![Japanese light theme with detail modal open](assets/screenshot2.png)
 > *The detail modal for jp-001 (Red Flags, Mitigations, References with publisher and accessed).*
@@ -207,17 +207,18 @@ Entries are observations at the time of writing and are not exhaustive. They are
 | JP (Japan) | 32 |
 | US (United States) | 20 |
 | GB (United Kingdom) | 7 |
+| AU (Australia) | 7 |
 | IN (India) | 1 |
-| **Total** | **60** |
+| **Total** | **67** |
 
 ### Verification status
 
 | Status | Count |
 |--------|-------|
-| verified | 46 |
+| verified | 53 |
 | partial | 13 |
 | unverified | 1 |
-| **Total** | **60** |
+| **Total** | **67** |
 
 ---
 
@@ -332,6 +333,9 @@ global-cultural-scam-atlas/
 ├── CLAUDE.md                            # Guide for Claude Code
 ├── data/
 │   ├── attacks/                         # Source data (one JSON per attack)
+│   │   ├── AU/                          # Australia (7 entries, au-001.json .. au-007.json)
+│   │   │   ├── au-001.json
+│   │   │   └── ...
 │   │   ├── GB/                          # United Kingdom (7 entries, gb-001.json .. gb-007.json)
 │   │   │   ├── gb-001.json
 │   │   │   └── ...

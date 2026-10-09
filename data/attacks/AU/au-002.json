@@ -1,0 +1,79 @@
+{
+  "id": "au-002",
+  "title": {
+    "ja": "銀行職員を装い送金を急かす（Bank impersonation）",
+    "en": "Bank Impersonation Scam"
+  },
+  "short_desc": {
+    "ja": "『不審な取引』を口実に、電話・SMS で急かし送金やログイン情報を要求",
+    "en": "'Suspicious activity' pretext pressures victim to transfer funds."
+  },
+  "cultural_lever": {
+    "ja": "銀行の権威と、不正取引への恐怖",
+    "en": "Bank authority and fear of fraud losses"
+  },
+  "attack_vector": [
+    "phone",
+    "sms",
+    "email"
+  ],
+  "targets": [
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) 銀行を装う電話・SMS 2) 『不審な取引がある』と告知 3) 緊急を演出 4) 口座情報・ログイン・送金を要求",
+    "en": "1) Call/SMS as 'bank' 2) Claim 'suspicious activity' 3) Urgent tone 4) Demand login or transfer"
+  },
+  "red_flags": {
+    "ja": [
+      "急かす言い回し",
+      "ログインパスワードや認証コードの要求",
+      "ソフトウェアのダウンロード指示"
+    ],
+    "en": [
+      "Urgent language",
+      "Request for online-banking passwords or codes",
+      "Instruction to download software"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "電話を切り、カード裏の番号で銀行に折り返す",
+      "リンクを踏まず銀行アプリから直接ログイン",
+      "正規銀行はパスワードや認証コードを尋ねないと認識"
+    ],
+    "en": [
+      "Hang up and call the number on your card",
+      "Open the bank app directly, not a link",
+      "Know banks will not ask for passwords or codes"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "bank-transfer"
+  ],
+  "legal_notes": {
+    "ja": "Scamwatch へ報告。銀行は PIN や認証コードを尋ねないと公式に明示",
+    "en": "Report to Scamwatch; banks never ask for PINs or codes"
+  },
+  "references": [
+    {
+      "label": "ASIC MoneySmart: Banking scams - Bank impersonation scams",
+      "url": "https://moneysmart.gov.au/financial-scams/banking-scams",
+      "publisher": "ASIC MoneySmart",
+      "accessed": "2026-10-09",
+      "quote": "Scammers may pretend to be your bank through phone calls, emails, texts or other online messages. They often use urgent language to pressure you into acting quickly. ... if they suspect a suspicious transaction, they will never ask you: for sensitive information such as online banking passwords or codes to download software to transfer money to log in to online banking through a link sent via text or email."
+    }
+  ],
+  "tags": [
+    "impersonation",
+    "banking-fraud",
+    "urgency",
+    "authority-pretext"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "ASIC MoneySmart が、銀行を装う電話・メール・SMS と、急かす文言、銀行が決してしない要求（パスワードや認証コード、ソフトダウンロード、リンクからのログイン）を明示的に記述"
+  }
+}
