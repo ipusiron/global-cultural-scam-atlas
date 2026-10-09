@@ -1,0 +1,78 @@
+{
+  "id": "in-006",
+  "title": {
+    "ja": "QR コード改ざんによる決済詐欺",
+    "en": "QR Code Tampering Scam"
+  },
+  "short_desc": {
+    "ja": "店舗や広告の QR コードを貼り替え、偽サイトで情報と資金を奪取",
+    "en": "QR codes swapped to lead to malicious sites that steal data and funds."
+  },
+  "cultural_lever": {
+    "ja": "UPI・PayTM 等 QR 決済の普及",
+    "en": "Widespread UPI/PayTM QR payments"
+  },
+  "attack_vector": [
+    "in-person",
+    "website"
+  ],
+  "targets": [
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) 店頭の QR コードを別のステッカーで上書き 2) 利用者がスキャン 3) 偽サイトへ遷移 4) ログイン・支払情報を奪う",
+    "en": "1) Overlay a sticker on a shop's QR code 2) Victim scans 3) Routed to a malicious site 4) Credentials and payment info stolen"
+  },
+  "red_flags": {
+    "ja": [
+      "QR 貼付位置が不自然",
+      "QR から誘導されるページの URL が公式でない",
+      "追加の個人情報入力を促される"
+    ],
+    "en": [
+      "QR sticker looks pasted over",
+      "Landing URL does not match the merchant",
+      "Pushed to enter extra personal info"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "店の QR コードは店員と目視確認",
+      "決済アプリで店名・金額を確認してから承認",
+      "疑わしければ 1930 または cybercrime.gov.in へ通報"
+    ],
+    "en": [
+      "Have the merchant confirm their QR",
+      "Verify payee name and amount before confirming",
+      "Report to 1930 / cybercrime.gov.in"
+    ]
+  },
+  "risk_score": 3,
+  "mediums": [
+    "qr-pay",
+    "bank-transfer"
+  ],
+  "legal_notes": {
+    "ja": "I4C が 2022 年4月に公告",
+    "en": "I4C advisory issued April 2022"
+  },
+  "references": [
+    {
+      "label": "I4C Advisory: Cybercriminals Tampering with QR Codes to defraud Citizens",
+      "url": "https://cybercrime.gov.in/webform/Advisory.aspx",
+      "publisher": "Indian Cyber Crime Coordination Centre (I4C)",
+      "accessed": "2026-10-09",
+      "quote": "Cybercriminals Tampering with QR Codes to defraud Citizens April 26 2022 Cybercriminals are tampering with Quick Response (QR) codes to redirect victims to malicious sites that steal login and financial information....."
+    }
+  ],
+  "tags": [
+    "qr-fraud",
+    "payment-app",
+    "credential-theft"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "I4C 公告が、手口（tampering with QR codes）、結果（redirect to malicious sites that steal login and financial information）を記述。インドの UPI 普及に対応した代表的手口"
+  }
+}

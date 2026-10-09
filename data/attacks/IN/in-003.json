@@ -1,0 +1,80 @@
+{
+  "id": "in-003",
+  "title": {
+    "ja": "結婚紹介プラットフォームを悪用した投資・暗号詐欺",
+    "en": "Matrimonial-Site Investment/Crypto Fraud"
+  },
+  "short_desc": {
+    "ja": "お見合いサイトに偽プロフィールを作成し、信頼構築後に偽の投資機会で入金させる",
+    "en": "Fake matrimonial profiles push 'investment' once trust is built."
+  },
+  "cultural_lever": {
+    "ja": "家族主導の縁談慣行とマッチングアプリへの信頼",
+    "en": "Trust in matrimonial platforms and family-arranged marriage culture"
+  },
+  "attack_vector": [
+    "social",
+    "website"
+  ],
+  "targets": [
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) インドの結婚紹介サイトに偽プロフィール 2) 相手と関係を構築 3) 暗号資産や高利回り投資を提案 4) 入金後に消失",
+    "en": "1) Fake matrimonial profiles 2) Build trust 3) Offer crypto/high-yield investment 4) Vanish after deposit"
+  },
+  "red_flags": {
+    "ja": [
+      "プロフィールに裏付けがない",
+      "交際早期での投資話",
+      "プラットフォーム外への誘導"
+    ],
+    "en": [
+      "Profiles lack verifiable detail",
+      "Investment pitch early in talks",
+      "Move off the platform quickly"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "プラットフォーム内でのやり取りを維持",
+      "投資話が出たら関係を終了",
+      "1930 または cybercrime.gov.in へ通報"
+    ],
+    "en": [
+      "Stay on the platform",
+      "End contact at investment pitch",
+      "Report to 1930 / cybercrime.gov.in"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "bank-transfer",
+    "cryptocurrency",
+    "e-wallet"
+  ],
+  "legal_notes": {
+    "ja": "I4C 公告が 2025 年10月に発出",
+    "en": "I4C advisory issued October 2025"
+  },
+  "references": [
+    {
+      "label": "I4C Advisory: Misuse of Matrimonial Platforms for Investment/Crypto Frauds",
+      "url": "https://cybercrime.gov.in/webform/Advisory.aspx",
+      "publisher": "Indian Cyber Crime Coordination Centre (I4C)",
+      "accessed": "2026-10-09",
+      "quote": "Misuse of Matrimonial Platforms for Investment/Crypto Frauds. October 31 2025 Fraudsters register on Indian matrimonial platforms (including regional ones) by creating profiles with false identities."
+    }
+  ],
+  "tags": [
+    "romance-scam",
+    "investment-fraud",
+    "cryptocurrency",
+    "trust-exploitation"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "I4C 公告が、インドの結婚紹介サイト（regional ones も含む）に偽プロフィールを登録する手口を明示。インド固有の文化的レバー"
+  }
+}

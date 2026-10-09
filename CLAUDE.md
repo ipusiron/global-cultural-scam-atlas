@@ -114,7 +114,7 @@ Runs via `npm test` (`node --test`, zero extra dependencies). See `README.md` fo
    - SG (Singapore): APAC region, en/zh/ms/ta languages (7 entries).
    - KR (South Korea): APAC region, ko/en languages (6 entries).
    - TW (Taiwan): APAC region, zh-TW/en languages (6 entries).
-   - IN (India): APAC region, hi/en languages (1 entry, expansion pending).
+   - IN (India): APAC region, hi/en languages (10 entries).
 
 ## Content Guidelines (`docs/content-guidelines.md`)
 

@@ -1,0 +1,78 @@
+{
+  "id": "in-004",
+  "title": {
+    "ja": "WhatsApp Web アカウントのレンタル詐欺",
+    "en": "WhatsApp Web Account Renting Scam"
+  },
+  "short_desc": {
+    "ja": "Facebook・Instagram で WhatsApp Web を貸し出す副業を募り、犯罪用に悪用",
+    "en": "'Rent your WhatsApp Web' side-gig ads on FB/IG feed into crime."
+  },
+  "cultural_lever": {
+    "ja": "SNS 発の副業・小遣い稼ぎへの関心",
+    "en": "Appetite for side-gigs promoted on social media"
+  },
+  "attack_vector": [
+    "social"
+  ],
+  "targets": [
+    "general",
+    "student"
+  ],
+  "scenario": {
+    "ja": "1) FB・IG で副業広告 2) WhatsApp Web を貸し出す提案 3) 相手がアカウントで犯罪的連絡を発信 4) 本人がマネー・ミュール化",
+    "en": "1) Side-gig ad on FB/IG 2) 'Rent WhatsApp Web' 3) Criminals use account to contact others 4) Owner becomes money mule"
+  },
+  "red_flags": {
+    "ja": [
+      "WhatsApp Web のアクセス提供を要求",
+      "SNS で勧誘される短期副業",
+      "匿名の相手に報酬の約束"
+    ],
+    "en": [
+      "Request access to WhatsApp Web",
+      "Social-ad side-gig solicitation",
+      "Anonymous promise of commission"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "WhatsApp Web のセッションを他人に許可しない",
+      "SNS 広告の副業は慎重に判断",
+      "1930 または cybercrime.gov.in へ通報"
+    ],
+    "en": [
+      "Never share your WhatsApp Web session",
+      "Treat social-ad gigs with caution",
+      "Report to 1930 / cybercrime.gov.in"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "bank-transfer"
+  ],
+  "legal_notes": {
+    "ja": "I4C が 2025 年10月の公告で越境詐欺の傾向と警告",
+    "en": "I4C flagged this as an emerging transnational crime trend"
+  },
+  "references": [
+    {
+      "label": "I4C Advisory: WhatsApp Web Account Renting Scam using Facebook & Instagram",
+      "url": "https://cybercrime.gov.in/webform/Advisory.aspx",
+      "publisher": "Indian Cyber Crime Coordination Centre (I4C)",
+      "accessed": "2026-10-09",
+      "quote": "WhatsApp Web Account Renting Scam – using Facebook & Instagram. October 15 2025 The National Cybercrime Threat Analytics Unit of I4C has identified an emerging transnational crime trend where certain Facebook & Instagram accounts...."
+    }
+  ],
+  "tags": [
+    "social-media",
+    "money-mule",
+    "job-scam",
+    "account-takeover"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "I4C 公告が、経路（Facebook & Instagram）、要求（WhatsApp Web renting）、位置づけ（emerging transnational crime trend）を記述"
+  }
+}

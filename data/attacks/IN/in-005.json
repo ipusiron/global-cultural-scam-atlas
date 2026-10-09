@@ -1,0 +1,79 @@
+{
+  "id": "in-005",
+  "title": {
+    "ja": "電気料金未払いを装う SMS フィッシング",
+    "en": "Unpaid Electricity-Bill SMS Scam"
+  },
+  "short_desc": {
+    "ja": "電力会社を装う SMS で滞納を通知し、不正アプリやリンクで個人情報を奪う",
+    "en": "'Electricity bill unpaid' SMS pushes malicious links/apps."
+  },
+  "cultural_lever": {
+    "ja": "停電リスクへの不安と、料金通知を SMS で受け取る慣行",
+    "en": "Fear of outages; SMS as a billing channel"
+  },
+  "attack_vector": [
+    "sms"
+  ],
+  "targets": [
+    "general",
+    "elderly"
+  ],
+  "scenario": {
+    "ja": "1) 電力会社を装う SMS 2) 『未払いのため停電予告』 3) リンクのクリック・アプリインストールを促す 4) 情報・資金を奪う",
+    "en": "1) Fake 'utility' SMS 2) 'Unpaid - power will be cut' 3) Push link/app 4) Steal info and funds"
+  },
+  "red_flags": {
+    "ja": [
+      "発信者が電力会社名を名乗る SMS",
+      "停電脅迫を伴う URL クリック要求",
+      "不審なアプリのインストール指示"
+    ],
+    "en": [
+      "SMS from a 'utility' sender",
+      "URL click under cut-off threat",
+      "Instructions to install an app"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "電力会社の公式アプリ・公式ウェブで直接確認",
+      "SMS 内のリンクは踏まない",
+      "1930 または cybercrime.gov.in へ通報"
+    ],
+    "en": [
+      "Verify in the utility's official app or site",
+      "Do not click SMS links",
+      "Report to 1930 / cybercrime.gov.in"
+    ]
+  },
+  "risk_score": 3,
+  "mediums": [
+    "bank-transfer",
+    "e-wallet"
+  ],
+  "legal_notes": {
+    "ja": "I4C が 2022 年5月に公告",
+    "en": "I4C advisory issued May 2022"
+  },
+  "references": [
+    {
+      "label": "I4C Advisory: Fake SMSs related to unpaid Electricity Bill to dupe citizens",
+      "url": "https://cybercrime.gov.in/webform/Advisory.aspx",
+      "publisher": "Indian Cyber Crime Coordination Centre (I4C)",
+      "accessed": "2026-10-09",
+      "quote": "Fake SMSs related to unpaid Electricity Bill to dupe citizens May 10 2022 Smishing - Cybercriminals send text messages pretending to be from trusted sources to get targets to click on links that install malware....."
+    }
+  ],
+  "tags": [
+    "smishing",
+    "impersonation",
+    "utility-pretext",
+    "malware"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "I4C 公告が、口実（unpaid Electricity Bill）、経路（text messages pretending to be from trusted sources）、結果（malware install）を記述"
+  }
+}
