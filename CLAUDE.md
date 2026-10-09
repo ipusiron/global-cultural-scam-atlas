@@ -16,6 +16,10 @@ npm run build:countries   # Generate dist/countries.json (aggregated data)
 npm run build             # Run both build scripts
 npm run validate:schema   # Validate dist/countries.json against schema
 npm run build:local       # Build and copy dist/countries.json to docs/dist/
+
+# Scaffold a new attack JSON (auto-numbered or explicit sequence)
+node tools/new-attack.mjs JP        # writes data/attacks/JP/jp-033.json etc.
+node tools/new-attack.mjs US 42     # forces us-042.json, refuses to overwrite
 ```
 
 ### Local Preview
@@ -39,9 +43,9 @@ python -m http.server 8000 --directory docs
 
 The UI is split into three ES modules under `docs/js/`.
 
-- `gcsa-core.js`: pure logic shared with the tests (`filterAttacks`, `matchQuery`, `clampRisk`, `riskStars`, `pickLang`, `pickList`, `sanitizeUrl`, `escapeHtml`, `escapeAttr`, `resolveLocale`, `resolveTheme`). No DOM access.
-- `gcsa-messages.js`: i18n dictionary. `ja` and `en` keys must stay in sync; `test/i18n.test.js` enforces this.
-- `main.js`: DOM wiring only. Loads `./dist/countries.json`, applies filters, renders cards, drives the modal, and switches locale/theme without re-fetching.
+- `gcsa-core.js`: pure logic shared with the tests (`filterAttacks`, `searchAttackFields`, `extractTargets`, `countryCounts`, `sortAttacks`, `parseHash`, `buildHash`, `aggregate`, `csvField`, `toCsv`, `entriesToCsvRows`, `matchQuery`, `clampRisk`, `riskStars`, `pickLang`, `pickList`, `sanitizeUrl`, `escapeHtml`, `escapeAttr`, `resolveLocale`, `resolveTheme`). No DOM access.
+- `gcsa-messages.js`: i18n dictionary plus `labelFor(prefix, value, locale)` for controlled-vocab labels (`vector.*`, `target.*`, `field.*`). `ja` and `en` keys must stay in sync; `test/i18n.test.js` enforces this.
+- `main.js`: DOM wiring only. Loads `./dist/countries.json`, applies filters, renders cards, syncs the URL hash, draws the stats SVG, exports CSV, drives the modal (backdrop click + focus return), and switches locale/theme without re-fetching.
 
 `docs/index.html` loads `main.js` with `type="module"`.
 
@@ -70,19 +74,20 @@ Attack files must include (all with `ja` locale, optionally `en`):
 1. `tools/build-index.mjs`: scans attack files, creates index by country code.
 2. `tools/build-countries.mjs`: aggregates attack files with country metadata from `COUNTRY_META`, outputs to `dist/countries.json`.
 3. `tools/copy-local.mjs`: copies the aggregated file into `docs/dist/` for local HTTP preview.
+4. `tools/new-attack.mjs`: writes a schema-shaped TODO scaffold at `data/attacks/<ISO2>/<id>.json`; never overwrites an existing file.
 
 ## Tests
 
 Runs via `npm test` (`node --test`, zero extra dependencies). See `README.md` for a per-file summary.
 
-- `test/core.test.js`, `test/i18n.test.js`, `test/data.test.js`, `test/html.test.js`, `test/contrast.test.js`, `test/format.test.js`, `test/readme.test.js`.
+- `test/core.test.js`, `test/i18n.test.js`, `test/data.test.js`, `test/html.test.js`, `test/contrast.test.js`, `test/format.test.js`, `test/readme.test.js`, `test/phase2.test.js`, `test/new-attack.test.js`.
 
 ## CI/CD
 
 ### GitHub Actions
-- **`.github/workflows/ci.yml`**: validates on PR/push to main (build + schema validation).
+- **`.github/workflows/ci.yml`**: validates on PR/push to main (build + schema validation, Node 22).
 - **`.github/workflows/test.yml`**: runs `npm test` on PR/push to main (Node 22).
-- **`.github/workflows/pages.yml`**: deploys to GitHub Pages on push to main.
+- **`.github/workflows/pages.yml`**: deploys to GitHub Pages on push to main (Node 22).
   - Builds `dist/countries.json`.
   - Copies `docs/*` and `dist/countries.json` to `public/`.
   - Deploys to `gh-pages` branch.
