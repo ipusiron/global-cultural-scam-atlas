@@ -251,9 +251,9 @@ python -m http.server 8000 --directory docs
 
 | 状態 | 件数 |
 |------|------|
-| verified（出典確認済み） | 26 |
-| partial（一部確認） | 25 |
-| unverified（未確認） | 2 |
+| verified（出典確認済み） | 39 |
+| partial（一部確認） | 13 |
+| unverified（未確認） | 1 |
 | **合計** | **53** |
 
 ---

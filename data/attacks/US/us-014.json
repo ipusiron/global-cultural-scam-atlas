@@ -62,16 +62,11 @@
   },
   "references": [
     {
-      "label": "FTC Rental Scams",
-      "url": "https://consumer.ftc.gov/articles/rental-scams",
-      "publisher": "consumer.ftc.gov",
-      "accessed": "2026-10-09"
-    },
-    {
-      "label": "FBI Rental Fraud",
-      "url": "https://www.fbi.gov/how-we-can-help-you/safety-resources/scams-and-safety/common-scams-and-crimes/real-estate-fraud",
-      "publisher": "fbi.gov",
-      "accessed": "2026-10-09"
+      "label": "FTC: Rental Listing Scams",
+      "url": "https://consumer.ftc.gov/articles/rental-listing-scams",
+      "publisher": "FTC",
+      "accessed": "2026-10-09",
+      "quote": "The fake owner might tell you can only secure the property with a wire transfer through Western Union or MoneyGram, gift cards, or cryptocurrency to pay for an application fee, deposit, or first month's rent."
     }
   ],
   "tags": [
@@ -81,8 +76,8 @@
     "phantom-goods"
   ],
   "verification": {
-    "status": "partial",
+    "status": "verified",
     "checked": "2026-10-09",
-    "note": "関連する公的注意喚起はあるが、事例の手口を個別に裏づける逐語の記述を本文に見出せなかった"
+    "note": "'secure the property' with 'wire transfer / gift cards' is pretext + demand"
   }
 }

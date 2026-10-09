@@ -62,15 +62,9 @@
     {
       "label": "消費者庁：売買契約に基づかないで送付された商品に関するQ&A",
       "url": "https://www.no-trouble.caa.go.jp/qa/negativeoption.html",
-      "publisher": "no-trouble.caa.go.jp",
+      "publisher": "消費者庁 特定商取引法ガイド",
       "accessed": "2026-10-09",
-      "quote": "今回の改正により、事業者は送付した商品について直ちに返還請求できなくなるため、注文や契約をしていないにもかかわらず、金銭を得ようとして一方的に送り付けられた商品については、消費者は直ちに処分することができるようになります。"
-    },
-    {
-      "label": "消費者庁：特定商取引法ガイド（行政処分の執行状況）",
-      "url": "https://www.no-trouble.caa.go.jp/action/result_1year.html",
-      "publisher": "no-trouble.caa.go.jp",
-      "accessed": "2026-10-09"
+      "quote": "売買契約の申込みも締結もしていないのに、自分宛てに身に覚えのない商品が送付されてきました。代金を支払わなくてはならないのでしょうか。…売買契約に基づかないで一方的に商品の送付があったとしても、それにより売買契約は成立しておらず、代金を支払う必要はありません。"
     }
   ],
   "tags": [
@@ -82,6 +76,6 @@
   "verification": {
     "status": "verified",
     "checked": "2026-10-09",
-    "note": "取得した本文に手口を示す記述あり（no-trouble.caa.go.jp）"
+    "note": "『身に覚えのない商品が送付』が接触経路、『代金を支払わなくてはならないのでしょうか』が加害者の要求"
   }
 }

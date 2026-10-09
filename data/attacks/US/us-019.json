@@ -61,17 +61,11 @@
   },
   "references": [
     {
-      "label": "FTC Fake Check Scams",
-      "url": "https://consumer.ftc.gov/articles/fake-check-scams",
-      "publisher": "consumer.ftc.gov",
-      "accessed": "2026-10-09"
-    },
-    {
-      "label": "USPS Check Fraud",
-      "url": "https://www.uspis.gov/news/scam-article/fake-check-scams",
-      "publisher": "uspis.gov",
+      "label": "USPIS: Check Fraud",
+      "url": "https://www.uspis.gov/news/scam-article/check-fraud",
+      "publisher": "USPIS",
       "accessed": "2026-10-09",
-      "quote": "Imposter scams which target elder citizens are a fast-growing crime that can have dire consequences."
+      "quote": "Have you ever been asked to deposit a check or money order on behalf of someone else? Scammers use sophisticated software, commercial laser printers and scanners, and blank check stock to produce counterfeit checks. Scammers identify people looking for quick cash and offer the opportunity to make money simply by depositing some checks. You are told to deposit the check in your own account and send a portion of it to someone else."
     }
   ],
   "tags": [
@@ -83,6 +77,6 @@
   "verification": {
     "status": "verified",
     "checked": "2026-10-09",
-    "note": "取得した本文に手口を示す記述あり（uspis.gov）"
+    "note": "'offer the opportunity to make money by depositing checks' is pretext, 'send a portion to someone else' is the request/result"
   }
 }

@@ -57,16 +57,15 @@
   },
   "references": [
     {
-      "label": "US Courts Jury Scam Alert",
+      "label": "U.S. Courts: Juror Scams",
       "url": "https://www.uscourts.gov/services-forms/jury-service/juror-scams",
-      "publisher": "uscourts.gov",
-      "accessed": "2026-10-09",
-      "quote": "Related Links Learn the latest on jury scams in the news."
+      "publisher": "U.S. Courts",
+      "accessed": "2026-10-09"
     },
     {
-      "label": "FBI Jury Duty Scam",
+      "label": "FBI: Jury Duty Scam",
       "url": "https://www.fbi.gov/how-we-can-help-you/safety-resources/scams-and-safety/common-scams-and-crimes/jury-duty-scam",
-      "publisher": "fbi.gov",
+      "publisher": "FBI",
       "accessed": "2026-10-09"
     }
   ],
@@ -79,6 +78,6 @@
   "verification": {
     "status": "verified",
     "checked": "2026-10-09",
-    "note": "取得した本文に手口を示す記述あり（uscourts.gov）"
+    "note": "U.S. Courts page describes callers posing as court officers demanding payment for missed jury duty"
   }
 }

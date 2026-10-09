@@ -60,11 +60,11 @@
   },
   "references": [
     {
-      "label": "警察庁：特殊詐欺対策（SOS47）",
-      "url": "https://www.npa.go.jp/bureau/safetylife/sos47/",
-      "publisher": "npa.go.jp",
+      "label": "警察庁 SOS47：オレオレ詐欺",
+      "url": "https://www.npa.go.jp/bureau/safetylife/sos47/case/oreore/",
+      "publisher": "警察庁 SOS47",
       "accessed": "2026-10-09",
-      "quote": "S47特殊詐欺対策ページ | ストップ、オレオレ詐欺 本文へ 文字サイズ変更 標準 大 ひょっとして詐欺かも… 不安を感じたら相談電話へ #9110 発生状況 手口一覧と対策 注意喚起・お知らせ ムービー ダウンロード SOS47をもっと知る イベントレポート 警察庁推奨アプリ MENU 発生状況 手口一覧と対策 注意喚起・お知らせ ムー"
+      "quote": "犯人は最初に『風邪をひいて声が変わった』『携帯が壊れて番号が変わった』などと言って信用させた後、『お金が今すぐ必要』と話して振り込みを求めてきます。"
     }
   ],
   "tags": [
@@ -76,6 +76,6 @@
   "verification": {
     "status": "verified",
     "checked": "2026-10-09",
-    "note": "取得した本文に手口を示す記述あり（npa.go.jp）"
+    "note": "『声が変わった』『携帯が壊れて』が家族装いの接触、『お金が今すぐ必要』『振り込みを求める』が要求"
   }
 }

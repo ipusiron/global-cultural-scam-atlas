@@ -60,17 +60,11 @@
   },
   "references": [
     {
-      "label": "FTC COVID-19 Scams",
-      "url": "https://consumer.ftc.gov/features/coronavirus-scams-what-ftc-doing",
-      "publisher": "consumer.ftc.gov",
-      "accessed": "2026-10-09"
-    },
-    {
-      "label": "CDC Vaccine Scam Warning",
-      "url": "https://www.cdc.gov/vaccines/covid-19/index.html",
-      "publisher": "cdc.gov",
+      "label": "FTC: COVID-19 vaccines are in the pipeline. Scammers won't be far behind.",
+      "url": "https://consumer.ftc.gov/consumer-alerts/2020/12/covid-19-vaccines-are-pipeline-scammers-wont-be-far-behind",
+      "publisher": "FTC",
       "accessed": "2026-10-09",
-      "quote": "Access Denied Access Denied You don't have permission to access \"http://www.cdc.gov/vaccines/covid-19/index.html\" on this server."
+      "quote": "No one from a vaccine distribution site or health care payer, like a private insurance company, will call you asking for your Social Security number or your credit card or bank account information to sign you up to get the vaccine."
     }
   ],
   "tags": [
@@ -82,6 +76,6 @@
   "verification": {
     "status": "verified",
     "checked": "2026-10-09",
-    "note": "取得した本文に手口を示す記述あり（cdc.gov）"
+    "note": "'call you' = pretext (vaccine signup call), 'SSN or credit card or bank account information' = demand"
   }
 }

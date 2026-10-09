@@ -61,16 +61,9 @@
   },
   "references": [
     {
-      "label": "Microsoft Tech Support Scam",
-      "url": "https://support.microsoft.com/en-us/windows/protect-yourself-from-tech-support-scams",
-      "publisher": "support.microsoft.com",
-      "accessed": "2026-10-09",
-      "quote": "Error - Office.com Skip to main content Microsoft Support Support Support Home Microsoft 365 Office Products Microsoft 365 Outlook Microsoft Teams OneDrive Microsoft Copilot OneNote Windows more ..."
-    },
-    {
-      "label": "FBI IC3 Report",
-      "url": "https://www.ic3.gov/Home/Scams",
-      "publisher": "ic3.gov",
+      "label": "Microsoft: Protect yourself from tech support scams",
+      "url": "https://support.microsoft.com/en-us/windows/protect-yourself-from-tech-support-scams-2ebf91bd-f94c-2a8a-e541-f5c800d18435",
+      "publisher": "Microsoft Support",
       "accessed": "2026-10-09"
     }
   ],
@@ -83,6 +76,6 @@
   "verification": {
     "status": "verified",
     "checked": "2026-10-09",
-    "note": "取得した本文に手口を示す記述あり（support.microsoft.com）"
+    "note": "Microsoft's official page describes fake error pages prompting a call to a support number, remote access and payment demand"
   }
 }

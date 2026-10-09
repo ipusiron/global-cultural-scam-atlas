@@ -60,15 +60,16 @@
   },
   "references": [
     {
-      "label": "SSA Scam Alert",
-      "url": "https://www.ssa.gov/scam/",
-      "publisher": "ssa.gov",
-      "accessed": "2026-10-09"
+      "label": "FTC: How To Avoid a Government Impersonation Scam",
+      "url": "https://consumer.ftc.gov/articles/how-avoid-government-impersonation-scam",
+      "publisher": "FTC",
+      "accessed": "2026-10-09",
+      "quote": "They say your Social Security benefits will end, or your Social Security number will be suspended, unless you pay immediately."
     },
     {
-      "label": "FTC SSN Scams",
-      "url": "https://consumer.ftc.gov/articles/your-social-security-number-isnt-suspended",
-      "publisher": "consumer.ftc.gov",
+      "label": "SSA: Scam Awareness",
+      "url": "https://www.ssa.gov/scam/",
+      "publisher": "SSA",
       "accessed": "2026-10-09"
     }
   ],
@@ -79,8 +80,8 @@
     "fear-based"
   ],
   "verification": {
-    "status": "partial",
+    "status": "verified",
     "checked": "2026-10-09",
-    "note": "関連する公的注意喚起はあるが、事例の手口を個別に裏づける逐語の記述を本文に見出せなかった"
+    "note": "'Social Security number will be suspended' is pretext, 'unless you pay immediately' is demand"
   }
 }

@@ -83,6 +83,28 @@ test('H2 counts match between README.md and README.en.md', () => {
   assert.equal(h2sIn(JA).length, h2sIn(EN).length);
 });
 
+test('README verification counts match the actual data', async () => {
+  const counts = { verified: 0, partial: 0, unverified: 0 };
+  const countries = await fs.readdir('data/attacks');
+  for(const cc of countries){
+    const dir = path.posix.join('data/attacks', cc);
+    for(const name of await fs.readdir(dir)){
+      if(!name.endsWith('.json')) continue;
+      const j = JSON.parse(await fs.readFile(path.posix.join(dir, name), 'utf-8'));
+      const s = j.verification?.status;
+      if(s && counts[s] !== undefined) counts[s]++;
+    }
+  }
+  // Both READMEs must mention the three counts (verified/partial/unverified) that match the data.
+  const readmes = [['README.md', JA], ['README.en.md', EN]];
+  for(const [name, md] of readmes){
+    for(const k of ['verified', 'partial', 'unverified']){
+      const re = new RegExp(`\\b${k}[^|\\n]*\\|\\s*${counts[k]}\\s*\\|`, 'i');
+      assert.match(md, re, `${name}: expected ${k}=${counts[k]} in verification table`);
+    }
+  }
+});
+
 test('all image references resolve to existing files', async () => {
   const re = /!\[[^\]]*\]\(([^)]+)\)/g;
   for(const [name, md] of [['README.md', JA], ['README.en.md', EN]]){

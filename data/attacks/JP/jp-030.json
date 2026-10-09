@@ -69,14 +69,7 @@
     {
       "label": "警察庁：サイバー空間の脅威情勢",
       "url": "https://www.npa.go.jp/publications/statistics/cybersecurity/",
-      "publisher": "npa.go.jp",
-      "accessed": "2026-10-09",
-      "quote": "サイバー空間をめぐる脅威の情勢等｜警察庁Webサイト ホーム 刊行物 統計 サイバー空間をめぐる脅威の情勢等 サイバー空間をめぐる脅威の情勢等 サイバー犯罪、サイバー攻撃等のサイバー空間の脅威について、事例や統計等データを掲載しています。"
-    },
-    {
-      "label": "NISC：サイバーセキュリティ2024",
-      "url": "https://www.nisc.go.jp/pdf/policy/kihon-s/cs2024.pdf",
-      "publisher": "nisc.go.jp",
+      "publisher": "警察庁",
       "accessed": "2026-10-09"
     }
   ],
@@ -87,8 +80,8 @@
     "combined-tactics"
   ],
   "verification": {
-    "status": "verified",
+    "status": "partial",
     "checked": "2026-10-09",
-    "note": "取得した本文に手口を示す記述あり（npa.go.jp）"
+    "note": "官公庁の統計・情勢ページで複合型手口（SNS 関係構築→フィッシング→AI 音声→物理接触）を一体として扱う個別事例を見出せず partial"
   }
 }

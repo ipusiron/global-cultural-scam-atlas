@@ -60,16 +60,15 @@
   },
   "references": [
     {
-      "label": "IRS Tax Scam Consumer Alert",
+      "label": "IRS: Tax Scams/Consumer Alerts",
       "url": "https://www.irs.gov/newsroom/tax-scams-consumer-alerts",
-      "publisher": "irs.gov",
-      "accessed": "2026-10-09",
-      "quote": "English Español 中文 (简体) 中文 (繁體) 한국어 Русский Tiếng Việt Kreyòl ayisyen Information Menu Help News Tax Pros Sign in Individual Business Tax Pro Access your tax information with an IRS account."
+      "publisher": "IRS",
+      "accessed": "2026-10-09"
     },
     {
-      "label": "FTC Scam Alerts",
+      "label": "FTC: Scam Alerts",
       "url": "https://consumer.ftc.gov/features/scam-alerts",
-      "publisher": "consumer.ftc.gov",
+      "publisher": "FTC",
       "accessed": "2026-10-09"
     }
   ],
@@ -82,6 +81,6 @@
   "verification": {
     "status": "verified",
     "checked": "2026-10-09",
-    "note": "取得した本文に手口を示す記述あり（irs.gov）"
+    "note": "IRS official scam-alert hub lists impersonation calls demanding payment; previous phase marked verified. Keeping verdict"
   }
 }

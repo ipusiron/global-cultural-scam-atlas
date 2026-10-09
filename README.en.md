@@ -213,9 +213,9 @@ Entries are observations at the time of writing and are not exhaustive. They are
 
 | Status | Count |
 |--------|-------|
-| verified | 26 |
-| partial | 25 |
-| unverified | 2 |
+| verified | 39 |
+| partial | 13 |
+| unverified | 1 |
 | **Total** | **53** |
 
 ---

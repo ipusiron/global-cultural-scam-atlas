@@ -59,11 +59,11 @@
   },
   "references": [
     {
-      "label": "警察庁 SOS47：手口一覧（還付金詐欺を含む）",
+      "label": "警察庁 SOS47：手口一覧と対策（還付金詐欺）",
       "url": "https://www.npa.go.jp/bureau/safetylife/sos47/case/",
-      "publisher": "npa.go.jp",
+      "publisher": "警察庁 SOS47",
       "accessed": "2026-10-09",
-      "quote": "詳細を見る 還付金詐欺 税金還付等に必要な手続きを装って被害者にATMを操作させ、口座間送金により財産上の不法の利益を得る手口です。"
+      "quote": "還付金詐欺 税金還付等に必要な手続きを装って被害者にATMを操作させ、口座間送金により財産上の不法の利益を得る手口です。"
     }
   ],
   "tags": [
@@ -75,6 +75,6 @@
   "verification": {
     "status": "verified",
     "checked": "2026-10-09",
-    "note": "取得した本文に手口を示す記述あり（npa.go.jp）"
+    "note": "『税金還付等に必要な手続きを装って』が装う相手、『ATMを操作させ、口座間送金』が要求・結果"
   }
 }

@@ -62,15 +62,16 @@
   },
   "references": [
     {
-      "label": "FTC Romance Scams",
+      "label": "FTC: What You Need to Know About Romance Scams",
       "url": "https://consumer.ftc.gov/articles/what-you-need-know-about-romance-scams",
-      "publisher": "consumer.ftc.gov",
-      "accessed": "2026-10-09"
+      "publisher": "FTC",
+      "accessed": "2026-10-09",
+      "quote": "Romance scammers create fake profiles on dating sites and apps or contact you through popular social media sites like Instagram or Facebook. The scammers strike up a relationship with you to build up trust, sometimes talking or chatting several times a day. Then, they make up a story and ask for money."
     },
     {
-      "label": "FBI Romance Scam Warning",
+      "label": "FBI: Romance Scams",
       "url": "https://www.fbi.gov/scams-and-safety/common-scams-and-crimes/romance-scams",
-      "publisher": "fbi.gov",
+      "publisher": "FBI",
       "accessed": "2026-10-09"
     }
   ],
@@ -81,8 +82,8 @@
     "trust-exploitation"
   ],
   "verification": {
-    "status": "partial",
+    "status": "verified",
     "checked": "2026-10-09",
-    "note": "関連する公的注意喚起はあるが、事例の手口を個別に裏づける逐語の記述を本文に見出せなかった"
+    "note": "'fake profiles on dating sites' is pretext, 'ask for money' is request"
   }
 }

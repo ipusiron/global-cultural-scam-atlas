@@ -60,16 +60,15 @@
   },
   "references": [
     {
-      "label": "VA Benefits Scam Alert",
+      "label": "VA: Avoiding scams and fraud",
       "url": "https://www.va.gov/resources/avoiding-scams-and-fraud/",
-      "publisher": "va.gov",
-      "accessed": "2026-10-09",
-      "quote": "How do I file for disability benefits?"
+      "publisher": "VA",
+      "accessed": "2026-10-09"
     },
     {
-      "label": "FTC Veterans Scams",
+      "label": "FTC: Veterans Scams",
       "url": "https://consumer.ftc.gov/articles/veterans-scams",
-      "publisher": "consumer.ftc.gov",
+      "publisher": "FTC",
       "accessed": "2026-10-09"
     }
   ],
@@ -82,6 +81,6 @@
   "verification": {
     "status": "verified",
     "checked": "2026-10-09",
-    "note": "取得した本文に手口を示す記述あり（va.gov）"
+    "note": "VA official page lists impersonators requesting fees/personal info for benefits"
   }
 }

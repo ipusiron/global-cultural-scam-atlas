@@ -11,7 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## [Unreleased]
 
 ### Added / 追加
-- 全53件に `verification{status,checked,note}` を追加（verified 26・partial 25・unverified 2）。/ Added verification metadata to all 53 attack files (26 verified, 25 partial, 2 unverified).
+- 全53件に `verification{status,checked,note}` を追加（verified 39・partial 13・unverified 1）。WebSearch で各事例2件以上のクエリを探し、ブロックページを除外し、quote が『装う相手・接触経路』と『要求・結果』の両方に対応することを確認した。/ Added verification metadata to all 53 attack files (39 verified, 13 partial, 1 unverified). For every case we ran at least two WebSearches, filtered out blocked / short responses, and required every verified quote to cover both the pretext/contact and the request/outcome.
 - `references[]` 各項目に `publisher` と `accessed`、verified には `quote`（本文からの逐語引用、200字以内）を追加。/ Enriched every reference with `publisher` and `accessed`, and attached a literal `quote` (≤200 chars) to verified items.
 - カードと詳細モーダルに出典確認バッジ（出典確認済み／一部確認／未確認）を表示。/ Added a verification badge (verified/partial/unverified) on cards and the detail modal.
 - 絞り込みに「出典確認済みのみ」チェックボックスを追加。URL ハッシュ `verified=1` と往復。/ Added a "Verified only" checkbox that round-trips through the URL hash as `verified=1`.

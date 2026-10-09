@@ -60,16 +60,11 @@
   },
   "references": [
     {
-      "label": "FTC Utility Scams",
-      "url": "https://consumer.ftc.gov/articles/utility-scams",
-      "publisher": "consumer.ftc.gov",
-      "accessed": "2026-10-09"
-    },
-    {
-      "label": "Utilities United Against Scams",
-      "url": "https://www.utilitiesunited.org/",
-      "publisher": "utilitiesunited.org",
-      "accessed": "2026-10-09"
+      "label": "FTC: Scammers Pretend To Be Your Utility Company",
+      "url": "https://consumer.ftc.gov/articles/scammers-pretend-be-your-utility-company",
+      "publisher": "FTC",
+      "accessed": "2026-10-09",
+      "quote": "They threaten to shut off your gas, electric, or water service if you don't pay them immediately. These scammers want to scare you into paying before you have time to confirm what they're telling you."
     }
   ],
   "tags": [
@@ -79,8 +74,8 @@
     "fear-based"
   ],
   "verification": {
-    "status": "partial",
+    "status": "verified",
     "checked": "2026-10-09",
-    "note": "関連する公的注意喚起はあるが、事例の手口を個別に裏づける逐語の記述を本文に見出せなかった"
+    "note": "'threat to shut off your gas/electric/water' is pretext, 'pay them immediately' is demand"
   }
 }

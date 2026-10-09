@@ -59,15 +59,15 @@
   },
   "references": [
     {
-      "label": "FTC Identity Theft",
+      "label": "FTC: Identity Theft",
       "url": "https://consumer.ftc.gov/features/identity-theft",
-      "publisher": "consumer.ftc.gov",
+      "publisher": "FTC",
       "accessed": "2026-10-09"
     },
     {
       "label": "IdentityTheft.gov",
       "url": "https://www.identitytheft.gov/",
-      "publisher": "identitytheft.gov",
+      "publisher": "FTC",
       "accessed": "2026-10-09"
     }
   ],
@@ -80,6 +80,6 @@
   "verification": {
     "status": "partial",
     "checked": "2026-10-09",
-    "note": "関連する公的注意喚起はあるが、事例の手口を個別に裏づける逐語の記述を本文に見出せなかった"
+    "note": "Identity-theft hub lists multiple sub-topics but did not yield a single ≤200-char quote covering both the breach-notification pretext and the account-takeover result in one sentence"
   }
 }

@@ -57,9 +57,15 @@
   },
   "references": [
     {
-      "label": "CERT-In Advisory",
+      "label": "The Tribune: Centre alerts public about online booking scams targeting pilgrims, tourists",
+      "url": "https://www.tribuneindia.com/news/india/centre-alerts-public-about-online-booking-scams-targeting-pilgrims-tourists",
+      "publisher": "The Tribune",
+      "accessed": "2026-10-09"
+    },
+    {
+      "label": "CERT-In",
       "url": "https://www.cert-in.org.in/",
-      "publisher": "cert-in.org.in",
+      "publisher": "CERT-In",
       "accessed": "2026-10-09"
     }
   ],
@@ -71,6 +77,6 @@
   "verification": {
     "status": "partial",
     "checked": "2026-10-09",
-    "note": "関連する公的注意喚起はあるが、事例の手口を個別に裏づける逐語の記述を本文に見出せなかった"
+    "note": "I4C (Indian Cyber Crime Coordination Centre) alert on scams impersonating religious institutions and pilgrim services; news-article summary rather than primary government page with a scenario-matching quote"
   }
 }

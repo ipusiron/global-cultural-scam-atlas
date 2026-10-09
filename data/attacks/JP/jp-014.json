@@ -62,10 +62,11 @@
   },
   "references": [
     {
-      "label": "金融庁：無登録業者にご注意",
-      "url": "https://www.fsa.go.jp/",
-      "publisher": "fsa.go.jp",
-      "accessed": "2026-10-09"
+      "label": "金融庁：それ詐欺です！SNS上の投資勧誘にご注意ください！",
+      "url": "https://www.fsa.go.jp/receipt/toushisagi_koukoku/shuhou.html",
+      "publisher": "金融庁",
+      "accessed": "2026-10-09",
+      "quote": "動画投稿サイトの広告等からSNSのクローズドチャットへ誘導され、投資への勧誘が行われる事例…『講師』や『先生』、『アシスタント』が登場し、投資の指南をする。…虚偽の成功談をもとに投資話を持ち掛ける。架空の口座で取引させ、しばらくは利益が出て出金もできるかのように装いながら、追加で高額な入金をさせる。"
     }
   ],
   "tags": [
@@ -75,8 +76,8 @@
     "authority-pretext"
   ],
   "verification": {
-    "status": "partial",
+    "status": "verified",
     "checked": "2026-10-09",
-    "note": "関連する公的注意喚起はあるが、事例の手口を個別に裏づける逐語の記述を本文に見出せなかった"
+    "note": "『SNSのクローズドチャットへ誘導』が接触経路、『追加で高額な入金をさせる』が要求・結果"
   }
 }

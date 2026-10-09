@@ -61,11 +61,17 @@
   },
   "references": [
     {
-      "label": "消費者庁：連鎖販売取引（マルチ商法）",
-      "url": "https://www.no-trouble.caa.go.jp/what/renhan.html",
-      "publisher": "no-trouble.caa.go.jp",
+      "label": "消費者庁：ネットワークビジネスで大量の在庫をかかえてしまった",
+      "url": "https://www.no-trouble.caa.go.jp/case/multilevelmarketing/case02.html",
+      "publisher": "消費者庁 特定商取引法ガイド",
       "accessed": "2026-10-09",
-      "quote": "とは 訪問販売 通信販売 電話勧誘販売 連鎖販売取引 特定継続的役務提供 業務提供誘引販売取引 訪問購入 特定商取引法の条文 特定商取引法の条文 特定商取引に関する法律の解説（令和７年６月１日時点版） 法改正 令和3年改正 令和2年改正 平成28年改正 平成24年改正 平成20年改正 平成16年改正 平成11年改正 お問合せ窓口 全国のお"
+      "quote": "大学生である息子が『簡単に稼げるアルバイトがある』と友人の紹介を受けて、Ｘという連鎖販売業者の事務所に出向いた。事務所では友人とＸの社員が『入会金３、０００円を支払い、中国茶と浄水器（総額３０万円）を購入すると会員になることができ…』と勧誘された。"
+    },
+    {
+      "label": "消費者庁：ビジネスセミナーへ参加したつもりが、実際はネットワークビジネスの説明会だった",
+      "url": "https://www.no-trouble.caa.go.jp/case/multilevelmarketing/case01.html",
+      "publisher": "消費者庁 特定商取引法ガイド",
+      "accessed": "2026-10-09"
     }
   ],
   "tags": [
@@ -76,6 +82,6 @@
   "verification": {
     "status": "verified",
     "checked": "2026-10-09",
-    "note": "取得した本文に手口を示す記述あり（no-trouble.caa.go.jp）"
+    "note": "『簡単に稼げるアルバイトがある』が接触経路、『入会金・教材30万円を購入すると会員になれる』が要求・結果"
   }
 }

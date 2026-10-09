@@ -62,17 +62,11 @@
   },
   "references": [
     {
-      "label": "警察庁：SNS型投資・ロマンス詐欺",
-      "url": "https://www.npa.go.jp/bureau/criminal/souni/tokusyusagi/",
-      "publisher": "npa.go.jp",
-      "accessed": "2026-10-09"
-    },
-    {
-      "label": "金融庁：投資詐欺に関する注意喚起",
-      "url": "https://www.fsa.go.jp/ordinary/chuui/",
-      "publisher": "fsa.go.jp",
+      "label": "警察庁 SOS47：SNS型投資詐欺",
+      "url": "https://www.npa.go.jp/bureau/safetylife/sos47/case/sns-romance/investment/",
+      "publisher": "警察庁 SOS47",
       "accessed": "2026-10-09",
-      "quote": "個人間融資 SNSなどを通じて見知らぬ人同士が知り合い、金銭の貸し借りをすることをうたうもの。個人間融資であっても、反復継続の意思をもって金銭の貸付けを行う場合には、貸金業の登録を受ける必要がある。個人を装ったヤミ金融業者により違法な高金利の貸付けが行われるほか、個人情報が悪用されたり、ネット上でさらされるなど、トラブルや犯罪被害に巻き込まれる危険性がある。"
+      "quote": "SNSのダイレクトメッセージで接触後、被害者をLINEなどの他のSNSに誘導し、『株や暗号資産に投資すれば利益が得られる』などと言葉巧みに被害者を信用させ、最終的に、『投資金』や『手数料』などという名目で、ネットバンキングなどの手段により、金銭等を振り込ませる詐欺の手口です。"
     }
   ],
   "tags": [
@@ -84,6 +78,6 @@
   "verification": {
     "status": "verified",
     "checked": "2026-10-09",
-    "note": "取得した本文に手口を示す記述あり（fsa.go.jp）"
+    "note": "『SNSのダイレクトメッセージで接触』『LINEに誘導』が接触経路、『投資金や手数料の名目で金銭等を振り込ませる』が要求・結果"
   }
 }

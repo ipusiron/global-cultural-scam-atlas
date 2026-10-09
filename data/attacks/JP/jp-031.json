@@ -67,16 +67,16 @@
   },
   "references": [
     {
-      "label": "消費者庁：国勢調査を装った詐欺にご注意",
+      "label": "消費者庁：国の行政機関が行う統計調査を装った『かたり調査』にご注意ください",
       "url": "https://www.caa.go.jp/policies/policy/consumer_policy/caution/caution_017/",
-      "publisher": "caa.go.jp",
+      "publisher": "消費者庁",
       "accessed": "2026-10-09",
-      "quote": "公表資料 社会生活基本調査をよそおった詐欺や不審な調査にご注意ください!"
+      "quote": "国の行政機関が行う統計調査を装った不審な電話・電子メール・ウェブサイトなどにご注意ください。"
     },
     {
-      "label": "総務省：令和7年国勢調査 不審な調査にご注意ください",
+      "label": "総務省：国勢調査をよそおった詐欺や不審な調査にご注意",
       "url": "https://www.kokusei2025.go.jp/caution/",
-      "publisher": "kokusei2025.go.jp",
+      "publisher": "総務省",
       "accessed": "2026-10-09"
     }
   ],
@@ -90,6 +90,6 @@
   "verification": {
     "status": "verified",
     "checked": "2026-10-09",
-    "note": "取得した本文に手口を示す記述あり（caa.go.jp）"
+    "note": "『国の行政機関が行う統計調査を装った』が装う相手、『不審な電話・電子メール・ウェブサイト』が接触経路。要求（個人情報詐取）は関連公表資料で補足"
   }
 }

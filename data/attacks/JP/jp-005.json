@@ -63,11 +63,11 @@
   },
   "references": [
     {
-      "label": "警察庁 SOS47：手口一覧",
+      "label": "警察庁 SOS47：手口一覧と対策（架空料金請求詐欺）",
       "url": "https://www.npa.go.jp/bureau/safetylife/sos47/case/",
-      "publisher": "npa.go.jp",
+      "publisher": "警察庁 SOS47",
       "accessed": "2026-10-09",
-      "quote": "詳細を見る 架空料金請求詐欺 未払いの料金があるなど架空の事実を口実とし金銭等をだまし取る（脅し取る）手口です。"
+      "quote": "架空料金請求詐欺 未払いの料金があるなど架空の事実を口実とし金銭等をだまし取る（脅し取る）手口です。"
     }
   ],
   "tags": [
@@ -80,6 +80,6 @@
   "verification": {
     "status": "verified",
     "checked": "2026-10-09",
-    "note": "取得した本文に手口を示す記述あり（npa.go.jp）"
+    "note": "『未払いの料金』『架空の事実』が装う名目、『金銭等をだまし取る』が要求・結果"
   }
 }

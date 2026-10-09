@@ -63,16 +63,11 @@
   },
   "references": [
     {
-      "label": "FTC Prize Scams",
-      "url": "https://consumer.ftc.gov/articles/prize-scams",
-      "publisher": "consumer.ftc.gov",
-      "accessed": "2026-10-09"
-    },
-    {
-      "label": "PCH Scam Protection",
-      "url": "https://info.pch.com/scam-alerts",
-      "publisher": "info.pch.com",
-      "accessed": "2026-10-09"
+      "label": "FTC: Fake Prize, Sweepstakes, and Lottery Scams",
+      "url": "https://consumer.ftc.gov/articles/fake-prize-sweepstakes-and-lottery-scams",
+      "publisher": "FTC",
+      "accessed": "2026-10-09",
+      "quote": "If you have to pay to get your prize, it's a scam. Real prizes are free. So if someone tells you to pay a fee for \"taxes,\" \"shipping and handling charges,\" \"processing fees,\" or \"customs duties\" to get your prize, you're dealing with a scammer."
     }
   ],
   "tags": [
@@ -82,8 +77,8 @@
     "greed-exploitation"
   ],
   "verification": {
-    "status": "partial",
+    "status": "verified",
     "checked": "2026-10-09",
-    "note": "関連する公的注意喚起はあるが、事例の手口を個別に裏づける逐語の記述を本文に見出せなかった"
+    "note": "'pay to get your prize' is the demand; the notification of prize is the pretext"
   }
 }

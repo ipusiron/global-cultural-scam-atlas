@@ -58,15 +58,16 @@
   },
   "references": [
     {
-      "label": "AARP Grandparent Scam",
-      "url": "https://www.aarp.org/money/scams-fraud/info-2019/grandparent.html",
-      "publisher": "aarp.org",
-      "accessed": "2026-10-09"
+      "label": "FTC: Grandkid and Family Scams",
+      "url": "https://consumer.ftc.gov/features/pass-it-on/impersonator-scams/grandkid-scams",
+      "publisher": "FTC",
+      "accessed": "2026-10-09",
+      "quote": "You get a call: \"Grandma, I need money for bail.\" Or money for a medical bill. Or some other kind of trouble. The caller says it's urgent — and tells you to keep it a secret."
     },
     {
-      "label": "FTC Family Emergency Scams",
-      "url": "https://consumer.ftc.gov/articles/family-emergency-scams",
-      "publisher": "consumer.ftc.gov",
+      "label": "AARP: Grandparent Scam",
+      "url": "https://www.aarp.org/money/scams-fraud/info-2019/grandparent.html",
+      "publisher": "AARP",
       "accessed": "2026-10-09"
     }
   ],
@@ -77,8 +78,8 @@
     "emotional-manipulation"
   ],
   "verification": {
-    "status": "partial",
+    "status": "verified",
     "checked": "2026-10-09",
-    "note": "関連する公的注意喚起はあるが、事例の手口を個別に裏づける逐語の記述を本文に見出せなかった"
+    "note": "'Grandma, I need money for bail' is pretext, 'urgent' + 'keep it a secret' is the demand"
   }
 }

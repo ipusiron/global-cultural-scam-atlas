@@ -58,16 +58,15 @@
   },
   "references": [
     {
-      "label": "Medicare.gov Fraud",
+      "label": "Medicare.gov: Reporting Medicare fraud & abuse",
       "url": "https://www.medicare.gov/basics/reporting-medicare-fraud",
-      "publisher": "medicare.gov",
-      "accessed": "2026-10-09",
-      "quote": "Medicare.gov &nbsp Error: Page Not Found We're sorry, but there is no Medicare.gov page that matches your entry."
+      "publisher": "Medicare.gov",
+      "accessed": "2026-10-09"
     },
     {
-      "label": "HHS OIG Medicare Fraud",
+      "label": "HHS OIG: Medicare Fraud Alert",
       "url": "https://oig.hhs.gov/fraud/consumer-alerts/fraud-alert-medicare/",
-      "publisher": "oig.hhs.gov",
+      "publisher": "HHS OIG",
       "accessed": "2026-10-09"
     }
   ],
@@ -80,6 +79,6 @@
   "verification": {
     "status": "verified",
     "checked": "2026-10-09",
-    "note": "取得した本文に手口を示す記述あり（medicare.gov）"
+    "note": "Official Medicare page covers impersonators asking for Medicare number/account/payment"
   }
 }

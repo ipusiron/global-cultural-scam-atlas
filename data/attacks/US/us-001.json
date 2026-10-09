@@ -54,15 +54,29 @@
     "ja": "",
     "en": ""
   },
-  "references": [],
+  "references": [
+    {
+      "label": "FTC: Shutting down tech support scams",
+      "url": "https://consumer.ftc.gov/consumer-alerts/2022/05/shutting-down-tech-support-scams",
+      "publisher": "FTC",
+      "accessed": "2026-10-09",
+      "quote": "They may also try calling you, hoping you'll react to an \"urgent problem\" with your computer. That's how they get your personal information or money to \"fix\" it."
+    },
+    {
+      "label": "FTC: How can you spot a tech support scam?",
+      "url": "https://consumer.ftc.gov/consumer-alerts/2020/09/how-can-you-spot-tech-support-scam",
+      "publisher": "FTC",
+      "accessed": "2026-10-09"
+    }
+  ],
   "tags": [
     "fake-tech-support",
     "urgency",
     "authority-pretext"
   ],
   "verification": {
-    "status": "unverified",
+    "status": "verified",
     "checked": "2026-10-09",
-    "note": "事例の手口を裏づける出典が見つからなかった"
+    "note": "'calling you'/'urgent problem with your computer' is pretext, 'get your personal information or money' is request"
   }
 }

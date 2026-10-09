@@ -61,16 +61,9 @@
   },
   "references": [
     {
-      "label": "IPA：標的型攻撃対策",
+      "label": "IPA：情報セキュリティ10大脅威 2024",
       "url": "https://www.ipa.go.jp/security/10threats/10threats2024.html",
-      "publisher": "ipa.go.jp",
-      "accessed": "2026-10-09",
-      "quote": "の被害 2016年 9年連続9回目 4 標的型攻撃による機密情報の窃取 2016年 9年連続9回目 5 修正プログラムの公開前を狙う攻撃（ゼロデイ攻撃） 2022年 3年連続3回目 6 不注意による情報漏えい等の被害 2016年 6年連続7回目 7 脆弱性対策情報の公開に伴う悪用増加 2016年 4年連続7回目 8 ビジネスメール詐欺によ"
-    },
-    {
-      "label": "NISC：重要インフラのサイバーセキュリティ",
-      "url": "https://www.nisc.go.jp/pdf/policy/infra/infra_rt4.pdf",
-      "publisher": "nisc.go.jp",
+      "publisher": "IPA",
       "accessed": "2026-10-09"
     }
   ],
@@ -81,8 +74,8 @@
     "social-engineering"
   ],
   "verification": {
-    "status": "verified",
+    "status": "partial",
     "checked": "2026-10-09",
-    "note": "取得した本文に手口を示す記述あり（ipa.go.jp）"
+    "note": "監査員を装う物理侵入は標的型攻撃の一環として言及されうるが、公的機関の個別事例ページを特定できず partial"
   }
 }

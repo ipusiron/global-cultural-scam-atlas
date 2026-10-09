@@ -58,16 +58,11 @@
   },
   "references": [
     {
-      "label": "FTC Gift Card Scams",
+      "label": "FTC: Gift Card Scams",
       "url": "https://consumer.ftc.gov/articles/gift-card-scams",
-      "publisher": "consumer.ftc.gov",
-      "accessed": "2026-10-09"
-    },
-    {
-      "label": "AARP Gift Card Alert",
-      "url": "https://www.aarp.org/money/scams-fraud/info-2021/gift-card.html",
-      "publisher": "aarp.org",
-      "accessed": "2026-10-09"
+      "publisher": "FTC",
+      "accessed": "2026-10-09",
+      "quote": "Only scammers will tell you to buy a gift card, like a Google Play or Apple Card, and give them the numbers off the back of the card."
     }
   ],
   "tags": [
@@ -77,8 +72,8 @@
     "urgency"
   ],
   "verification": {
-    "status": "partial",
+    "status": "verified",
     "checked": "2026-10-09",
-    "note": "関連する公的注意喚起はあるが、事例の手口を個別に裏づける逐語の記述を本文に見出せなかった"
+    "note": "'tell you to buy a gift card' is the demand/instruction after an impersonation pretext; FTC consistent framing"
   }
 }

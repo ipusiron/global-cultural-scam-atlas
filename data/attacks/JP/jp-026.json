@@ -62,16 +62,11 @@
   },
   "references": [
     {
-      "label": "国民生活センター：鍵開けサービスのトラブル",
-      "url": "https://www.kokusen.go.jp/",
-      "publisher": "kokusen.go.jp",
-      "accessed": "2026-10-09"
-    },
-    {
-      "label": "警察庁：住宅侵入犯罪の防止",
-      "url": "https://www.npa.go.jp/bureau/safetylife/",
-      "publisher": "npa.go.jp",
-      "accessed": "2026-10-09"
+      "label": "国民生活センター：【広告より高額！？】出張解錠サービスの料金トラブルに注意",
+      "url": "https://www.kokusen.go.jp/news/data/n-20241119_1.html",
+      "publisher": "国民生活センター",
+      "accessed": "2026-10-09",
+      "quote": "スマートフォンで解錠サービスを検索してみつけた事業者のホームページには、『見積もりは無料』『解錠で2,000円～』と表示されていた。…約1時間30分後に担当者が来て、鍵の種類を確認し作業に入ったが、事前に料金が知らされることはなく、作業が終わってから約10万円を請求された。"
     }
   ],
   "tags": [
@@ -81,8 +76,8 @@
     "burglary"
   ],
   "verification": {
-    "status": "partial",
+    "status": "verified",
     "checked": "2026-10-09",
-    "note": "関連する公的注意喚起はあるが、事例の手口を個別に裏づける逐語の記述を本文に見出せなかった"
+    "note": "『『解錠で2,000円～』と表示されていた』が広告での集客＝接触経路、『作業が終わってから約10万円を請求された』が要求・結果"
   }
 }

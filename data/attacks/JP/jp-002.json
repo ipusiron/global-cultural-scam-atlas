@@ -60,16 +60,16 @@
   },
   "references": [
     {
-      "label": "警察庁 SOS47 手口一覧と対策",
-      "url": "https://www.npa.go.jp/bureau/safetylife/sos47/case/",
-      "publisher": "npa.go.jp",
+      "label": "警察庁 SOS47：預貯金詐欺",
+      "url": "https://www.npa.go.jp/bureau/safetylife/sos47/case/deposits/",
+      "publisher": "警察庁 SOS47",
       "accessed": "2026-10-09",
-      "quote": "ニセ警察詐欺 警察官等をかたり、捜査（優先調査）名目で現金等をだまし取る手口です。"
+      "quote": "県や市区町村などの自治体や税務署の職員などと名乗り、医療費などの払い戻しがあるからと、キャッシュカードの確認や取替の必要があるなどの口実で自宅を訪れ、キャッシュカードをだまし取る詐欺です。"
     },
     {
-      "label": "東京都：最新の特殊詐欺（警察官を騙る手口）",
-      "url": "https://www.seikatubunka.metro.tokyo.lg.jp/tomin_anzen/chian/mijikanahanzai/saisinnotokusyusagi",
-      "publisher": "seikatubunka.metro.tokyo.lg.jp",
+      "label": "警察庁 SOS47：手口一覧と対策",
+      "url": "https://www.npa.go.jp/bureau/safetylife/sos47/case/",
+      "publisher": "警察庁 SOS47",
       "accessed": "2026-10-09"
     }
   ],
@@ -84,6 +84,6 @@
   "verification": {
     "status": "verified",
     "checked": "2026-10-09",
-    "note": "取得した本文に手口を示す記述あり（npa.go.jp）"
+    "note": "『自治体や税務署の職員などと名乗り』『自宅を訪れ、キャッシュカードをだまし取る』が装う相手・接触経路と要求・結果に対応"
   }
 }

@@ -63,16 +63,9 @@
   },
   "references": [
     {
-      "label": "金融庁：フィッシング詐欺に関する注意喚起",
-      "url": "https://www.fsa.go.jp/ordinary/internet-bank/index.html",
-      "publisher": "fsa.go.jp",
-      "accessed": "2026-10-09",
-      "quote": "また、お探しのページが国立図書館の「インターネット資料収集保存事業（Web Archiving Project）」に保存されている場合があります。以下のURLからお探しください。"
-    },
-    {
-      "label": "全国銀行協会：振り込め詐欺等の対策",
+      "label": "全国銀行協会：銀行をかたる犯罪にご注意ください",
       "url": "https://www.zenginkyo.or.jp/hanzai/",
-      "publisher": "zenginkyo.or.jp",
+      "publisher": "全国銀行協会",
       "accessed": "2026-10-09"
     }
   ],
@@ -83,8 +76,8 @@
     "banking"
   ],
   "verification": {
-    "status": "verified",
+    "status": "partial",
     "checked": "2026-10-09",
-    "note": "取得した本文に手口を示す記述あり（fsa.go.jp）"
+    "note": "ボイスフィッシングの詳細を解説する官公庁の個別ページ（警察庁PDFは入手可能だが個別手口ページとしては限定的）を優先度の高いものに割り当てられず partial"
   }
 }

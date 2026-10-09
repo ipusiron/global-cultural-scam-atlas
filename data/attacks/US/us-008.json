@@ -60,15 +60,16 @@
   },
   "references": [
     {
-      "label": "Federal Student Aid Scam Alert",
-      "url": "https://studentaid.gov/resources/scams",
-      "publisher": "studentaid.gov",
-      "accessed": "2026-10-09"
+      "label": "FTC: Student Loan and Education Scams",
+      "url": "https://consumer.ftc.gov/all-scams/student-loan-education-scams",
+      "publisher": "FTC",
+      "accessed": "2026-10-09",
+      "quote": "They'll say they're affiliated with Federal Student Aid (FSA) or the Department of Education. (They're not.) They'll say they're following up on your eligibility for a new loan forgiveness program, and might even know things about your loan, like the balance or your account number."
     },
     {
-      "label": "FTC Student Loan Scams",
-      "url": "https://consumer.ftc.gov/articles/student-loan-scams",
-      "publisher": "consumer.ftc.gov",
+      "label": "Federal Student Aid: Avoid student loan scams",
+      "url": "https://studentaid.gov/resources/scams",
+      "publisher": "Federal Student Aid",
       "accessed": "2026-10-09"
     }
   ],
@@ -79,8 +80,8 @@
     "advance-fee"
   ],
   "verification": {
-    "status": "partial",
+    "status": "verified",
     "checked": "2026-10-09",
-    "note": "関連する公的注意喚起はあるが、事例の手口を個別に裏づける逐語の記述を本文に見出せなかった"
+    "note": "'affiliated with FSA/Department of Education' is pretext, 'loan forgiveness program' + 'upfront fee' demand is the ask (per the all-scams hub)"
   }
 }

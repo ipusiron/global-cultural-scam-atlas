@@ -61,16 +61,11 @@
   },
   "references": [
     {
-      "label": "FTC Job Scams",
+      "label": "FTC: Job Scams",
       "url": "https://consumer.ftc.gov/articles/job-scams",
-      "publisher": "consumer.ftc.gov",
-      "accessed": "2026-10-09"
-    },
-    {
-      "label": "BBB Employment Scams",
-      "url": "https://www.bbb.org/article/news-releases/22666-bbb-tip-employment-scams",
-      "publisher": "bbb.org",
-      "accessed": "2026-10-09"
+      "publisher": "FTC",
+      "accessed": "2026-10-09",
+      "quote": "Scammers advertise jobs the same way honest employers do — online (in ads, on job sites, and social media), in newspapers, and sometimes on TV and radio. They promise you a job, but what they want is your money and your personal information."
     }
   ],
   "tags": [
@@ -80,8 +75,8 @@
     "money-mule"
   ],
   "verification": {
-    "status": "partial",
+    "status": "verified",
     "checked": "2026-10-09",
-    "note": "関連する公的注意喚起はあるが、事例の手口を個別に裏づける逐語の記述を本文に見出せなかった"
+    "note": "'advertise jobs online/newspapers' is pretext, 'want your money and personal information' is request"
   }
 }
