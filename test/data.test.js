@@ -11,6 +11,15 @@ const ROOT = path.resolve('data/attacks');
 const EXPECTED_COUNTS = { JP: 32, US: 20, IN: 1 };
 const ID_PATTERN = /^[a-z]{2}-\d{3}$/;
 
+const VECTOR_VOCAB = new Set([
+  'in-person','phone','email','sms','social','website',
+  'payment-app','postal','door-to-door','marketplace','mixed'
+]);
+const TARGET_VOCAB = new Set(['tourist','general','elderly','business','student','expat']);
+const MEDIUM_VOCAB = new Set(['cash','credit','bank-transfer','cryptocurrency','gift-cards','e-wallet','qr-pay']);
+const VERIFICATION_STATUS = new Set(['verified','partial','unverified']);
+const DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
+
 async function listCountryDirs(){
   const entries = await fs.readdir(ROOT, { withFileTypes: true });
   return entries.filter(e => e.isDirectory()).map(e => e.name).sort();
@@ -71,4 +80,55 @@ test('data/schema.json pins the id pattern to ^[a-z]{2}-\\d{3}$', async () => {
   const idSchema = schema.properties.countries.items.properties.attacks.items.properties.id;
   assert.equal(idSchema.pattern, '^[a-z]{2}-\\d{3}$',
     'schema.json: attack.id must specify pattern ^[a-z]{2}-\\d{3}$');
+});
+
+test('attack_vector / targets / mediums use only controlled vocabulary', async () => {
+  const dirs = await listCountryDirs();
+  for(const cc of dirs){
+    for(const file of await listAttackFiles(cc)){
+      const c = JSON.parse(await fs.readFile(file, 'utf-8'));
+      for(const v of (c.attack_vector || [])){
+        assert.ok(VECTOR_VOCAB.has(v), `${file}: vector "${v}" is out of vocab`);
+      }
+      for(const t of (c.targets || [])){
+        assert.ok(TARGET_VOCAB.has(t), `${file}: target "${t}" is out of vocab`);
+      }
+      for(const m of (c.mediums || [])){
+        assert.ok(MEDIUM_VOCAB.has(m), `${file}: medium "${m}" is out of vocab`);
+      }
+    }
+  }
+});
+
+test('verification (when present) has status in enum and checked in YYYY-MM-DD', async () => {
+  const dirs = await listCountryDirs();
+  for(const cc of dirs){
+    for(const file of await listAttackFiles(cc)){
+      const c = JSON.parse(await fs.readFile(file, 'utf-8'));
+      if(!c.verification) continue;
+      assert.ok(VERIFICATION_STATUS.has(c.verification.status),
+        `${file}: verification.status "${c.verification.status}" out of enum`);
+      if(c.verification.checked != null){
+        assert.match(c.verification.checked, DATE_PATTERN,
+          `${file}: verification.checked "${c.verification.checked}" not YYYY-MM-DD`);
+      }
+    }
+  }
+});
+
+test('every references entry has an http(s) URL', async () => {
+  const dirs = await listCountryDirs();
+  for(const cc of dirs){
+    for(const file of await listAttackFiles(cc)){
+      const c = JSON.parse(await fs.readFile(file, 'utf-8'));
+      for(const r of (c.references || [])){
+        assert.ok(typeof r.url === 'string' && /^https?:\/\//.test(r.url),
+          `${file}: reference url "${r.url}" is not http(s)`);
+        if(r.accessed != null){
+          assert.match(r.accessed, DATE_PATTERN,
+            `${file}: reference accessed "${r.accessed}" not YYYY-MM-DD`);
+        }
+      }
+    }
+  }
 });

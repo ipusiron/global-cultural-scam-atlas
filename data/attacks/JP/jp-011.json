@@ -60,13 +60,21 @@
   },
   "references": [
     {
-      "label": "国民生活センター：フリマアプリのトラブル",
-      "url": "https://www.kokusen.go.jp/"
+      "label": "国民生活センター：フリマアプリでの架空取引を持ちかける手口に注意",
+      "url": "https://www.kokusen.go.jp/news/data/n-20211118_1.html",
+      "publisher": "国民生活センター",
+      "accessed": "2026-10-09",
+      "quote": "画像投稿アプリで海外のバイナリーオプション取引で稼いでいるという女性と知り合い、『取引ツールを買わないか』と勧誘された。約20万円のツールを買うことにしたところ、代金の支払方法としてフリマアプリでの架空取引を持ちかけられた。"
     }
   ],
   "tags": [
     "marketplace",
     "phishing",
     "social-engineering"
-  ]
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "『取引ツールを買わないか』と勧誘が接触経路、『フリマアプリでの架空取引で支払わせる』が要求・結果"
+  }
 }

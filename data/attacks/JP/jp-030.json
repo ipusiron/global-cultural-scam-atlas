@@ -68,11 +68,9 @@
   "references": [
     {
       "label": "警察庁：サイバー空間の脅威情勢",
-      "url": "https://www.npa.go.jp/publications/statistics/cybersecurity/"
-    },
-    {
-      "label": "NISC：サイバーセキュリティ2024",
-      "url": "https://www.nisc.go.jp/pdf/policy/kihon-s/cs2024.pdf"
+      "url": "https://www.npa.go.jp/publications/statistics/cybersecurity/",
+      "publisher": "警察庁",
+      "accessed": "2026-10-09"
     }
   ],
   "tags": [
@@ -80,5 +78,10 @@
     "multi-vector",
     "advanced-persistent",
     "combined-tactics"
-  ]
+  ],
+  "verification": {
+    "status": "partial",
+    "checked": "2026-10-09",
+    "note": "官公庁の統計・情勢ページで複合型手口（SNS 関係構築→フィッシング→AI 音声→物理接触）を一体として扱う個別事例を見出せず partial"
+  }
 }

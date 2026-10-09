@@ -63,12 +63,11 @@
   },
   "references": [
     {
-      "label": "警察庁：闇バイトの危険性",
-      "url": "https://www.npa.go.jp/bureau/safetylife/yamibaito/hanzaishaboshu.html"
-    },
-    {
-      "label": "警察庁：令和6年特殊詐欺統計",
-      "url": "https://www.npa.go.jp/bureau/criminal/souni/tokusyusagi/hurikomesagi_toukei2024.pdf"
+      "label": "警察庁：いわゆる『闇バイト』の危険性について",
+      "url": "https://www.npa.go.jp/bureau/safetylife/yamibaito/hanzaishaboshu.html",
+      "publisher": "警察庁",
+      "accessed": "2026-10-09",
+      "quote": "ＳＮＳやインターネットの掲示板には、仕事の内容を明らかにせずに著しく高額な報酬の支払いを示唆するなどして犯罪の実行者を募集する投稿が掲載されています。簡単に 高収入 を得られるなら、と応募して、強盗や詐欺といった犯罪に加担することとなり、逮捕された人が多くいます。絶対に手を出さないでください。"
     }
   ],
   "tags": [
@@ -76,5 +75,10 @@
     "recruitment",
     "organized-crime",
     "youth-exploitation"
-  ]
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "『SNSや掲示板で高額報酬を示唆して募集』が接触経路、『シグナルやテレグラムに誘導』『犯罪に加担』が要求・結果"
+  }
 }

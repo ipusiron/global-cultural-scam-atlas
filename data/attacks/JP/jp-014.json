@@ -53,7 +53,7 @@
   "risk_score": 4,
   "mediums": [
     "bank-transfer",
-    "crypto",
+    "cryptocurrency",
     "e-wallet"
   ],
   "legal_notes": {
@@ -62,8 +62,11 @@
   },
   "references": [
     {
-      "label": "金融庁：無登録業者にご注意",
-      "url": "https://www.fsa.go.jp/"
+      "label": "金融庁：それ詐欺です！SNS上の投資勧誘にご注意ください！",
+      "url": "https://www.fsa.go.jp/receipt/toushisagi_koukoku/shuhou.html",
+      "publisher": "金融庁",
+      "accessed": "2026-10-09",
+      "quote": "動画投稿サイトの広告等からSNSのクローズドチャットへ誘導され、投資への勧誘が行われる事例…『講師』や『先生』、『アシスタント』が登場し、投資の指南をする。…虚偽の成功談をもとに投資話を持ち掛ける。架空の口座で取引させ、しばらくは利益が出て出金もできるかのように装いながら、追加で高額な入金をさせる。"
     }
   ],
   "tags": [
@@ -71,5 +74,10 @@
     "social",
     "crypto",
     "authority-pretext"
-  ]
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "『SNSのクローズドチャットへ誘導』が接触経路、『追加で高額な入金をさせる』が要求・結果"
+  }
 }

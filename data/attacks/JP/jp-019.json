@@ -13,8 +13,8 @@
     "en": "Souvenir culture and discount expectations"
   },
   "attack_vector": [
-    "street",
-    "market"
+    "in-person",
+    "marketplace"
   ],
   "targets": [
     "tourist",
@@ -58,13 +58,21 @@
   },
   "references": [
     {
-      "label": "特許庁：偽ブランド対策・知的財産",
-      "url": "https://www.jpo.go.jp/"
+      "label": "国民生活センター：模倣品に関するトラブルにご注意！（令和4年10月から水際取締りが強化されました）",
+      "url": "https://www.kokusen.go.jp/news/data/n-20221012_1.html",
+      "publisher": "国民生活センター",
+      "accessed": "2026-10-09",
+      "quote": "インターネットでの模倣品の購入トラブルは引き続き見られます。詐欺的な販売サイトから模倣品を購入しないよう、注文する前にサイトの情報をよく確認しましょう。"
     }
   ],
   "tags": [
     "counterfeit",
     "tourism",
     "street"
-  ]
+  ],
+  "verification": {
+    "status": "partial",
+    "checked": "2026-10-09",
+    "note": "模倣品トラブルを扱うがオンライン通販中心で、路上販売の個別事例を直接扱う官公庁ページを見出せず partial"
+  }
 }

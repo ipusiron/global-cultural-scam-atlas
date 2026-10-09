@@ -61,12 +61,10 @@
   },
   "references": [
     {
-      "label": "IPA：標的型攻撃対策",
-      "url": "https://www.ipa.go.jp/security/10threats/10threats2024.html"
-    },
-    {
-      "label": "NISC：重要インフラのサイバーセキュリティ",
-      "url": "https://www.nisc.go.jp/pdf/policy/infra/infra_rt4.pdf"
+      "label": "IPA：情報セキュリティ10大脅威 2024",
+      "url": "https://www.ipa.go.jp/security/10threats/10threats2024.html",
+      "publisher": "IPA",
+      "accessed": "2026-10-09"
     }
   ],
   "tags": [
@@ -74,5 +72,10 @@
     "impersonation",
     "corporate-espionage",
     "social-engineering"
-  ]
+  ],
+  "verification": {
+    "status": "partial",
+    "checked": "2026-10-09",
+    "note": "監査員を装う物理侵入は標的型攻撃の一環として言及されうるが、公的機関の個別事例ページを特定できず partial"
+  }
 }

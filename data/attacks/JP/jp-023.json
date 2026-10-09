@@ -65,11 +65,9 @@
   "references": [
     {
       "label": "Google Cloud：AI音声なりすまし脅威",
-      "url": "https://cloud.google.com/blog/ja/topics/threat-intelligence/ai-powered-voice-spoofing-vishing-attacks"
-    },
-    {
-      "label": "トレンドマイクロ：ディープフェイク実態調査2024",
-      "url": "https://www.trendmicro.com/ja_jp/jp-security/24/g/securitytrend-20240703-02.html"
+      "url": "https://cloud.google.com/blog/ja/topics/threat-intelligence/ai-powered-voice-spoofing-vishing-attacks",
+      "publisher": "Google Cloud 脅威インテリジェンス",
+      "accessed": "2026-10-09"
     }
   ],
   "tags": [
@@ -77,5 +75,10 @@
     "AI-fraud",
     "voice-cloning",
     "impersonation"
-  ]
+  ],
+  "verification": {
+    "status": "partial",
+    "checked": "2026-10-09",
+    "note": "民間ベンダーの脅威解説が中心で、日本の官公庁の個別ページ（AI音声合成による家族装い詐欺の事例）を見出せず partial"
+  }
 }

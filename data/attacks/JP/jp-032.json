@@ -73,11 +73,9 @@
   "references": [
     {
       "label": "フィッシング対策協議会",
-      "url": "https://www.antiphishing.jp/"
-    },
-    {
-      "label": "ソースネクスト：キ・ケ・ンの取説",
-      "url": "https://www.sourcenext.com/product/security/blog/"
+      "url": "https://www.antiphishing.jp/",
+      "publisher": "フィッシング対策協議会",
+      "accessed": "2026-10-09"
     }
   ],
   "tags": [
@@ -87,5 +85,10 @@
     "urgency",
     "financial-fraud",
     "sms-phishing"
-  ]
+  ],
+  "verification": {
+    "status": "partial",
+    "checked": "2026-10-09",
+    "note": "総論の入口ページ。個別事例の詳細（例：国税庁をかたるフィッシング）は jp-003 と jp-018 で引用済み。jp-032 自体は『金融機関・大手企業全般』を扱うため個別裏付けは partial"
+  }
 }

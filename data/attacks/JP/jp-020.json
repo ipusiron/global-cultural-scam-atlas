@@ -54,7 +54,7 @@
   "mediums": [
     "bank-transfer",
     "e-wallet",
-    "crypto"
+    "cryptocurrency"
   ],
   "legal_notes": {
     "ja": "",
@@ -62,12 +62,17 @@
   },
   "references": [
     {
-      "label": "内閣府 防災：災害関連情報",
-      "url": "https://www.bousai.go.jp/"
+      "label": "国民生活センター：ご用心 災害に便乗した悪質商法",
+      "url": "https://www.kokusen.go.jp/soudan_now/data/disaster.html",
+      "publisher": "国民生活センター",
+      "accessed": "2026-10-09",
+      "quote": "地震、大雨などの災害時には、それに便乗した悪質商法が多数発生しています。 悪質商法は災害発生地域だけが狙われるとは限りません。災害に便乗した悪質な商法には十分注意してください。 特に最近は「火災保険を使って自己負担なく住宅の修理ができる」など、「保険金が使える」と勧誘する手口について、全国の消費生活センター等に相談が寄せられています。 被災後の混乱に便乗し、点検商法や不当な高額請求などのトラブルが増えます。"
     },
     {
-      "label": "日本赤十字社：義援金",
-      "url": "https://www.jrc.or.jp/"
+      "label": "国民生活センター：令和6年能登半島地震に便乗した詐欺的トラブルにご注意ください",
+      "url": "https://www.kokusen.go.jp/news/data/n-20240112_2.html",
+      "publisher": "国民生活センター",
+      "accessed": "2026-10-09"
     }
   ],
   "tags": [
@@ -75,5 +80,10 @@
     "disaster-pretext",
     "social",
     "urgency"
-  ]
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "『ボランティアを名乗る』『市役所の者だと名乗る』が接触と装う相手、『募金を求める』『義援金を求める』が要求・結果"
+  }
 }

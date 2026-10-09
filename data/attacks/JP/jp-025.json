@@ -62,12 +62,10 @@
   },
   "references": [
     {
-      "label": "IPA：物理的セキュリティ対策",
-      "url": "https://www.ipa.go.jp/security/10threats/10threats2024.html"
-    },
-    {
-      "label": "NISC：サイバーセキュリティ2024",
-      "url": "https://www.nisc.go.jp/pdf/policy/kihon-s/cs2024.pdf"
+      "label": "IPA：情報セキュリティ10大脅威 2024",
+      "url": "https://www.ipa.go.jp/security/10threats/10threats2024.html",
+      "publisher": "IPA",
+      "accessed": "2026-10-09"
     }
   ],
   "tags": [
@@ -75,5 +73,10 @@
     "physical-security",
     "dumpster-diving",
     "information-theft"
-  ]
+  ],
+  "verification": {
+    "status": "partial",
+    "checked": "2026-10-09",
+    "note": "IPA 10大脅威はトラッシングを個別脅威として明示しておらず、総論ページとしての位置付け。ベンダー・民間記事はあるが官公庁の個別事例を見出せず partial"
+  }
 }

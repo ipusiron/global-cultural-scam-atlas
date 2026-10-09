@@ -13,8 +13,7 @@
     "en": "Face-saving, reluctance to refuse, reciprocity"
   },
   "attack_vector": [
-    "in-person",
-    "street"
+    "in-person"
   ],
   "targets": [
     "tourist",
@@ -58,13 +57,27 @@
   },
   "references": [
     {
-      "label": "観光庁：訪日旅行の安全情報",
-      "url": "https://www.mlit.go.jp/kankocho/"
+      "label": "東京都：高額で買い取ると勧められ、外貨を購入したが換金できない",
+      "url": "https://www.shouhiseikatu.metro.tokyo.lg.jp/sodan/faq/main/264.html",
+      "publisher": "東京都消費生活総合センター",
+      "accessed": "2026-10-09",
+      "quote": "電話で『今後イラクが復興すれば通貨の価値が何十倍にも上がるのでイラクディナールを購入しないか。』と勧められた。直後に別の事業者から『イラクディナールを高額で買い取りたい。』と電話がきた。"
+    },
+    {
+      "label": "国家公安委員会：犯罪収益移転危険度調査書（令和元年）",
+      "url": "https://www.npa.go.jp/sosikihanzai/jafic/nenzihokoku/risk/risk011219.pdf",
+      "publisher": "国家公安委員会",
+      "accessed": "2026-10-09"
     }
   ],
   "tags": [
     "tourism",
     "street",
     "cash"
-  ]
+  ],
+  "verification": {
+    "status": "partial",
+    "checked": "2026-10-09",
+    "note": "外貨売買の劇場型手口の相談事例として近いが、観光地で親切装いの闇両替を直接扱う官公庁ページを見出せず partial"
+  }
 }

@@ -17,7 +17,7 @@
     "phone"
   ],
   "targets": [
-    "elder",
+    "elderly",
     "general",
     "expat"
   ],
@@ -51,7 +51,6 @@
   },
   "risk_score": 2,
   "mediums": [
-    "postal",
     "cash",
     "bank-transfer"
   ],
@@ -61,13 +60,21 @@
   },
   "references": [
     {
-      "label": "消費者庁：送り付け商法（ネガティブ・オプション）",
-      "url": "https://www.no-trouble.caa.go.jp/qa/negativeoption.html"
+      "label": "消費者庁：売買契約に基づかないで送付された商品に関するQ&A",
+      "url": "https://www.no-trouble.caa.go.jp/qa/negativeoption.html",
+      "publisher": "消費者庁 特定商取引法ガイド",
+      "accessed": "2026-10-09",
+      "quote": "事業者が金銭を得る目的で、売買契約に基づかないで一方的に送付した商品については、消費者が直ちに処分できるものであり、開封や処分を行ったことによって、消費者に支払義務が生じることはありません。"
     }
   ],
   "tags": [
     "negative-option",
     "postal",
     "consumer-law"
-  ]
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "『一方的に送付』が接触経路、『代金の支払を請求され』が要求（Q3の設問本文より）、jp-006 と同一の制度解説ページを参照する重複事例"
+  }
 }

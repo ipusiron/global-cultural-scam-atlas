@@ -1,28 +1,85 @@
 {
   "id": "jp-003",
-  "title": { "ja": "国税庁・税務署装いフィッシング（未納税通知）", "en": "Tax Agency Impersonation Phishing (Unpaid Tax Notice)" },
-  "short_desc": { "ja": "SMSやメールで未納税を装い、偽サイトへ誘導してカード情報等を詐取。", "en": "SMS/email claims unpaid taxes and links to a spoofed site to steal card/PII." },
-  "cultural_lever": { "ja": "官公庁からの正式通知への信頼、締切遵守の圧力", "en": "Trust in government notices and pressure to meet deadlines" },
-  "attack_vector": ["sms","email","website"],
-  "targets": ["general","business"],
+  "title": {
+    "ja": "国税庁・税務署装いフィッシング（未納税通知）",
+    "en": "Tax Agency Impersonation Phishing (Unpaid Tax Notice)"
+  },
+  "short_desc": {
+    "ja": "SMSやメールで未納税を装い、偽サイトへ誘導してカード情報等を詐取。",
+    "en": "SMS/email claims unpaid taxes and links to a spoofed site to steal card/PII."
+  },
+  "cultural_lever": {
+    "ja": "官公庁からの正式通知への信頼、締切遵守の圧力",
+    "en": "Trust in government notices and pressure to meet deadlines"
+  },
+  "attack_vector": [
+    "sms",
+    "email",
+    "website"
+  ],
+  "targets": [
+    "general",
+    "business"
+  ],
   "scenario": {
     "ja": "1) 『未納税』『差押え』等の件名でSMS/メール → 2) リンク先で個人・カード情報入力要求 → 3) 課金・不正送金",
     "en": "1) SMS/email with 'unpaid tax/seizure' → 2) Spoofed page asks for personal/card data → 3) Unauthorized charge/transfer"
   },
   "red_flags": {
-    "ja": ["短時間での支払い期限を強調","ドメインが公式でない/不自然なURL","ギフトカード・即時送金の要求"],
-    "en": ["Very short payment deadline","Non-official domain/odd URL","Requests gift cards or instant transfers"]
+    "ja": [
+      "短時間での支払い期限を強調",
+      "ドメインが公式でない/不自然なURL",
+      "ギフトカード・即時送金の要求"
+    ],
+    "en": [
+      "Very short payment deadline",
+      "Non-official domain/odd URL",
+      "Requests gift cards or instant transfers"
+    ]
   },
   "mitigations": {
-    "ja": ["国税庁サイトやe-Taxに自分でアクセスして確認","リンクは踏まずブックマークや検索から公式へ","不審なら自治体窓口や税務署へ直接照会"],
-    "en": ["Verify via official site/e-Tax you navigate to","Don't click links; use bookmarks/search","Call tax office using official numbers"]
+    "ja": [
+      "国税庁サイトやe-Taxに自分でアクセスして確認",
+      "リンクは踏まずブックマークや検索から公式へ",
+      "不審なら自治体窓口や税務署へ直接照会"
+    ],
+    "en": [
+      "Verify via official site/e-Tax you navigate to",
+      "Don't click links; use bookmarks/search",
+      "Call tax office using official numbers"
+    ]
   },
   "risk_score": 4,
-  "mediums": ["credit","e-wallet","bank-transfer","gift-card"],
-  "legal_notes": { "ja": "国税当局がギフトカード購入を求めることはありません。", "en": "Tax authorities do not ask for gift card payments." },
-  "references": [
-    { "label": "フィッシング対策協議会：国税庁をかたるフィッシング注意喚起(2024/05/22)", "url": "https://www.antiphishing.jp/news/alert/nta_20240522.html" },
-    { "label": "国税庁/税務署装い詐欺メールの学内注意喚起（UEC）", "url": "https://www.cc.uec.ac.jp/blogs/news/2024/12/20241229zeimuphishing.html" }
+  "mediums": [
+    "credit",
+    "e-wallet",
+    "bank-transfer",
+    "gift-cards"
   ],
-  "tags": ["fake-fee","authority-pretext","website","sms","email","urgency"]
+  "legal_notes": {
+    "ja": "国税当局がギフトカード購入を求めることはありません。",
+    "en": "Tax authorities do not ask for gift card payments."
+  },
+  "references": [
+    {
+      "label": "フィッシング対策協議会：国税庁をかたるフィッシング(2024/05/22)",
+      "url": "https://www.antiphishing.jp/news/alert/nta_20240522.html",
+      "publisher": "フィッシング対策協議会",
+      "accessed": "2026-10-09",
+      "quote": "2024/05/22 10:00 時点では、フィッシングサイトは稼働中であり、JPCERT/CC にサイト閉鎖のための調査を依頼中です。類似のフィッシングサイトが公開される可能性がありますので、引き続きご注意ください。 このようなフィッシングサイトにて、氏名 (漢字、カナ)、郵便番号、都道府県市区町村、番地、建物名、電話番号、カードに記載された名前、カード番号、有効期限、支払い方法、セキュリティコード、納付手続き完了メール（アドレス）等を、絶対に入力したりアップロードしないよう、ご注意ください。"
+    }
+  ],
+  "tags": [
+    "fake-fee",
+    "authority-pretext",
+    "website",
+    "sms",
+    "email",
+    "urgency"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "『税務署からのお知らせ』『【督促状】滞納した税金』は装う相手と件名の文例、本文に『カード番号、有効期限、…を入力させる』で要求・結果に対応"
+  }
 }

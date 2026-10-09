@@ -52,7 +52,7 @@
   "mediums": [
     "bank-transfer",
     "e-wallet",
-    "crypto"
+    "cryptocurrency"
   ],
   "legal_notes": {
     "ja": "",
@@ -60,8 +60,11 @@
   },
   "references": [
     {
-      "label": "警視庁：チケット詐欺の注意喚起",
-      "url": "https://www.keishicho.metro.tokyo.lg.jp/"
+      "label": "埼玉県警察：SNS上でのチケット詐欺に注意！",
+      "url": "https://www.police.pref.saitama.lg.jp/c0070/kurashi/cyber-ticket.html",
+      "publisher": "埼玉県警察",
+      "accessed": "2026-10-09",
+      "quote": "『支払いの早い人を優先します』『詐欺に遭いたくないので先払いをお願いします』等、支払いを先にさせようとします。…『仕事が忙しい』『病気になった』等の理由で発券や返金を先延ばしにして、最終的にはアカウントを消して連絡が取れなくなります。"
     }
   ],
   "tags": [
@@ -69,5 +72,10 @@
     "social",
     "prepayment",
     "scarcity"
-  ]
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "『支払いを先にさせる』が接触経路の勧誘、『発券や返金を先延ばし』『アカウントを消して連絡が取れなくなる』が要求・結果"
+  }
 }

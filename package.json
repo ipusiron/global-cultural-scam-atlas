@@ -8,6 +8,7 @@
     "build": "npm run build:index && npm run build:countries",
     "build:local": "npm run build && node tools/copy-local.mjs",
     "validate:schema": "ajv validate -s data/schema.json -d dist/countries.json --strict=false",
+    "check:refs": "node tools/check-refs.mjs",
     "test": "node --test"
   },
   "devDependencies": {

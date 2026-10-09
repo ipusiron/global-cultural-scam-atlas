@@ -17,7 +17,7 @@
     "sms"
   ],
   "targets": [
-    "elder",
+    "elderly",
     "general"
   ],
   "scenario": {
@@ -52,7 +52,7 @@
   "mediums": [
     "bank-transfer",
     "cash",
-    "gift-card"
+    "gift-cards"
   ],
   "legal_notes": {
     "ja": "",
@@ -60,8 +60,11 @@
   },
   "references": [
     {
-      "label": "警察庁：特殊詐欺対策（SOS47）",
-      "url": "https://www.npa.go.jp/bureau/safetylife/sos47/"
+      "label": "警察庁 SOS47：オレオレ詐欺",
+      "url": "https://www.npa.go.jp/bureau/safetylife/sos47/case/oreore/",
+      "publisher": "警察庁 SOS47",
+      "accessed": "2026-10-09",
+      "quote": "犯人は最初に『風邪をひいて声が変わった』『携帯が壊れて番号が変わった』などと言って信用させた後、『お金が今すぐ必要』と話して振り込みを求めてきます。"
     }
   ],
   "tags": [
@@ -69,5 +72,10 @@
     "urgency",
     "phone",
     "authority-pretext"
-  ]
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "『声が変わった』『携帯が壊れて』が家族装いの接触、『お金が今すぐ必要』『振り込みを求める』が要求"
+  }
 }

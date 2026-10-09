@@ -14,7 +14,6 @@
   },
   "attack_vector": [
     "in-person",
-    "street",
     "door-to-door"
   ],
   "targets": [
@@ -61,13 +60,21 @@
   },
   "references": [
     {
-      "label": "東京都消費生活総合センター：繁華街の客引きトラブル",
-      "url": "https://www.shouhiseikatu.metro.tokyo.lg.jp/"
+      "label": "警視庁：盛り場トピックス（最近の盛り場の被害事例）",
+      "url": "https://www.keishicho.metro.tokyo.lg.jp/kurashi/anzen/sakaribasogo/sakaribatopics.html",
+      "publisher": "警視庁",
+      "accessed": "2026-10-09",
+      "quote": "酔って気分が良いときに声を掛けてきた客引き。その客引きに連れられて入ったお店でまず一杯。しかし、そのお酒は非常にアルコールが強く、いつの間にか寝込んでしまいます。朝気づいたら夕べの記憶がなく、財布のお金もすっからかん。"
     }
   ],
   "tags": [
     "pressure-sales",
     "tourism",
     "street"
-  ]
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "『声を掛けてきた客引き』が接触経路、『財布のお金もすっからかん』『高額な料金のカード使用履歴』が要求・結果"
+  }
 }

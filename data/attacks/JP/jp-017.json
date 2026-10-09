@@ -17,7 +17,7 @@
     "phone"
   ],
   "targets": [
-    "elder",
+    "elderly",
     "general"
   ],
   "scenario": {
@@ -60,13 +60,21 @@
   },
   "references": [
     {
-      "label": "消費者庁：訪問販売の注意点",
-      "url": "https://www.no-trouble.caa.go.jp/what/kojin/hanbai.html"
+      "label": "国民生活センター：屋根工事の点検商法のトラブルが増えています",
+      "url": "https://www.kokusen.go.jp/news/data/n-20231011_1.html",
+      "publisher": "国民生活センター",
+      "accessed": "2026-10-09",
+      "quote": "点検商法とは、『近所で行う工事の挨拶に来た』などと言って突然訪問し、『屋根瓦がずれているため点検してあげる』と言って点検した後、『このままだと瓦が飛んでご近所に迷惑がかかる』などと不安をあおって工事の契約をする手口です。"
     }
   ],
   "tags": [
     "doorstep",
     "pressure-sales",
     "housing"
-  ]
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "『近所で行う工事の挨拶』『点検してあげる』が接触経路、『不安をあおって工事の契約』が要求・結果"
+  }
 }

@@ -63,12 +63,10 @@
   },
   "references": [
     {
-      "label": "総務省：偽・誤情報の流通対策",
-      "url": "https://www.soumu.go.jp/johotsusintokei/whitepaper/ja/r06/html/nd141210.html"
-    },
-    {
-      "label": "トレンドマイクロ：ディープフェイクを悪用した攻撃",
-      "url": "https://www.trendmicro.com/ja_jp/research/25/g/deepfake-it-til-you-make-it.html"
+      "label": "総務省：令和6年版 情報通信白書（AI 偽・誤情報の脅威）",
+      "url": "https://www.soumu.go.jp/johotsusintokei/whitepaper/ja/r06/html/nd141210.html",
+      "publisher": "総務省",
+      "accessed": "2026-10-09"
     }
   ],
   "tags": [
@@ -76,5 +74,10 @@
     "blackmail",
     "AI-generated",
     "sextortion"
-  ]
+  ],
+  "verification": {
+    "status": "partial",
+    "checked": "2026-10-09",
+    "note": "総務省情報通信白書に AI 偽・誤情報の記述はあるが、恐喝目的の AI 偽動画の個別事例を官公庁サイトに特定できず partial"
+  }
 }

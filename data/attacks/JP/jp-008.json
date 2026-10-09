@@ -19,7 +19,7 @@
   ],
   "targets": [
     "general",
-    "elder"
+    "elderly"
   ],
   "scenario": {
     "ja": "1) 偽警告表示 → 2) 指定番号へ電話 → 3) 遠隔操作許可 → 4) 有料契約/決済",
@@ -52,7 +52,7 @@
   "risk_score": 3,
   "mediums": [
     "credit",
-    "gift-card",
+    "gift-cards",
     "e-wallet"
   ],
   "legal_notes": {
@@ -61,12 +61,17 @@
   },
   "references": [
     {
-      "label": "総務省 国民のための情報セキュリティサイト：不審な警告画面",
-      "url": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/security/"
+      "label": "警察庁サイバー警察局：サポート詐欺対策",
+      "url": "https://www.npa.go.jp/bureau/cyber/countermeasures/support-fraud.html",
+      "publisher": "警察庁サイバー警察局",
+      "accessed": "2026-10-09",
+      "quote": "サポート詐欺とは よくある相談 サポート詐欺の手口 サポート詐欺の被害に遭ったら 被害防止対策 参考リンク サポート詐欺とは サポート詐欺とは、パソコンでインターネットを閲覧中に、突然、ウイルス感染したかのような嘘の画面を表示させたり、警告音を発生させるなどして、ユーザーの不安を煽り、画面に記載されたサポート窓口に電話をかけさせ、サポートの名目で金銭を騙し取しとったり、遠隔操作ソフトをインストールさせたりする手口です。"
     },
     {
-      "label": "フィッシング対策協議会",
-      "url": "https://www.antiphishing.jp/"
+      "label": "IPA：偽セキュリティ警告（サポート詐欺）対策特集ページ",
+      "url": "https://www.ipa.go.jp/security/anshin/measures/fakealert.html",
+      "publisher": "IPA",
+      "accessed": "2026-10-09"
     }
   ],
   "tags": [
@@ -74,5 +79,10 @@
     "website",
     "phone",
     "urgency"
-  ]
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "『嘘の画面』『電話をかけさせ』が接触経路、『金銭を騙し取る』『遠隔操作ソフトをインストール』が要求・結果"
+  }
 }

@@ -1,19 +1,81 @@
 {
   "id": "us-017",
-  "title": { "ja": "COVID-19ワクチン/治療詐欺", "en": "COVID-19 Vaccine/Treatment Scam" },
-  "short_desc": { "ja": "偽のワクチン予約や治療薬販売で金銭・情報詐取", "en": "Fake vaccine appointments or treatments to steal money and data" },
-  "cultural_lever": { "ja": "健康への不安・医療アクセスへの需要", "en": "Health anxiety and demand for medical access" },
-  "attack_vector": ["phone", "email", "social"],
-  "targets": ["elderly", "general"],
-  "scenario": { "ja": "1) ワクチン優先予約提供 2) 手数料や保険情報要求 3) 偽の治療薬販売 4) 個人医療情報窃取", "en": "1) Offer priority vaccine access 2) Request fees or insurance info 3) Sell fake treatments 4) Steal medical data" },
-  "red_flags": { "ja": ["ワクチンの支払い要求", "未承認治療薬", "個人情報の電話確認"], "en": ["Payment for vaccines", "Unapproved treatments", "Phone verification of personal info"] },
-  "mitigations": { "ja": ["公式医療機関のみ利用", "CDCガイドライン確認", "ワクチンは無料"], "en": ["Use official healthcare only", "Check CDC guidelines", "Vaccines are free"] },
-  "risk_score": 4,
-  "mediums": ["credit", "bank-transfer"],
-  "legal_notes": { "ja": "", "en": "" },
-  "references": [
-    { "label": "FTC COVID-19 Scams", "url": "https://consumer.ftc.gov/features/coronavirus-scams-what-ftc-doing" },
-    { "label": "CDC Vaccine Scam Warning", "url": "https://www.cdc.gov/vaccines/covid-19/index.html" }
+  "title": {
+    "ja": "COVID-19ワクチン/治療詐欺",
+    "en": "COVID-19 Vaccine/Treatment Scam"
+  },
+  "short_desc": {
+    "ja": "偽のワクチン予約や治療薬販売で金銭・情報詐取",
+    "en": "Fake vaccine appointments or treatments to steal money and data"
+  },
+  "cultural_lever": {
+    "ja": "健康への不安・医療アクセスへの需要",
+    "en": "Health anxiety and demand for medical access"
+  },
+  "attack_vector": [
+    "phone",
+    "email",
+    "social"
   ],
-  "tags": ["covid-19", "healthcare", "vaccine-fraud", "panic-exploitation"]
+  "targets": [
+    "elderly",
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) ワクチン優先予約提供 2) 手数料や保険情報要求 3) 偽の治療薬販売 4) 個人医療情報窃取",
+    "en": "1) Offer priority vaccine access 2) Request fees or insurance info 3) Sell fake treatments 4) Steal medical data"
+  },
+  "red_flags": {
+    "ja": [
+      "ワクチンの支払い要求",
+      "未承認治療薬",
+      "個人情報の電話確認"
+    ],
+    "en": [
+      "Payment for vaccines",
+      "Unapproved treatments",
+      "Phone verification of personal info"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "公式医療機関のみ利用",
+      "CDCガイドライン確認",
+      "ワクチンは無料"
+    ],
+    "en": [
+      "Use official healthcare only",
+      "Check CDC guidelines",
+      "Vaccines are free"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "credit",
+    "bank-transfer"
+  ],
+  "legal_notes": {
+    "ja": "",
+    "en": ""
+  },
+  "references": [
+    {
+      "label": "FTC: COVID-19 vaccines are in the pipeline. Scammers won't be far behind.",
+      "url": "https://consumer.ftc.gov/consumer-alerts/2020/12/covid-19-vaccines-are-pipeline-scammers-wont-be-far-behind",
+      "publisher": "FTC",
+      "accessed": "2026-10-09",
+      "quote": "No one from a vaccine distribution site or health care payer, like a private insurance company, will call you asking for your Social Security number or your credit card or bank account information to sign you up to get the vaccine."
+    }
+  ],
+  "tags": [
+    "covid-19",
+    "healthcare",
+    "vaccine-fraud",
+    "panic-exploitation"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "'call you' = pretext (vaccine signup call), 'SSN or credit card or bank account information' = demand"
+  }
 }

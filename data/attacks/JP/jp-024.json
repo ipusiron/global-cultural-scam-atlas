@@ -63,12 +63,10 @@
   },
   "references": [
     {
-      "label": "金融庁：フィッシング詐欺に関する注意喚起",
-      "url": "https://www.fsa.go.jp/ordinary/internet-bank/index.html"
-    },
-    {
-      "label": "全国銀行協会：振り込め詐欺等の対策",
-      "url": "https://www.zenginkyo.or.jp/hanzai/"
+      "label": "全国銀行協会：銀行をかたる犯罪にご注意ください",
+      "url": "https://www.zenginkyo.or.jp/hanzai/",
+      "publisher": "全国銀行協会",
+      "accessed": "2026-10-09"
     }
   ],
   "tags": [
@@ -76,5 +74,10 @@
     "voice-phishing",
     "automated-fraud",
     "banking"
-  ]
+  ],
+  "verification": {
+    "status": "partial",
+    "checked": "2026-10-09",
+    "note": "ボイスフィッシングの詳細を解説する官公庁の個別ページ（警察庁PDFは入手可能だが個別手口ページとしては限定的）を優先度の高いものに割り当てられず partial"
+  }
 }

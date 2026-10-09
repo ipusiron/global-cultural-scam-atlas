@@ -58,7 +58,6 @@
   },
   "risk_score": 4,
   "mediums": [
-    "identity-theft",
     "credit",
     "bank-transfer"
   ],
@@ -68,12 +67,17 @@
   },
   "references": [
     {
-      "label": "消費者庁：国勢調査を装った詐欺にご注意",
-      "url": "https://www.caa.go.jp/policies/policy/consumer_policy/caution/caution_017/"
+      "label": "消費者庁：国の行政機関が行う統計調査を装った『かたり調査』にご注意ください",
+      "url": "https://www.caa.go.jp/policies/policy/consumer_policy/caution/caution_017/",
+      "publisher": "消費者庁",
+      "accessed": "2026-10-09",
+      "quote": "国の行政機関が行う統計調査を装った不審な電話・電子メール・ウェブサイトなどにご注意ください。"
     },
     {
-      "label": "総務省：令和7年国勢調査 不審な調査にご注意ください",
-      "url": "https://www.kokusei2025.go.jp/caution/"
+      "label": "総務省：国勢調査をよそおった詐欺や不審な調査にご注意",
+      "url": "https://www.kokusei2025.go.jp/caution/",
+      "publisher": "総務省",
+      "accessed": "2026-10-09"
     }
   ],
   "tags": [
@@ -82,5 +86,10 @@
     "phishing",
     "authority-pretext",
     "civic-duty-exploitation"
-  ]
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "『国の行政機関が行う統計調査を装った』が装う相手、『不審な電話・電子メール・ウェブサイト』が接触経路。要求（個人情報詐取）は関連公表資料で補足"
+  }
 }

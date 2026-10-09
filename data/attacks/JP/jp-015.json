@@ -61,13 +61,27 @@
   },
   "references": [
     {
-      "label": "消費者庁：連鎖販売取引（マルチ商法）",
-      "url": "https://www.no-trouble.caa.go.jp/what/renhan.html"
+      "label": "消費者庁：ネットワークビジネスで大量の在庫をかかえてしまった",
+      "url": "https://www.no-trouble.caa.go.jp/case/multilevelmarketing/case02.html",
+      "publisher": "消費者庁 特定商取引法ガイド",
+      "accessed": "2026-10-09",
+      "quote": "大学生である息子が『簡単に稼げるアルバイトがある』と友人の紹介を受けて、Ｘという連鎖販売業者の事務所に出向いた。事務所では友人とＸの社員が『入会金３、０００円を支払い、中国茶と浄水器（総額３０万円）を購入すると会員になることができ…』と勧誘された。"
+    },
+    {
+      "label": "消費者庁：ビジネスセミナーへ参加したつもりが、実際はネットワークビジネスの説明会だった",
+      "url": "https://www.no-trouble.caa.go.jp/case/multilevelmarketing/case01.html",
+      "publisher": "消費者庁 特定商取引法ガイド",
+      "accessed": "2026-10-09"
     }
   ],
   "tags": [
     "mlm",
     "seminar",
     "pressure-sales"
-  ]
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "『簡単に稼げるアルバイトがある』が接触経路、『入会金・教材30万円を購入すると会員になれる』が要求・結果"
+  }
 }

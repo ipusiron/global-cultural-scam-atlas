@@ -39,8 +39,22 @@
                   "required": ["ja"],
                   "properties": { "ja": { "type": "string" }, "en": { "type": "string" } }
                 },
-                "attack_vector": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
-                "targets": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+                "attack_vector": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "string",
+                    "enum": ["in-person","phone","email","sms","social","website","payment-app","postal","door-to-door","marketplace","mixed"]
+                  }
+                },
+                "targets": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "string",
+                    "enum": ["tourist","general","elderly","business","student","expat"]
+                  }
+                },
                 "scenario": {
                   "type": "object",
                   "required": ["ja"],
@@ -63,7 +77,13 @@
                   }
                 },
                 "risk_score": { "type": "integer", "minimum": 1, "maximum": 5 },
-                "mediums": { "type": "array", "items": { "type": "string" } },
+                "mediums": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": ["cash","credit","bank-transfer","cryptocurrency","gift-cards","e-wallet","qr-pay"]
+                  }
+                },
                 "legal_notes": {
                   "type": "object",
                   "properties": { "ja": { "type": "string" }, "en": { "type": "string" } }
@@ -75,11 +95,23 @@
                     "required": ["label","url"],
                     "properties": {
                       "label": { "type": "string" },
-                      "url": { "type": "string", "format": "uri" }
+                      "url": { "type": "string", "format": "uri" },
+                      "publisher": { "type": "string" },
+                      "accessed": { "type": "string", "format": "date" },
+                      "quote": { "type": "string" }
                     }
                   }
                 },
-                "tags": { "type": "array", "items": { "type": "string" } }
+                "tags": { "type": "array", "items": { "type": "string" } },
+                "verification": {
+                  "type": "object",
+                  "required": ["status"],
+                  "properties": {
+                    "status": { "type": "string", "enum": ["verified","partial","unverified"] },
+                    "checked": { "type": "string", "format": "date" },
+                    "note": { "type": "string" }
+                  }
+                }
               }
             }
           }
