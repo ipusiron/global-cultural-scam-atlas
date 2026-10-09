@@ -1,0 +1,79 @@
+{
+  "id": "sg-002",
+  "title": {
+    "ja": "銀行フィッシング（口座不正アクセスを装う SMS）",
+    "en": "Bank Phishing (Fake 'Unauthorised Access' SMS)"
+  },
+  "short_desc": {
+    "ja": "『不正アクセス』通知の SMS で偽銀行サイトへ誘導し認証情報を奪う",
+    "en": "'Unauthorised access' SMS funnels victim to a fake bank site."
+  },
+  "cultural_lever": {
+    "ja": "銀行の権威と不正取引への恐怖",
+    "en": "Bank authority and fear of unauthorised access"
+  },
+  "attack_vector": [
+    "sms",
+    "website"
+  ],
+  "targets": [
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) 銀行名の SMS 2) 『不正アクセスの可能性』通知 3) 本文のリンクで偽サイトへ誘導 4) ログイン・OTP を奪う",
+    "en": "1) Bank-branded SMS 2) 'Suspicious access' notice 3) Fake-site link 4) Steal login and OTP"
+  },
+  "red_flags": {
+    "ja": [
+      "銀行名での SMS 内リンク",
+      "ロゴ・URL が本物と微妙に違う（m1cr0soft 等）",
+      "OTP の入力要求"
+    ],
+    "en": [
+      "Clickable link in bank-named SMS",
+      "Spoofed URL (e.g., m1cr0soft)",
+      "Prompt to enter an OTP"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "銀行は SMS でクリック可能なリンクを送らないと認識",
+      "公式アプリから直接ログイン",
+      "送金限度額を設定し 2FA を有効化"
+    ],
+    "en": [
+      "Banks never send clickable links by SMS",
+      "Open the official app directly",
+      "Set transaction limits and enable 2FA"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "bank-transfer",
+    "e-wallet"
+  ],
+  "legal_notes": {
+    "ja": "ScamShield と銀行に報告",
+    "en": "Report to ScamShield and the bank"
+  },
+  "references": [
+    {
+      "label": "ScamShield (SG): Phishing Scams - For bank phishing",
+      "url": "https://www.scamshield.gov.sg/i-want-protection-from-scams/learn-to-recognise-scams/phishing-scams/",
+      "publisher": "ScamShield / Singapore Government",
+      "accessed": "2026-10-09",
+      "quote": "For bank phishing Victims will receive SMS alerts about potential unauthorised access to their bank accounts, prompting them to click on embedded URLs to verify their identity and stop the transactions. ... For bank phishing Banks will never send you any clickable links via SMS. Legitimate SMSes from banks will reflect their officially registered SMS Sender ID."
+    }
+  ],
+  "tags": [
+    "phishing",
+    "banking-fraud",
+    "impersonation",
+    "urgency"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "ScamShield が、接触経路（SMS alerts）、口実（unauthorised access）、結果（verify identity と銀行認証奪取）を具体的に記述。シンガポールでは銀行は SMS でクリック可能リンクを送らないという明確な赤旗を示す"
+  }
+}

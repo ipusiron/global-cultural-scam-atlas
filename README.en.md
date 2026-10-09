@@ -27,7 +27,7 @@ Open it directly in a browser.
 ## 📸 Screenshots
 
 > ![English light theme, initial view](assets/en/screenshot.png)
-> *English, light theme, initial view (67 attacks; verification badge on each card).*
+> *English, light theme, initial view (74 attacks; verification badge on each card).*
 
 > ![Japanese light theme with detail modal open](assets/screenshot2.png)
 > *The detail modal for jp-001 (Red Flags, Mitigations, References with publisher and accessed).*
@@ -208,17 +208,18 @@ Entries are observations at the time of writing and are not exhaustive. They are
 | US (United States) | 20 |
 | GB (United Kingdom) | 7 |
 | AU (Australia) | 7 |
+| SG (Singapore) | 7 |
 | IN (India) | 1 |
-| **Total** | **67** |
+| **Total** | **74** |
 
 ### Verification status
 
 | Status | Count |
 |--------|-------|
-| verified | 53 |
+| verified | 60 |
 | partial | 13 |
 | unverified | 1 |
-| **Total** | **67** |
+| **Total** | **74** |
 
 ---
 
@@ -343,6 +344,9 @@ global-cultural-scam-atlas/
 │   │   │   └── in-001.json
 │   │   ├── JP/                          # Japan (32 entries, jp-001.json .. jp-032.json)
 │   │   │   ├── jp-001.json
+│   │   │   └── ...
+│   │   ├── SG/                          # Singapore (7 entries, sg-001.json .. sg-007.json)
+│   │   │   ├── sg-001.json
 │   │   │   └── ...
 │   │   └── US/                          # United States (20 entries, us-001.json .. us-020.json)
 │   │       ├── us-001.json

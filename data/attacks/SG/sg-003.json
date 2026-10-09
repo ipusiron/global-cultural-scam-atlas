@@ -1,0 +1,79 @@
+{
+  "id": "sg-003",
+  "title": {
+    "ja": "IRAS を装う税還付フィッシング",
+    "en": "IRAS Tax-Refund Phishing"
+  },
+  "short_desc": {
+    "ja": "シンガポール税務当局 IRAS を装い、還付を口実にクレカ情報を奪う",
+    "en": "Fake IRAS 'tax refund' demands credit-card details."
+  },
+  "cultural_lever": {
+    "ja": "税務当局 IRAS への信頼と還付への期待",
+    "en": "Trust in IRAS and anticipation of refunds"
+  },
+  "attack_vector": [
+    "email",
+    "sms"
+  ],
+  "targets": [
+    "general",
+    "expat"
+  ],
+  "scenario": {
+    "ja": "1) IRAS 名のメールで還付通知 2) クレカ情報の入力を要求 3) 偽の還付手続き画面へ誘導 4) 情報を奪取",
+    "en": "1) IRAS-branded 'refund' email 2) Request credit-card details 3) Redirect to fake form 4) Steal information"
+  },
+  "red_flags": {
+    "ja": [
+      "IRAS が『還付をカードに入金する』と連絡",
+      "メールで課税通知書や還付レターを送付",
+      "myTax Portal 以外のサイトでの入力要求"
+    ],
+    "en": [
+      "'Refund credited to your card' from IRAS",
+      "Tax notices or refund letters sent by email",
+      "Form outside of myTax Portal"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "myTax Portal で還付状況を直接確認",
+      "IRAS は税情報をメールで送らないと認識",
+      "ScamShield 1799 に相談"
+    ],
+    "en": [
+      "Check refund status on myTax Portal",
+      "Know IRAS does not email tax info",
+      "Call ScamShield (1799)"
+    ]
+  },
+  "risk_score": 3,
+  "mediums": [
+    "credit"
+  ],
+  "legal_notes": {
+    "ja": "ScamShield と IRAS に報告",
+    "en": "Report to ScamShield and IRAS"
+  },
+  "references": [
+    {
+      "label": "ScamShield (SG): Phishing Scams - For IRAS phishing",
+      "url": "https://www.scamshield.gov.sg/i-want-protection-from-scams/learn-to-recognise-scams/phishing-scams/",
+      "publisher": "ScamShield / Singapore Government",
+      "accessed": "2026-10-09",
+      "quote": "For IRAS phishing IRAS does not process tax refunds to credit/debit cards. IRAS will never send any confidential tax information and tax documents such as tax returns, notices of assessment, tax refund letters via emails. ... Any tax refunds are automatically credited into taxpayers’ bank account registered with IRAS or via PayNow (NRIC/FIN/UEN) accounts."
+    }
+  ],
+  "tags": [
+    "phishing",
+    "impersonation",
+    "government-pretext",
+    "tax-refund"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "ScamShield が IRAS を装う具体的な手口を明示（クレカ還付・税書類のメール送付が偽の兆候）。myTax Portal で確認するという対策も明記"
+  }
+}

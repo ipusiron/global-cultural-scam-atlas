@@ -1,0 +1,79 @@
+{
+  "id": "sg-005",
+  "title": {
+    "ja": "在宅タスク副業を装う『コミッション』詐欺",
+    "en": "Task-Based Job Commission Scam"
+  },
+  "short_desc": {
+    "ja": "在宅で簡単な作業にコミッションを支払うとして事前送金を奪う",
+    "en": "'Easy home tasks for commission' pretext steals advance funds."
+  },
+  "cultural_lever": {
+    "ja": "副業・簡単に稼げる仕事への期待",
+    "en": "Appeal of side jobs and quick cash"
+  },
+  "attack_vector": [
+    "social",
+    "mixed"
+  ],
+  "targets": [
+    "general",
+    "student"
+  ],
+  "scenario": {
+    "ja": "1) SNS や DM で在宅の『簡単な仕事』を提示 2) いいね・レビュー・暗号資産の『評価上げ』などのタスク 3) 事前購入や振込を要求 4) コミッションを払わず連絡途絶",
+    "en": "1) SNS/DM offers 'easy home job' 2) Like, review, 'boost crypto' tasks 3) Demand advance pay 4) No commission; vanish"
+  },
+  "red_flags": {
+    "ja": [
+      "事前の購入・送金要求",
+      "個人の銀行口座を仕事に使うよう指示",
+      "Singpass 認証情報の要求"
+    ],
+    "en": [
+      "Upfront purchase or transfer",
+      "Use of personal bank account for work",
+      "Request Singpass credentials"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "事前送金・自腹でのタスクは詐欺と判断",
+      "企業に直接問い合わせて求人の実在を確認",
+      "ScamShield 1799 に相談"
+    ],
+    "en": [
+      "Treat upfront payment as a scam",
+      "Contact the company directly",
+      "Call ScamShield (1799)"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "bank-transfer",
+    "cryptocurrency"
+  ],
+  "legal_notes": {
+    "ja": "Singpass の譲渡や QR の提供は違法行為に加担する恐れ",
+    "en": "Sharing Singpass credentials may abet an offence"
+  },
+  "references": [
+    {
+      "label": "ScamShield (SG): Job Scams",
+      "url": "https://www.scamshield.gov.sg/i-want-protection-from-scams/learn-to-recognise-scams/job-scams/",
+      "publisher": "ScamShield / Singapore Government",
+      "accessed": "2026-10-09",
+      "quote": "It is likely a scam if the job requires you to: Pay upfront before starting the job. ... Disclose your Singpass credentials and password or provided with a Singpass QR code for scanning to access your Singpass account in order to apply for a job."
+    }
+  ],
+  "tags": [
+    "job-scam",
+    "advance-fee",
+    "urgency"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "ScamShield が、タスク副業の赤旗（upfront pay、自腹、個人銀行口座の提供、Singpass QR の提供）を具体的に列挙。シンガポール固有の Singpass への言及が本件を国別事例に適合させる"
+  }
+}
