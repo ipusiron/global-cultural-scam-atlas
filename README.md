@@ -73,6 +73,9 @@ hub: true
 > ![日本語ダークテーマで初期表示](assets/screenshot3.png)
 > *ダークテーマに切り替えた表示*
 
+> ![日本語ライトテーマで統計タブ](assets/screenshot4.png)
+> *統計タブ（国別・ベクター別・ターゲット別・リスク分布）*
+
 ---
 
 ## ✨ 特徴
@@ -340,6 +343,7 @@ global-cultural-scam-atlas/
 │   ├── screenshot.png                   # 日本語ライトの初期表示
 │   ├── screenshot2.png                  # 日本語ライトで詳細モーダル
 │   ├── screenshot3.png                  # 日本語ダークの初期表示
+│   ├── screenshot4.png                  # 日本語ライトで統計タブ
 │   └── en/
 │       └── screenshot.png               # 英語ライトの初期表示
 ├── CHANGELOG.md                         # 変更履歴（日英併記）

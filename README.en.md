@@ -35,6 +35,9 @@ Open it directly in a browser.
 > ![Japanese dark theme](assets/screenshot3.png)
 > *Dark theme.*
 
+> ![Statistics tab](assets/screenshot4.png)
+> *Statistics tab (country / vector / target / risk distribution).*
+
 ---
 
 ## ✨ Features
@@ -302,6 +305,7 @@ global-cultural-scam-atlas/
 │   ├── screenshot.png                   # Japanese light, initial view
 │   ├── screenshot2.png                  # Japanese light, detail modal
 │   ├── screenshot3.png                  # Japanese dark, initial view
+│   ├── screenshot4.png                  # Japanese light, statistics tab
 │   └── en/
 │       └── screenshot.png               # English light, initial view
 ├── CHANGELOG.md                         # Change log (JA/EN)
