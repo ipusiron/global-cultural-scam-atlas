@@ -65,16 +65,16 @@ hub: true
 ## 📸 スクリーンショット
 
 > ![日本語ライトテーマで初期表示（53件）](assets/screenshot.png)
-> *日本語・ライトテーマで初期表示（全53件）*
+> *日本語・ライトテーマで初期表示（全53件、カード右上に出典確認バッジ）*
 
 > ![日本語ライトテーマで詳細モーダルを開いた状態](assets/screenshot2.png)
-> *jp-001 の詳細モーダル（Red Flags と Mitigations）*
+> *jp-001 の詳細モーダル（Red Flags と Mitigations、References の publisher と accessed）*
 
 > ![日本語ダークテーマで初期表示](assets/screenshot3.png)
 > *ダークテーマに切り替えた表示*
 
 > ![日本語ライトテーマで統計タブ](assets/screenshot4.png)
-> *統計タブ（国別・ベクター別・ターゲット別・リスク分布）*
+> *統計タブ（国別・ベクター別・ターゲット別・リスク分布・出典確認状態の分布）*
 
 ---
 
@@ -89,6 +89,9 @@ hub: true
 - 絞り込み状態を URL ハッシュで共有できる（コピー用のボタンつき）。
 - 統計タブで国別・ベクター別・ターゲット別・リスク分布を SVG で可視化する（全データと絞り込み後の2系列）。
 - 絞り込み結果を CSV（UTF-8 BOM・CRLF・式インジェクション対策）で取り出せる。
+- 事例ごとの出典確認状態（確認済み・一部確認・未確認）をカードと詳細モーダルにバッジで表示する。
+- 「出典確認済みのみ」のチェックボックスで絞り込める（URL ハッシュ `verified=1` と往復する）。
+- `tools/check-refs.mjs` で全 references のリンク生存を手動で検査できる（CI には入れない）。
 - 外部APIやCDNに依存しない静的サイトとして動作する。
 - データは `dist/countries.json` として誰でも取得できる。
 
@@ -98,7 +101,7 @@ hub: true
 
 ### 公開版をブラウザーで使う
 
-デモページを開き、国・攻撃ベクター・ターゲット・検索語で絞り込みます。並び替えセレクトから「国コード順」「リスクが高い順」「ID 順」を選べます。カードには一致した検索フィールド（タイトル・シナリオ・Red Flags など）がチップで並びます。右上のボタンでテーマ（ライト/ダーク）と言語（JA/EN）を切り替えられます。カードの「詳細」ボタンを押すとモーダルで Red Flags・Mitigations・References を確認でき、背景クリックや Esc で閉じるとフォーカスが元のボタンに戻ります。
+デモページを開き、国・攻撃ベクター・ターゲット・検索語で絞り込みます。「出典確認済みのみ」のチェックボックスをオンにすると、`verification.status` が `verified` の事例だけが残ります。並び替えセレクトから「国コード順」「リスクが高い順」「ID 順」を選べます。カードには一致した検索フィールド（タイトル・シナリオ・Red Flags など）がチップで並び、右上に出典確認バッジ（出典確認済み／一部確認／未確認）が付きます。右上のボタンでテーマ（ライト/ダーク）と言語（JA/EN）を切り替えられます。カードの「詳細」ボタンを押すとモーダルで Red Flags・Mitigations・References（publisher と accessed）を確認でき、背景クリックや Esc で閉じるとフォーカスが元のボタンに戻ります。
 
 ### 一覧タブと統計タブ
 
@@ -110,7 +113,11 @@ hub: true
 
 ### CSV ダウンロード
 
-「CSV ダウンロード」ボタンで、現在の絞り込み結果を CSV（UTF-8 BOM 付き・CRLF 改行）で取り出せます。列は `id, country, title, vector, targets, risk, cultural_lever, red_flags, mitigations` で、配列は ` / ` で連結します。先頭が `= + - @` の値には `'` を前置して式インジェクションを無効化します。ファイル名は `gcsa-<国>-<日付>.csv` です。
+「CSV ダウンロード」ボタンで、現在の絞り込み結果を CSV（UTF-8 BOM 付き・CRLF 改行）で取り出せます。列は `id, country, title, vector, targets, risk, cultural_lever, red_flags, mitigations, verification, references` で、配列と references の URL 群は ` / ` で連結します。先頭が `= + - @` の値には `'` を前置して式インジェクションを無効化します。ファイル名は `gcsa-<国>-<日付>.csv` です。
+
+### 出典の生存確認（手動実行）
+
+`npm run check:refs` で、`data/attacks/**` の全 references の URL に対して HEAD（405 なら GET）をホスト毎 1 秒間隔で送り、表を出力します。4xx/5xx があれば終了コード 1 で終わります。外部依存で落ちるため CI には入れていません。
 
 ### Day081 と組み合わせる
 
@@ -219,16 +226,17 @@ python -m http.server 8000 --directory docs
 | `title` | object | 攻撃の名称（`ja`, `en`） |
 | `short_desc` | object | 短い説明文（`ja`, `en`） |
 | `cultural_lever` | object | 悪用される文化的傾向（`ja`, `en`） |
-| `attack_vector` | array | 攻撃経路（`in-person`, `phone`, `email`, `sms`, `social`, `website`, `payment-app`, `postal`, `door-to-door`, `marketplace`） |
-| `targets` | array | 標的（`tourist`, `elderly`, `student`, `general`, `business`） |
+| `attack_vector` | array | 攻撃経路（`in-person`, `phone`, `email`, `sms`, `social`, `website`, `payment-app`, `postal`, `door-to-door`, `marketplace`, `mixed`） |
+| `targets` | array | 標的（`tourist`, `elderly`, `student`, `general`, `business`, `expat`） |
 | `scenario` | object | 攻撃の流れ（`ja`, `en`） |
 | `red_flags` | object | 警告兆候のリスト（`ja`, `en`） |
 | `mitigations` | object | 対策のリスト（`ja`, `en`） |
 | `risk_score` | integer | リスクスコア（1〜5） |
-| `mediums` | array | 決済手段（`cash`, `credit`, `bank-transfer`, `cryptocurrency`, `gift-cards`） |
+| `mediums` | array | 決済手段（`cash`, `credit`, `bank-transfer`, `cryptocurrency`, `gift-cards`, `e-wallet`, `qr-pay`） |
 | `legal_notes` | object | 法的注記（`ja`, `en`、省略可） |
-| `references` | array | 出典（`{label, url}`） |
+| `references` | array | 出典（`{label, url, publisher, accessed, quote}`、後者 3 項目は任意） |
 | `tags` | array | タグ |
+| `verification` | object | 出典確認状態（`{status, checked, note}`。`status` は `verified`／`partial`／`unverified`） |
 
 ### 現在の収録件数
 
@@ -237,6 +245,15 @@ python -m http.server 8000 --directory docs
 | JP（日本） | 32 |
 | US（アメリカ） | 20 |
 | IN（インド） | 1 |
+| **合計** | **53** |
+
+### 出典の確認状態
+
+| 状態 | 件数 |
+|------|------|
+| verified（出典確認済み） | 26 |
+| partial（一部確認） | 25 |
+| unverified（未確認） | 2 |
 | **合計** | **53** |
 
 ---
@@ -268,6 +285,7 @@ const phoneScams = data.countries.flatMap(c => c.attacks)
 - `npm run build` は両者をまとめて実行する。
 - `npm run validate:schema` で `data/schema.json` に準拠しているか検証する。
 - `npm run build:local` はビルド後に `dist/countries.json` を `docs/dist/` にコピーし、ローカルHTTPサーバーで配信できるようにする。
+- `npm run check:refs` で全 references の URL の生存を HEAD／GET で確認する（手動実行、CI 不参加）。
 
 ### ワークフロー
 
@@ -296,8 +314,9 @@ npm test
 - `test/contrast.test.js`: ライト・ダーク両テーマで `(fg,bg)(fg,card)(muted,bg)(muted,card)(accent,bg)(accent,card)` の6組がWCAG 4.5:1以上であること。
 - `test/format.test.js`: ファイルごとの最長行と最小行数。
 - `test/readme.test.js`: このREADMEの構造・画像参照・禁止語・ディレクトリー構造の網羅。
-- `test/phase2.test.js`: 検索フィールド拡張・ターゲット抽出・国別件数・並び替え・URL ハッシュの往復・集計・CSV エスケープと式インジェクション対策・辞書 `labelFor()` を実データで検算。
+- `test/phase2.test.js`: 検索フィールド拡張・ターゲット抽出・国別件数・並び替え・URL ハッシュの往復（`verified=1` 含む）・集計（`byVerification` を含む）・CSV エスケープと式インジェクション対策・CSV の verification/references 列・辞書 `labelFor()` を実データで検算。
 - `test/new-attack.test.js`: `tools/new-attack.mjs` の採番・既存ファイルを上書きしない挙動・不正入力の拒否を一時ディレクトリーで検証（リポジトリーに生成物を残さない）。
+- `test/check-refs.test.js`: `tools/check-refs.mjs` の URL 抽出関数と重複除去の単体テスト（ネットワークに出ない）。
 
 GitHub Actionsの `test` ワークフローが `push` と `pull_request` で同じ `npm test` を実行します。
 
@@ -382,10 +401,12 @@ global-cultural-scam-atlas/
 │   ├── i18n.test.js                     # ja/en 辞書の整合検証
 │   ├── new-attack.test.js               # 雛形スクリプトを一時ディレクトリーで検証
 │   ├── phase2.test.js                   # 検索拡張・並び替え・URL 状態・集計・CSV
+│   ├── check-refs.test.js               # check-refs.mjs の URL 抽出関数の単体テスト
 │   └── readme.test.js                   # README と README.en.md の構造検証
 └── tools/
     ├── build-countries.mjs              # dist/countries.json を生成
     ├── build-index.mjs                  # data/index.json を生成
+    ├── check-refs.mjs                   # references の URL 生存確認（手動実行）
     ├── copy-local.mjs                   # ローカル配信用に docs/dist/ へコピー
     └── new-attack.mjs                   # 新規事例の雛形 JSON を生成
 ```

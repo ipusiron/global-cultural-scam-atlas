@@ -27,16 +27,16 @@ Open it directly in a browser.
 ## 📸 Screenshots
 
 > ![English light theme, initial view](assets/en/screenshot.png)
-> *English, light theme, initial view (53 attacks).*
+> *English, light theme, initial view (53 attacks; verification badge on each card).*
 
 > ![Japanese light theme with detail modal open](assets/screenshot2.png)
-> *The detail modal for jp-001 (Red Flags and Mitigations).*
+> *The detail modal for jp-001 (Red Flags, Mitigations, References with publisher and accessed).*
 
 > ![Japanese dark theme](assets/screenshot3.png)
 > *Dark theme.*
 
 > ![Statistics tab](assets/screenshot4.png)
-> *Statistics tab (country / vector / target / risk distribution).*
+> *Statistics tab (country / vector / target / risk / verification-status distribution).*
 
 ---
 
@@ -51,6 +51,9 @@ Open it directly in a browser.
 - Filter/sort/language state round-trips through the URL hash and has a Copy-share-link button.
 - Statistics tab renders country / vector / target / risk histograms (all vs. filtered) as self-contained SVG.
 - CSV download exports the current filter result (UTF-8 BOM, CRLF, formula-injection safe).
+- Verification status for each entry (verified / partially verified / unverified) shown as a badge on cards and the detail modal.
+- A "Verified only" checkbox narrows the list to entries with `verification.status === "verified"` (and round-trips through the URL hash as `verified=1`).
+- `tools/check-refs.mjs` checks every reference URL manually (HEAD, falling back to GET); not wired into CI.
 - Static site: no external APIs or CDNs are called at runtime.
 - The aggregated dataset is publicly available as `dist/countries.json`.
 
@@ -60,7 +63,7 @@ Open it directly in a browser.
 
 ### Use the hosted demo
 
-Open the demo page and filter by country, attack vector, target, or keywords. Pick a sort order (country code, risk high-first, or id) from the Sort select. Each card lists the search fields where the query hit (title, scenario, Red Flags, ...). The header buttons toggle theme (light/dark) and language (JA/EN). Click "Details" to see Red Flags, Mitigations, and references in a modal; backdrop click or Esc closes it and focus returns to the opener.
+Open the demo page and filter by country, attack vector, target, or keywords. Toggle "Verified only" to limit the list to entries whose `verification.status` is `verified`. Pick a sort order (country code, risk high-first, or id) from the Sort select. Each card lists the search fields where the query hit (title, scenario, Red Flags, ...), and shows a verification badge (Verified / Partially verified / Unverified). The header buttons toggle theme (light/dark) and language (JA/EN). Click "Details" to see Red Flags, Mitigations, and references (with publisher and accessed date) in a modal; backdrop click or Esc closes it and focus returns to the opener.
 
 ### List and Statistics tabs
 
@@ -72,7 +75,11 @@ Filter, sort, and language state is encoded in the URL hash (e.g. `#country=JP&v
 
 ### CSV download
 
-The CSV button exports the current filter result as UTF-8 (BOM) with CRLF endings. Columns are `id, country, title, vector, targets, risk, cultural_lever, red_flags, mitigations`; arrays are joined with ` / `. Values starting with `= + - @` are prefixed with `'` to defuse spreadsheet formula injection. File name: `gcsa-<country>-<date>.csv`.
+The CSV button exports the current filter result as UTF-8 (BOM) with CRLF endings. Columns are `id, country, title, vector, targets, risk, cultural_lever, red_flags, mitigations, verification, references`; arrays and reference URL lists are joined with ` / `. Values starting with `= + - @` are prefixed with `'` to defuse spreadsheet formula injection. File name: `gcsa-<country>-<date>.csv`.
+
+### Check reference URLs (manual)
+
+`npm run check:refs` walks every `data/attacks/**` reference URL and sends a HEAD (falling back to GET on 405/501) with ~1 s spacing per host. Exits with code 1 if any 4xx/5xx is seen. External endpoints are flaky, so this script is not wired into CI.
 
 ### Combining with Day081
 
@@ -181,16 +188,17 @@ Entries are observations at the time of writing and are not exhaustive. They are
 | `title` | object | Attack name (`ja`, `en`) |
 | `short_desc` | object | Short description (`ja`, `en`) |
 | `cultural_lever` | object | Cultural tendency being exploited (`ja`, `en`) |
-| `attack_vector` | array | Channel (`in-person`, `phone`, `email`, `sms`, `social`, `website`, `payment-app`, `postal`, `door-to-door`, `marketplace`) |
-| `targets` | array | Target type (`tourist`, `elderly`, `student`, `general`, `business`) |
+| `attack_vector` | array | Channel (`in-person`, `phone`, `email`, `sms`, `social`, `website`, `payment-app`, `postal`, `door-to-door`, `marketplace`, `mixed`) |
+| `targets` | array | Target type (`tourist`, `elderly`, `student`, `general`, `business`, `expat`) |
 | `scenario` | object | Attack flow (`ja`, `en`) |
 | `red_flags` | object | Warning signs (`ja`, `en`) |
 | `mitigations` | object | Mitigations (`ja`, `en`) |
 | `risk_score` | integer | Risk score 1-5 |
-| `mediums` | array | Payment channels (`cash`, `credit`, `bank-transfer`, `cryptocurrency`, `gift-cards`) |
+| `mediums` | array | Payment channels (`cash`, `credit`, `bank-transfer`, `cryptocurrency`, `gift-cards`, `e-wallet`, `qr-pay`) |
 | `legal_notes` | object | Legal notes (`ja`, `en`, optional) |
-| `references` | array | Sources (`{label, url}`) |
+| `references` | array | Sources (`{label, url, publisher, accessed, quote}`; the last three are optional) |
 | `tags` | array | Tags |
+| `verification` | object | Verification state (`{status, checked, note}`; `status` is `verified` / `partial` / `unverified`) |
 
 ### Current counts
 
@@ -199,6 +207,15 @@ Entries are observations at the time of writing and are not exhaustive. They are
 | JP (Japan) | 32 |
 | US (United States) | 20 |
 | IN (India) | 1 |
+| **Total** | **53** |
+
+### Verification status
+
+| Status | Count |
+|--------|-------|
+| verified | 26 |
+| partial | 25 |
+| unverified | 2 |
 | **Total** | **53** |
 
 ---
@@ -230,6 +247,7 @@ const phoneScams = data.countries.flatMap(c => c.attacks)
 - `npm run build` runs both.
 - `npm run validate:schema` validates `dist/countries.json` against `data/schema.json`.
 - `npm run build:local` runs the build and copies `dist/countries.json` into `docs/dist/` so a local HTTP server rooted at `docs/` can serve it.
+- `npm run check:refs` checks every reference URL (manual, not in CI).
 
 ### Workflows
 
@@ -258,8 +276,9 @@ What the suites cover:
 - `test/contrast.test.js`: in both light and dark themes, the six key `(fg,bg)(fg,card)(muted,bg)(muted,card)(accent,bg)(accent,card)` pairs meet WCAG 4.5:1.
 - `test/format.test.js`: per-file maximum line length and minimum line count.
 - `test/readme.test.js`: structural checks on `README.md` and `README.en.md`.
-- `test/phase2.test.js`: expanded search, target extraction, per-country counts, sort, URL-hash round-trip, aggregates, CSV escaping (with formula-injection defusing), and `labelFor()` dictionary against the real dataset.
+- `test/phase2.test.js`: expanded search, target extraction, per-country counts, sort, URL-hash round-trip (including `verified=1`), aggregates (including `byVerification`), CSV escaping (with formula-injection defusing) and the new `verification` / `references` columns, and `labelFor()` dictionary against the real dataset.
 - `test/new-attack.test.js`: `tools/new-attack.mjs` sequence picking, overwrite refusal, and input validation, all driven through a tmp dir so the repo stays clean.
+- `test/check-refs.test.js`: unit tests for `tools/check-refs.mjs` URL extraction and dedup (no network).
 
 The `test` GitHub Actions workflow runs the same `npm test` on push and pull request.
 
@@ -344,10 +363,12 @@ global-cultural-scam-atlas/
 │   ├── i18n.test.js                     # ja/en dictionary consistency
 │   ├── new-attack.test.js               # new-attack.mjs run in a tmp dir
 │   ├── phase2.test.js                   # expanded search / sort / hash / aggregate / CSV
+│   ├── check-refs.test.js               # Unit tests for check-refs.mjs URL extraction
 │   └── readme.test.js                   # README structure checks
 └── tools/
     ├── build-countries.mjs              # Builds dist/countries.json
     ├── build-index.mjs                  # Builds data/index.json
+    ├── check-refs.mjs                   # Manual reference URL liveness check
     ├── copy-local.mjs                   # Copies the dataset under docs/dist/
     └── new-attack.mjs                   # Scaffold a new attack JSON
 ```

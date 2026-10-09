@@ -11,6 +11,24 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## [Unreleased]
 
 ### Added / 追加
+- 全53件に `verification{status,checked,note}` を追加（verified 26・partial 25・unverified 2）。/ Added verification metadata to all 53 attack files (26 verified, 25 partial, 2 unverified).
+- `references[]` 各項目に `publisher` と `accessed`、verified には `quote`（本文からの逐語引用、200字以内）を追加。/ Enriched every reference with `publisher` and `accessed`, and attached a literal `quote` (≤200 chars) to verified items.
+- カードと詳細モーダルに出典確認バッジ（出典確認済み／一部確認／未確認）を表示。/ Added a verification badge (verified/partial/unverified) on cards and the detail modal.
+- 絞り込みに「出典確認済みのみ」チェックボックスを追加。URL ハッシュ `verified=1` と往復。/ Added a "Verified only" checkbox that round-trips through the URL hash as `verified=1`.
+- 詳細モーダルの References に publisher と accessed を併記（quote は非表示）。/ References in the detail modal now carry publisher and accessed metadata.
+- CSV 出力に `verification` と `references` 列を追加。references は URL を ` / ` で連結。/ CSV export gained `verification` and `references` columns (URLs joined with ` / `).
+- 統計タブに「出典確認状態の分布」を追加。/ Statistics tab gained a verification-status distribution chart.
+- `tools/check-refs.mjs` と `npm run check:refs` を追加（HEAD → 405 で GET、ホスト毎 1 秒間隔、4xx/5xx で exit 1）。CI には入れない。/ Added `tools/check-refs.mjs` and the `check:refs` script (HEAD → GET on 405, ~1 s per host; exits 1 on 4xx/5xx). Not wired into CI.
+- `test/check-refs.test.js`（URL 抽出関数の単体テスト、ネットワーク非依存）、`test/phase2.test.js` と `test/data.test.js` に語彙適合・verified=1 の # 往復・CSV 新列・`byVerification` のテストを追加。/ Added `test/check-refs.test.js` and extended `test/phase2.test.js` and `test/data.test.js` to cover controlled vocabulary conformance, the new CSV columns, `verified=1` hash round-trip, and `byVerification` aggregates.
+
+### Changed / 変更
+- 制御語彙を正規化（attack_vector: street→in-person, market→marketplace／targets: elder→elderly, immigrant→expat／mediums: crypto→cryptocurrency, gift-card→gift-cards）。/ Normalised controlled vocabulary across 18 attack files.
+- `targets` に `expat`、`mediums` に `e-wallet` と `qr-pay` を正式に追加。/ Officially added `expat` to targets and `e-wallet`/`qr-pay` to mediums.
+- mediums から `postal` と `identity-theft` を除去（決済手段ではない）。`postal` は attack_vector に、`identity-theft` は tags に寄せる。/ Removed `postal` and `identity-theft` from mediums (not payment channels); moved them to `attack_vector` and `tags` respectively.
+- `data/schema.json` の `attack_vector`／`targets`／`mediums` に enum を追加し、`references.items` に `publisher`／`accessed`／`quote` を、`attacks.items` に `verification{status,checked,note}` を任意追加。/ Pinned the controlled vocabularies as enums in `data/schema.json` and added optional reference/verification metadata.
+- `docs/content-guidelines.md` と `CLAUDE.md` の統制語彙表と出典ガイドを更新。/ Updated the controlled-vocabulary tables and fact-checking guide.
+
+### Added / 追加
 - ターゲット（観光客・一般・高齢者・事業者・学生など）の絞り込みセレクトを追加。/ Added a Target filter select driven by values present in the dataset.
 - 国セレクトの各項目に件数を併記（例「日本 (JP) (32)」「すべて (53)」）。/ Country select options now carry per-country counts.
 - 検索対象を `cultural_lever`・`red_flags`・`mitigations`・`id` にも拡張し、どのフィールドで当たったかをカードに表示するようにしました。/ Full-text search now covers `cultural_lever`, `red_flags`, `mitigations`, and `id`, and each card shows which fields matched.
