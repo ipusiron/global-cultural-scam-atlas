@@ -237,3 +237,53 @@ dialog::backdrop{background:rgba(0,0,0,.6)}
 }
 .search-wrapper input{min-height:44px;font-size:16px;}
 .noscript{padding:12px 16px;background:var(--card);color:var(--fg);border-bottom:1px solid var(--border);text-align:center;}
+
+/* Tabs (list / stats) */
+.tabs{
+  display:flex;gap:4px;padding:8px 16px 0 16px;max-width:1280px;margin:0 auto;
+  border-bottom:1px solid var(--border);flex-wrap:wrap;
+}
+.tab{
+  background:transparent;color:var(--fg);border:1px solid transparent;
+  border-bottom:none;border-radius:10px 10px 0 0;padding:8px 16px;cursor:pointer;
+  font-weight:600;min-height:40px;
+}
+.tab[aria-selected="true"]{
+  background:var(--card);border-color:var(--border);
+}
+.tab:hover{filter:brightness(1.05);}
+
+/* Matched-field chips on cards */
+.matched-row{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12px;}
+.chip.matched{background:var(--chip);border-color:var(--accent);color:var(--fg);}
+
+/* Toast (share link copied) */
+.toast{
+  position:fixed;left:50%;bottom:24px;transform:translateX(-50%);
+  background:var(--card);color:var(--fg);border:1px solid var(--border);
+  padding:10px 16px;border-radius:8px;box-shadow:0 6px 16px rgba(0,0,0,.35);
+  z-index:2000;opacity:0;transition:opacity .2s;max-width:92vw;text-align:center;
+}
+.toast.visible{opacity:1;}
+
+/* Stats view */
+.stats-view{
+  padding:16px;max-width:1280px;margin:0 auto;
+  display:flex;flex-direction:column;gap:24px;
+}
+.stats-section{
+  background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 14px;
+}
+.stats-section h3{margin:0 0 8px 0;font-size:16px;}
+.stats-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.stats-col h4{margin:4px 0 6px 0;font-size:13px;color:var(--muted);font-weight:600;}
+.stats-chart{width:100%;max-width:360px;height:auto;display:block;}
+.stats-chart .stats-label{fill:var(--fg);font-size:12px;font-family:system-ui,sans-serif;}
+.stats-chart .stats-count{fill:var(--muted);font-size:12px;font-family:system-ui,sans-serif;}
+.stats-chart .stats-bar{fill:var(--accent);}
+@media (max-width:640px){
+  .stats-pair{grid-template-columns:1fr;}
+}
+
+/* hidden 属性を display 指定より優先する（.cards の grid と .stats-view の flex が勝ち、統計タブで一覧が隠れなかった） */
+[hidden]{display:none !important;}
