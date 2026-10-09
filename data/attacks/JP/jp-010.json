@@ -61,12 +61,19 @@
   "references": [
     {
       "label": "東京都消費生活総合センター：繁華街の客引きトラブル",
-      "url": "https://www.shouhiseikatu.metro.tokyo.lg.jp/"
+      "url": "https://www.shouhiseikatu.metro.tokyo.lg.jp/",
+      "publisher": "shouhiseikatu.metro.tokyo.lg.jp",
+      "accessed": "2026-10-09"
     }
   ],
   "tags": [
     "pressure-sales",
     "tourism",
     "street"
-  ]
+  ],
+  "verification": {
+    "status": "partial",
+    "checked": "2026-10-09",
+    "note": "関連する公的注意喚起はあるが、事例の手口を個別に裏づける逐語の記述を本文に見出せなかった"
+  }
 }

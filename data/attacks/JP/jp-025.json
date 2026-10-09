@@ -63,11 +63,16 @@
   "references": [
     {
       "label": "IPA：物理的セキュリティ対策",
-      "url": "https://www.ipa.go.jp/security/10threats/10threats2024.html"
+      "url": "https://www.ipa.go.jp/security/10threats/10threats2024.html",
+      "publisher": "ipa.go.jp",
+      "accessed": "2026-10-09",
+      "quote": "10大脅威 2024では、個人の10大脅威の順位は掲載せず、五十音順で並べています。これは、順位が高い脅威から優先的に対応し、下位の脅威への対策が疎かになることを懸念してのことです。"
     },
     {
       "label": "NISC：サイバーセキュリティ2024",
-      "url": "https://www.nisc.go.jp/pdf/policy/kihon-s/cs2024.pdf"
+      "url": "https://www.nisc.go.jp/pdf/policy/kihon-s/cs2024.pdf",
+      "publisher": "nisc.go.jp",
+      "accessed": "2026-10-09"
     }
   ],
   "tags": [
@@ -75,5 +80,10 @@
     "physical-security",
     "dumpster-diving",
     "information-theft"
-  ]
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "取得した本文に手口を示す記述あり（ipa.go.jp）"
+  }
 }

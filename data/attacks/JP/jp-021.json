@@ -61,12 +61,20 @@
   "references": [
     {
       "label": "消費者庁：送り付け商法（ネガティブ・オプション）",
-      "url": "https://www.no-trouble.caa.go.jp/qa/negativeoption.html"
+      "url": "https://www.no-trouble.caa.go.jp/qa/negativeoption.html",
+      "publisher": "no-trouble.caa.go.jp",
+      "accessed": "2026-10-09",
+      "quote": "今回の改正により、事業者は送付した商品について直ちに返還請求できなくなるため、注文や契約をしていないにもかかわらず、金銭を得ようとして一方的に送り付けられた商品については、消費者は直ちに処分することができるようになります。"
     }
   ],
   "tags": [
     "negative-option",
     "postal",
     "consumer-law"
-  ]
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "取得した本文に手口を示す記述あり（no-trouble.caa.go.jp）"
+  }
 }

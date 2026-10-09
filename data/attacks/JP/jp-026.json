@@ -63,11 +63,15 @@
   "references": [
     {
       "label": "国民生活センター：鍵開けサービスのトラブル",
-      "url": "https://www.kokusen.go.jp/"
+      "url": "https://www.kokusen.go.jp/",
+      "publisher": "kokusen.go.jp",
+      "accessed": "2026-10-09"
     },
     {
       "label": "警察庁：住宅侵入犯罪の防止",
-      "url": "https://www.npa.go.jp/bureau/safetylife/"
+      "url": "https://www.npa.go.jp/bureau/safetylife/",
+      "publisher": "npa.go.jp",
+      "accessed": "2026-10-09"
     }
   ],
   "tags": [
@@ -75,5 +79,10 @@
     "physical-intrusion",
     "emergency-exploitation",
     "burglary"
-  ]
+  ],
+  "verification": {
+    "status": "partial",
+    "checked": "2026-10-09",
+    "note": "関連する公的注意喚起はあるが、事例の手口を個別に裏づける逐語の記述を本文に見出せなかった"
+  }
 }

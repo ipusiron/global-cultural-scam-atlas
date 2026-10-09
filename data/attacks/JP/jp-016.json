@@ -61,12 +61,19 @@
   "references": [
     {
       "label": "日本赤十字社：義援金・寄付情報",
-      "url": "https://www.jrc.or.jp/"
+      "url": "https://www.jrc.or.jp/",
+      "publisher": "jrc.or.jp",
+      "accessed": "2026-10-09"
     }
   ],
   "tags": [
     "charity",
     "street",
     "festival-pretext"
-  ]
+  ],
+  "verification": {
+    "status": "partial",
+    "checked": "2026-10-09",
+    "note": "関連する公的注意喚起はあるが、事例の手口を個別に裏づける逐語の記述を本文に見出せなかった"
+  }
 }

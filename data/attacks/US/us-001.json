@@ -59,5 +59,10 @@
     "fake-tech-support",
     "urgency",
     "authority-pretext"
-  ]
+  ],
+  "verification": {
+    "status": "unverified",
+    "checked": "2026-10-09",
+    "note": "事例の手口を裏づける出典が見つからなかった"
+  }
 }

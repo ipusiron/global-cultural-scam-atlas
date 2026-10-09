@@ -59,12 +59,19 @@
   "references": [
     {
       "label": "特許庁：偽ブランド対策・知的財産",
-      "url": "https://www.jpo.go.jp/"
+      "url": "https://www.jpo.go.jp/",
+      "publisher": "jpo.go.jp",
+      "accessed": "2026-10-09"
     }
   ],
   "tags": [
     "counterfeit",
     "tourism",
     "street"
-  ]
+  ],
+  "verification": {
+    "status": "partial",
+    "checked": "2026-10-09",
+    "note": "関連する公的注意喚起はあるが、事例の手口を個別に裏づける逐語の記述を本文に見出せなかった"
+  }
 }

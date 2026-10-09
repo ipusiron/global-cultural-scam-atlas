@@ -1,19 +1,86 @@
 {
   "id": "us-008",
-  "title": { "ja": "学生ローン免除詐欺", "en": "Student Loan Forgiveness Scam" },
-  "short_desc": { "ja": "偽のローン免除プログラムで手数料詐取", "en": "Charge fees for fake loan forgiveness programs" },
-  "cultural_lever": { "ja": "学生ローン負担への絶望・救済への期待", "en": "Student debt burden and hope for relief" },
-  "attack_vector": ["phone", "email", "social"],
-  "targets": ["student", "general"],
-  "scenario": { "ja": "1) ローン免除の電話/メール 2) 政府プログラムを装う 3) 前払い手数料要求 4) 個人情報収集", "en": "1) Call/email about forgiveness 2) Pose as government program 3) Request upfront fees 4) Collect personal data" },
-  "red_flags": { "ja": ["前払い手数料", "即決の圧力", "政府機関を装う企業"], "en": ["Upfront fees", "Pressure to act now", "Companies posing as government"] },
-  "mitigations": { "ja": ["StudentAid.govのみ信頼", "手数料は不要と認識", "FSA IDは共有しない"], "en": ["Only trust StudentAid.gov", "Know fees aren't required", "Never share FSA ID"] },
-  "risk_score": 4,
-  "mediums": ["credit", "bank-transfer"],
-  "legal_notes": { "ja": "", "en": "" },
-  "references": [
-    { "label": "Federal Student Aid Scam Alert", "url": "https://studentaid.gov/resources/scams" },
-    { "label": "FTC Student Loan Scams", "url": "https://consumer.ftc.gov/articles/student-loan-scams" }
+  "title": {
+    "ja": "学生ローン免除詐欺",
+    "en": "Student Loan Forgiveness Scam"
+  },
+  "short_desc": {
+    "ja": "偽のローン免除プログラムで手数料詐取",
+    "en": "Charge fees for fake loan forgiveness programs"
+  },
+  "cultural_lever": {
+    "ja": "学生ローン負担への絶望・救済への期待",
+    "en": "Student debt burden and hope for relief"
+  },
+  "attack_vector": [
+    "phone",
+    "email",
+    "social"
   ],
-  "tags": ["student-loans", "debt-relief", "impersonation", "advance-fee"]
+  "targets": [
+    "student",
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) ローン免除の電話/メール 2) 政府プログラムを装う 3) 前払い手数料要求 4) 個人情報収集",
+    "en": "1) Call/email about forgiveness 2) Pose as government program 3) Request upfront fees 4) Collect personal data"
+  },
+  "red_flags": {
+    "ja": [
+      "前払い手数料",
+      "即決の圧力",
+      "政府機関を装う企業"
+    ],
+    "en": [
+      "Upfront fees",
+      "Pressure to act now",
+      "Companies posing as government"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "StudentAid.govのみ信頼",
+      "手数料は不要と認識",
+      "FSA IDは共有しない"
+    ],
+    "en": [
+      "Only trust StudentAid.gov",
+      "Know fees aren't required",
+      "Never share FSA ID"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "credit",
+    "bank-transfer"
+  ],
+  "legal_notes": {
+    "ja": "",
+    "en": ""
+  },
+  "references": [
+    {
+      "label": "Federal Student Aid Scam Alert",
+      "url": "https://studentaid.gov/resources/scams",
+      "publisher": "studentaid.gov",
+      "accessed": "2026-10-09"
+    },
+    {
+      "label": "FTC Student Loan Scams",
+      "url": "https://consumer.ftc.gov/articles/student-loan-scams",
+      "publisher": "consumer.ftc.gov",
+      "accessed": "2026-10-09"
+    }
+  ],
+  "tags": [
+    "student-loans",
+    "debt-relief",
+    "impersonation",
+    "advance-fee"
+  ],
+  "verification": {
+    "status": "partial",
+    "checked": "2026-10-09",
+    "note": "関連する公的注意喚起はあるが、事例の手口を個別に裏づける逐語の記述を本文に見出せなかった"
+  }
 }

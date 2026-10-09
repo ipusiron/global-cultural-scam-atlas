@@ -64,11 +64,16 @@
   "references": [
     {
       "label": "総務省：偽・誤情報の流通対策",
-      "url": "https://www.soumu.go.jp/johotsusintokei/whitepaper/ja/r06/html/nd141210.html"
+      "url": "https://www.soumu.go.jp/johotsusintokei/whitepaper/ja/r06/html/nd141210.html",
+      "publisher": "soumu.go.jp",
+      "accessed": "2026-10-09",
+      "quote": "m���W�[�Ƃ̋��� ��1�߁@AI�̐i���ɔ����ۑ�ƌ���̎�g �i1�j�@�U�E����̗��ʁE�g�U���̉ۑ�y�ё΍� �u�f�B�[�v�t�F�C�N�v�Ƃ́A�u�f�B�[�v���[�j���O�i�[�w�w�K�j�v�Ɓu�t�F�C�N�i�U���j�v��g�ݍ��킹����"
     },
     {
       "label": "トレンドマイクロ：ディープフェイクを悪用した攻撃",
-      "url": "https://www.trendmicro.com/ja_jp/research/25/g/deepfake-it-til-you-make-it.html"
+      "url": "https://www.trendmicro.com/ja_jp/research/25/g/deepfake-it-til-you-make-it.html",
+      "publisher": "trendmicro.com",
+      "accessed": "2026-10-09"
     }
   ],
   "tags": [
@@ -76,5 +81,10 @@
     "blackmail",
     "AI-generated",
     "sextortion"
-  ]
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "取得した本文に手口を示す記述あり（soumu.go.jp）"
+  }
 }

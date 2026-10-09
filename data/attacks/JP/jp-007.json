@@ -61,7 +61,10 @@
   "references": [
     {
       "label": "警察庁：特殊詐欺対策（SOS47）",
-      "url": "https://www.npa.go.jp/bureau/safetylife/sos47/"
+      "url": "https://www.npa.go.jp/bureau/safetylife/sos47/",
+      "publisher": "npa.go.jp",
+      "accessed": "2026-10-09",
+      "quote": "S47特殊詐欺対策ページ | ストップ、オレオレ詐欺 本文へ 文字サイズ変更 標準 大 ひょっとして詐欺かも… 不安を感じたら相談電話へ #9110 発生状況 手口一覧と対策 注意喚起・お知らせ ムービー ダウンロード SOS47をもっと知る イベントレポート 警察庁推奨アプリ MENU 発生状況 手口一覧と対策 注意喚起・お知らせ ムー"
     }
   ],
   "tags": [
@@ -69,5 +72,10 @@
     "urgency",
     "phone",
     "authority-pretext"
-  ]
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "取得した本文に手口を示す記述あり（npa.go.jp）"
+  }
 }

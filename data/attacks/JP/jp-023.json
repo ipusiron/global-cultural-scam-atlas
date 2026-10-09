@@ -65,11 +65,16 @@
   "references": [
     {
       "label": "Google Cloud：AI音声なりすまし脅威",
-      "url": "https://cloud.google.com/blog/ja/topics/threat-intelligence/ai-powered-voice-spoofing-vishing-attacks"
+      "url": "https://cloud.google.com/blog/ja/topics/threat-intelligence/ai-powered-voice-spoofing-vishing-attacks",
+      "publisher": "cloud.google.com",
+      "accessed": "2026-10-09",
+      "quote": "詐欺師が音声クローニングとディープフェイクを利用して、 ある組織から 2 億香港ドル以上を盗んだ という事例が報告されている。"
     },
     {
       "label": "トレンドマイクロ：ディープフェイク実態調査2024",
-      "url": "https://www.trendmicro.com/ja_jp/jp-security/24/g/securitytrend-20240703-02.html"
+      "url": "https://www.trendmicro.com/ja_jp/jp-security/24/g/securitytrend-20240703-02.html",
+      "publisher": "trendmicro.com",
+      "accessed": "2026-10-09"
     }
   ],
   "tags": [
@@ -77,5 +82,10 @@
     "AI-fraud",
     "voice-cloning",
     "impersonation"
-  ]
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "取得した本文に手口を示す記述あり（cloud.google.com）"
+  }
 }

@@ -62,12 +62,20 @@
   "references": [
     {
       "label": "消費者庁：連鎖販売取引（マルチ商法）",
-      "url": "https://www.no-trouble.caa.go.jp/what/renhan.html"
+      "url": "https://www.no-trouble.caa.go.jp/what/renhan.html",
+      "publisher": "no-trouble.caa.go.jp",
+      "accessed": "2026-10-09",
+      "quote": "とは 訪問販売 通信販売 電話勧誘販売 連鎖販売取引 特定継続的役務提供 業務提供誘引販売取引 訪問購入 特定商取引法の条文 特定商取引法の条文 特定商取引に関する法律の解説（令和７年６月１日時点版） 法改正 令和3年改正 令和2年改正 平成28年改正 平成24年改正 平成20年改正 平成16年改正 平成11年改正 お問合せ窓口 全国のお"
     }
   ],
   "tags": [
     "mlm",
     "seminar",
     "pressure-sales"
-  ]
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "取得した本文に手口を示す記述あり（no-trouble.caa.go.jp）"
+  }
 }

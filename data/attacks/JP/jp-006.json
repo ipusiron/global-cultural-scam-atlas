@@ -61,11 +61,16 @@
   "references": [
     {
       "label": "消費者庁：売買契約に基づかないで送付された商品に関するQ&A",
-      "url": "https://www.no-trouble.caa.go.jp/qa/negativeoption.html"
+      "url": "https://www.no-trouble.caa.go.jp/qa/negativeoption.html",
+      "publisher": "no-trouble.caa.go.jp",
+      "accessed": "2026-10-09",
+      "quote": "今回の改正により、事業者は送付した商品について直ちに返還請求できなくなるため、注文や契約をしていないにもかかわらず、金銭を得ようとして一方的に送り付けられた商品については、消費者は直ちに処分することができるようになります。"
     },
     {
       "label": "消費者庁：特定商取引法ガイド（行政処分の執行状況）",
-      "url": "https://www.no-trouble.caa.go.jp/action/result_1year.html"
+      "url": "https://www.no-trouble.caa.go.jp/action/result_1year.html",
+      "publisher": "no-trouble.caa.go.jp",
+      "accessed": "2026-10-09"
     }
   ],
   "tags": [
@@ -73,5 +78,10 @@
     "postal",
     "fake-fee",
     "consumer-law"
-  ]
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "取得した本文に手口を示す記述あり（no-trouble.caa.go.jp）"
+  }
 }

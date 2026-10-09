@@ -63,11 +63,16 @@
   "references": [
     {
       "label": "フィッシング対策協議会：国税庁をかたるフィッシング注意喚起(2024/05/22)",
-      "url": "https://www.antiphishing.jp/news/alert/nta_20240522.html"
+      "url": "https://www.antiphishing.jp/news/alert/nta_20240522.html",
+      "publisher": "antiphishing.jp",
+      "accessed": "2026-10-09",
+      "quote": "フィッシング対策協議会 Council of Anti-Phishing Japan | ニュース | 緊急情報 | 国税庁をかたるフィッシング (2024/05/22) ～ フィッシングとは実在する組織を騙って、ユーザネーム、パスワード、アカウントID、ATMの暗証番号、クレジットカード番号といった個人情報を詐取する行為です ～ 報告 フィッシングの報告 よくあるご質問 ／ お問い合わせ Pow"
     },
     {
       "label": "国税庁/税務署装い詐欺メールの学内注意喚起（UEC）",
-      "url": "https://www.cc.uec.ac.jp/blogs/news/2024/12/20241229zeimuphishing.html"
+      "url": "https://www.cc.uec.ac.jp/blogs/news/2024/12/20241229zeimuphishing.html",
+      "publisher": "cc.uec.ac.jp",
+      "accessed": "2026-10-09"
     }
   ],
   "tags": [
@@ -77,5 +82,10 @@
     "sms",
     "email",
     "urgency"
-  ]
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "取得した本文に手口を示す記述あり（antiphishing.jp）"
+  }
 }

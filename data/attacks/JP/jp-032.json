@@ -73,11 +73,16 @@
   "references": [
     {
       "label": "フィッシング対策協議会",
-      "url": "https://www.antiphishing.jp/"
+      "url": "https://www.antiphishing.jp/",
+      "publisher": "antiphishing.jp",
+      "accessed": "2026-10-09"
     },
     {
       "label": "ソースネクスト：キ・ケ・ンの取説",
-      "url": "https://www.sourcenext.com/product/security/blog/"
+      "url": "https://www.sourcenext.com/product/security/blog/",
+      "publisher": "sourcenext.com",
+      "accessed": "2026-10-09",
+      "quote": "カテゴリ： パスワード 2026/10/08 更新 「国税庁」を騙る詐欺 「国税庁」を騙ったフィッシング詐欺が増加していると、フィッシング対策協議会が注意を呼びかけています。"
     }
   ],
   "tags": [
@@ -87,5 +92,10 @@
     "urgency",
     "financial-fraud",
     "sms-phishing"
-  ]
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "取得した本文に手口を示す記述あり（sourcenext.com）"
+  }
 }

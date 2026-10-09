@@ -62,11 +62,15 @@
   "references": [
     {
       "label": "総務省 国民のための情報セキュリティサイト：不審な警告画面",
-      "url": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/security/"
+      "url": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/security/",
+      "publisher": "soumu.go.jp",
+      "accessed": "2026-10-09"
     },
     {
       "label": "フィッシング対策協議会",
-      "url": "https://www.antiphishing.jp/"
+      "url": "https://www.antiphishing.jp/",
+      "publisher": "antiphishing.jp",
+      "accessed": "2026-10-09"
     }
   ],
   "tags": [
@@ -74,5 +78,10 @@
     "website",
     "phone",
     "urgency"
-  ]
+  ],
+  "verification": {
+    "status": "partial",
+    "checked": "2026-10-09",
+    "note": "関連する公的注意喚起はあるが、事例の手口を個別に裏づける逐語の記述を本文に見出せなかった"
+  }
 }

@@ -61,11 +61,16 @@
   "references": [
     {
       "label": "警察庁 SOS47 手口一覧と対策",
-      "url": "https://www.npa.go.jp/bureau/safetylife/sos47/case/"
+      "url": "https://www.npa.go.jp/bureau/safetylife/sos47/case/",
+      "publisher": "npa.go.jp",
+      "accessed": "2026-10-09",
+      "quote": "ニセ警察詐欺 警察官等をかたり、捜査（優先調査）名目で現金等をだまし取る手口です。"
     },
     {
       "label": "東京都：最新の特殊詐欺（警察官を騙る手口）",
-      "url": "https://www.seikatubunka.metro.tokyo.lg.jp/tomin_anzen/chian/mijikanahanzai/saisinnotokusyusagi"
+      "url": "https://www.seikatubunka.metro.tokyo.lg.jp/tomin_anzen/chian/mijikanahanzai/saisinnotokusyusagi",
+      "publisher": "seikatubunka.metro.tokyo.lg.jp",
+      "accessed": "2026-10-09"
     }
   ],
   "tags": [
@@ -75,5 +80,10 @@
     "urgency",
     "social-engineering",
     "tourism"
-  ]
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "取得した本文に手口を示す記述あり（npa.go.jp）"
+  }
 }

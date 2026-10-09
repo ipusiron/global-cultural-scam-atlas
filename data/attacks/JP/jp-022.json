@@ -64,11 +64,16 @@
   "references": [
     {
       "label": "警察庁：闇バイトの危険性",
-      "url": "https://www.npa.go.jp/bureau/safetylife/yamibaito/hanzaishaboshu.html"
+      "url": "https://www.npa.go.jp/bureau/safetylife/yamibaito/hanzaishaboshu.html",
+      "publisher": "npa.go.jp",
+      "accessed": "2026-10-09",
+      "quote": "いわゆる「闇バイト」の危険性について｜警察庁Webサイト ホーム 各部局から 生活安全局 いわゆる「闇バイト」の危険性について いわゆる「闇バイト」の危険性について ＳＮＳやインターネットの掲示板には、仕事の内容を明らかにせずに著しく高額な報酬の支払いを示唆するなどして犯罪の実行者を募集する投稿が掲載されています。簡単に 高収入 を得られるなら、と応募して、強盗や詐欺といった犯罪に加担することとな"
     },
     {
       "label": "警察庁：令和6年特殊詐欺統計",
-      "url": "https://www.npa.go.jp/bureau/criminal/souni/tokusyusagi/hurikomesagi_toukei2024.pdf"
+      "url": "https://www.npa.go.jp/bureau/criminal/souni/tokusyusagi/hurikomesagi_toukei2024.pdf",
+      "publisher": "npa.go.jp",
+      "accessed": "2026-10-09"
     }
   ],
   "tags": [
@@ -76,5 +81,10 @@
     "recruitment",
     "organized-crime",
     "youth-exploitation"
-  ]
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "取得した本文に手口を示す記述あり（npa.go.jp）"
+  }
 }

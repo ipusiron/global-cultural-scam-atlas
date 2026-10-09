@@ -63,7 +63,9 @@
   "references": [
     {
       "label": "金融庁：無登録業者にご注意",
-      "url": "https://www.fsa.go.jp/"
+      "url": "https://www.fsa.go.jp/",
+      "publisher": "fsa.go.jp",
+      "accessed": "2026-10-09"
     }
   ],
   "tags": [
@@ -71,5 +73,10 @@
     "social",
     "crypto",
     "authority-pretext"
-  ]
+  ],
+  "verification": {
+    "status": "partial",
+    "checked": "2026-10-09",
+    "note": "関連する公的注意喚起はあるが、事例の手口を個別に裏づける逐語の記述を本文に見出せなかった"
+  }
 }

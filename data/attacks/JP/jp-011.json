@@ -61,12 +61,19 @@
   "references": [
     {
       "label": "国民生活センター：フリマアプリのトラブル",
-      "url": "https://www.kokusen.go.jp/"
+      "url": "https://www.kokusen.go.jp/",
+      "publisher": "kokusen.go.jp",
+      "accessed": "2026-10-09"
     }
   ],
   "tags": [
     "marketplace",
     "phishing",
     "social-engineering"
-  ]
+  ],
+  "verification": {
+    "status": "partial",
+    "checked": "2026-10-09",
+    "note": "関連する公的注意喚起はあるが、事例の手口を個別に裏づける逐語の記述を本文に見出せなかった"
+  }
 }

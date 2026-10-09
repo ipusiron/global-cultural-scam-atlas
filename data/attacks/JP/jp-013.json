@@ -58,12 +58,19 @@
   "references": [
     {
       "label": "観光庁：訪日旅行の安全情報",
-      "url": "https://www.mlit.go.jp/kankocho/"
+      "url": "https://www.mlit.go.jp/kankocho/",
+      "publisher": "mlit.go.jp",
+      "accessed": "2026-10-09"
     }
   ],
   "tags": [
     "tourism",
     "street",
     "cash"
-  ]
+  ],
+  "verification": {
+    "status": "partial",
+    "checked": "2026-10-09",
+    "note": "関連する公的注意喚起はあるが、事例の手口を個別に裏づける逐語の記述を本文に見出せなかった"
+  }
 }

@@ -63,11 +63,16 @@
   "references": [
     {
       "label": "警察庁：SNS型投資・ロマンス詐欺",
-      "url": "https://www.npa.go.jp/bureau/criminal/souni/tokusyusagi/"
+      "url": "https://www.npa.go.jp/bureau/criminal/souni/tokusyusagi/",
+      "publisher": "npa.go.jp",
+      "accessed": "2026-10-09"
     },
     {
       "label": "金融庁：投資詐欺に関する注意喚起",
-      "url": "https://www.fsa.go.jp/ordinary/chuui/"
+      "url": "https://www.fsa.go.jp/ordinary/chuui/",
+      "publisher": "fsa.go.jp",
+      "accessed": "2026-10-09",
+      "quote": "個人間融資 SNSなどを通じて見知らぬ人同士が知り合い、金銭の貸し借りをすることをうたうもの。個人間融資であっても、反復継続の意思をもって金銭の貸付けを行う場合には、貸金業の登録を受ける必要がある。個人を装ったヤミ金融業者により違法な高金利の貸付けが行われるほか、個人情報が悪用されたり、ネット上でさらされるなど、トラブルや犯罪被害に巻き込まれる危険性がある。"
     }
   ],
   "tags": [
@@ -75,5 +80,10 @@
     "money-mule",
     "SNS-recruitment",
     "organized-crime"
-  ]
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "取得した本文に手口を示す記述あり（fsa.go.jp）"
+  }
 }

@@ -61,7 +61,9 @@
   "references": [
     {
       "label": "フィッシング対策協議会（宅配便不在連絡を装う手口）",
-      "url": "https://www.antiphishing.jp/"
+      "url": "https://www.antiphishing.jp/",
+      "publisher": "antiphishing.jp",
+      "accessed": "2026-10-09"
     }
   ],
   "tags": [
@@ -69,5 +71,10 @@
     "sms",
     "website",
     "phishing"
-  ]
+  ],
+  "verification": {
+    "status": "partial",
+    "checked": "2026-10-09",
+    "note": "関連する公的注意喚起はあるが、事例の手口を個別に裏づける逐語の記述を本文に見出せなかった"
+  }
 }
