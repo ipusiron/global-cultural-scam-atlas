@@ -1,0 +1,78 @@
+{
+  "id": "au-001",
+  "title": {
+    "ja": "銀行を装うフィッシング",
+    "en": "Bank Phishing"
+  },
+  "short_desc": {
+    "ja": "本物そっくりのメール・SMS で銀行を装い情報を奪取",
+    "en": "Impersonates banks via lookalike SMS and emails."
+  },
+  "cultural_lever": {
+    "ja": "大手銀行のブランドへの信頼",
+    "en": "Trust in established bank brands"
+  },
+  "attack_vector": [
+    "sms",
+    "email",
+    "social"
+  ],
+  "targets": [
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) 信頼される組織を装う 2) 本物そっくりのメッセージ送付 3) リンク・添付クリックや情報入力を促す 4) ログインを窃取",
+    "en": "1) Pose as a trusted org 2) Send lookalike message 3) Push a link or attachment 4) Steal credentials"
+  },
+  "red_flags": {
+    "ja": [
+      "個人名を含む本物らしいメッセージ",
+      "リンクや添付ファイルの誘導",
+      "リワード失効など急かす文言"
+    ],
+    "en": [
+      "Message using your name feels genuine",
+      "Push to click a link or attachment",
+      "Urgency like 'points expiring'"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "リンクを踏まず銀行アプリや公式 URL から入る",
+      "多要素認証を有効化",
+      "疑わしいメッセージは削除"
+    ],
+    "en": [
+      "Open the bank app or type the URL",
+      "Enable multi-factor authentication",
+      "Delete suspicious messages"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "bank-transfer"
+  ],
+  "legal_notes": {
+    "ja": "Scamwatch（NASC）へ報告",
+    "en": "Report to Scamwatch (NASC)"
+  },
+  "references": [
+    {
+      "label": "ASIC MoneySmart: Banking scams - Phishing scams",
+      "url": "https://moneysmart.gov.au/financial-scams/banking-scams",
+      "publisher": "ASIC MoneySmart",
+      "accessed": "2026-10-09",
+      "quote": "Phishing is when a scammer tries to get your personal information so they can get access to your online accounts. Scammers may contact you by text, email, social media or messaging apps pretending to be a trusted organisation. The message might look almost exactly like the real thing. They may know your name and other personal details that make the message sound genuine."
+    }
+  ],
+  "tags": [
+    "phishing",
+    "banking-fraud",
+    "impersonation"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "ASIC MoneySmart の銀行詐欺ページが、接触経路（text, email, social media or messaging apps）と、装う相手（a trusted organisation）、要求（personal information）を具体的に記述。本物そっくりで個人名を含む点に対応"
+  }
+}

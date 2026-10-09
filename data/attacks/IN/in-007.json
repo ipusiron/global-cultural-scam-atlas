@@ -1,0 +1,78 @@
+{
+  "id": "in-007",
+  "title": {
+    "ja": "Caller ID スプーフィングによる成りすまし詐欺",
+    "en": "Caller ID Spoofing Scam"
+  },
+  "short_desc": {
+    "ja": "発信者番号を偽装して銀行や政府機関を装う",
+    "en": "Falsified caller ID impersonates banks or government."
+  },
+  "cultural_lever": {
+    "ja": "電話での本人確認への信頼と、発信者番号への過信",
+    "en": "Belief that caller IDs identify the actual caller"
+  },
+  "attack_vector": [
+    "phone"
+  ],
+  "targets": [
+    "general",
+    "elderly"
+  ],
+  "scenario": {
+    "ja": "1) 発信者 ID を偽装し銀行や政府機関を装う 2) OTP・PIN・口座情報を要求 3) 口座を乗っ取り送金",
+    "en": "1) Spoof caller ID to look like a bank/official 2) Ask for OTP/PIN/account 3) Hijack and transfer"
+  },
+  "red_flags": {
+    "ja": [
+      "発信者番号が正規でも急な情報要求",
+      "OTP・PIN・CVV の電話での要求",
+      "急かす文言"
+    ],
+    "en": [
+      "'Legit' caller ID that still asks for info",
+      "Request for OTP/PIN/CVV by phone",
+      "Urgent pressure"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "電話を切り、公式番号へ折り返す",
+      "OTP・PIN・CVV は電話で絶対共有しない",
+      "1930 または cybercrime.gov.in へ通報"
+    ],
+    "en": [
+      "Hang up and call back on an official number",
+      "Never share OTP/PIN/CVV by phone",
+      "Report to 1930 / cybercrime.gov.in"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "bank-transfer",
+    "credit"
+  ],
+  "legal_notes": {
+    "ja": "I4C が 2022 年8月に公告",
+    "en": "I4C advisory issued August 2022"
+  },
+  "references": [
+    {
+      "label": "I4C Advisory: Cybercriminals using Caller ID Spoofing to perpetrate Cybercrime",
+      "url": "https://cybercrime.gov.in/webform/Advisory.aspx",
+      "publisher": "Indian Cyber Crime Coordination Centre (I4C)",
+      "accessed": "2026-10-09",
+      "quote": "Cybercriminals using Caller ID Spoofing to perpetrate Cybercrime. August 31 2022 Caller ID Spoofing is when a caller deliberately falsifies the information transmitted to your caller ID display to disguise their identity."
+    }
+  ],
+  "tags": [
+    "caller-id-spoofing",
+    "impersonation",
+    "banking-fraud"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "I4C 公告が、手口（falsifies the information transmitted to your caller ID display）を定義として明示"
+  }
+}

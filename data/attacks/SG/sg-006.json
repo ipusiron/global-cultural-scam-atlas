@@ -1,0 +1,77 @@
+{
+  "id": "sg-006",
+  "title": {
+    "ja": "暗号資産投資詐欺（指定ウォレットへの送金）",
+    "en": "Crypto Investment Scam (Deposit to Designated Wallet)"
+  },
+  "short_desc": {
+    "ja": "投資名目で新規口座を開設させ指定ウォレットに暗号資産を送らせる",
+    "en": "'Investment' pretext routes crypto to a scammer's wallet."
+  },
+  "cultural_lever": {
+    "ja": "暗号資産市場への期待と MAS 規制の勘違い",
+    "en": "Appeal of crypto and confusion about MAS oversight"
+  },
+  "attack_vector": [
+    "social",
+    "website"
+  ],
+  "targets": [
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) SNS や DM で高利回りの投資を提案 2) 新規の暗号資産口座を開設させる 3) 指定ウォレットへ送金 4) 口座ごと乗っ取り、資金消失",
+    "en": "1) Social DM pushes high-return investing 2) Open a new crypto account 3) Send to designated wallet 4) Take over the account"
+  },
+  "red_flags": {
+    "ja": [
+      "新規口座の開設と指定ウォレットへの送金",
+      "シードフレーズやログインの共有要求",
+      "高利回りの保証"
+    ],
+    "en": [
+      "New account + designated wallet transfer",
+      "Request for seed phrases or logins",
+      "'Guaranteed' high returns"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "シードフレーズ・パスワード・OTP を絶対に共有しない",
+      "正規の暗号資産業者サイトでログイン状態を確認",
+      "MAS は暗号資産投資の損失を補償しないと認識"
+    ],
+    "en": [
+      "Never share seed phrases, passwords, OTPs",
+      "Verify you are on the official platform",
+      "MAS does not cover crypto losses"
+    ]
+  },
+  "risk_score": 5,
+  "mediums": [
+    "cryptocurrency"
+  ],
+  "legal_notes": {
+    "ja": "ScamShield へ報告。CSA SingCERT へもフィッシングを通報",
+    "en": "Report to ScamShield; phishing to CSA SingCERT"
+  },
+  "references": [
+    {
+      "label": "ScamShield (SG): Cryptocurrency Related Scams - Investment Scam",
+      "url": "https://www.scamshield.gov.sg/i-want-protection-from-scams/learn-to-recognise-scams/cryptocurrency-related-scams/",
+      "publisher": "ScamShield / Singapore Government",
+      "accessed": "2026-10-09",
+      "quote": "In 2025, investment scams accounted for 38.4% of all cryptocurrency losses. Scammers would direct victims to create new cryptocurrency accounts for \"investing\". Victims are then asked to transfer their cryptocurrency to designated wallets or share their login details and seed phrases. This gives scammers full control over the victims' accounts."
+    }
+  ],
+  "tags": [
+    "investment-fraud",
+    "cryptocurrency",
+    "credential-theft"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "ScamShield が、2025年に暗号詐欺損失の38.4%を占めた投資詐欺の具体的な手口（新規口座開設・指定ウォレット・シードフレーズ奪取）を明示"
+  }
+}

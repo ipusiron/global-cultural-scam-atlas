@@ -1,0 +1,77 @@
+{
+  "id": "kr-003",
+  "title": {
+    "ja": "宅配会社を装うスミッシング（配達不可）",
+    "en": "Courier-Impersonation Smishing (Delivery Failure)"
+  },
+  "short_desc": {
+    "ja": "『配達不可（배송불가）』の SMS で住所確認を名目にリンクを踏ませる",
+    "en": "'Delivery failed' SMS pretext pushes a shipping-fix link."
+  },
+  "cultural_lever": {
+    "ja": "オンラインショッピングと宅配の普及、注文との照合負担",
+    "en": "High online-shopping use and reliance on couriers"
+  },
+  "attack_vector": [
+    "sms"
+  ],
+  "targets": [
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) 宅配会社を装う SMS 2) 『配達不可・住所不明』を通告 3) 短縮 URL を押させる 4) 悪性アプリを導入し金融情報を奪取",
+    "en": "1) SMS imitates a courier 2) 'Delivery failed / address unknown' 3) Short URL click 4) Malware steals financial info"
+  },
+  "red_flags": {
+    "ja": [
+      "注文していないのに届く配達 SMS",
+      "URL が公式ドメインではない",
+      "住所確認・修正を促す文言"
+    ],
+    "en": [
+      "Delivery SMS without an actual order",
+      "URL is not the courier's official domain",
+      "Push to fix the shipping address"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "宅配会社の公式アプリや公式サイトで照合",
+      "URL は押さず SMS を削除",
+      "出所の明らかなサイトにのみ情報を入力"
+    ],
+    "en": [
+      "Check the courier's official app",
+      "Delete the SMS; do not click",
+      "Only submit info on known sites"
+    ]
+  },
+  "risk_score": 3,
+  "mediums": [
+    "bank-transfer"
+  ],
+  "legal_notes": {
+    "ja": "KISA 118 相談センターとボイスフィッシング統合通報対応センター（보이스피싱통합신고대응센터）へ通報",
+    "en": "Report to KISA 118 and the Integrated Voice Phishing Center"
+  },
+  "references": [
+    {
+      "label": "KISA 보호나라: 스미싱이란?",
+      "url": "https://www.boho.or.kr/kr/bbs/view.do?bbsId=B0000030&menuNo=205027&nttId=70081",
+      "publisher": "KISA 보호나라",
+      "accessed": "2026-10-09",
+      "quote": "스미싱(smishing)은 문자메시지(SMS)와 피싱(Phising)의 합성어로 악성 앱 주소가 포함된 휴대폰 문자(SMS)를 대량으로 전송 후 이용자가 악성 앱을 설치하도록 유도하여 금융정보 등을 탈취하는 신종 사기수법입니다. ... 택배 사칭 유형 유형4. 12_15고객님배송불가 주소불명 주소확인 변경요망"
+    }
+  ],
+  "tags": [
+    "smishing",
+    "impersonation",
+    "delivery-pretext",
+    "malware"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "KISA 保護ポータル（보호나라）がスミッシングの定義（악성 앱 주소が含まれる SMS を一斉送信し금융정보 탈취）と、宅配なりすまし類型（택배 사칭 유형）の実例文言を併記"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": "in-010",
+  "title": {
+    "ja": "偽の求人 SMS によるマネー・ミュール勧誘",
+    "en": "Fake Job-Offer SMS Mule Recruitment"
+  },
+  "short_desc": {
+    "ja": "簡単な業務を謳う求人 SMS で若者を募り、口座をマネー・ミュール化",
+    "en": "'Easy job' SMS lures young people into money-mule roles."
+  },
+  "cultural_lever": {
+    "ja": "若者の求職プレッシャーと副業への期待",
+    "en": "Job-market pressure on youth and side-gig expectation"
+  },
+  "attack_vector": [
+    "sms",
+    "social"
+  ],
+  "targets": [
+    "student",
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) 偽求人 SMS を若者宛てに送る 2) 面接・契約を装い個人情報と銀行口座を取得 3) 送金代行を依頼 4) 口座がマネー・ミュール化",
+    "en": "1) Send fake-job SMS to youth 2) Collect KYC and bank info 3) Request them to forward payments 4) Account used as a mule"
+  },
+  "red_flags": {
+    "ja": [
+      "SMS で届く求人オファー",
+      "個人の銀行口座を業務に使うと説明",
+      "送金代行をお願いされる"
+    ],
+    "en": [
+      "Job offers via SMS",
+      "Instruction to use personal bank account for work",
+      "Request to forward payments"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "個人の銀行口座を業務に提供しない",
+      "SMS 求人は会社に直接電話で裏取り",
+      "I4C と警察へ通報し口座凍結を依頼"
+    ],
+    "en": [
+      "Never use personal accounts for a 'job'",
+      "Verify SMS job offers by calling the firm",
+      "Report to I4C/police and freeze the account"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "bank-transfer"
+  ],
+  "legal_notes": {
+    "ja": "マネー・ミュール化は刑事責任の対象になり得る",
+    "en": "Money mule roles may create criminal liability"
+  },
+  "references": [
+    {
+      "label": "I4C Advisory: Fraudsters sending Fake Job Offer SMSs to perpetrate Cybercrime",
+      "url": "https://cybercrime.gov.in/webform/Advisory.aspx",
+      "publisher": "Indian Cyber Crime Coordination Centre (I4C)",
+      "accessed": "2026-10-09",
+      "quote": "Fraudsters sending Fake Job Offer SMSs to perpetrate Cybercrime. August 29 2022 A new trend in financial cyber fraud has been observed where fraudsters send Fake Job Offer SMSs to perpetrate Cybercrime."
+    }
+  ],
+  "tags": [
+    "job-scam",
+    "money-mule",
+    "smishing"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "I4C 公告が、手口（Fake Job Offer SMSs）、位置づけ（a new trend in financial cyber fraud）を明示"
+  }
+}

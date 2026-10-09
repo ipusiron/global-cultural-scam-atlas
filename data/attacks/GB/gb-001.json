@@ -1,0 +1,80 @@
+{
+  "id": "gb-001",
+  "title": {
+    "ja": "無料年金レビューを装う勧誘",
+    "en": "Free Pension Review Lure"
+  },
+  "short_desc": {
+    "ja": "『無料の年金見直し』を名目に高リスク商品へ資金移転を促す",
+    "en": "'Free pension review' lures funds into high-risk schemes."
+  },
+  "cultural_lever": {
+    "ja": "年金制度への不安と専門助言の無料化への期待",
+    "en": "Anxiety over retirement and the promise of free professional advice"
+  },
+  "attack_vector": [
+    "phone",
+    "email",
+    "sms"
+  ],
+  "targets": [
+    "elderly",
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) 突然の電話・メール 2) 無料の年金レビュー提案 3) 保証利回りをうたい海外不動産や森林投資へ資金移転",
+    "en": "1) Cold call/email 2) Offer free pension review 3) Move pot to high-risk overseas schemes"
+  },
+  "red_flags": {
+    "ja": [
+      "突然の連絡（コールドコール）",
+      "『無料』『保証』の強調",
+      "海外投資・森林・保管ユニットへの誘導"
+    ],
+    "en": [
+      "Cold contact",
+      "'Free' or 'guaranteed' claims",
+      "Overseas property or forestry investments"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "年金に関するコールドコールは電話を切る",
+      "FCA Firm Checker で業者を確認",
+      "MoneyHelper や Pension Wise で無料助言を受ける"
+    ],
+    "en": [
+      "Hang up on pension cold calls",
+      "Verify firms via FCA Firm Checker",
+      "Use MoneyHelper / Pension Wise for free guidance"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "bank-transfer"
+  ],
+  "legal_notes": {
+    "ja": "年金に関するコールドコールは英国で違法。FCA 0800 111 6768 へ報告",
+    "en": "Pension cold-calling is illegal in the UK; report to FCA 0800 111 6768"
+  },
+  "references": [
+    {
+      "label": "FCA: Pension scams",
+      "url": "https://www.fca.org.uk/consumers/pension-scams",
+      "publisher": "Financial Conduct Authority",
+      "accessed": "2026-10-09",
+      "quote": "If you’re contacted unexpectedly and offered a free pension review, it’s likely to be a scam. ... Free pension reviews are designed to persuade you to move money from your pension pot into a high-risk scheme."
+    }
+  ],
+  "tags": [
+    "pension",
+    "investment-fraud",
+    "cold-call",
+    "authority-pretext"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "FCA が『無料の年金レビュー』が高リスク商品への資金移転を狙うことを具体的に説明。接触の経路（unexpectedly）と結果（move money ... into a high-risk scheme）に対応。英国で年金コールドコール自体が違法のため risk_score=4"
+  }
+}

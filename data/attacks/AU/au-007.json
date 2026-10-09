@@ -1,0 +1,79 @@
+{
+  "id": "au-007",
+  "title": {
+    "ja": "警察・政府職員を装い暗号資産での送金を要求",
+    "en": "Police-Impersonation Crypto Transfer Demand"
+  },
+  "short_desc": {
+    "ja": "法執行機関・政府職員を名乗り、暗号資産での支払いや『凍結資金の返還』を要求",
+    "en": "Pose as law enforcement to demand crypto or 'release' funds."
+  },
+  "cultural_lever": {
+    "ja": "法執行機関への服従と、資産凍結への不安",
+    "en": "Deference to authorities and fear of asset freezes"
+  },
+  "attack_vector": [
+    "phone",
+    "email",
+    "social"
+  ],
+  "targets": [
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) 警察・政府職員を名乗り接触 2) 『凍結した暗号資産を返す』や捜査名目 3) 暗号資産 ATM 等で送金を要求 4) 情報も盗む",
+    "en": "1) Pose as police/gov official 2) Claim seized crypto or investigation 3) Demand crypto ATM payment 4) Also phish account details"
+  },
+  "red_flags": {
+    "ja": [
+      "政府機関が暗号資産での支払いを要求",
+      "暗号資産 ATM への送金指示",
+      "捜査情報を口外しないよう要求"
+    ],
+    "en": [
+      "Government requesting crypto payments",
+      "Instructions to pay at a crypto ATM",
+      "Demand to keep investigation secret"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "豪政府機関は暗号資産やギフトカードで支払いを求めないと認識",
+      "電話を切り公式の電話番号へ折り返す",
+      "家族・銀行員など第三者に相談"
+    ],
+    "en": [
+      "Australian government agencies never ask for crypto or gift cards",
+      "Hang up and call back on an official number",
+      "Consult a trusted third party"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "cryptocurrency"
+  ],
+  "legal_notes": {
+    "ja": "Scamwatch と ReportCyber へ報告",
+    "en": "Report to Scamwatch and ReportCyber"
+  },
+  "references": [
+    {
+      "label": "ASIC MoneySmart: Crypto scams - Recovery and impersonation",
+      "url": "https://moneysmart.gov.au/financial-scams/crypto-scams",
+      "publisher": "ASIC MoneySmart",
+      "accessed": "2026-10-09",
+      "quote": "Recovery – You are contacted by an individual claiming to be a government or law enforcement official who alleges to either have frozen crypto belonging to you or alternatively attempting to phish for account details. ... There have also been examples of scammers impersonating police to trick victims into transferring their cryptocurrency."
+    }
+  ],
+  "tags": [
+    "impersonation",
+    "authority-pretext",
+    "cryptocurrency",
+    "government-pretext"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "ASIC MoneySmart が、装う相手（government or law enforcement official）、要求（crypto transfer）、口実（frozen crypto）を具体的に記述。警察を装う豪州特有の事例"
+  }
+}

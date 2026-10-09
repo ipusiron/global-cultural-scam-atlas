@@ -1,0 +1,78 @@
+{
+  "id": "kr-002",
+  "title": {
+    "ja": "モバイル訃報（부고）を装う知人なりすましスミッシング",
+    "en": "Mobile Obituary Impersonation Smishing"
+  },
+  "short_desc": {
+    "ja": "父親の死去を装う訃報 SMS で葬儀場 URL をクリックさせる",
+    "en": "Fake obituary SMS pushes click on funeral-hall URL."
+  },
+  "cultural_lever": {
+    "ja": "急な訃報への配慮と、返信や香典の慣行",
+    "en": "Expectations around sudden death and condolence practice"
+  },
+  "attack_vector": [
+    "sms"
+  ],
+  "targets": [
+    "general",
+    "business"
+  ],
+  "scenario": {
+    "ja": "1) 訃報（부고）の SMS を受信 2) 父の死去と葬儀場 URL 3) URL クリックで悪性アプリを導入 4) 携帯が乗っ取られ情報漏洩",
+    "en": "1) 'Obituary' SMS received 2) Father died + hall URL 3) Click installs malware 4) Device hijacked"
+  },
+  "red_flags": {
+    "ja": [
+      "『父が本日ご逝去されたのでお知らせします（아버지께서 오늘 별세하셨기에 삼가 알려 드립니다）』の定型文",
+      "短縮 URL（http://xx...）",
+      "SMS 内に葬儀場リンクしかない"
+    ],
+    "en": [
+      "Stock '아버지께서 ...' phrasing",
+      "Short URL (http://xx...)",
+      "Only a funeral-hall link in the SMS"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "送信者本人に電話で直接確認",
+      "SMS 内の URL は押さず削除",
+      "疑わしい SMS は迷惑メッセージとして通報（스팸으로 신고）"
+    ],
+    "en": [
+      "Call the sender directly",
+      "Delete the SMS; do not click",
+      "Use the '스팸으로 신고' report"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "bank-transfer"
+  ],
+  "legal_notes": {
+    "ja": "KISA 118 相談センターとボイスフィッシング統合通報対応センター（보이스피싱통합신고대응센터）へ通報",
+    "en": "Report to KISA 118 and the Integrated Voice Phishing Center"
+  },
+  "references": [
+    {
+      "label": "KISA 보호나라: 스미싱 주의보 (2024-01-04)",
+      "url": "https://www.boho.or.kr/kr/bbs/view.do?bbsId=B0000030&menuNo=205027&nttId=71280",
+      "publisher": "KISA 보호나라",
+      "accessed": "2026-10-09",
+      "quote": "지인 부고 사칭 '아버지께서 오늘 별세하셨기에 삼가 알려 드립니다. 장례식장 주소 http://xx...'"
+    }
+  ],
+  "tags": [
+    "smishing",
+    "impersonation",
+    "obituary-pretext",
+    "malware"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "KISA の『スミッシング注意報（스미싱 주의보）』が、口実（지인 부고 사칭）と定型文、URL 設置を具体的に記述"
+  }
+}

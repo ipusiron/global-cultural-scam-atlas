@@ -1,0 +1,78 @@
+{
+  "id": "kr-006",
+  "title": {
+    "ja": "健康保険公団など公共機関を装うスミッシング",
+    "en": "Public-Agency Impersonation Smishing"
+  },
+  "short_desc": {
+    "ja": "健康保険公団（건강보험공단）などの通知を装い悪性アプリを導入させる",
+    "en": "'Health insurance notice' pretext installs malware."
+  },
+  "cultural_lever": {
+    "ja": "公共機関（健康保険公団・税務署など）への信頼",
+    "en": "Trust in public agencies like the National Health Insurance Service"
+  },
+  "attack_vector": [
+    "sms"
+  ],
+  "targets": [
+    "general",
+    "elderly"
+  ],
+  "scenario": {
+    "ja": "1) 公共機関名の SMS 2) 『健康診断通知（건강검진 통보）』『過料（과태료）』などの口実 3) 内容確認のため URL をクリックさせる 4) 悪性アプリを導入",
+    "en": "1) SMS as 'Public Agency' 2) 'Health check / fine' pretext 3) 'Open to view' URL 4) Install malware"
+  },
+  "red_flags": {
+    "ja": [
+      "短縮 URL の『内容を見る（내용보기）』リンク",
+      "政府機関名の SMS に URL が含まれる",
+      "過度な権限を要求するアプリの導入要求"
+    ],
+    "en": [
+      "'내용보기' with a short URL",
+      "Gov-named SMS containing a URL",
+      "App requesting excessive permissions"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "公共機関のサイトは手入力で開く",
+      "KISA 118 相談センターと 保護ポータル（보호나라）で判別",
+      "疑わしい SMS は迷惑メッセージとして通報（스팸으로 신고）"
+    ],
+    "en": [
+      "Type the agency URL manually",
+      "Check via KISA 118 or Boho",
+      "Use '스팸으로 신고' to report"
+    ]
+  },
+  "risk_score": 3,
+  "mediums": [
+    "bank-transfer"
+  ],
+  "legal_notes": {
+    "ja": "KISA の明記：公共機関のなりすまし（공공기관 사칭）は代表的な類型",
+    "en": "KISA lists public-agency impersonation among the main patterns"
+  },
+  "references": [
+    {
+      "label": "KISA 보호나라: 스미싱 - 공공기관 사칭 유형",
+      "url": "https://www.boho.or.kr/kr/bbs/view.do?bbsId=B0000030&menuNo=205027&nttId=70081",
+      "publisher": "KISA 보호나라",
+      "accessed": "2026-10-09",
+      "quote": "휴대전화에 일반적으로 많이 설치된 정상앱(예: 크롬, Play 스토어, 공공기관에서 사용하는 민원24, 유명 모바일 백신 등)을 사칭하여 악성앱 설치를 유도합니다. 전화, 문자메시지 관리, 개인정보 조회, 저장소 조회, 위치정보, 기기관리자 권한 요구 등 정상앱 보다 과도한 권한을 포함하고 있으므로 앱 설치 단계에서 주의해야 합니다."
+    }
+  ],
+  "tags": [
+    "smishing",
+    "government-pretext",
+    "impersonation",
+    "malware"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "KISA 保護ポータル（보호나라）が、口実（공공기관의 민원24・백신 등 正常앱 사칭）と要求（악성앱 설치・過度な権限）を具体的に記述。公共機関なりすまし類型（공공기관 사칭 유형）を代表類型として明記"
+  }
+}

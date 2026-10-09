@@ -1,0 +1,78 @@
+{
+  "id": "in-009",
+  "title": {
+    "ja": "偽のカスタマーケア番号による詐欺",
+    "en": "Fake Customer Care Number Scam"
+  },
+  "short_desc": {
+    "ja": "Google 検索上位に偽の銀行・業者番号を仕込み、問い合わせ者から情報を奪う",
+    "en": "Fake bank or merchant 'care' numbers planted in Google results."
+  },
+  "cultural_lever": {
+    "ja": "検索上位＝正規という思い込み",
+    "en": "Belief that top search results are official"
+  },
+  "attack_vector": [
+    "website",
+    "phone"
+  ],
+  "targets": [
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) Google や SNS 上に偽カスタマーケア番号を仕込む 2) 利用者がかける 3) 対応者が本人確認と称し OTP・口座情報を要求 4) 口座から送金",
+    "en": "1) Plant fake 'care' numbers on Google/social 2) Victim calls 3) 'Verify' pretext demands OTP/account 4) Drain account"
+  },
+  "red_flags": {
+    "ja": [
+      "検索結果だけに頼る問い合わせ",
+      "初めての担当者が口座・OTP を要求",
+      "顧客ケアでアプリインストールを促す"
+    ],
+    "en": [
+      "Reliance on search-result numbers",
+      "Agent asking for OTP/account first time",
+      "'Install our support app'"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "銀行アプリや公式サイト・カード裏の番号を使う",
+      "OTP・PIN・CVV は電話で絶対共有しない",
+      "1930 または cybercrime.gov.in へ通報"
+    ],
+    "en": [
+      "Use the official app, site, or card",
+      "Never share OTP/PIN/CVV by phone",
+      "Report to 1930 / cybercrime.gov.in"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "bank-transfer",
+    "credit"
+  ],
+  "legal_notes": {
+    "ja": "I4C が 2022 年3月に公告",
+    "en": "I4C advisory issued March 2022"
+  },
+  "references": [
+    {
+      "label": "I4C Advisory: Cybercriminals using Fake Customer Care Numbers / Helplines to defraud citizens",
+      "url": "https://cybercrime.gov.in/webform/Advisory.aspx",
+      "publisher": "Indian Cyber Crime Coordination Centre (I4C)",
+      "accessed": "2026-10-09",
+      "quote": "Cybercriminals using Fake Customer Care Numbers / Helplines to defraud citizens March 21 2022 Google and Social Media are the go-to places for most of us when we want to search for customer care number of a bank/merchant...."
+    }
+  ],
+  "tags": [
+    "impersonation",
+    "banking-fraud",
+    "search-poisoning"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "I4C 公告が、経路（Google や SNS 上の偽番号）、対象（a bank/merchant）、文脈（検索依存）を記述"
+  }
+}

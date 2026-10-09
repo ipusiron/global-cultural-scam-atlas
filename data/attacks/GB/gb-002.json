@@ -1,0 +1,79 @@
+{
+  "id": "gb-002",
+  "title": {
+    "ja": "年金の早期引き出しを促す『年金解放（pension liberation）』詐欺",
+    "en": "Early Pension Release ('Pension Liberation') Scam"
+  },
+  "short_desc": {
+    "ja": "55歳未満での年金引き出しを約束し、資金を奪取",
+    "en": "Promises pension access before 55 to seize funds."
+  },
+  "cultural_lever": {
+    "ja": "急な資金需要と年金制度の複雑さに対する不安",
+    "en": "Urgent cash needs; confusion over pension rules"
+  },
+  "attack_vector": [
+    "phone",
+    "social",
+    "email"
+  ],
+  "targets": [
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) 55歳未満への引き出し提案 2) 『年金解放（pension liberation）』『年金ローン（pension loan）』の名目 3) 海外スキームへ資金移転 4) 高額手数料と55%の税負担",
+    "en": "1) Offer early withdrawal 2) 'pension liberation' or 'pension loan' 3) Move pot to overseas scheme 4) 30% fee + 55% tax"
+  },
+  "red_flags": {
+    "ja": [
+      "55歳未満でも引き出せるという説明",
+      "海外に設定されたスキーム",
+      "手数料として約半額が差し引かれる"
+    ],
+    "en": [
+      "Claims you can access pension before 55",
+      "Scheme based abroad",
+      "Fees take ~half of your pot"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "55歳前の年金引き出しはほぼ詐欺と判断",
+      "Pension Wise で無料助言",
+      "FCA Firm Checker で業者確認"
+    ],
+    "en": [
+      "Treat pre-55 access as a scam",
+      "Use free Pension Wise appointment",
+      "Check firms on FCA Firm Checker"
+    ]
+  },
+  "risk_score": 5,
+  "mediums": [
+    "bank-transfer"
+  ],
+  "legal_notes": {
+    "ja": "55歳未満の引き出しには最大55%の課税。FCA へ報告",
+    "en": "Early withdrawal attracts up to 55% tax; report to FCA"
+  },
+  "references": [
+    {
+      "label": "FCA: Pension scams - how early pension release scams work",
+      "url": "https://www.fca.org.uk/consumers/pension-scams",
+      "publisher": "Financial Conduct Authority",
+      "accessed": "2026-10-09",
+      "quote": "Offers to access your pension early may be called 'pension liberation' or a 'pension loan', as the scammers often claim you can borrow money from your pension fund. If you take up the offer, your pension funds will be transferred into a scheme set up by the scam, which will often be based abroad."
+    }
+  ],
+  "tags": [
+    "pension",
+    "investment-fraud",
+    "urgency",
+    "fee-fraud"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "FCA が『pension liberation』『pension loan』の名称と、海外スキームへの資金移転を具体的に記述。接触経路（offer to access early）と結果（transferred into a scheme ... based abroad）に対応。手数料30%+税55%の資金損失のため risk_score=5"
+  }
+}

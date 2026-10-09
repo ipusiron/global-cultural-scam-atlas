@@ -1,0 +1,77 @@
+{
+  "id": "sg-007",
+  "title": {
+    "ja": "暗号資産を使った『副業ブースト』詐欺",
+    "en": "Crypto 'Boost' Job Scam"
+  },
+  "short_desc": {
+    "ja": "SNS で暗号資産の『価値ブースト』を仕事と称し自腹で購入させる",
+    "en": "'Boost crypto value' task scams buy with own funds for 'commission'."
+  },
+  "cultural_lever": {
+    "ja": "SNS を通じた副業への期待と暗号資産への関心",
+    "en": "Interest in side gigs and crypto via social media"
+  },
+  "attack_vector": [
+    "social"
+  ],
+  "targets": [
+    "general",
+    "student"
+  ],
+  "scenario": {
+    "ja": "1) Facebook・TikTok・Instagram で暗号資産『副業』募集 2) 自腹で暗号資産を購入させる 3) コミッション支払いを約束 4) ログイン共有で口座ごと奪取",
+    "en": "1) Crypto 'jobs' on Facebook/TikTok/Instagram 2) Buy crypto with own funds 3) Promise commission 4) Take over account via shared login"
+  },
+  "red_flags": {
+    "ja": [
+      "SNS 発の『暗号資産ブースト』コミッション",
+      "ログイン情報の共有要求",
+      "受け取れないコミッションの説明"
+    ],
+    "en": [
+      "'Boost crypto' commission from social DMs",
+      "Request to share logins",
+      "Unexplained commission delays"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "自腹での仕事はほぼ詐欺と認識",
+      "ログイン情報は決して共有しない",
+      "ScamShield 1799 に相談"
+    ],
+    "en": [
+      "Treat 'use your own funds' jobs as scams",
+      "Never share logins",
+      "Call ScamShield (1799)"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "cryptocurrency"
+  ],
+  "legal_notes": {
+    "ja": "暗号資産の損失は MAS 規制下でも補償対象外",
+    "en": "Crypto losses are not covered even under MAS oversight"
+  },
+  "references": [
+    {
+      "label": "ScamShield (SG): Cryptocurrency Related Scams - Job scams",
+      "url": "https://www.scamshield.gov.sg/i-want-protection-from-scams/learn-to-recognise-scams/cryptocurrency-related-scams/",
+      "publisher": "ScamShield / Singapore Government",
+      "accessed": "2026-10-09",
+      "quote": "Victims would encounter cryptocurrency-related \"job opportunities\" through social media platforms such as Facebook, TikTok, and Instagram. Scammers would direct victims to buy cryptocurrency using their own money and claim they will earn \"commissions\" for helping to boost cryptocurrency values."
+    }
+  ],
+  "tags": [
+    "job-scam",
+    "cryptocurrency",
+    "social-media"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "ScamShield が、接触経路（Facebook, TikTok, Instagram）、口実（commissions で boost cryptocurrency values）、要求（自腹での購入）を具体的に記述"
+  }
+}

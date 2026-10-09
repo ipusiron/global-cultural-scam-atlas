@@ -1,0 +1,80 @@
+{
+  "id": "tw-003",
+  "title": {
+    "ja": "暗号資産（虛擬資產）の現金手渡し（面交）を要求する投資詐欺",
+    "en": "Crypto Cash Face-to-Face Investment Scam"
+  },
+  "short_desc": {
+    "ja": "未登録の暗号資産業者を名乗り『元本保証の利益（保證獲利）』で誘い、受け渡し後に解凍金などを追加請求",
+    "en": "Unregistered crypto 'firms' lure 'guaranteed returns' then demand extra fees."
+  },
+  "cultural_lever": {
+    "ja": "暗号資産市場への期待と、現金手渡しへの信頼",
+    "en": "Interest in crypto and comfort with cash hand-offs"
+  },
+  "attack_vector": [
+    "social",
+    "in-person",
+    "website"
+  ],
+  "targets": [
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) 未登録の暗号資産業者を名乗る 2) 『絶対に損しない（穩賺不賠）』『元本保証の利益（保證獲利）』を謳い投資を募る 3) 現金手渡しや個人口座への入金を要求 4) 解凍金・保証金・税金などを追加請求して失踪",
+    "en": "1) Pose as unregistered crypto firm 2) 'Guaranteed returns' lures 3) Demand cash hand-off or personal-account transfer 4) Demand 'unlock' or 'tax' fees, then vanish"
+  },
+  "red_flags": {
+    "ja": [
+      "『元本保証（保證獲利）』『絶対に損しない（穩賺不賠）』『高利回り（利潤豐厚）』の文言",
+      "暗号資産業者が現金での受け渡しを要求",
+      "払い戻し時に追加の解凍金・保証金・税金を要求"
+    ],
+    "en": [
+      "'Guaranteed'/'risk-free'/'high returns'",
+      "Crypto firm demands cash hand-off",
+      "'Unlock fee / margin / tax' required to withdraw"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "金管会の『暗号資産サービス提供事業者または人員（提供虛擬資產服務之事業或人員）』専区で合法業者を確認",
+      "合法な業者は現金手渡しや個人口座への入金を要求しない",
+      "165 または 02-2737-3434 に照会"
+    ],
+    "en": [
+      "Verify firms in the FSC's crypto service area",
+      "Legal firms do not take cash face-to-face",
+      "Verify via 165 or 02-2737-3434"
+    ]
+  },
+  "risk_score": 5,
+  "mediums": [
+    "cash",
+    "cryptocurrency",
+    "bank-transfer"
+  ],
+  "legal_notes": {
+    "ja": "資金洗浄防止法（洗錢防制法）の改正により、未登録の暗号資産業者は刑事責任を負う",
+    "en": "Unregistered crypto providers face criminal liability under AML law"
+  },
+  "references": [
+    {
+      "label": "金管會 新聞稿: 網路投資群組詐騙多，投資前先停看聽",
+      "url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=202602130008&dtable=News",
+      "publisher": "金融監督管理委員會 (FSC Taiwan)",
+      "accessed": "2026-10-09",
+      "quote": "或冒充名人、合法業者名義誘騙民眾投入資金，嗣後再藉口需支付解凍金、保證金、驗證金或稅款等名義，要求民眾繳納額外款項後方得領回投資報酬 ... 合法虛擬資產服務商提供服務時，不得以現金方式向客戶收取款項，須以可留存金流軌跡之轉帳方式進行。如民眾遇到非合規名單之虛擬資產服務商，或聲稱可提供現金面交服務或要求民眾將交易款項匯至個人帳戶者，除該業者已涉及非法經營之刑事責任外，相關交易極有可能涉及詐騙"
+    }
+  ],
+  "tags": [
+    "investment-fraud",
+    "cryptocurrency",
+    "cash-handover"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "金管會の新聞稿が、口実（保證獲利・名人仿冒）、要求（解凍金・保證金・現金面交）、合法業者が決してしないこと（現金受領）を具体的に記述。被害が重大で risk_score=5"
+  }
+}

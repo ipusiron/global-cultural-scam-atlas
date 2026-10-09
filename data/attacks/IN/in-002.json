@@ -1,0 +1,82 @@
+{
+  "id": "in-002",
+  "title": {
+    "ja": "ビデオ通話で『デジタル逮捕』を装う詐欺",
+    "en": "'Digital Arrest' via Video Call"
+  },
+  "short_desc": {
+    "ja": "CBI・ED・警察等を装いビデオ通話で逮捕を演出し保釈金を要求",
+    "en": "CBI/ED impersonators 'arrest' victim on video and demand bail."
+  },
+  "cultural_lever": {
+    "ja": "法執行機関の権威と、家族が巻き込まれる不安",
+    "en": "Deference to law enforcement; fear of family involvement"
+  },
+  "attack_vector": [
+    "phone",
+    "social"
+  ],
+  "targets": [
+    "general",
+    "elderly"
+  ],
+  "scenario": {
+    "ja": "1) 警察・CBI・ED 等を装う電話 2) 本人または家族が逮捕と告知 3) モバイルカメラを ON のまま監禁状態に 4) 保釈金・解決金の送金を要求",
+    "en": "1) Call as police/CBI/ED 2) Claim victim or kin 'arrested' 3) Keep phone camera on, confine 4) Demand bail"
+  },
+  "red_flags": {
+    "ja": [
+      "法執行機関を名乗るビデオ通話",
+      "カメラを ON のままにさせる",
+      "家族への影響を強調"
+    ],
+    "en": [
+      "'Officer' on video calls",
+      "Instruction to keep camera on",
+      "Threats about family"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "CBI・ED・警察はビデオ通話で逮捕しないと認識",
+      "1930 ヘルプラインか cybercrime.gov.in へ通報",
+      "家族と事前に合言葉を決める"
+    ],
+    "en": [
+      "CBI/ED/police do not arrest on video calls",
+      "Report to 1930 or cybercrime.gov.in",
+      "Agree a family codeword"
+    ]
+  },
+  "risk_score": 5,
+  "mediums": [
+    "bank-transfer",
+    "e-wallet",
+    "cryptocurrency"
+  ],
+  "legal_notes": {
+    "ja": "I4C の公式助言：CBI・ED・警察・税関・判事はビデオ通話で逮捕しない",
+    "en": "I4C: CBI/ED/police/customs/judges never arrest on video calls"
+  },
+  "references": [
+    {
+      "label": "The Tribune: CBI, ED don't nab via video calls - Advisory to curb 'digital arrest'",
+      "url": "https://www.tribuneindia.com/news/india/cbi-ed-dont-nab-via-video-calls-advisory-to-curb-digital-arrest/amp",
+      "publisher": "The Tribune (reporting I4C advisory)",
+      "accessed": "2026-10-09",
+      "quote": "The CBI, ED, police, customs, or judges do not arrest people through video calls, the Indian Cyber Crime Coordination Centre (I4C) said in a public advisory issued in view of the rising cases of ‘digital arrest’ crimes in the country. ... Digital arrest refers to a cybercrime technique, in which fraudsters, posing as law enforcement officials, claim the victim or their close kin have been arrested. The cyber criminal subsequently confines the person to their premises by asking them to keep their mobile phone cameras on and seek money for bail."
+    }
+  ],
+  "tags": [
+    "impersonation",
+    "authority-pretext",
+    "government-pretext",
+    "fear-based",
+    "video-call"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "Tribune 記事が I4C の公告を逐語で報道。装う相手（CBI, ED, police, customs, or judges）、口実（arrested）、要求（money for bail）、手口（keep mobile phone cameras on）を具体的に記述。インド固有の重大詐欺で risk_score=5"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "id": "sg-001",
+  "title": {
+    "ja": "政府職員なりすまし詐欺（GOIS）",
+    "en": "Government Officials Impersonation Scam (GOIS)"
+  },
+  "short_desc": {
+    "ja": "SPF や MAS 等を名乗り『捜査』名目で安全口座への送金や貴重品引き渡しを要求",
+    "en": "'SPF' or 'MAS' demand transfers to 'safe accounts' for 'investigations'."
+  },
+  "cultural_lever": {
+    "ja": "政府機関への強い信頼とマネロン捜査への不安",
+    "en": "Deference to authorities and anti-money-laundering anxiety"
+  },
+  "attack_vector": [
+    "phone",
+    "social"
+  ],
+  "targets": [
+    "general",
+    "elderly"
+  ],
+  "scenario": {
+    "ja": "1) 突然の電話や WhatsApp 動画通話 2) SPF や MAS を名乗る 3) 犯罪関与を虚偽通告 4) 『安全口座』への送金や金塊・時計の引き渡しを要求",
+    "en": "1) Unsolicited call/in-app video 2) Claim SPF or MAS 3) False accusation 4) Demand 'safe account' transfer or gold/watches"
+  },
+  "red_flags": {
+    "ja": [
+      "政府職員が送金を要求する",
+      "ビデオ通話で ID・就労許可証・銀行カードを見せろと指示",
+      "WhatsApp 等の非公式経路からの連絡"
+    ],
+    "en": [
+      "Officials asking for a transfer",
+      "Request to show IDs or bank cards on video",
+      "Contact via WhatsApp or similar"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "政府機関は電話で送金を求めないと認識",
+      "ScamShield Helpline 1799 に相談",
+      "政府 SMS は gov.sg Sender ID を確認"
+    ],
+    "en": [
+      "Officials never ask for transfers by phone",
+      "Call the 1799 ScamShield Helpline",
+      "Verify gov SMS uses the gov.sg Sender ID"
+    ]
+  },
+  "risk_score": 5,
+  "mediums": [
+    "bank-transfer",
+    "cash"
+  ],
+  "legal_notes": {
+    "ja": "SPF と ScamShield へ報告。1799 に連絡",
+    "en": "Report to SPF and ScamShield (1799)"
+  },
+  "references": [
+    {
+      "label": "ScamShield (SG): Government Officials Impersonation Scams",
+      "url": "https://www.scamshield.gov.sg/i-want-protection-from-scams/learn-to-recognise-scams/government-officials-impersonation-scams/",
+      "publisher": "ScamShield / Singapore Government",
+      "accessed": "2026-10-09",
+      "quote": "Victims would receive unsolicited phone calls or in-app calls (e.g. WhatsApp video call) allegedly from government agencies such as the Singapore Police Force (SPF) or the Monetary Authority of Singapore (MAS). ... Victims would then be instructed by the scammers to transfer money into a \"safe account\" to assist with \"investigations\"."
+    }
+  ],
+  "tags": [
+    "impersonation",
+    "authority-pretext",
+    "government-pretext",
+    "fear-based"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "ScamShield（シンガポール政府）が、装う相手（SPF or MAS）、経路（WhatsApp video call）、要求（safe account への送金）を具体的に記述。GOIS はシンガポールの代表的な詐欺手口で損失額も大きく risk_score=5"
+  }
+}

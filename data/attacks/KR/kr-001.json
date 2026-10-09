@@ -1,0 +1,78 @@
+{
+  "id": "kr-001",
+  "title": {
+    "ja": "モバイル結婚式招待状（청첩장）を装う知人なりすましスミッシング",
+    "en": "Mobile Wedding-Invitation Impersonation Smishing"
+  },
+  "short_desc": {
+    "ja": "結婚式のモバイル招待状リンクを知人番号から送り悪性アプリを導入",
+    "en": "Fake wedding invitation link from a known number installs malware."
+  },
+  "cultural_lever": {
+    "ja": "韓国で広く使われるモバイル結婚式招待状（청첩장）の慣行と知人への信頼",
+    "en": "Common mobile wedding invitations and trust in acquaintances"
+  },
+  "attack_vector": [
+    "sms",
+    "social"
+  ],
+  "targets": [
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) 連絡先に登録済みに見える番号から SMS 2) 『結婚（결혼）』『招待状（청첩장）』の文言 3) 悪性アプリをインストール 4) 連絡先や金融情報を奪い知人へ再配信",
+    "en": "1) SMS from a 'known' number 2) '결혼/청첩장' keywords 3) Install malware 4) Steal contacts/financial info and reshare"
+  },
+  "red_flags": {
+    "ja": [
+      "結婚関連 SMS 内の短縮 URL",
+      "電話帳の相手を装う発信者番号",
+      "アプリのアイコン隠蔽や本物の模倣"
+    ],
+    "en": [
+      "Short URL in wedding SMS",
+      "Caller ID matches contacts",
+      "App hides icon or clones a real one"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "招待状の SMS はリンクを押さず送信者に直接確認",
+      "KISA 保護ポータル（보호나라）のスミッシング確認サービス（스미싱 확인서비스）で判別",
+      "出所不明の URL は即削除"
+    ],
+    "en": [
+      "Verify with sender directly instead of clicking",
+      "Use Boho (KISA) '스미싱 확인서비스'",
+      "Delete SMS with unknown URLs"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "bank-transfer"
+  ],
+  "legal_notes": {
+    "ja": "ボイスフィッシング統合通報対応センター（보이스피싱통합신고대응센터）と KISA 保護ポータル（보호나라）へ通報",
+    "en": "Report to the Integrated Voice Phishing Center and KISA Boho"
+  },
+  "references": [
+    {
+      "label": "KISA 보호나라: 청첩장 등 지인 사칭 스미싱 주의 권고",
+      "url": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=1&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=71676",
+      "publisher": "KISA 보호나라",
+      "accessed": "2026-10-09",
+      "quote": "“결혼”, “결혼식”, “청첩장” 등의 키워드를 활용, 결혼식 정보 확인을 위한 악성앱 설치를 유도하는 스미싱 유포 사례 증가 - 특히, 스미싱 문자 발신번호를 수신자 스마트폰에 저장된 연락처나 일반 휴대전화번호로 표기됨에 따라 실제 지인이 보낸 문자로 오인하도록 유도"
+    }
+  ],
+  "tags": [
+    "smishing",
+    "impersonation",
+    "wedding-pretext",
+    "malware"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "KISA 保護ポータル（보호나라）の公式告示が、口実（결혼·결혼식·청첩장キーワード）、接触経路（連絡先に見える発信者）、要求（악성앱 설치）を具体的に記述"
+  }
+}

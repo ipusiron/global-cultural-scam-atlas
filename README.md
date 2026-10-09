@@ -64,8 +64,8 @@ hub: true
 
 ## 📸 スクリーンショット
 
-> ![日本語ライトテーマで初期表示（53件）](assets/screenshot.png)
-> *日本語・ライトテーマで初期表示（全53件、カード右上に出典確認バッジ）*
+> ![日本語ライトテーマで初期表示（60件）](assets/screenshot.png)
+> *日本語・ライトテーマで初期表示（全95件、カード右上に出典確認バッジ）*
 
 > ![日本語ライトテーマで詳細モーダルを開いた状態](assets/screenshot2.png)
 > *jp-001 の詳細モーダル（Red Flags と Mitigations、References の publisher と accessed）*
@@ -244,17 +244,22 @@ python -m http.server 8000 --directory docs
 |----|------|
 | JP（日本） | 32 |
 | US（アメリカ） | 20 |
-| IN（インド） | 1 |
-| **合計** | **53** |
+| GB（英国） | 7 |
+| AU（オーストラリア） | 7 |
+| SG（シンガポール） | 7 |
+| KR（韓国） | 6 |
+| TW（台湾） | 6 |
+| IN（インド） | 10 |
+| **合計** | **95** |
 
 ### 出典の確認状態
 
 | 状態 | 件数 |
 |------|------|
-| verified（出典確認済み） | 39 |
+| verified（出典確認済み） | 81 |
 | partial（一部確認） | 13 |
 | unverified（未確認） | 1 |
-| **合計** | **53** |
+| **合計** | **95** |
 
 ---
 
@@ -369,10 +374,26 @@ global-cultural-scam-atlas/
 ├── CLAUDE.md                            # Claude Code 向け開発ガイド
 ├── data/
 │   ├── attacks/                         # 1攻撃=1 JSON のソースデータ
-│   │   ├── IN/                          # インドの攻撃（1 件）
-│   │   │   └── in-001.json
+│   │   ├── AU/                          # 豪州の攻撃（7 件、au-001.json 〜 au-007.json）
+│   │   │   ├── au-001.json
+│   │   │   └── …
+│   │   ├── GB/                          # 英国の攻撃（7 件、gb-001.json 〜 gb-007.json）
+│   │   │   ├── gb-001.json
+│   │   │   └── …
+│   │   ├── IN/                          # インドの攻撃（10 件、in-001.json 〜 in-010.json）
+│   │   │   ├── in-001.json
+│   │   │   └── …
 │   │   ├── JP/                          # 日本の攻撃（32 件、jp-001.json 〜 jp-032.json）
 │   │   │   ├── jp-001.json
+│   │   │   └── …
+│   │   ├── KR/                          # 韓国の攻撃（6 件、kr-001.json 〜 kr-006.json）
+│   │   │   ├── kr-001.json
+│   │   │   └── …
+│   │   ├── SG/                          # シンガポールの攻撃（7 件、sg-001.json 〜 sg-007.json）
+│   │   │   ├── sg-001.json
+│   │   │   └── …
+│   │   ├── TW/                          # 台湾の攻撃（6 件、tw-001.json 〜 tw-006.json）
+│   │   │   ├── tw-001.json
 │   │   │   └── …
 │   │   └── US/                          # 米国の攻撃（20 件、us-001.json 〜 us-020.json）
 │   │       ├── us-001.json

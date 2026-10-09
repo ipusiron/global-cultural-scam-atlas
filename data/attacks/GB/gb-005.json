@@ -1,0 +1,80 @@
+{
+  "id": "gb-005",
+  "title": {
+    "ja": "画面共有ソフトを悪用した遠隔操作詐欺",
+    "en": "Screen-Sharing Remote-Access Scam"
+  },
+  "short_desc": {
+    "ja": "AnyDesk や TeamViewer を入れさせて銀行口座を操作",
+    "en": "Pushes AnyDesk/TeamViewer to seize online banking."
+  },
+  "cultural_lever": {
+    "ja": "業務で使い慣れた画面共有ソフトへの信頼",
+    "en": "Trust in familiar screen-sharing tools from work"
+  },
+  "attack_vector": [
+    "phone",
+    "social",
+    "website"
+  ],
+  "targets": [
+    "general",
+    "business"
+  ],
+  "scenario": {
+    "ja": "1) 投資話や銀行問い合わせを装い接触 2) AnyDesk・Teams・TeamViewer・Zoom のインストールを指示 3) 画面共有で銀行口座を直接操作 4) 送金を実行",
+    "en": "1) Pose as broker or bank support 2) Push AnyDesk/Teams/TeamViewer/Zoom install 3) Take over screen 4) Transfer funds from account"
+  },
+  "red_flags": {
+    "ja": [
+      "突然の投資や銀行支援の提案",
+      "画面共有や遠隔操作の要求",
+      "急かされ即時の判断を迫られる"
+    ],
+    "en": [
+      "Unsolicited investment or 'support' offer",
+      "Asked to share screen or allow remote access",
+      "Pressured to decide quickly"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "金融業者とは画面共有をしない",
+      "FCA Firm Checker で業者を確認",
+      "緊急を装う依頼は電話を切って折り返す"
+    ],
+    "en": [
+      "Never share screens with a financial firm",
+      "Verify firms on FCA Firm Checker",
+      "Hang up on urgent requests and call back"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "bank-transfer"
+  ],
+  "legal_notes": {
+    "ja": "FCA へ 0800 111 6768 で報告",
+    "en": "Report to FCA on 0800 111 6768"
+  },
+  "references": [
+    {
+      "label": "FCA: Screen sharing scams",
+      "url": "https://www.fca.org.uk/consumers/screen-sharing-scams",
+      "publisher": "Financial Conduct Authority",
+      "accessed": "2026-10-09",
+      "quote": "the scammer will typically ask you to download legitimate screen sharing software. This could be software you have heard of or have used before with work, friends or family. This could be software such as AnyDesk, Microsoft Teams, TeamViewer or Zoom. ... Once they have access to your screen, they can access your personal information. This includes any financial accounts, such as your online banking."
+    }
+  ],
+  "tags": [
+    "remote-access",
+    "tech-abuse",
+    "authority-pretext",
+    "banking-fraud"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "FCA が接触経路（contacted out of the blue）と、画面共有ソフト名、要求（download）と結果（access online banking）を具体的に記述。使い慣れた業務用ソフトへの信頼を悪用する"
+  }
+}

@@ -27,7 +27,7 @@ Open it directly in a browser.
 ## 📸 Screenshots
 
 > ![English light theme, initial view](assets/en/screenshot.png)
-> *English, light theme, initial view (53 attacks; verification badge on each card).*
+> *English, light theme, initial view (95 attacks; verification badge on each card).*
 
 > ![Japanese light theme with detail modal open](assets/screenshot2.png)
 > *The detail modal for jp-001 (Red Flags, Mitigations, References with publisher and accessed).*
@@ -206,17 +206,22 @@ Entries are observations at the time of writing and are not exhaustive. They are
 |---------|---------|
 | JP (Japan) | 32 |
 | US (United States) | 20 |
-| IN (India) | 1 |
-| **Total** | **53** |
+| GB (United Kingdom) | 7 |
+| AU (Australia) | 7 |
+| SG (Singapore) | 7 |
+| KR (South Korea) | 6 |
+| TW (Taiwan) | 6 |
+| IN (India) | 10 |
+| **Total** | **95** |
 
 ### Verification status
 
 | Status | Count |
 |--------|-------|
-| verified | 39 |
+| verified | 81 |
 | partial | 13 |
 | unverified | 1 |
-| **Total** | **53** |
+| **Total** | **95** |
 
 ---
 
@@ -331,10 +336,26 @@ global-cultural-scam-atlas/
 ├── CLAUDE.md                            # Guide for Claude Code
 ├── data/
 │   ├── attacks/                         # Source data (one JSON per attack)
-│   │   ├── IN/                          # India (1 entry)
-│   │   │   └── in-001.json
+│   │   ├── AU/                          # Australia (7 entries, au-001.json .. au-007.json)
+│   │   │   ├── au-001.json
+│   │   │   └── ...
+│   │   ├── GB/                          # United Kingdom (7 entries, gb-001.json .. gb-007.json)
+│   │   │   ├── gb-001.json
+│   │   │   └── ...
+│   │   ├── IN/                          # India (10 entries, in-001.json .. in-010.json)
+│   │   │   ├── in-001.json
+│   │   │   └── ...
 │   │   ├── JP/                          # Japan (32 entries, jp-001.json .. jp-032.json)
 │   │   │   ├── jp-001.json
+│   │   │   └── ...
+│   │   ├── KR/                          # South Korea (6 entries, kr-001.json .. kr-006.json)
+│   │   │   ├── kr-001.json
+│   │   │   └── ...
+│   │   ├── SG/                          # Singapore (7 entries, sg-001.json .. sg-007.json)
+│   │   │   ├── sg-001.json
+│   │   │   └── ...
+│   │   ├── TW/                          # Taiwan (6 entries, tw-001.json .. tw-006.json)
+│   │   │   ├── tw-001.json
 │   │   │   └── ...
 │   │   └── US/                          # United States (20 entries, us-001.json .. us-020.json)
 │   │       ├── us-001.json

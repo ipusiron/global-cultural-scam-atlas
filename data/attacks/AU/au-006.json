@@ -1,0 +1,78 @@
+{
+  "id": "au-006",
+  "title": {
+    "ja": "偽の暗号資産取引所・ウォレット詐欺",
+    "en": "Fake Crypto Exchange / Wallet Scam"
+  },
+  "short_desc": {
+    "ja": "本物そっくりの取引所・ウォレット・取引アプリへ入金を誘導",
+    "en": "Lookalike exchanges, wallets, and apps absorb crypto deposits."
+  },
+  "cultural_lever": {
+    "ja": "暗号資産市場への期待と、取引アプリ利用の慣れ",
+    "en": "Enthusiasm for crypto and comfort with trading apps"
+  },
+  "attack_vector": [
+    "website",
+    "social",
+    "email"
+  ],
+  "targets": [
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) 偽の取引所・ウォレット・アプリへ誘導 2) 当初は利益が出て見える 3) さらなる投資を促す 4) 突然ロックアウトし消失",
+    "en": "1) Point to fake exchange/wallet/app 2) Show paper gains 3) Push further deposits 4) Lock out and disappear"
+  },
+  "red_flags": {
+    "ja": [
+      "アプリを公式ストア以外からダウンロードさせる",
+      "最初は確実に利益が出る",
+      "出金時に追加入金を要求"
+    ],
+    "en": [
+      "App download from the firm's site, not official stores",
+      "Guaranteed initial profits",
+      "Request more deposit at withdrawal"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "取引所の URL と公式アプリを厳密に確認",
+      "メールや DM のリンクを踏まない",
+      "引き出せないならそれ以上入金しない"
+    ],
+    "en": [
+      "Verify exchange URL and official apps",
+      "Avoid links from emails or DMs",
+      "If you cannot withdraw, stop depositing"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "cryptocurrency"
+  ],
+  "legal_notes": {
+    "ja": "Scamwatch と ASIC へ報告。暗号資産は FSCS 相当の補償対象外",
+    "en": "Report to Scamwatch and ASIC; crypto is not covered"
+  },
+  "references": [
+    {
+      "label": "ASIC MoneySmart: Crypto scams - Fake trading platforms, wallets or apps",
+      "url": "https://moneysmart.gov.au/financial-scams/crypto-scams",
+      "publisher": "ASIC MoneySmart",
+      "accessed": "2026-10-09",
+      "quote": "Scammers build fake exchanges or wallet sites that look real. You’re invited to trade, but once you deposit crypto, they disappear with your funds. ... Fake platforms – You use their platform to trade, mine crypto or to earn extra rewards. Initially, your crypto goes up in value, so you invest more. But then they lock you out, close the site and disappear with your money."
+    }
+  ],
+  "tags": [
+    "cryptocurrency",
+    "investment-fraud",
+    "fake-platform"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "ASIC MoneySmart が、装う対象（exchanges or wallet sites）と結果（lock you out, close the site and disappear）を具体的に記述。ASIC が2025-26年度に3,000件以上の暗号詐欺を摘発"
+  }
+}

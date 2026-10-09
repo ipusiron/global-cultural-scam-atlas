@@ -1,0 +1,79 @@
+{
+  "id": "au-003",
+  "title": {
+    "ja": "遠隔操作詐欺（Remote access scam）",
+    "en": "Remote Access Scam"
+  },
+  "short_desc": {
+    "ja": "銀行やソフト会社を装い、遠隔操作ソフトを入れさせ口座から送金",
+    "en": "Bank/software impersonation installs remote tools to drain account."
+  },
+  "cultural_lever": {
+    "ja": "テクニカルサポートへの信頼・ウイルス警告への不安",
+    "en": "Trust in tech support and fear of malware warnings"
+  },
+  "attack_vector": [
+    "phone",
+    "website"
+  ],
+  "targets": [
+    "general",
+    "elderly"
+  ],
+  "scenario": {
+    "ja": "1) 銀行・ソフト会社を装い連絡 2) 『口座・端末に問題』と伝える 3) 特別なソフトのダウンロードを指示 4) 遠隔操作で銀行口座へ侵入",
+    "en": "1) Pretend to be bank/software vendor 2) Claim account or device issue 3) Push 'special software' install 4) Access banking remotely"
+  },
+  "red_flags": {
+    "ja": [
+      "ウイルス警告のポップアップ",
+      "銀行名義で『特別ソフト』を要求",
+      "ライブチャットからのダウンロード"
+    ],
+    "en": [
+      "Virus-warning pop-up",
+      "'Special software' request in bank's name",
+      "Download via a 'live chat'"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "見知らぬ相手に遠隔操作権を与えない",
+      "ポップアップは閉じ、端末を再起動",
+      "銀行は公式アプリや公式 URL から確認"
+    ],
+    "en": [
+      "Never grant remote access to strangers",
+      "Close pop-ups and restart the device",
+      "Verify via the official bank app or URL"
+    ]
+  },
+  "risk_score": 5,
+  "mediums": [
+    "bank-transfer"
+  ],
+  "legal_notes": {
+    "ja": "Scamwatch へ報告",
+    "en": "Report to Scamwatch"
+  },
+  "references": [
+    {
+      "label": "ASIC MoneySmart: Banking scams - Remote access scams",
+      "url": "https://moneysmart.gov.au/financial-scams/banking-scams",
+      "publisher": "ASIC MoneySmart",
+      "accessed": "2026-10-09",
+      "quote": "Remote access scams can happen when someone pretends to be from a well‑known company, such as your bank or a software provider. They may claim there’s a problem with your account or device and say they need to fix it for you. Their real aim is to get access to your device so they can access your bank account, steal personal information or install malware."
+    }
+  ],
+  "tags": [
+    "remote-access",
+    "tech-abuse",
+    "banking-fraud",
+    "impersonation"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "ASIC MoneySmart が、装う相手（your bank or a software provider）と口実（problem with your account or device）、目的（access your bank account）を具体的に記述。即時の金融被害に直結するため risk_score=5"
+  }
+}

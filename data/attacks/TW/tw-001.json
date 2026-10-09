@@ -1,0 +1,79 @@
+{
+  "id": "tw-001",
+  "title": {
+    "ja": "LINE 投資グループ（投資群組）で有名人を装う投資詐欺",
+    "en": "LINE Investment-Group 'Celebrity' Scam"
+  },
+  "short_desc": {
+    "ja": "有名人や投資顧問を装い LINE グループへ誘い込み専用アプリで有価証券の購入を装う",
+    "en": "Impersonates celebs on LINE groups and pushes a fake trading app."
+  },
+  "cultural_lever": {
+    "ja": "台湾での LINE の普及と、有名人発の情報への信頼",
+    "en": "Ubiquity of LINE and trust in celebrity-sourced tips"
+  },
+  "attack_vector": [
+    "social",
+    "website"
+  ],
+  "targets": [
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) 有名人の名義で広告・動画を配信 2) 投資経験や高額利益で LINE グループへ誘い込む 3) 特定のアプリをダウンロードさせる 4) 有価証券の購入を偽装して資金を奪う",
+    "en": "1) Celeb-name ads/videos 2) Lure to LINE group 3) Push to install specific APP 4) Fake 'buying securities'"
+  },
+  "red_flags": {
+    "ja": [
+      "有名人や金融専門家の名義を使った投資グループ",
+      "専用ルートでの優先申込を謳う",
+      "指定アプリのダウンロード要求"
+    ],
+    "en": [
+      "'Celebrity' or 'expert' investment group",
+      "'Priority access' narrative",
+      "Request to install a specific app"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "金管会の『非合法証券先物業防止宣導専区（防範非法證券期貨業宣導專區）』で合法業者か照合",
+      "反詐欺相談専線 02-2737-3434 または 165 に照会",
+      "高報酬をうたう虚偽の情報を信じない"
+    ],
+    "en": [
+      "Verify firms on the FSC anti-fraud zone",
+      "Call 02-2737-3434 or 165 to verify",
+      "Treat high-return claims with suspicion"
+    ]
+  },
+  "risk_score": 5,
+  "mediums": [
+    "bank-transfer",
+    "cryptocurrency"
+  ],
+  "legal_notes": {
+    "ja": "165 反詐欺専線または 02-2737-3434 へ通報",
+    "en": "Report to 165 or the Anti-Fraud Consultation Line 02-2737-3434"
+  },
+  "references": [
+    {
+      "label": "金管會 新聞稿: 網路投資群組詐騙多，投資理財應洽合法業者",
+      "url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=202408150002&dtable=News",
+      "publisher": "金融監督管理委員會 (FSC Taiwan)",
+      "accessed": "2026-10-09",
+      "quote": "近期外界頻頻反映，瀏覽網路頁面或影片時，常發現有不肖人士假借名人名義，以投資經驗分享或高額獲利誘使民眾加入投資群組，誘騙民眾下載特定APP，佯裝購買有價證券之詐騙手法。"
+    }
+  ],
+  "tags": [
+    "investment-fraud",
+    "impersonation",
+    "celebrity-impersonation",
+    "social-engineering"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "金管會の新聞稿が、装う相手（假借名人名義）、経路（投資群組）、要求（下載特定 APP）、目的（佯裝購買有價證券）を具体的に記述。台湾で多発し FSC が公式注意喚起しているため risk_score=5"
+  }
+}

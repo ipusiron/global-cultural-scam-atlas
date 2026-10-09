@@ -1,6 +1,6 @@
 // Tests for data/attacks (one JSON per attack):
 //  - id matches the file name and ^[a-z]{2}-\d{3}$
-//  - per-country counts (JP=32, US=20, IN=1, total=53)
+//  - per-country counts (JP=32, US=20, IN=10, GB=7, AU=7, SG=7, KR=6, TW=6, total=95)
 //  - risk_score is an integer in [1,5]
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
@@ -8,7 +8,7 @@ import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
 const ROOT = path.resolve('data/attacks');
-const EXPECTED_COUNTS = { JP: 32, US: 20, IN: 1 };
+const EXPECTED_COUNTS = { JP: 32, US: 20, IN: 10, GB: 7, AU: 7, SG: 7, KR: 6, TW: 6 };
 const ID_PATTERN = /^[a-z]{2}-\d{3}$/;
 
 const VECTOR_VOCAB = new Set([
@@ -46,7 +46,7 @@ test('per-country attack counts match the README table', async () => {
     total += files.length;
   }
   assert.equal(total, Object.values(EXPECTED_COUNTS).reduce((a, b) => a + b, 0));
-  assert.equal(total, 53);
+  assert.equal(total, 95);
 });
 
 test('every attack id matches the file name and the ^[a-z]{2}-\\d{3}$ pattern', async () => {
@@ -111,6 +111,47 @@ test('verification (when present) has status in enum and checked in YYYY-MM-DD',
       if(c.verification.checked != null){
         assert.match(c.verification.checked, DATE_PATTERN,
           `${file}: verification.checked "${c.verification.checked}" not YYYY-MM-DD`);
+      }
+    }
+  }
+});
+
+test('ja fields do not contain Hangul outside parentheses', async () => {
+  // ja は日本語で書く。原語の固有名詞や手口名は、日本語の語のあとに
+  // 括弧（全角「（）」または半角「()」）で1回だけ併記してよい。
+  // 括弧の外にハングルが残らないことを機械的に確かめる。
+  const HANGUL = /[가-힣ㄱ-ㆎ]/;
+  const JA_FIELDS = ['title', 'short_desc', 'cultural_lever', 'scenario', 'legal_notes'];
+  const JA_ARRAY_FIELDS = ['red_flags', 'mitigations'];
+  function stripParens(s){
+    // 括弧の中身を取り除く（全角・半角ともに）
+    return String(s)
+      .replace(/（[^（）]*）/g, '')
+      .replace(/\([^()]*\)/g, '');
+  }
+  function checkString(s, where){
+    const stripped = stripParens(s);
+    const m = stripped.match(HANGUL);
+    assert.ok(!m, `${where}: Hangul "${m && m[0]}" remains outside parentheses in ja field. value="${s}"`);
+  }
+  const dirs = await listCountryDirs();
+  for(const cc of dirs){
+    for(const file of await listAttackFiles(cc)){
+      const c = JSON.parse(await fs.readFile(file, 'utf-8'));
+      for(const f of JA_FIELDS){
+        const v = c[f];
+        if(v && typeof v === 'object' && typeof v.ja === 'string'){
+          checkString(v.ja, `${file} ${f}.ja`);
+        }
+      }
+      for(const f of JA_ARRAY_FIELDS){
+        const v = c[f];
+        if(v && typeof v === 'object' && Array.isArray(v.ja)){
+          v.ja.forEach((item, i) => checkString(item, `${file} ${f}.ja[${i}]`));
+        }
+      }
+      if(c.verification && typeof c.verification.note === 'string'){
+        checkString(c.verification.note, `${file} verification.note`);
       }
     }
   }

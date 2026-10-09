@@ -1,0 +1,81 @@
+{
+  "id": "sg-004",
+  "title": {
+    "ja": "電子商取引詐欺（Carousell 等の偽の売買）",
+    "en": "E-Commerce Buyer/Seller Scam"
+  },
+  "short_desc": {
+    "ja": "SNS や中古マーケットで安値を提示し、プラットフォーム外決済に誘導",
+    "en": "Low prices on marketplaces lure out-of-platform payment."
+  },
+  "cultural_lever": {
+    "ja": "便利な C2C マーケットへの慣れと即売りへの魅力",
+    "en": "Comfort with online marketplaces and love of a deal"
+  },
+  "attack_vector": [
+    "marketplace",
+    "social",
+    "website"
+  ],
+  "targets": [
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) 魅力的な価格で商品提示 2) プラットフォーム外の決済を要求 3) 偽の第三者アプリや銀行送金 4) 入金後に音信不通または偽の支払い証明",
+    "en": "1) Attractive-priced listing 2) Push off-platform payment 3) Third-party app or bank transfer 4) Vanish or send fake proof"
+  },
+  "red_flags": {
+    "ja": [
+      "期間限定を強調した魅力的な価格",
+      "プラットフォーム外決済（直接送金）の要求",
+      "取引確定後に『追加の関税・配送料』要求"
+    ],
+    "en": [
+      "'Limited time' low prices",
+      "Push to pay off the platform",
+      "'Extra customs/shipping' after deal"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "プラットフォームの Transaction Safety Rating を確認",
+      "プラットフォーム上の決済のみ使用",
+      "テキストリンクや QR コードの決済を使わない"
+    ],
+    "en": [
+      "Check Transaction Safety Ratings",
+      "Pay only through the platform's secure options",
+      "Avoid payment links or QR codes in texts"
+    ]
+  },
+  "risk_score": 3,
+  "mediums": [
+    "bank-transfer",
+    "e-wallet",
+    "qr-pay"
+  ],
+  "legal_notes": {
+    "ja": "ScamShield とプラットフォームへ報告",
+    "en": "Report to ScamShield and the platform"
+  },
+  "references": [
+    {
+      "label": "ScamShield (SG): E-Commerce Scams",
+      "url": "https://www.scamshield.gov.sg/i-want-protection-from-scams/learn-to-recognise-scams/e-commerce-scams/",
+      "publisher": "ScamShield / Singapore Government",
+      "accessed": "2026-10-09",
+      "quote": "It is likely a scam if the seller: Offers the item/service at an attractive price for a limited time ... Needs you to click on links or install a third-party app sent via text messages to make payment or receive refunds"
+    }
+  ],
+  "tags": [
+    "e-commerce",
+    "marketplace-fraud",
+    "scarcity",
+    "urgency"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "ScamShield が、売り手を装う赤旗（attractive price for a limited time、direct payment、third-party app、追加の関税要求）を具体的に記述。シンガポールの Carousell 等の C2C マーケットが代表例"
+  }
+}

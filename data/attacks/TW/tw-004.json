@@ -1,0 +1,79 @@
+{
+  "id": "tw-004",
+  "title": {
+    "ja": "ネットオークションの『分割払い（分期付款）設定ミス』 ATM 誘導",
+    "en": "Online-Auction 'Instalment Mistake' ATM Scam"
+  },
+  "short_desc": {
+    "ja": "オークションサイト（拍賣）の職員を装い『操作ミス』を口実に ATM での修正を迫る",
+    "en": "'Auction staff' claim 'instalment mistake' to drive victim to ATM."
+  },
+  "cultural_lever": {
+    "ja": "ネットオークションの普及と、取引ミスへの不安",
+    "en": "Online auction habits and anxiety over transaction errors"
+  },
+  "attack_vector": [
+    "phone",
+    "email",
+    "marketplace"
+  ],
+  "targets": [
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) 売り手の取引完了情報を盗み見 2) オークションサイトの職員を装う 3) 『分割払い（分期付款）設定』『送金失敗（匯款失敗）』を口実に 4) 慌てた買い手に ATM での修正操作を指示し送金させる",
+    "en": "1) Harvest seller's completed-trade info 2) Pose as auction staff 3) Claim 'instalment' or 'transfer failed' 4) Push buyer to ATM for 'fix'"
+  },
+  "red_flags": {
+    "ja": [
+      "オークションサイトの職員を名乗る電話",
+      "『分割払い設定』『送金失敗』の説明",
+      "ATM での修正操作の指示"
+    ],
+    "en": [
+      "Call from alleged auction-site staff",
+      "'Instalment' or 'transfer failed' excuse",
+      "ATM 'fix' instructions"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "ATM で見知らぬ操作を言われたら必ず止まる",
+      "疑わしいメールは開かず、ウイルス対策ソフトを更新",
+      "対面取引や代引き（貨到付款）など安全な決済を選ぶ"
+    ],
+    "en": [
+      "Stop immediately for unexplained ATM steps",
+      "Delete unknown emails; keep antivirus up",
+      "Prefer in-person or COD payment"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "bank-transfer"
+  ],
+  "legal_notes": {
+    "ja": "165 または 02-2737-3434 に通報",
+    "en": "Report to 165 or 02-2737-3434"
+  },
+  "references": [
+    {
+      "label": "金管會 金融智慧網: 常見詐騙手法 - 網路拍賣詐騙",
+      "url": "https://moneywise.fsc.gov.tw/home.jsp?dataserno=36&id=4&mcustomize=publicizeinfo_view.jsp&parentpath=0",
+      "publisher": "金融監督管理委員會 金融智慧網 (FSC)",
+      "accessed": "2026-10-09",
+      "quote": "歹徒透過窺視賣家帳號內交易完成的電子郵件資訊，偽裝為拍賣網站服務人員，先取信買家，再佯稱買家匯款操作錯誤（如：誤設為「分期付款」或「轉帳失敗」等說辭），誘騙買家緊急至自動櫃員機修正匯款，使買家在不知情、慌張的情境下，依其指示轉帳致詐騙得逞。"
+    }
+  ],
+  "tags": [
+    "marketplace-fraud",
+    "atm-fraud",
+    "impersonation",
+    "urgency"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "金管會の宣導資訊が、接触経路（拍賣サイト職員を装う）、口実（分期付款設定・轉帳失敗）、要求（ATM 修正）を具体的に記述。台湾で典型的な手口"
+  }
+}

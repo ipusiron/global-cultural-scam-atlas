@@ -1,0 +1,79 @@
+{
+  "id": "in-008",
+  "title": {
+    "ja": "軍人を装う『緊急転勤』取引詐欺",
+    "en": "Army-Personnel Impersonation in Trades"
+  },
+  "short_desc": {
+    "ja": "軍人身分で OLX 等の売買に登場し『緊急転勤』を口実に送金を奪う",
+    "en": "'Army officer' pretext on OLX etc. demands advance payment."
+  },
+  "cultural_lever": {
+    "ja": "軍人への敬意と、緊急転勤という現実感",
+    "en": "Respect for the armed forces; plausibility of urgent postings"
+  },
+  "attack_vector": [
+    "marketplace",
+    "social"
+  ],
+  "targets": [
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) OLX 等で軍人を装う売り手・買い手 2) 身分証やユニフォーム画像を提示 3) 緊急転勤・現地受取不可を口実 4) 前払いや UPI 送金を要求",
+    "en": "1) Pose as army seller/buyer on OLX 2) Show ID or uniform photos 3) 'Urgent posting' pretext 4) Demand advance / UPI payment"
+  },
+  "red_flags": {
+    "ja": [
+      "軍人身分と緊急転勤の説明",
+      "対面での現物確認を拒否",
+      "QR や UPI での前払い要求"
+    ],
+    "en": [
+      "'Army officer + urgent posting'",
+      "Refusal to meet in person",
+      "QR / UPI advance payment"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "対面での確認を優先",
+      "身分証画像を信用しない",
+      "1930 または cybercrime.gov.in へ通報"
+    ],
+    "en": [
+      "Meet in person before paying",
+      "Do not trust ID photos",
+      "Report to 1930 / cybercrime.gov.in"
+    ]
+  },
+  "risk_score": 3,
+  "mediums": [
+    "bank-transfer",
+    "qr-pay",
+    "e-wallet"
+  ],
+  "legal_notes": {
+    "ja": "I4C が 2022 年7月に公告",
+    "en": "I4C advisory issued July 2022"
+  },
+  "references": [
+    {
+      "label": "I4C Advisory: Fraudsters using Army personnel details to perpetrate financial cyber frauds",
+      "url": "https://cybercrime.gov.in/webform/Advisory.aspx",
+      "publisher": "Indian Cyber Crime Coordination Centre (I4C)",
+      "accessed": "2026-10-09",
+      "quote": "Fraudsters using Army personnel details to perpetrate financial cyber frauds July 06 2022 As per the analysis of recent complaints reported on NCRP of I4C, a new trend in financial cyber fraud has been observed where fraudsters impersonate....."
+    }
+  ],
+  "tags": [
+    "impersonation",
+    "marketplace-fraud",
+    "military-pretext"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "I4C 公告が、手口（Army personnel details を悪用）、位置づけ（a new trend in financial cyber fraud）を明示。OLX 詐欺はインドで広く注意喚起"
+  }
+}

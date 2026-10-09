@@ -109,7 +109,12 @@ Runs via `npm test` (`node --test`, zero extra dependencies). See `README.md` fo
 4. Currently configured countries:
    - JP (Japan): APAC region, ja/en languages (32 entries).
    - US (United States): AMER region, en language (20 entries).
-   - IN (India): APAC region, hi/en languages (1 entry).
+   - GB (United Kingdom): EMEA region, en language (7 entries).
+   - AU (Australia): APAC region, en language (7 entries).
+   - SG (Singapore): APAC region, en/zh/ms/ta languages (7 entries).
+   - KR (South Korea): APAC region, ko/en languages (6 entries).
+   - TW (Taiwan): APAC region, zh-TW/en languages (6 entries).
+   - IN (India): APAC region, hi/en languages (10 entries).
 
 ## Content Guidelines (`docs/content-guidelines.md`)
 
