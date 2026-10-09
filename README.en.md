@@ -35,6 +35,9 @@ Open it directly in a browser.
 > ![Japanese dark theme](assets/screenshot3.png)
 > *Dark theme.*
 
+> ![Statistics tab](assets/screenshot4.png)
+> *Statistics tab (country / vector / target / risk distribution).*
+
 ---
 
 ## ✨ Features
@@ -42,8 +45,12 @@ Open it directly in a browser.
 - One JSON file per attack, so each contribution is reviewable in isolation.
 - JSON Schema validation runs automatically in CI.
 - Japanese/English UI switch that also swaps the data labels.
-- Filters by country, attack vector, and full-text search, with a reset button.
+- Filters by country, attack vector, target, and full-text search, plus a sort select and a reset button.
+- Search also covers `cultural_lever`, `red_flags`, `mitigations`, and `id`, and each card shows which fields matched.
 - Risk score (1-5) displayed as a colour-coded star bar.
+- Filter/sort/language state round-trips through the URL hash and has a Copy-share-link button.
+- Statistics tab renders country / vector / target / risk histograms (all vs. filtered) as self-contained SVG.
+- CSV download exports the current filter result (UTF-8 BOM, CRLF, formula-injection safe).
 - Static site: no external APIs or CDNs are called at runtime.
 - The aggregated dataset is publicly available as `dist/countries.json`.
 
@@ -53,11 +60,36 @@ Open it directly in a browser.
 
 ### Use the hosted demo
 
-Open the demo page and filter by country, attack vector, or keywords. Click "Details" on a card to see the Red Flags, Mitigations, and references in a modal. The buttons in the header toggle theme (light/dark) and language (JA/EN).
+Open the demo page and filter by country, attack vector, target, or keywords. Pick a sort order (country code, risk high-first, or id) from the Sort select. Each card lists the search fields where the query hit (title, scenario, Red Flags, ...). The header buttons toggle theme (light/dark) and language (JA/EN). Click "Details" to see Red Flags, Mitigations, and references in a modal; backdrop click or Esc closes it and focus returns to the opener.
+
+### List and Statistics tabs
+
+The tabs at the top switch between the List and the Statistics view. The statistics view draws country, vector, target, and risk-score distributions as dependency-free SVG bar charts, side by side for the full dataset and the current filter.
+
+### Share link and URL hash
+
+Filter, sort, and language state is encoded in the URL hash (e.g. `#country=JP&vector=phone&target=elderly&q=ATM&sort=risk&lang=ja`) and restored by browser back/forward. The "Copy share link" button writes it to the clipboard; environments without the Clipboard API fall back to a dialog with a selectable URL.
+
+### CSV download
+
+The CSV button exports the current filter result as UTF-8 (BOM) with CRLF endings. Columns are `id, country, title, vector, targets, risk, cultural_lever, red_flags, mitigations`; arrays are joined with ` / `. Values starting with `= + - @` are prefixed with `'` to defuse spreadsheet formula injection. File name: `gcsa-<country>-<date>.csv`.
+
+### Combining with Day081
+
+Paste scenario text into Day081's [Emotion-Based Scam Detector](https://ipusiron.github.io/emotion-based-scam-detector/) to practice judging emotional language. GCSA does not yet deep-link scenarios into Day081 because the detector does not currently accept input via URL parameter (see the PR description for details).
+
+### Scaffold a new attack
+
+```bash
+node tools/new-attack.mjs JP        # writes data/attacks/JP/jp-033.json at the next free sequence
+node tools/new-attack.mjs US 42     # writes us-042.json; refuses to overwrite
+```
+
+The scaffold is filled with TODO strings; a human must replace them before `npm run build` and `npm run validate:schema`.
 
 ### Override the initial language via URL
 
-Append `?lang=ja` or `?lang=en` to force the initial locale, overriding stored preferences and browser settings.
+Append `?lang=ja` or `?lang=en` to force the initial locale, overriding stored preferences and browser settings. A `lang=` entry inside the URL hash takes precedence over `?lang=`.
 
 ### Run locally
 
@@ -77,10 +109,13 @@ python -m http.server 8000 --directory docs
 | Area | Role |
 |------|------|
 | Header | Title, theme toggle, language toggle, countries.json download link |
-| Filters | Country select, attack vector select, full-text search, reset |
+| Tabs | List vs. Statistics switch (`role="tablist"`, `aria-selected`) |
+| Filters | Country (with counts), vector, target, full-text search, sort, reset, Copy share link, Download CSV |
 | Summary | Current number of visible attacks (announced via `aria-live`) |
-| Cards | One card per attack (title, country, risk, vectors, targets, details button) |
-| Detail modal | ID, cultural lever, scenario, Red Flags, Mitigations, references |
+| Cards | One card per attack (title, country, risk, vectors, targets, matched fields, details button) |
+| Statistics | SVG bar charts for country / vector / target / risk, side by side for all vs. filtered |
+| Detail modal | ID, cultural lever, scenario, Red Flags, Mitigations, references (backdrop click and Esc close; focus returns to opener) |
+| Toast | Announces share-link copy status via `aria-live` |
 | Footer | Link to the GitHub repository |
 
 ---
@@ -120,7 +155,10 @@ python -m http.server 8000 --directory docs
 ### Combinations
 
 - Paste scenario text into Day081's [Emotion-Based Scam Detector](https://ipusiron.github.io/emotion-based-scam-detector/) to practice judging emotional language.
-- Add your own case as JSON and send a pull request to grow the database (follow `docs/content-guidelines.md`).
+- Share filter URLs with students and trainees so they land on the same country / vector / target selection.
+- Load CSV exports into spreadsheets or analysis notebooks (pandas, R, ...) to summarise trends by country and risk.
+- Compare the all-vs-filtered histograms in the Statistics tab to see which countries or targets are overweighted at a glance.
+- Add your own case as JSON and send a pull request to grow the database (follow `docs/content-guidelines.md`). Scaffold with `tools/new-attack.mjs`.
 
 ### Limits
 
@@ -220,6 +258,8 @@ What the suites cover:
 - `test/contrast.test.js`: in both light and dark themes, the six key `(fg,bg)(fg,card)(muted,bg)(muted,card)(accent,bg)(accent,card)` pairs meet WCAG 4.5:1.
 - `test/format.test.js`: per-file maximum line length and minimum line count.
 - `test/readme.test.js`: structural checks on `README.md` and `README.en.md`.
+- `test/phase2.test.js`: expanded search, target extraction, per-country counts, sort, URL-hash round-trip, aggregates, CSV escaping (with formula-injection defusing), and `labelFor()` dictionary against the real dataset.
+- `test/new-attack.test.js`: `tools/new-attack.mjs` sequence picking, overwrite refusal, and input validation, all driven through a tmp dir so the repo stays clean.
 
 The `test` GitHub Actions workflow runs the same `npm test` on push and pull request.
 
@@ -265,6 +305,7 @@ global-cultural-scam-atlas/
 │   ├── screenshot.png                   # Japanese light, initial view
 │   ├── screenshot2.png                  # Japanese light, detail modal
 │   ├── screenshot3.png                  # Japanese dark, initial view
+│   ├── screenshot4.png                  # Japanese light, statistics tab
 │   └── en/
 │       └── screenshot.png               # English light, initial view
 ├── CHANGELOG.md                         # Change log (JA/EN)
@@ -301,11 +342,14 @@ global-cultural-scam-atlas/
 │   ├── format.test.js                   # Line length and minimum-size checks
 │   ├── html.test.js                     # Structural checks on docs/index.html
 │   ├── i18n.test.js                     # ja/en dictionary consistency
+│   ├── new-attack.test.js               # new-attack.mjs run in a tmp dir
+│   ├── phase2.test.js                   # expanded search / sort / hash / aggregate / CSV
 │   └── readme.test.js                   # README structure checks
 └── tools/
     ├── build-countries.mjs              # Builds dist/countries.json
     ├── build-index.mjs                  # Builds data/index.json
-    └── copy-local.mjs                   # Copies the dataset under docs/dist/
+    ├── copy-local.mjs                   # Copies the dataset under docs/dist/
+    └── new-attack.mjs                   # Scaffold a new attack JSON
 ```
 
 ---

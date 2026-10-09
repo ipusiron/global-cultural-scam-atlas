@@ -85,3 +85,9 @@ test('country select has no static placeholder option (JS populates it)', async 
   assert.ok(m, 'country select not found');
   assert.ok(!/<option/i.test(m[1]), 'country <select> must be empty; JS populates options');
 });
+
+test('style.css makes the hidden attribute win over display rules (tab switching relies on it)', async () => {
+  const css = await fs.readFile('docs/style.css', 'utf-8');
+  const compact = css.replace(/\s+/g, '');
+  assert.ok(compact.includes('[hidden]{display:none!important;}'), 'style.css must declare [hidden]{display:none !important}');
+});

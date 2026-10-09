@@ -73,6 +73,9 @@ hub: true
 > ![日本語ダークテーマで初期表示](assets/screenshot3.png)
 > *ダークテーマに切り替えた表示*
 
+> ![日本語ライトテーマで統計タブ](assets/screenshot4.png)
+> *統計タブ（国別・ベクター別・ターゲット別・リスク分布）*
+
 ---
 
 ## ✨ 特徴
@@ -80,8 +83,12 @@ hub: true
 - 1攻撃=1 JSONファイルで管理し、PR単位でレビューができる。
 - JSON Schemaによる構造検証をCIで自動実行する。
 - 日本語と英語の表示切替に対応し、UI文言とデータの両方が切り替わる。
-- フィルター（国・攻撃ベクター・全文検索）とフィルターリセットを提供する。
+- フィルター（国・攻撃ベクター・ターゲット・全文検索）と並び替え、フィルターリセットを提供する。
+- 検索対象を `cultural_lever`・`red_flags`・`mitigations`・`id` にも広げ、どのフィールドで当たったかをカード上に示す。
 - リスクスコア（1〜5）を色分けで示す。
+- 絞り込み状態を URL ハッシュで共有できる（コピー用のボタンつき）。
+- 統計タブで国別・ベクター別・ターゲット別・リスク分布を SVG で可視化する（全データと絞り込み後の2系列）。
+- 絞り込み結果を CSV（UTF-8 BOM・CRLF・式インジェクション対策）で取り出せる。
 - 外部APIやCDNに依存しない静的サイトとして動作する。
 - データは `dist/countries.json` として誰でも取得できる。
 
@@ -91,11 +98,36 @@ hub: true
 
 ### 公開版をブラウザーで使う
 
-デモページを開き、国・攻撃ベクター・検索語で絞り込みます。カードの「詳細」ボタンを押すとモーダルでRed Flags・Mitigations・Referencesを確認できます。右上のボタンでテーマ（ライト/ダーク）と言語（JA/EN）を切り替えられます。
+デモページを開き、国・攻撃ベクター・ターゲット・検索語で絞り込みます。並び替えセレクトから「国コード順」「リスクが高い順」「ID 順」を選べます。カードには一致した検索フィールド（タイトル・シナリオ・Red Flags など）がチップで並びます。右上のボタンでテーマ（ライト/ダーク）と言語（JA/EN）を切り替えられます。カードの「詳細」ボタンを押すとモーダルで Red Flags・Mitigations・References を確認でき、背景クリックや Esc で閉じるとフォーカスが元のボタンに戻ります。
+
+### 一覧タブと統計タブ
+
+上部のタブで「一覧」と「統計」を切り替えます。統計タブでは、国別・攻撃ベクター別・ターゲット別・リスクスコアの分布を、全データと現在の絞り込み結果の2系列で、依存ゼロの SVG 横棒グラフとして表示します。
+
+### 共有リンクと URL ハッシュ
+
+絞り込み・並び替え・言語の状態は URL ハッシュ（例 `#country=JP&vector=phone&target=elderly&q=ATM&sort=risk&lang=ja`）に保存され、ブラウザーの戻る・進むでも復元されます。「共有リンクをコピー」ボタンでクリップボードにコピーできます（Clipboard API が使えない環境ではダイアログで URL を提示します）。
+
+### CSV ダウンロード
+
+「CSV ダウンロード」ボタンで、現在の絞り込み結果を CSV（UTF-8 BOM 付き・CRLF 改行）で取り出せます。列は `id, country, title, vector, targets, risk, cultural_lever, red_flags, mitigations` で、配列は ` / ` で連結します。先頭が `= + - @` の値には `'` を前置して式インジェクションを無効化します。ファイル名は `gcsa-<国>-<日付>.csv` です。
+
+### Day081 と組み合わせる
+
+Day081 の [Emotion-Based Scam Detector](https://ipusiron.github.io/emotion-based-scam-detector/) にシナリオを貼り、感情に訴える文面の判定を練習します。本リポジトリーからの直接リンクは、Day081 側が URL パラメーターで入力テキストを受け取っていないため今回は見送っています（詳しくは PR の本文を参照）。
+
+### 新規事例の雛形スクリプト
+
+```bash
+node tools/new-attack.mjs JP        # 次の空き番号で data/attacks/JP/jp-033.json を生成
+node tools/new-attack.mjs US 42     # us-042.json を生成（既存ファイルは上書きしない）
+```
+
+TODO 入りの雛形が生成されるので、人が内容を埋めてから `npm run build` と `npm run validate:schema` を通してください。
 
 ### URLで初期言語を指定する
 
-`?lang=ja` または `?lang=en` を付けてアクセスすると、保存値やブラウザー設定より優先してその言語で表示します。
+`?lang=ja` または `?lang=en` を付けてアクセスすると、保存値やブラウザー設定より優先してその言語で表示します。URL ハッシュに `lang=` が含まれる場合はさらに優先されます。
 
 ### ローカルで動かす
 
@@ -115,10 +147,13 @@ python -m http.server 8000 --directory docs
 | 領域 | 役割 |
 |------|------|
 | ヘッダー | タイトル・テーマ切替・言語切替・countries.jsonダウンロードリンク |
-| フィルター | 国セレクト・攻撃ベクターセレクト・全文検索・リセット |
+| タブ | 「一覧」と「統計」の切り替え（`role="tablist"`、`aria-selected`） |
+| フィルター | 国（件数つき）・攻撃ベクター・ターゲット・全文検索・並び替え・リセット・共有リンクをコピー・CSV ダウンロード |
 | サマリー | 現在表示中の件数（`aria-live` で更新を通知） |
-| カード一覧 | 攻撃ごとのカード（タイトル・国・リスク・ベクター・ターゲット・詳細ボタン） |
-| 詳細モーダル | ID・文化的レバー・シナリオ・Red Flags・Mitigations・References |
+| カード一覧 | 攻撃ごとのカード（タイトル・国・リスク・ベクター・ターゲット・一致フィールド・詳細ボタン） |
+| 統計 | 国別・ベクター別・ターゲット別・リスク分布の SVG 横棒グラフ（全データ／絞り込み後の2系列） |
+| 詳細モーダル | ID・文化的レバー・シナリオ・Red Flags・Mitigations・References（背景クリックとEsc で閉じる、閉じた後は開いたボタンへフォーカス戻し） |
+| トースト | 共有リンクのコピー結果を `aria-live` で通知 |
 | フッター | GitHubリポジトリーへのリンク |
 
 ---
@@ -158,7 +193,10 @@ python -m http.server 8000 --directory docs
 ### 組み合わせ
 
 - Day081の [Emotion-Based Scam Detector](https://ipusiron.github.io/emotion-based-scam-detector/) に事例のシナリオ文を貼り、感情に訴える文面の判定を練習する。
-- 自分の事例をJSONで追加してPRを出し、データベースを育てる（`docs/content-guidelines.md` に従う）。
+- 共有リンクをコピーして授業や研修で配り、国・ベクター・ターゲットの絞り込みを再現してもらう。
+- CSV ダウンロードを表計算や分析ノートブック（pandas・R など）に取り込み、国ごと・リスクごとの傾向を集計する。
+- 統計タブで、全データと絞り込み後の分布を見比べ、国やターゲットの偏りを素早く把握する。
+- 自分の事例をJSONで追加してPRを出し、データベースを育てる（`docs/content-guidelines.md` に従う）。`tools/new-attack.mjs` で雛形を作る。
 
 ### 限界
 
@@ -258,6 +296,8 @@ npm test
 - `test/contrast.test.js`: ライト・ダーク両テーマで `(fg,bg)(fg,card)(muted,bg)(muted,card)(accent,bg)(accent,card)` の6組がWCAG 4.5:1以上であること。
 - `test/format.test.js`: ファイルごとの最長行と最小行数。
 - `test/readme.test.js`: このREADMEの構造・画像参照・禁止語・ディレクトリー構造の網羅。
+- `test/phase2.test.js`: 検索フィールド拡張・ターゲット抽出・国別件数・並び替え・URL ハッシュの往復・集計・CSV エスケープと式インジェクション対策・辞書 `labelFor()` を実データで検算。
+- `test/new-attack.test.js`: `tools/new-attack.mjs` の採番・既存ファイルを上書きしない挙動・不正入力の拒否を一時ディレクトリーで検証（リポジトリーに生成物を残さない）。
 
 GitHub Actionsの `test` ワークフローが `push` と `pull_request` で同じ `npm test` を実行します。
 
@@ -303,6 +343,7 @@ global-cultural-scam-atlas/
 │   ├── screenshot.png                   # 日本語ライトの初期表示
 │   ├── screenshot2.png                  # 日本語ライトで詳細モーダル
 │   ├── screenshot3.png                  # 日本語ダークの初期表示
+│   ├── screenshot4.png                  # 日本語ライトで統計タブ
 │   └── en/
 │       └── screenshot.png               # 英語ライトの初期表示
 ├── CHANGELOG.md                         # 変更履歴（日英併記）
@@ -339,11 +380,14 @@ global-cultural-scam-atlas/
 │   ├── format.test.js                   # 行長と最小行数の検証
 │   ├── html.test.js                     # docs/index.html の構造検証
 │   ├── i18n.test.js                     # ja/en 辞書の整合検証
+│   ├── new-attack.test.js               # 雛形スクリプトを一時ディレクトリーで検証
+│   ├── phase2.test.js                   # 検索拡張・並び替え・URL 状態・集計・CSV
 │   └── readme.test.js                   # README と README.en.md の構造検証
 └── tools/
     ├── build-countries.mjs              # dist/countries.json を生成
     ├── build-index.mjs                  # data/index.json を生成
-    └── copy-local.mjs                   # ローカル配信用に docs/dist/ へコピー
+    ├── copy-local.mjs                   # ローカル配信用に docs/dist/ へコピー
+    └── new-attack.mjs                   # 新規事例の雛形 JSON を生成
 ```
 
 ---

@@ -11,6 +11,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## [Unreleased]
 
 ### Added / 追加
+- ターゲット（観光客・一般・高齢者・事業者・学生など）の絞り込みセレクトを追加。/ Added a Target filter select driven by values present in the dataset.
+- 国セレクトの各項目に件数を併記（例「日本 (JP) (32)」「すべて (53)」）。/ Country select options now carry per-country counts.
+- 検索対象を `cultural_lever`・`red_flags`・`mitigations`・`id` にも拡張し、どのフィールドで当たったかをカードに表示するようにしました。/ Full-text search now covers `cultural_lever`, `red_flags`, `mitigations`, and `id`, and each card shows which fields matched.
+- 並び替えセレクト（国コード順・リスクが高い順・ID 順）を追加。/ Added a Sort select with three stable orders.
+- 絞り込み・並び替え・言語の状態を URL ハッシュ（例 `#country=JP&vector=phone&target=elderly&q=ATM&sort=risk&lang=ja`）と往復するようにし、「共有リンクをコピー」ボタンを追加しました。/ Filter/sort/language state round-trips through the URL hash and a Copy-share-link button writes it to the clipboard.
+- 統計タブを追加。国別・ベクター別・ターゲット別・リスク分布を全データと絞り込み後の2系列で SVG 横棒グラフ表示します。/ Added a Statistics tab rendering country/vector/target/risk histograms (all vs. filtered) as self-contained SVG.
+- 絞り込み結果を CSV（UTF-8 BOM・CRLF・式インジェクション対策）でダウンロードするボタンを追加。/ Added a CSV download that exports the current filter result with UTF-8 BOM, CRLF, and formula-injection defusing.
+- 新規事例の雛形を自動採番で作る `tools/new-attack.mjs` を追加（既存ファイルは上書きしない）。/ Added `tools/new-attack.mjs` to scaffold a new attack JSON with the next free sequence, refusing to overwrite existing files.
+- コア関数 `searchAttackFields`・`extractTargets`・`countryCounts`・`sortAttacks`・`parseHash`・`buildHash`・`aggregate`・`csvField`・`toCsv`・`entriesToCsvRows` と、ベクター/ターゲット/一致フィールドの i18n 辞書 `labelFor()` を追加。/ Added new pure helpers and the `labelFor()` dictionary for controlled-vocabulary labels.
+- テストに `test/phase2.test.js`（検索拡張・ターゲット・並び替え・URL 状態・集計・CSV・辞書）と `test/new-attack.test.js`（雛形スクリプトを一時ディレクトリーで実行）を追加。/ Added `test/phase2.test.js` and `test/new-attack.test.js`.
+
+### Changed / 変更
+- 詳細モーダルを背景クリックでも閉じ、閉じると開いたボタンへフォーカスを戻すようにしました。/ Clicking the dialog backdrop now closes the detail modal, and focus returns to the opener on close.
+- `.github/workflows/ci.yml` と `.github/workflows/pages.yml` の Node を 22 に揃えました。/ Pinned ci and pages workflows to Node 22 to match the test workflow.
+- 検索フィールドのプレースホルダーを `… ID` も含む文言に更新し、辞書を同期しました。/ Updated the search placeholder and i18n dictionary to mention ID search.
+
 - 最新の攻撃手法を2件追加 / Added 2 recent attack entries.
 - 自動テスト基盤を追加（`node --test`、依存なし）。`test/core.test.js`・`test/i18n.test.js`・`test/data.test.js`・`test/html.test.js`・`test/contrast.test.js`・`test/format.test.js`・`test/readme.test.js` を追加。/ Added a dependency-free `node --test` suite covering core logic, i18n dictionaries, attack JSON, index.html structure, WCAG contrast, format hygiene, and README structure.
 - `.github/workflows/test.yml` を追加（Node 22 で `npm test`）。/ Added a `test` workflow that runs `npm test` on Node 22.
