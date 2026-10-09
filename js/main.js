@@ -12,7 +12,7 @@ import {
   filterAttacks, sortAttacks, pickLang, pickList, riskStars, clampRisk,
   sanitizeUrl, escapeHtml, escapeAttr, resolveLocale, resolveTheme,
   extractTargets, countryCounts, parseHash, buildHash,
-  aggregate, toCsv, entriesToCsvRows, SORT_OPTIONS
+  aggregate, toCsv, entriesToCsvRows, SORT_OPTIONS, verificationStatus
 } from './gcsa-core.js';
 import { messages, t, labelFor } from './gcsa-messages.js';
 
@@ -47,6 +47,7 @@ const state = {
   target: hashState.target || '__all__',
   q: hashState.q || '',
   sort: hashState.sort || 'default',
+  verifiedOnly: hashState.verified === '1',
   view: 'list',               // 'list' | 'stats'
   lastOpener: null            // button that opened the modal (for focus return)
 };
@@ -62,6 +63,7 @@ const els = {
   target: document.getElementById('target'),
   q: document.getElementById('q'),
   sort: document.getElementById('sort'),
+  verifiedOnly: document.getElementById('verifiedOnly'),
   searchClear: document.getElementById('searchClear'),
   resetFilters: document.getElementById('resetFilters'),
   shareLink: document.getElementById('shareLink'),
@@ -76,6 +78,7 @@ const els = {
   dlgVector: document.getElementById('dlgVector'),
   dlgTargets: document.getElementById('dlgTargets'),
   dlgRisk: document.getElementById('dlgRisk'),
+  dlgVerification: document.getElementById('dlgVerification'),
   dlgShort: document.getElementById('dlgShort'),
   dlgLever: document.getElementById('dlgLever'),
   dlgScenario: document.getElementById('dlgScenario'),
@@ -194,6 +197,7 @@ function syncControlsFromState(){
   els.target.value = state.target;
   els.q.value = state.q;
   els.sort.value = SORT_OPTIONS.includes(state.sort) ? state.sort : 'default';
+  if(els.verifiedOnly) els.verifiedOnly.checked = state.verifiedOnly === true;
   updateTabAria();
 }
 
@@ -221,6 +225,12 @@ function bindEvents(){
   els.vector .addEventListener('change', () => { state.vector  = els.vector .value; render(); pushHash(); });
   els.target .addEventListener('change', () => { state.target  = els.target .value; render(); pushHash(); });
   els.sort   .addEventListener('change', () => { state.sort    = els.sort   .value; render(); pushHash(); });
+  if(els.verifiedOnly){
+    els.verifiedOnly.addEventListener('change', () => {
+      state.verifiedOnly = els.verifiedOnly.checked;
+      render(); pushHash();
+    });
+  }
   els.q.addEventListener('input', debounce(() => {
     state.q = els.q.value.trim();
     render();
@@ -241,6 +251,7 @@ function bindEvents(){
     state.target  = '__all__';
     state.q = '';
     state.sort = 'default';
+    state.verifiedOnly = false;
     syncControlsFromState();
     render();
     pushHash();
@@ -271,6 +282,7 @@ function bindEvents(){
     state.target  = h.target  || '__all__';
     state.q       = h.q || '';
     state.sort    = h.sort || 'default';
+    state.verifiedOnly = h.verified === '1';
     if(h.lang && h.lang !== state.locale){
       state.locale = h.lang;
       safeSet('gcsa_locale', state.locale);
@@ -293,7 +305,8 @@ function pushHash(){
     target:  state.target,
     q: state.q,
     sort: state.sort,
-    lang: state.locale
+    lang: state.locale,
+    verified: state.verifiedOnly ? '1' : ''
   });
   const url = window.location.pathname + window.location.search + (h || '');
   try { history.replaceState(null, '', url); } catch(_) { /* ignore */ }
@@ -306,7 +319,8 @@ function shareUrl(){
     target:  state.target,
     q: state.q,
     sort: state.sort,
-    lang: state.locale
+    lang: state.locale,
+    verified: state.verifiedOnly ? '1' : ''
   });
   return window.location.origin + window.location.pathname + window.location.search + (h || '');
 }
@@ -392,7 +406,8 @@ function currentEntries(){
   return sortAttacks(
     filterAttacks(state.data, {
       country: state.country, vector: state.vector,
-      target: state.target, q: state.q, locale: state.locale
+      target: state.target, q: state.q, locale: state.locale,
+      verifiedOnly: state.verifiedOnly
     }),
     state.sort
   );
@@ -429,6 +444,8 @@ function renderCard({ country, atk, tTitle, tShort, matchedFields }){
     `<span class="chip target">${escapeHtml(labelFor('target', v, loc))}</span>`).join(' ');
   const risk = clampRisk(atk.risk_score);
   const stars = riskStars(risk);
+  const vstatus = verificationStatus(atk);
+  const vlabel = escapeHtml(labelFor('verification', vstatus, loc));
   const countryLabel = t(loc, 'modal.country');
   const riskLabel = t(loc, 'modal.risk');
   const detailsLabel = t(loc, 'card.details');
@@ -442,7 +459,10 @@ function renderCard({ country, atk, tTitle, tShort, matchedFields }){
   }
   return `
   <article class="card">
-    <h3>${escapeHtml(tTitle)}</h3>
+    <div class="card-head">
+      <h3>${escapeHtml(tTitle)}</h3>
+      <span class="badge verification verification-${vstatus}">${vlabel}</span>
+    </div>
     <div class="kvs">
       <div><strong>${escapeHtml(countryLabel)}</strong> ${escapeHtml(country.country_code)}</div>
       <div><strong>${escapeHtml(riskLabel)}</strong> <span class="risk-${risk}">${stars}</span></div>
@@ -478,6 +498,15 @@ function openDetail(country, atk, opener){
   els.dlgRisk.appendChild(span);
   els.dlgRisk.appendChild(document.createTextNode(` (${risk} / 5)`));
 
+  if(els.dlgVerification){
+    const vstatus = verificationStatus(atk);
+    els.dlgVerification.textContent = '';
+    const badge = document.createElement('span');
+    badge.className = `badge verification verification-${vstatus}`;
+    badge.textContent = labelFor('verification', vstatus, loc);
+    els.dlgVerification.appendChild(badge);
+  }
+
   els.dlgShort.textContent = pickLang(atk.short_desc, loc);
   els.dlgLever.textContent = pickLang(atk.cultural_lever, loc);
   els.dlgScenario.textContent = pickLang(atk.scenario, loc);
@@ -488,9 +517,16 @@ function openDetail(country, atk, opener){
     .map(li => `<li>${escapeHtml(li)}</li>`).join('');
   const refs = atk.references || [];
   if(refs.length){
-    els.dlgRefs.innerHTML = refs.map(r =>
-      `<li><a href="${escapeAttr(sanitizeUrl(r.url))}" target="_blank" rel="noopener noreferrer">${escapeHtml(r.label || r.url)}</a></li>`
-    ).join('');
+    const pubLabel = t(loc, 'modal.publisher');
+    const accLabel = t(loc, 'modal.accessed');
+    els.dlgRefs.innerHTML = refs.map(r => {
+      const link = `<a href="${escapeAttr(sanitizeUrl(r.url))}" target="_blank" rel="noopener noreferrer">${escapeHtml(r.label || r.url)}</a>`;
+      const meta = [];
+      if(r.publisher) meta.push(`${escapeHtml(pubLabel)} ${escapeHtml(r.publisher)}`);
+      if(r.accessed)  meta.push(`${escapeHtml(accLabel)} ${escapeHtml(r.accessed)}`);
+      const metaHtml = meta.length ? ` <span class="muted ref-meta">· ${meta.join(' · ')}</span>` : '';
+      return `<li>${link}${metaHtml}</li>`;
+    }).join('');
   } else {
     const none = t(loc, 'modal.noReferences');
     els.dlgRefs.innerHTML = `<li class="muted">${escapeHtml(none)}</li>`;
@@ -538,7 +574,11 @@ function renderStats(filteredEntries){
     section('stats.byRisk', 'stats.risk',
       Object.fromEntries([1,2,3,4,5].map(r => [String(r), allStats.byRisk[r] || 0])),
       Object.fromEntries([1,2,3,4,5].map(r => [String(r), filteredStats.byRisk[r] || 0])),
-      r => `${r} / 5`, r => `${r} / 5`)
+      r => `${r} / 5`, r => `${r} / 5`),
+    section('stats.byVerification', 'stats.verification',
+      allStats.byVerification, filteredStats.byVerification,
+      k => labelFor('verification', k, loc),
+      k => labelFor('verification', k, loc))
   ];
   els.statsView.innerHTML = sections.join('');
 
@@ -603,7 +643,8 @@ function downloadCsv(){
     ['id', 'id'], ['country', 'country'], ['title', 'title'],
     ['vector', 'vector'], ['targets', 'targets'], ['risk', 'risk'],
     ['cultural_lever', 'cultural_lever'],
-    ['red_flags', 'red_flags'], ['mitigations', 'mitigations']
+    ['red_flags', 'red_flags'], ['mitigations', 'mitigations'],
+    ['verification', 'verification'], ['references', 'references']
   ];
   const csv = toCsv(rows, columns);
   const bom = '﻿';

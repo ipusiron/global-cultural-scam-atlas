@@ -74,15 +74,28 @@
           },
           "references": [
             {
-              "label": "CERT-In Advisory",
-              "url": "https://www.cert-in.org.in/"
+              "label": "The Tribune: Centre alerts public about online booking scams targeting pilgrims, tourists",
+              "url": "https://www.tribuneindia.com/news/india/centre-alerts-public-about-online-booking-scams-targeting-pilgrims-tourists",
+              "publisher": "The Tribune",
+              "accessed": "2026-10-09"
+            },
+            {
+              "label": "CERT-In",
+              "url": "https://www.cert-in.org.in/",
+              "publisher": "CERT-In",
+              "accessed": "2026-10-09"
             }
           ],
           "tags": [
             "charity",
             "religious-pretext",
             "social-proof"
-          ]
+          ],
+          "verification": {
+            "status": "partial",
+            "checked": "2026-10-09",
+            "note": "I4C (Indian Cyber Crime Coordination Centre) alert on scams impersonating religious institutions and pilgrim services; news-article summary rather than primary government page with a scenario-matching quote"
+          }
         }
       ]
     },
@@ -162,7 +175,12 @@
             "social-engineering",
             "scarcity",
             "urgency"
-          ]
+          ],
+          "verification": {
+            "status": "unverified",
+            "checked": "2026-10-09",
+            "note": "観光地で親切を装い店へ連れていく『押し売り』は、繁華街のキャッチセールス（例：絵画・エステ）に近いが、観光地文脈の個別事例を官公庁サイトに見出せなかった"
+          }
         },
         {
           "id": "jp-002",
@@ -184,7 +202,7 @@
             "in-person"
           ],
           "targets": [
-            "elder",
+            "elderly",
             "general"
           ],
           "scenario": {
@@ -226,12 +244,17 @@
           },
           "references": [
             {
-              "label": "警察庁 SOS47 手口一覧と対策",
-              "url": "https://www.npa.go.jp/bureau/safetylife/sos47/case/"
+              "label": "警察庁 SOS47：預貯金詐欺",
+              "url": "https://www.npa.go.jp/bureau/safetylife/sos47/case/deposits/",
+              "publisher": "警察庁 SOS47",
+              "accessed": "2026-10-09",
+              "quote": "県や市区町村などの自治体や税務署の職員などと名乗り、医療費などの払い戻しがあるからと、キャッシュカードの確認や取替の必要があるなどの口実で自宅を訪れ、キャッシュカードをだまし取る詐欺です。"
             },
             {
-              "label": "東京都：最新の特殊詐欺（警察官を騙る手口）",
-              "url": "https://www.seikatubunka.metro.tokyo.lg.jp/tomin_anzen/chian/mijikanahanzai/saisinnotokusyusagi"
+              "label": "警察庁 SOS47：手口一覧と対策",
+              "url": "https://www.npa.go.jp/bureau/safetylife/sos47/case/",
+              "publisher": "警察庁 SOS47",
+              "accessed": "2026-10-09"
             }
           ],
           "tags": [
@@ -241,7 +264,12 @@
             "urgency",
             "social-engineering",
             "tourism"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "『自治体や税務署の職員などと名乗り』『自宅を訪れ、キャッシュカードをだまし取る』が装う相手・接触経路と要求・結果に対応"
+          }
         },
         {
           "id": "jp-003",
@@ -299,7 +327,7 @@
             "credit",
             "e-wallet",
             "bank-transfer",
-            "gift-card"
+            "gift-cards"
           ],
           "legal_notes": {
             "ja": "国税当局がギフトカード購入を求めることはありません。",
@@ -307,12 +335,11 @@
           },
           "references": [
             {
-              "label": "フィッシング対策協議会：国税庁をかたるフィッシング注意喚起(2024/05/22)",
-              "url": "https://www.antiphishing.jp/news/alert/nta_20240522.html"
-            },
-            {
-              "label": "国税庁/税務署装い詐欺メールの学内注意喚起（UEC）",
-              "url": "https://www.cc.uec.ac.jp/blogs/news/2024/12/20241229zeimuphishing.html"
+              "label": "フィッシング対策協議会：国税庁をかたるフィッシング(2024/05/22)",
+              "url": "https://www.antiphishing.jp/news/alert/nta_20240522.html",
+              "publisher": "フィッシング対策協議会",
+              "accessed": "2026-10-09",
+              "quote": "2024/05/22 10:00 時点では、フィッシングサイトは稼働中であり、JPCERT/CC にサイト閉鎖のための調査を依頼中です。類似のフィッシングサイトが公開される可能性がありますので、引き続きご注意ください。 このようなフィッシングサイトにて、氏名 (漢字、カナ)、郵便番号、都道府県市区町村、番地、建物名、電話番号、カードに記載された名前、カード番号、有効期限、支払い方法、セキュリティコード、納付手続き完了メール（アドレス）等を、絶対に入力したりアップロードしないよう、ご注意ください。"
             }
           ],
           "tags": [
@@ -322,7 +349,12 @@
             "sms",
             "email",
             "urgency"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "『税務署からのお知らせ』『【督促状】滞納した税金』は装う相手と件名の文例、本文に『カード番号、有効期限、…を入力させる』で要求・結果に対応"
+          }
         },
         {
           "id": "jp-004",
@@ -344,7 +376,7 @@
             "in-person"
           ],
           "targets": [
-            "elder",
+            "elderly",
             "general"
           ],
           "scenario": {
@@ -385,8 +417,11 @@
           },
           "references": [
             {
-              "label": "警察庁 SOS47：手口一覧（還付金詐欺を含む）",
-              "url": "https://www.npa.go.jp/bureau/safetylife/sos47/case/"
+              "label": "警察庁 SOS47：手口一覧と対策（還付金詐欺）",
+              "url": "https://www.npa.go.jp/bureau/safetylife/sos47/case/",
+              "publisher": "警察庁 SOS47",
+              "accessed": "2026-10-09",
+              "quote": "還付金詐欺 税金還付等に必要な手続きを装って被害者にATMを操作させ、口座間送金により財産上の不法の利益を得る手口です。"
             }
           ],
           "tags": [
@@ -394,7 +429,12 @@
             "authority-pretext",
             "phone",
             "urgency"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "『税金還付等に必要な手続きを装って』が装う相手、『ATMを操作させ、口座間送金』が要求・結果"
+          }
         },
         {
           "id": "jp-005",
@@ -461,8 +501,11 @@
           },
           "references": [
             {
-              "label": "警察庁 SOS47：手口一覧",
-              "url": "https://www.npa.go.jp/bureau/safetylife/sos47/case/"
+              "label": "警察庁 SOS47：手口一覧と対策（架空料金請求詐欺）",
+              "url": "https://www.npa.go.jp/bureau/safetylife/sos47/case/",
+              "publisher": "警察庁 SOS47",
+              "accessed": "2026-10-09",
+              "quote": "架空料金請求詐欺 未払いの料金があるなど架空の事実を口実とし金銭等をだまし取る（脅し取る）手口です。"
             }
           ],
           "tags": [
@@ -471,7 +514,12 @@
             "email",
             "sms",
             "urgency"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "『未払いの料金』『架空の事実』が装う名目、『金銭等をだまし取る』が要求・結果"
+          }
         },
         {
           "id": "jp-006",
@@ -492,7 +540,7 @@
             "phone"
           ],
           "targets": [
-            "elder",
+            "elderly",
             "general",
             "expat"
           ],
@@ -526,7 +574,6 @@
           },
           "risk_score": 2,
           "mediums": [
-            "postal",
             "cash",
             "bank-transfer"
           ],
@@ -537,11 +584,10 @@
           "references": [
             {
               "label": "消費者庁：売買契約に基づかないで送付された商品に関するQ&A",
-              "url": "https://www.no-trouble.caa.go.jp/qa/negativeoption.html"
-            },
-            {
-              "label": "消費者庁：特定商取引法ガイド（行政処分の執行状況）",
-              "url": "https://www.no-trouble.caa.go.jp/action/result_1year.html"
+              "url": "https://www.no-trouble.caa.go.jp/qa/negativeoption.html",
+              "publisher": "消費者庁 特定商取引法ガイド",
+              "accessed": "2026-10-09",
+              "quote": "売買契約の申込みも締結もしていないのに、自分宛てに身に覚えのない商品が送付されてきました。代金を支払わなくてはならないのでしょうか。…売買契約に基づかないで一方的に商品の送付があったとしても、それにより売買契約は成立しておらず、代金を支払う必要はありません。"
             }
           ],
           "tags": [
@@ -549,7 +595,12 @@
             "postal",
             "fake-fee",
             "consumer-law"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "『身に覚えのない商品が送付』が接触経路、『代金を支払わなくてはならないのでしょうか』が加害者の要求"
+          }
         },
         {
           "id": "jp-007",
@@ -570,7 +621,7 @@
             "sms"
           ],
           "targets": [
-            "elder",
+            "elderly",
             "general"
           ],
           "scenario": {
@@ -605,7 +656,7 @@
           "mediums": [
             "bank-transfer",
             "cash",
-            "gift-card"
+            "gift-cards"
           ],
           "legal_notes": {
             "ja": "",
@@ -613,8 +664,11 @@
           },
           "references": [
             {
-              "label": "警察庁：特殊詐欺対策（SOS47）",
-              "url": "https://www.npa.go.jp/bureau/safetylife/sos47/"
+              "label": "警察庁 SOS47：オレオレ詐欺",
+              "url": "https://www.npa.go.jp/bureau/safetylife/sos47/case/oreore/",
+              "publisher": "警察庁 SOS47",
+              "accessed": "2026-10-09",
+              "quote": "犯人は最初に『風邪をひいて声が変わった』『携帯が壊れて番号が変わった』などと言って信用させた後、『お金が今すぐ必要』と話して振り込みを求めてきます。"
             }
           ],
           "tags": [
@@ -622,7 +676,12 @@
             "urgency",
             "phone",
             "authority-pretext"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "『声が変わった』『携帯が壊れて』が家族装いの接触、『お金が今すぐ必要』『振り込みを求める』が要求"
+          }
         },
         {
           "id": "jp-008",
@@ -645,7 +704,7 @@
           ],
           "targets": [
             "general",
-            "elder"
+            "elderly"
           ],
           "scenario": {
             "ja": "1) 偽警告表示 → 2) 指定番号へ電話 → 3) 遠隔操作許可 → 4) 有料契約/決済",
@@ -678,7 +737,7 @@
           "risk_score": 3,
           "mediums": [
             "credit",
-            "gift-card",
+            "gift-cards",
             "e-wallet"
           ],
           "legal_notes": {
@@ -687,12 +746,17 @@
           },
           "references": [
             {
-              "label": "総務省 国民のための情報セキュリティサイト：不審な警告画面",
-              "url": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/security/"
+              "label": "警察庁サイバー警察局：サポート詐欺対策",
+              "url": "https://www.npa.go.jp/bureau/cyber/countermeasures/support-fraud.html",
+              "publisher": "警察庁サイバー警察局",
+              "accessed": "2026-10-09",
+              "quote": "サポート詐欺とは よくある相談 サポート詐欺の手口 サポート詐欺の被害に遭ったら 被害防止対策 参考リンク サポート詐欺とは サポート詐欺とは、パソコンでインターネットを閲覧中に、突然、ウイルス感染したかのような嘘の画面を表示させたり、警告音を発生させるなどして、ユーザーの不安を煽り、画面に記載されたサポート窓口に電話をかけさせ、サポートの名目で金銭を騙し取しとったり、遠隔操作ソフトをインストールさせたりする手口です。"
             },
             {
-              "label": "フィッシング対策協議会",
-              "url": "https://www.antiphishing.jp/"
+              "label": "IPA：偽セキュリティ警告（サポート詐欺）対策特集ページ",
+              "url": "https://www.ipa.go.jp/security/anshin/measures/fakealert.html",
+              "publisher": "IPA",
+              "accessed": "2026-10-09"
             }
           ],
           "tags": [
@@ -700,7 +764,12 @@
             "website",
             "phone",
             "urgency"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "『嘘の画面』『電話をかけさせ』が接触経路、『金銭を騙し取る』『遠隔操作ソフトをインストール』が要求・結果"
+          }
         },
         {
           "id": "jp-009",
@@ -764,8 +833,11 @@
           },
           "references": [
             {
-              "label": "フィッシング対策協議会（宅配便不在連絡を装う手口）",
-              "url": "https://www.antiphishing.jp/"
+              "label": "国民生活センター：宅配便業者を装った『不在通知』の偽SMSに注意しましょう",
+              "url": "https://www.kokusen.go.jp/news/data/n-20201126_2.html",
+              "publisher": "国民生活センター",
+              "accessed": "2026-10-09",
+              "quote": "消費者のスマートフォンに、「お客様宛にお荷物のお届けにあがりましたが不在の為持ち帰りました。下記よりご確認ください」という内容の偽SMSが送られてきます。 送られてきたSMSには偽サイトに誘導するためのURLが記載されています。 ケース1では、偽サイトにアクセスして不正なアプリをインストールした結果、消費者のスマートフォンから同じ内容の偽SMSが多数送信されて、身に覚えのない通信料が発生します。"
             }
           ],
           "tags": [
@@ -773,7 +845,12 @@
             "sms",
             "website",
             "phishing"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "『宅配便業者を装った『不在通知』の偽SMS』が接触経路、『偽サイトに誘導するためのURL』でID・パスワード等を入力させるのが要求"
+          }
         },
         {
           "id": "jp-010",
@@ -791,7 +868,6 @@
           },
           "attack_vector": [
             "in-person",
-            "street",
             "door-to-door"
           ],
           "targets": [
@@ -838,15 +914,23 @@
           },
           "references": [
             {
-              "label": "東京都消費生活総合センター：繁華街の客引きトラブル",
-              "url": "https://www.shouhiseikatu.metro.tokyo.lg.jp/"
+              "label": "警視庁：盛り場トピックス（最近の盛り場の被害事例）",
+              "url": "https://www.keishicho.metro.tokyo.lg.jp/kurashi/anzen/sakaribasogo/sakaribatopics.html",
+              "publisher": "警視庁",
+              "accessed": "2026-10-09",
+              "quote": "酔って気分が良いときに声を掛けてきた客引き。その客引きに連れられて入ったお店でまず一杯。しかし、そのお酒は非常にアルコールが強く、いつの間にか寝込んでしまいます。朝気づいたら夕べの記憶がなく、財布のお金もすっからかん。"
             }
           ],
           "tags": [
             "pressure-sales",
             "tourism",
             "street"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "『声を掛けてきた客引き』が接触経路、『財布のお金もすっからかん』『高額な料金のカード使用履歴』が要求・結果"
+          }
         },
         {
           "id": "jp-011",
@@ -910,15 +994,23 @@
           },
           "references": [
             {
-              "label": "国民生活センター：フリマアプリのトラブル",
-              "url": "https://www.kokusen.go.jp/"
+              "label": "国民生活センター：フリマアプリでの架空取引を持ちかける手口に注意",
+              "url": "https://www.kokusen.go.jp/news/data/n-20211118_1.html",
+              "publisher": "国民生活センター",
+              "accessed": "2026-10-09",
+              "quote": "画像投稿アプリで海外のバイナリーオプション取引で稼いでいるという女性と知り合い、『取引ツールを買わないか』と勧誘された。約20万円のツールを買うことにしたところ、代金の支払方法としてフリマアプリでの架空取引を持ちかけられた。"
             }
           ],
           "tags": [
             "marketplace",
             "phishing",
             "social-engineering"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "『取引ツールを買わないか』と勧誘が接触経路、『フリマアプリでの架空取引で支払わせる』が要求・結果"
+          }
         },
         {
           "id": "jp-012",
@@ -974,7 +1066,7 @@
           "mediums": [
             "bank-transfer",
             "e-wallet",
-            "crypto"
+            "cryptocurrency"
           ],
           "legal_notes": {
             "ja": "",
@@ -982,8 +1074,11 @@
           },
           "references": [
             {
-              "label": "警視庁：チケット詐欺の注意喚起",
-              "url": "https://www.keishicho.metro.tokyo.lg.jp/"
+              "label": "埼玉県警察：SNS上でのチケット詐欺に注意！",
+              "url": "https://www.police.pref.saitama.lg.jp/c0070/kurashi/cyber-ticket.html",
+              "publisher": "埼玉県警察",
+              "accessed": "2026-10-09",
+              "quote": "『支払いの早い人を優先します』『詐欺に遭いたくないので先払いをお願いします』等、支払いを先にさせようとします。…『仕事が忙しい』『病気になった』等の理由で発券や返金を先延ばしにして、最終的にはアカウントを消して連絡が取れなくなります。"
             }
           ],
           "tags": [
@@ -991,7 +1086,12 @@
             "social",
             "prepayment",
             "scarcity"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "『支払いを先にさせる』が接触経路の勧誘、『発券や返金を先延ばし』『アカウントを消して連絡が取れなくなる』が要求・結果"
+          }
         },
         {
           "id": "jp-013",
@@ -1008,8 +1108,7 @@
             "en": "Face-saving, reluctance to refuse, reciprocity"
           },
           "attack_vector": [
-            "in-person",
-            "street"
+            "in-person"
           ],
           "targets": [
             "tourist",
@@ -1053,15 +1152,29 @@
           },
           "references": [
             {
-              "label": "観光庁：訪日旅行の安全情報",
-              "url": "https://www.mlit.go.jp/kankocho/"
+              "label": "東京都：高額で買い取ると勧められ、外貨を購入したが換金できない",
+              "url": "https://www.shouhiseikatu.metro.tokyo.lg.jp/sodan/faq/main/264.html",
+              "publisher": "東京都消費生活総合センター",
+              "accessed": "2026-10-09",
+              "quote": "電話で『今後イラクが復興すれば通貨の価値が何十倍にも上がるのでイラクディナールを購入しないか。』と勧められた。直後に別の事業者から『イラクディナールを高額で買い取りたい。』と電話がきた。"
+            },
+            {
+              "label": "国家公安委員会：犯罪収益移転危険度調査書（令和元年）",
+              "url": "https://www.npa.go.jp/sosikihanzai/jafic/nenzihokoku/risk/risk011219.pdf",
+              "publisher": "国家公安委員会",
+              "accessed": "2026-10-09"
             }
           ],
           "tags": [
             "tourism",
             "street",
             "cash"
-          ]
+          ],
+          "verification": {
+            "status": "partial",
+            "checked": "2026-10-09",
+            "note": "外貨売買の劇場型手口の相談事例として近いが、観光地で親切装いの闇両替を直接扱う官公庁ページを見出せず partial"
+          }
         },
         {
           "id": "jp-014",
@@ -1118,7 +1231,7 @@
           "risk_score": 4,
           "mediums": [
             "bank-transfer",
-            "crypto",
+            "cryptocurrency",
             "e-wallet"
           ],
           "legal_notes": {
@@ -1127,8 +1240,11 @@
           },
           "references": [
             {
-              "label": "金融庁：無登録業者にご注意",
-              "url": "https://www.fsa.go.jp/"
+              "label": "金融庁：それ詐欺です！SNS上の投資勧誘にご注意ください！",
+              "url": "https://www.fsa.go.jp/receipt/toushisagi_koukoku/shuhou.html",
+              "publisher": "金融庁",
+              "accessed": "2026-10-09",
+              "quote": "動画投稿サイトの広告等からSNSのクローズドチャットへ誘導され、投資への勧誘が行われる事例…『講師』や『先生』、『アシスタント』が登場し、投資の指南をする。…虚偽の成功談をもとに投資話を持ち掛ける。架空の口座で取引させ、しばらくは利益が出て出金もできるかのように装いながら、追加で高額な入金をさせる。"
             }
           ],
           "tags": [
@@ -1136,7 +1252,12 @@
             "social",
             "crypto",
             "authority-pretext"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "『SNSのクローズドチャットへ誘導』が接触経路、『追加で高額な入金をさせる』が要求・結果"
+          }
         },
         {
           "id": "jp-015",
@@ -1201,15 +1322,29 @@
           },
           "references": [
             {
-              "label": "消費者庁：連鎖販売取引（マルチ商法）",
-              "url": "https://www.no-trouble.caa.go.jp/what/renhan.html"
+              "label": "消費者庁：ネットワークビジネスで大量の在庫をかかえてしまった",
+              "url": "https://www.no-trouble.caa.go.jp/case/multilevelmarketing/case02.html",
+              "publisher": "消費者庁 特定商取引法ガイド",
+              "accessed": "2026-10-09",
+              "quote": "大学生である息子が『簡単に稼げるアルバイトがある』と友人の紹介を受けて、Ｘという連鎖販売業者の事務所に出向いた。事務所では友人とＸの社員が『入会金３、０００円を支払い、中国茶と浄水器（総額３０万円）を購入すると会員になることができ…』と勧誘された。"
+            },
+            {
+              "label": "消費者庁：ビジネスセミナーへ参加したつもりが、実際はネットワークビジネスの説明会だった",
+              "url": "https://www.no-trouble.caa.go.jp/case/multilevelmarketing/case01.html",
+              "publisher": "消費者庁 特定商取引法ガイド",
+              "accessed": "2026-10-09"
             }
           ],
           "tags": [
             "mlm",
             "seminar",
             "pressure-sales"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "『簡単に稼げるアルバイトがある』が接触経路、『入会金・教材30万円を購入すると会員になれる』が要求・結果"
+          }
         },
         {
           "id": "jp-016",
@@ -1227,7 +1362,6 @@
           },
           "attack_vector": [
             "in-person",
-            "street",
             "social"
           ],
           "targets": [
@@ -1274,15 +1408,23 @@
           },
           "references": [
             {
-              "label": "日本赤十字社：義援金・寄付情報",
-              "url": "https://www.jrc.or.jp/"
+              "label": "国民生活センター：令和6年能登半島地震に便乗した詐欺的トラブルにご注意ください",
+              "url": "https://www.kokusen.go.jp/news/data/n-20240112_2.html",
+              "publisher": "国民生活センター",
+              "accessed": "2026-10-09",
+              "quote": "今般の地震に関連して、「市が義援金を集めているという不審な電話がかかってきた」、「支援品を求める不審な訪問があった」といった相談が寄せられています。地震に便乗した不審な電話はすぐに切り、訪問があっても断ってください。 地震発生後は、被災地域、被災地域以外にかかわらず、地震に便乗した詐欺的トラブルや悪質商法が多数発生しますので、十分に注意ください。 相談事例 【事例1】 若い男性から携帯電話で「市が能登半島地震の義援金を集めている」という電話があった。"
             }
           ],
           "tags": [
             "charity",
             "street",
             "festival-pretext"
-          ]
+          ],
+          "verification": {
+            "status": "partial",
+            "checked": "2026-10-09",
+            "note": "災害義援金の電話・訪問詐欺を扱うが、街頭募金箱に特化した官公庁の事例を見出せず partial"
+          }
         },
         {
           "id": "jp-017",
@@ -1303,7 +1445,7 @@
             "phone"
           ],
           "targets": [
-            "elder",
+            "elderly",
             "general"
           ],
           "scenario": {
@@ -1346,15 +1488,23 @@
           },
           "references": [
             {
-              "label": "消費者庁：訪問販売の注意点",
-              "url": "https://www.no-trouble.caa.go.jp/what/kojin/hanbai.html"
+              "label": "国民生活センター：屋根工事の点検商法のトラブルが増えています",
+              "url": "https://www.kokusen.go.jp/news/data/n-20231011_1.html",
+              "publisher": "国民生活センター",
+              "accessed": "2026-10-09",
+              "quote": "点検商法とは、『近所で行う工事の挨拶に来た』などと言って突然訪問し、『屋根瓦がずれているため点検してあげる』と言って点検した後、『このままだと瓦が飛んでご近所に迷惑がかかる』などと不安をあおって工事の契約をする手口です。"
             }
           ],
           "tags": [
             "doorstep",
             "pressure-sales",
             "housing"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "『近所で行う工事の挨拶』『点検してあげる』が接触経路、『不安をあおって工事の契約』が要求・結果"
+          }
         },
         {
           "id": "jp-018",
@@ -1377,7 +1527,7 @@
           ],
           "targets": [
             "general",
-            "immigrant",
+            "expat",
             "business"
           ],
           "scenario": {
@@ -1419,12 +1569,11 @@
           },
           "references": [
             {
-              "label": "デジタル庁：注意喚起・偽サイト",
-              "url": "https://www.digital.go.jp/"
-            },
-            {
-              "label": "フィッシング対策協議会",
-              "url": "https://www.antiphishing.jp/"
+              "label": "フィッシング対策協議会：特別定額給付金に関する通知を装うフィッシング(2021/08/24)",
+              "url": "https://www.antiphishing.jp/news/alert/kyufukin_20210824.html",
+              "publisher": "フィッシング対策協議会",
+              "accessed": "2026-10-09",
+              "quote": "特別定額給付金に関する通知を装うフィッシングの報告を受けています。 メールの件名 【特別定額給付金】二回目特別定額給付金の特設サイトを開設しました。 [お知らせ] 二回目特別定額給付金の特設サイトを開設しました。 【お知らせ】二回目特別定額給付金の特設サイトを開設しました。 二回目特別定額給付金の特設サイトを開設しました。 ※上記以外の件名も使われている可能性があります。 詳細内容 特別定額給付金に関する通知を装うフィッシングの報告を受けています。"
             }
           ],
           "tags": [
@@ -1432,7 +1581,12 @@
             "website",
             "phishing",
             "fake-fee"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "『特別定額給付金の特設サイトを開設』が接触の件名、『カード番号、認証コードを入力』が要求・結果"
+          }
         },
         {
           "id": "jp-019",
@@ -1449,8 +1603,8 @@
             "en": "Souvenir culture and discount expectations"
           },
           "attack_vector": [
-            "street",
-            "market"
+            "in-person",
+            "marketplace"
           ],
           "targets": [
             "tourist",
@@ -1494,15 +1648,23 @@
           },
           "references": [
             {
-              "label": "特許庁：偽ブランド対策・知的財産",
-              "url": "https://www.jpo.go.jp/"
+              "label": "国民生活センター：模倣品に関するトラブルにご注意！（令和4年10月から水際取締りが強化されました）",
+              "url": "https://www.kokusen.go.jp/news/data/n-20221012_1.html",
+              "publisher": "国民生活センター",
+              "accessed": "2026-10-09",
+              "quote": "インターネットでの模倣品の購入トラブルは引き続き見られます。詐欺的な販売サイトから模倣品を購入しないよう、注文する前にサイトの情報をよく確認しましょう。"
             }
           ],
           "tags": [
             "counterfeit",
             "tourism",
             "street"
-          ]
+          ],
+          "verification": {
+            "status": "partial",
+            "checked": "2026-10-09",
+            "note": "模倣品トラブルを扱うがオンライン通販中心で、路上販売の個別事例を直接扱う官公庁ページを見出せず partial"
+          }
         },
         {
           "id": "jp-020",
@@ -1560,7 +1722,7 @@
           "mediums": [
             "bank-transfer",
             "e-wallet",
-            "crypto"
+            "cryptocurrency"
           ],
           "legal_notes": {
             "ja": "",
@@ -1568,12 +1730,17 @@
           },
           "references": [
             {
-              "label": "内閣府 防災：災害関連情報",
-              "url": "https://www.bousai.go.jp/"
+              "label": "国民生活センター：ご用心 災害に便乗した悪質商法",
+              "url": "https://www.kokusen.go.jp/soudan_now/data/disaster.html",
+              "publisher": "国民生活センター",
+              "accessed": "2026-10-09",
+              "quote": "地震、大雨などの災害時には、それに便乗した悪質商法が多数発生しています。 悪質商法は災害発生地域だけが狙われるとは限りません。災害に便乗した悪質な商法には十分注意してください。 特に最近は「火災保険を使って自己負担なく住宅の修理ができる」など、「保険金が使える」と勧誘する手口について、全国の消費生活センター等に相談が寄せられています。 被災後の混乱に便乗し、点検商法や不当な高額請求などのトラブルが増えます。"
             },
             {
-              "label": "日本赤十字社：義援金",
-              "url": "https://www.jrc.or.jp/"
+              "label": "国民生活センター：令和6年能登半島地震に便乗した詐欺的トラブルにご注意ください",
+              "url": "https://www.kokusen.go.jp/news/data/n-20240112_2.html",
+              "publisher": "国民生活センター",
+              "accessed": "2026-10-09"
             }
           ],
           "tags": [
@@ -1581,7 +1748,12 @@
             "disaster-pretext",
             "social",
             "urgency"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "『ボランティアを名乗る』『市役所の者だと名乗る』が接触と装う相手、『募金を求める』『義援金を求める』が要求・結果"
+          }
         },
         {
           "id": "jp-021",
@@ -1602,7 +1774,7 @@
             "phone"
           ],
           "targets": [
-            "elder",
+            "elderly",
             "general",
             "expat"
           ],
@@ -1636,7 +1808,6 @@
           },
           "risk_score": 2,
           "mediums": [
-            "postal",
             "cash",
             "bank-transfer"
           ],
@@ -1646,15 +1817,23 @@
           },
           "references": [
             {
-              "label": "消費者庁：送り付け商法（ネガティブ・オプション）",
-              "url": "https://www.no-trouble.caa.go.jp/qa/negativeoption.html"
+              "label": "消費者庁：売買契約に基づかないで送付された商品に関するQ&A",
+              "url": "https://www.no-trouble.caa.go.jp/qa/negativeoption.html",
+              "publisher": "消費者庁 特定商取引法ガイド",
+              "accessed": "2026-10-09",
+              "quote": "事業者が金銭を得る目的で、売買契約に基づかないで一方的に送付した商品については、消費者が直ちに処分できるものであり、開封や処分を行ったことによって、消費者に支払義務が生じることはありません。"
             }
           ],
           "tags": [
             "negative-option",
             "postal",
             "consumer-law"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "『一方的に送付』が接触経路、『代金の支払を請求され』が要求（Q3の設問本文より）、jp-006 と同一の制度解説ページを参照する重複事例"
+          }
         },
         {
           "id": "jp-022",
@@ -1721,12 +1900,11 @@
           },
           "references": [
             {
-              "label": "警察庁：闇バイトの危険性",
-              "url": "https://www.npa.go.jp/bureau/safetylife/yamibaito/hanzaishaboshu.html"
-            },
-            {
-              "label": "警察庁：令和6年特殊詐欺統計",
-              "url": "https://www.npa.go.jp/bureau/criminal/souni/tokusyusagi/hurikomesagi_toukei2024.pdf"
+              "label": "警察庁：いわゆる『闇バイト』の危険性について",
+              "url": "https://www.npa.go.jp/bureau/safetylife/yamibaito/hanzaishaboshu.html",
+              "publisher": "警察庁",
+              "accessed": "2026-10-09",
+              "quote": "ＳＮＳやインターネットの掲示板には、仕事の内容を明らかにせずに著しく高額な報酬の支払いを示唆するなどして犯罪の実行者を募集する投稿が掲載されています。簡単に 高収入 を得られるなら、と応募して、強盗や詐欺といった犯罪に加担することとなり、逮捕された人が多くいます。絶対に手を出さないでください。"
             }
           ],
           "tags": [
@@ -1734,7 +1912,12 @@
             "recruitment",
             "organized-crime",
             "youth-exploitation"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "『SNSや掲示板で高額報酬を示唆して募集』が接触経路、『シグナルやテレグラムに誘導』『犯罪に加担』が要求・結果"
+          }
         },
         {
           "id": "jp-023",
@@ -1803,11 +1986,9 @@
           "references": [
             {
               "label": "Google Cloud：AI音声なりすまし脅威",
-              "url": "https://cloud.google.com/blog/ja/topics/threat-intelligence/ai-powered-voice-spoofing-vishing-attacks"
-            },
-            {
-              "label": "トレンドマイクロ：ディープフェイク実態調査2024",
-              "url": "https://www.trendmicro.com/ja_jp/jp-security/24/g/securitytrend-20240703-02.html"
+              "url": "https://cloud.google.com/blog/ja/topics/threat-intelligence/ai-powered-voice-spoofing-vishing-attacks",
+              "publisher": "Google Cloud 脅威インテリジェンス",
+              "accessed": "2026-10-09"
             }
           ],
           "tags": [
@@ -1815,7 +1996,12 @@
             "AI-fraud",
             "voice-cloning",
             "impersonation"
-          ]
+          ],
+          "verification": {
+            "status": "partial",
+            "checked": "2026-10-09",
+            "note": "民間ベンダーの脅威解説が中心で、日本の官公庁の個別ページ（AI音声合成による家族装い詐欺の事例）を見出せず partial"
+          }
         },
         {
           "id": "jp-024",
@@ -1882,12 +2068,10 @@
           },
           "references": [
             {
-              "label": "金融庁：フィッシング詐欺に関する注意喚起",
-              "url": "https://www.fsa.go.jp/ordinary/internet-bank/index.html"
-            },
-            {
-              "label": "全国銀行協会：振り込め詐欺等の対策",
-              "url": "https://www.zenginkyo.or.jp/hanzai/"
+              "label": "全国銀行協会：銀行をかたる犯罪にご注意ください",
+              "url": "https://www.zenginkyo.or.jp/hanzai/",
+              "publisher": "全国銀行協会",
+              "accessed": "2026-10-09"
             }
           ],
           "tags": [
@@ -1895,7 +2079,12 @@
             "voice-phishing",
             "automated-fraud",
             "banking"
-          ]
+          ],
+          "verification": {
+            "status": "partial",
+            "checked": "2026-10-09",
+            "note": "ボイスフィッシングの詳細を解説する官公庁の個別ページ（警察庁PDFは入手可能だが個別手口ページとしては限定的）を優先度の高いものに割り当てられず partial"
+          }
         },
         {
           "id": "jp-025",
@@ -1961,12 +2150,10 @@
           },
           "references": [
             {
-              "label": "IPA：物理的セキュリティ対策",
-              "url": "https://www.ipa.go.jp/security/10threats/10threats2024.html"
-            },
-            {
-              "label": "NISC：サイバーセキュリティ2024",
-              "url": "https://www.nisc.go.jp/pdf/policy/kihon-s/cs2024.pdf"
+              "label": "IPA：情報セキュリティ10大脅威 2024",
+              "url": "https://www.ipa.go.jp/security/10threats/10threats2024.html",
+              "publisher": "IPA",
+              "accessed": "2026-10-09"
             }
           ],
           "tags": [
@@ -1974,7 +2161,12 @@
             "physical-security",
             "dumpster-diving",
             "information-theft"
-          ]
+          ],
+          "verification": {
+            "status": "partial",
+            "checked": "2026-10-09",
+            "note": "IPA 10大脅威はトラッシングを個別脅威として明示しておらず、総論ページとしての位置付け。ベンダー・民間記事はあるが官公庁の個別事例を見出せず partial"
+          }
         },
         {
           "id": "jp-026",
@@ -2040,12 +2232,11 @@
           },
           "references": [
             {
-              "label": "国民生活センター：鍵開けサービスのトラブル",
-              "url": "https://www.kokusen.go.jp/"
-            },
-            {
-              "label": "警察庁：住宅侵入犯罪の防止",
-              "url": "https://www.npa.go.jp/bureau/safetylife/"
+              "label": "国民生活センター：【広告より高額！？】出張解錠サービスの料金トラブルに注意",
+              "url": "https://www.kokusen.go.jp/news/data/n-20241119_1.html",
+              "publisher": "国民生活センター",
+              "accessed": "2026-10-09",
+              "quote": "スマートフォンで解錠サービスを検索してみつけた事業者のホームページには、『見積もりは無料』『解錠で2,000円～』と表示されていた。…約1時間30分後に担当者が来て、鍵の種類を確認し作業に入ったが、事前に料金が知らされることはなく、作業が終わってから約10万円を請求された。"
             }
           ],
           "tags": [
@@ -2053,7 +2244,12 @@
             "physical-intrusion",
             "emergency-exploitation",
             "burglary"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "『『解錠で2,000円～』と表示されていた』が広告での集客＝接触経路、『作業が終わってから約10万円を請求された』が要求・結果"
+          }
         },
         {
           "id": "jp-027",
@@ -2120,12 +2316,10 @@
           },
           "references": [
             {
-              "label": "総務省：偽・誤情報の流通対策",
-              "url": "https://www.soumu.go.jp/johotsusintokei/whitepaper/ja/r06/html/nd141210.html"
-            },
-            {
-              "label": "トレンドマイクロ：ディープフェイクを悪用した攻撃",
-              "url": "https://www.trendmicro.com/ja_jp/research/25/g/deepfake-it-til-you-make-it.html"
+              "label": "総務省：令和6年版 情報通信白書（AI 偽・誤情報の脅威）",
+              "url": "https://www.soumu.go.jp/johotsusintokei/whitepaper/ja/r06/html/nd141210.html",
+              "publisher": "総務省",
+              "accessed": "2026-10-09"
             }
           ],
           "tags": [
@@ -2133,7 +2327,12 @@
             "blackmail",
             "AI-generated",
             "sextortion"
-          ]
+          ],
+          "verification": {
+            "status": "partial",
+            "checked": "2026-10-09",
+            "note": "総務省情報通信白書に AI 偽・誤情報の記述はあるが、恐喝目的の AI 偽動画の個別事例を官公庁サイトに特定できず partial"
+          }
         },
         {
           "id": "jp-028",
@@ -2199,12 +2398,11 @@
           },
           "references": [
             {
-              "label": "警察庁：SNS型投資・ロマンス詐欺",
-              "url": "https://www.npa.go.jp/bureau/criminal/souni/tokusyusagi/"
-            },
-            {
-              "label": "金融庁：投資詐欺に関する注意喚起",
-              "url": "https://www.fsa.go.jp/ordinary/chuui/"
+              "label": "警察庁 SOS47：SNS型投資詐欺",
+              "url": "https://www.npa.go.jp/bureau/safetylife/sos47/case/sns-romance/investment/",
+              "publisher": "警察庁 SOS47",
+              "accessed": "2026-10-09",
+              "quote": "SNSのダイレクトメッセージで接触後、被害者をLINEなどの他のSNSに誘導し、『株や暗号資産に投資すれば利益が得られる』などと言葉巧みに被害者を信用させ、最終的に、『投資金』や『手数料』などという名目で、ネットバンキングなどの手段により、金銭等を振り込ませる詐欺の手口です。"
             }
           ],
           "tags": [
@@ -2212,7 +2410,12 @@
             "money-mule",
             "SNS-recruitment",
             "organized-crime"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "『SNSのダイレクトメッセージで接触』『LINEに誘導』が接触経路、『投資金や手数料の名目で金銭等を振り込ませる』が要求・結果"
+          }
         },
         {
           "id": "jp-029",
@@ -2277,12 +2480,10 @@
           },
           "references": [
             {
-              "label": "IPA：標的型攻撃対策",
-              "url": "https://www.ipa.go.jp/security/10threats/10threats2024.html"
-            },
-            {
-              "label": "NISC：重要インフラのサイバーセキュリティ",
-              "url": "https://www.nisc.go.jp/pdf/policy/infra/infra_rt4.pdf"
+              "label": "IPA：情報セキュリティ10大脅威 2024",
+              "url": "https://www.ipa.go.jp/security/10threats/10threats2024.html",
+              "publisher": "IPA",
+              "accessed": "2026-10-09"
             }
           ],
           "tags": [
@@ -2290,7 +2491,12 @@
             "impersonation",
             "corporate-espionage",
             "social-engineering"
-          ]
+          ],
+          "verification": {
+            "status": "partial",
+            "checked": "2026-10-09",
+            "note": "監査員を装う物理侵入は標的型攻撃の一環として言及されうるが、公的機関の個別事例ページを特定できず partial"
+          }
         },
         {
           "id": "jp-030",
@@ -2362,11 +2568,9 @@
           "references": [
             {
               "label": "警察庁：サイバー空間の脅威情勢",
-              "url": "https://www.npa.go.jp/publications/statistics/cybersecurity/"
-            },
-            {
-              "label": "NISC：サイバーセキュリティ2024",
-              "url": "https://www.nisc.go.jp/pdf/policy/kihon-s/cs2024.pdf"
+              "url": "https://www.npa.go.jp/publications/statistics/cybersecurity/",
+              "publisher": "警察庁",
+              "accessed": "2026-10-09"
             }
           ],
           "tags": [
@@ -2374,7 +2578,12 @@
             "multi-vector",
             "advanced-persistent",
             "combined-tactics"
-          ]
+          ],
+          "verification": {
+            "status": "partial",
+            "checked": "2026-10-09",
+            "note": "官公庁の統計・情勢ページで複合型手口（SNS 関係構築→フィッシング→AI 音声→物理接触）を一体として扱う個別事例を見出せず partial"
+          }
         },
         {
           "id": "jp-031",
@@ -2436,7 +2645,6 @@
           },
           "risk_score": 4,
           "mediums": [
-            "identity-theft",
             "credit",
             "bank-transfer"
           ],
@@ -2446,12 +2654,17 @@
           },
           "references": [
             {
-              "label": "消費者庁：国勢調査を装った詐欺にご注意",
-              "url": "https://www.caa.go.jp/policies/policy/consumer_policy/caution/caution_017/"
+              "label": "消費者庁：国の行政機関が行う統計調査を装った『かたり調査』にご注意ください",
+              "url": "https://www.caa.go.jp/policies/policy/consumer_policy/caution/caution_017/",
+              "publisher": "消費者庁",
+              "accessed": "2026-10-09",
+              "quote": "国の行政機関が行う統計調査を装った不審な電話・電子メール・ウェブサイトなどにご注意ください。"
             },
             {
-              "label": "総務省：令和7年国勢調査 不審な調査にご注意ください",
-              "url": "https://www.kokusei2025.go.jp/caution/"
+              "label": "総務省：国勢調査をよそおった詐欺や不審な調査にご注意",
+              "url": "https://www.kokusei2025.go.jp/caution/",
+              "publisher": "総務省",
+              "accessed": "2026-10-09"
             }
           ],
           "tags": [
@@ -2460,7 +2673,12 @@
             "phishing",
             "authority-pretext",
             "civic-duty-exploitation"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "『国の行政機関が行う統計調査を装った』が装う相手、『不審な電話・電子メール・ウェブサイト』が接触経路。要求（個人情報詐取）は関連公表資料で補足"
+          }
         },
         {
           "id": "jp-032",
@@ -2537,11 +2755,9 @@
           "references": [
             {
               "label": "フィッシング対策協議会",
-              "url": "https://www.antiphishing.jp/"
-            },
-            {
-              "label": "ソースネクスト：キ・ケ・ンの取説",
-              "url": "https://www.sourcenext.com/product/security/blog/"
+              "url": "https://www.antiphishing.jp/",
+              "publisher": "フィッシング対策協議会",
+              "accessed": "2026-10-09"
             }
           ],
           "tags": [
@@ -2551,7 +2767,12 @@
             "urgency",
             "financial-fraud",
             "sms-phishing"
-          ]
+          ],
+          "verification": {
+            "status": "partial",
+            "checked": "2026-10-09",
+            "note": "総論の入口ページ。個別事例の詳細（例：国税庁をかたるフィッシング）は jp-003 と jp-018 で引用済み。jp-032 自体は『金融機関・大手企業全般』を扱うため個別裏付けは partial"
+          }
         }
       ]
     },
@@ -2587,7 +2808,7 @@
           ],
           "targets": [
             "general",
-            "elder"
+            "elderly"
           ],
           "scenario": {
             "ja": "1) 偽警告 2) 電話誘導 3) 遠隔操作 4) 支払要求",
@@ -2616,19 +2837,38 @@
           "risk_score": 4,
           "mediums": [
             "credit",
-            "gift-card",
+            "gift-cards",
             "e-wallet"
           ],
           "legal_notes": {
             "ja": "",
             "en": ""
           },
-          "references": [],
+          "references": [
+            {
+              "label": "FTC: Shutting down tech support scams",
+              "url": "https://consumer.ftc.gov/consumer-alerts/2022/05/shutting-down-tech-support-scams",
+              "publisher": "FTC",
+              "accessed": "2026-10-09",
+              "quote": "They may also try calling you, hoping you'll react to an \"urgent problem\" with your computer. That's how they get your personal information or money to \"fix\" it."
+            },
+            {
+              "label": "FTC: How can you spot a tech support scam?",
+              "url": "https://consumer.ftc.gov/consumer-alerts/2020/09/how-can-you-spot-tech-support-scam",
+              "publisher": "FTC",
+              "accessed": "2026-10-09"
+            }
+          ],
           "tags": [
             "fake-tech-support",
             "urgency",
             "authority-pretext"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "'calling you'/'urgent problem with your computer' is pretext, 'get your personal information or money' is request"
+          }
         },
         {
           "id": "us-002",
@@ -2692,12 +2932,16 @@
           },
           "references": [
             {
-              "label": "IRS Tax Scam Consumer Alert",
-              "url": "https://www.irs.gov/newsroom/tax-scams-consumer-alerts"
+              "label": "IRS: Tax Scams/Consumer Alerts",
+              "url": "https://www.irs.gov/newsroom/tax-scams-consumer-alerts",
+              "publisher": "IRS",
+              "accessed": "2026-10-09"
             },
             {
-              "label": "FTC Scam Alerts",
-              "url": "https://consumer.ftc.gov/features/scam-alerts"
+              "label": "FTC: Scam Alerts",
+              "url": "https://consumer.ftc.gov/features/scam-alerts",
+              "publisher": "FTC",
+              "accessed": "2026-10-09"
             }
           ],
           "tags": [
@@ -2705,7 +2949,12 @@
             "authority-pretext",
             "urgency",
             "fear-based"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "IRS official scam-alert hub lists impersonation calls demanding payment; previous phase marked verified. Keeping verdict"
+          }
         },
         {
           "id": "us-003",
@@ -2770,12 +3019,10 @@
           },
           "references": [
             {
-              "label": "Microsoft Tech Support Scam",
-              "url": "https://support.microsoft.com/en-us/windows/protect-yourself-from-tech-support-scams"
-            },
-            {
-              "label": "FBI IC3 Report",
-              "url": "https://www.ic3.gov/Home/Scams"
+              "label": "Microsoft: Protect yourself from tech support scams",
+              "url": "https://support.microsoft.com/en-us/windows/protect-yourself-from-tech-support-scams-2ebf91bd-f94c-2a8a-e541-f5c800d18435",
+              "publisher": "Microsoft Support",
+              "accessed": "2026-10-09"
             }
           ],
           "tags": [
@@ -2783,7 +3030,12 @@
             "impersonation",
             "remote-access",
             "brand-exploitation"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "Microsoft's official page describes fake error pages prompting a call to a support number, remote access and payment demand"
+          }
         },
         {
           "id": "us-004",
@@ -2849,12 +3101,17 @@
           },
           "references": [
             {
-              "label": "FTC Romance Scams",
-              "url": "https://consumer.ftc.gov/articles/what-you-need-know-about-romance-scams"
+              "label": "FTC: What You Need to Know About Romance Scams",
+              "url": "https://consumer.ftc.gov/articles/what-you-need-know-about-romance-scams",
+              "publisher": "FTC",
+              "accessed": "2026-10-09",
+              "quote": "Romance scammers create fake profiles on dating sites and apps or contact you through popular social media sites like Instagram or Facebook. The scammers strike up a relationship with you to build up trust, sometimes talking or chatting several times a day. Then, they make up a story and ask for money."
             },
             {
-              "label": "FBI Romance Scam Warning",
-              "url": "https://www.fbi.gov/scams-and-safety/common-scams-and-crimes/romance-scams"
+              "label": "FBI: Romance Scams",
+              "url": "https://www.fbi.gov/scams-and-safety/common-scams-and-crimes/romance-scams",
+              "publisher": "FBI",
+              "accessed": "2026-10-09"
             }
           ],
           "tags": [
@@ -2862,7 +3119,12 @@
             "emotional-manipulation",
             "long-con",
             "trust-exploitation"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "'fake profiles on dating sites' is pretext, 'ask for money' is request"
+          }
         },
         {
           "id": "us-005",
@@ -2924,12 +3186,17 @@
           },
           "references": [
             {
-              "label": "AARP Grandparent Scam",
-              "url": "https://www.aarp.org/money/scams-fraud/info-2019/grandparent.html"
+              "label": "FTC: Grandkid and Family Scams",
+              "url": "https://consumer.ftc.gov/features/pass-it-on/impersonator-scams/grandkid-scams",
+              "publisher": "FTC",
+              "accessed": "2026-10-09",
+              "quote": "You get a call: \"Grandma, I need money for bail.\" Or money for a medical bill. Or some other kind of trouble. The caller says it's urgent — and tells you to keep it a secret."
             },
             {
-              "label": "FTC Family Emergency Scams",
-              "url": "https://consumer.ftc.gov/articles/family-emergency-scams"
+              "label": "AARP: Grandparent Scam",
+              "url": "https://www.aarp.org/money/scams-fraud/info-2019/grandparent.html",
+              "publisher": "AARP",
+              "accessed": "2026-10-09"
             }
           ],
           "tags": [
@@ -2937,7 +3204,12 @@
             "family-exploitation",
             "urgency",
             "emotional-manipulation"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "'Grandma, I need money for bail' is pretext, 'urgent' + 'keep it a secret' is the demand"
+          }
         },
         {
           "id": "us-006",
@@ -3002,12 +3274,10 @@
           },
           "references": [
             {
-              "label": "FTC Charity Scams",
-              "url": "https://consumer.ftc.gov/articles/charity-scams"
-            },
-            {
-              "label": "Charity Navigator",
-              "url": "https://www.charitynavigator.org/"
+              "label": "FTC: Charity Scams",
+              "url": "https://consumer.ftc.gov/all-scams/charity-scams",
+              "publisher": "FTC",
+              "accessed": "2026-10-09"
             }
           ],
           "tags": [
@@ -3015,7 +3285,12 @@
             "disaster-exploitation",
             "emotional-manipulation",
             "urgency"
-          ]
+          ],
+          "verification": {
+            "status": "partial",
+            "checked": "2026-10-09",
+            "note": "FTC charity hub exists but separates contact method and payment demand across different alerts; could not locate a single ≤200-char quote matching both the pretext (disaster-themed solicitation) and request (untraceable payment)"
+          }
         },
         {
           "id": "us-007",
@@ -3077,12 +3352,16 @@
           },
           "references": [
             {
-              "label": "Medicare.gov Fraud",
-              "url": "https://www.medicare.gov/basics/reporting-medicare-fraud"
+              "label": "Medicare.gov: Reporting Medicare fraud & abuse",
+              "url": "https://www.medicare.gov/basics/reporting-medicare-fraud",
+              "publisher": "Medicare.gov",
+              "accessed": "2026-10-09"
             },
             {
-              "label": "HHS OIG Medicare Fraud",
-              "url": "https://oig.hhs.gov/fraud/consumer-alerts/fraud-alert-medicare/"
+              "label": "HHS OIG: Medicare Fraud Alert",
+              "url": "https://oig.hhs.gov/fraud/consumer-alerts/fraud-alert-medicare/",
+              "publisher": "HHS OIG",
+              "accessed": "2026-10-09"
             }
           ],
           "tags": [
@@ -3090,7 +3369,12 @@
             "healthcare",
             "identity-theft",
             "impersonation"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "Official Medicare page covers impersonators asking for Medicare number/account/payment"
+          }
         },
         {
           "id": "us-008",
@@ -3154,12 +3438,17 @@
           },
           "references": [
             {
-              "label": "Federal Student Aid Scam Alert",
-              "url": "https://studentaid.gov/resources/scams"
+              "label": "FTC: Student Loan and Education Scams",
+              "url": "https://consumer.ftc.gov/all-scams/student-loan-education-scams",
+              "publisher": "FTC",
+              "accessed": "2026-10-09",
+              "quote": "They'll say they're affiliated with Federal Student Aid (FSA) or the Department of Education. (They're not.) They'll say they're following up on your eligibility for a new loan forgiveness program, and might even know things about your loan, like the balance or your account number."
             },
             {
-              "label": "FTC Student Loan Scams",
-              "url": "https://consumer.ftc.gov/articles/student-loan-scams"
+              "label": "Federal Student Aid: Avoid student loan scams",
+              "url": "https://studentaid.gov/resources/scams",
+              "publisher": "Federal Student Aid",
+              "accessed": "2026-10-09"
             }
           ],
           "tags": [
@@ -3167,7 +3456,12 @@
             "debt-relief",
             "impersonation",
             "advance-fee"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "'affiliated with FSA/Department of Education' is pretext, 'loan forgiveness program' + 'upfront fee' demand is the ask (per the all-scams hub)"
+          }
         },
         {
           "id": "us-009",
@@ -3228,12 +3522,16 @@
           },
           "references": [
             {
-              "label": "US Courts Jury Scam Alert",
-              "url": "https://www.uscourts.gov/services-forms/jury-service/juror-scams"
+              "label": "U.S. Courts: Juror Scams",
+              "url": "https://www.uscourts.gov/services-forms/jury-service/juror-scams",
+              "publisher": "U.S. Courts",
+              "accessed": "2026-10-09"
             },
             {
-              "label": "FBI Jury Duty Scam",
-              "url": "https://www.fbi.gov/how-we-can-help-you/safety-resources/scams-and-safety/common-scams-and-crimes/jury-duty-scam"
+              "label": "FBI: Jury Duty Scam",
+              "url": "https://www.fbi.gov/how-we-can-help-you/safety-resources/scams-and-safety/common-scams-and-crimes/jury-duty-scam",
+              "publisher": "FBI",
+              "accessed": "2026-10-09"
             }
           ],
           "tags": [
@@ -3241,7 +3539,12 @@
             "legal-threat",
             "impersonation",
             "authority-pretext"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "U.S. Courts page describes callers posing as court officers demanding payment for missed jury duty"
+          }
         },
         {
           "id": "us-010",
@@ -3305,12 +3608,11 @@
           },
           "references": [
             {
-              "label": "FTC Utility Scams",
-              "url": "https://consumer.ftc.gov/articles/utility-scams"
-            },
-            {
-              "label": "Utilities United Against Scams",
-              "url": "https://www.utilitiesunited.org/"
+              "label": "FTC: Scammers Pretend To Be Your Utility Company",
+              "url": "https://consumer.ftc.gov/articles/scammers-pretend-be-your-utility-company",
+              "publisher": "FTC",
+              "accessed": "2026-10-09",
+              "quote": "They threaten to shut off your gas, electric, or water service if you don't pay them immediately. These scammers want to scare you into paying before you have time to confirm what they're telling you."
             }
           ],
           "tags": [
@@ -3318,7 +3620,12 @@
             "urgency",
             "essential-service",
             "fear-based"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "'threat to shut off your gas/electric/water' is pretext, 'pay them immediately' is demand"
+          }
         },
         {
           "id": "us-011",
@@ -3382,12 +3689,17 @@
           },
           "references": [
             {
-              "label": "SSA Scam Alert",
-              "url": "https://www.ssa.gov/scam/"
+              "label": "FTC: How To Avoid a Government Impersonation Scam",
+              "url": "https://consumer.ftc.gov/articles/how-avoid-government-impersonation-scam",
+              "publisher": "FTC",
+              "accessed": "2026-10-09",
+              "quote": "They say your Social Security benefits will end, or your Social Security number will be suspended, unless you pay immediately."
             },
             {
-              "label": "FTC SSN Scams",
-              "url": "https://consumer.ftc.gov/articles/your-social-security-number-isnt-suspended"
+              "label": "SSA: Scam Awareness",
+              "url": "https://www.ssa.gov/scam/",
+              "publisher": "SSA",
+              "accessed": "2026-10-09"
             }
           ],
           "tags": [
@@ -3395,7 +3707,12 @@
             "identity-theft",
             "government-impersonation",
             "fear-based"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "'Social Security number will be suspended' is pretext, 'unless you pay immediately' is demand"
+          }
         },
         {
           "id": "us-012",
@@ -3462,12 +3779,11 @@
           },
           "references": [
             {
-              "label": "FTC Prize Scams",
-              "url": "https://consumer.ftc.gov/articles/prize-scams"
-            },
-            {
-              "label": "PCH Scam Protection",
-              "url": "https://info.pch.com/scam-alerts"
+              "label": "FTC: Fake Prize, Sweepstakes, and Lottery Scams",
+              "url": "https://consumer.ftc.gov/articles/fake-prize-sweepstakes-and-lottery-scams",
+              "publisher": "FTC",
+              "accessed": "2026-10-09",
+              "quote": "If you have to pay to get your prize, it's a scam. Real prizes are free. So if someone tells you to pay a fee for \"taxes,\" \"shipping and handling charges,\" \"processing fees,\" or \"customs duties\" to get your prize, you're dealing with a scammer."
             }
           ],
           "tags": [
@@ -3475,7 +3791,12 @@
             "sweepstakes",
             "advance-fee",
             "greed-exploitation"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "'pay to get your prize' is the demand; the notification of prize is the pretext"
+          }
         },
         {
           "id": "us-013",
@@ -3540,12 +3861,11 @@
           },
           "references": [
             {
-              "label": "FTC Job Scams",
-              "url": "https://consumer.ftc.gov/articles/job-scams"
-            },
-            {
-              "label": "BBB Employment Scams",
-              "url": "https://www.bbb.org/article/news-releases/22666-bbb-tip-employment-scams"
+              "label": "FTC: Job Scams",
+              "url": "https://consumer.ftc.gov/articles/job-scams",
+              "publisher": "FTC",
+              "accessed": "2026-10-09",
+              "quote": "Scammers advertise jobs the same way honest employers do — online (in ads, on job sites, and social media), in newspapers, and sometimes on TV and radio. They promise you a job, but what they want is your money and your personal information."
             }
           ],
           "tags": [
@@ -3553,7 +3873,12 @@
             "work-from-home",
             "advance-fee",
             "money-mule"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "'advertise jobs online/newspapers' is pretext, 'want your money and personal information' is request"
+          }
         },
         {
           "id": "us-014",
@@ -3619,12 +3944,11 @@
           },
           "references": [
             {
-              "label": "FTC Rental Scams",
-              "url": "https://consumer.ftc.gov/articles/rental-scams"
-            },
-            {
-              "label": "FBI Rental Fraud",
-              "url": "https://www.fbi.gov/how-we-can-help-you/safety-resources/scams-and-safety/common-scams-and-crimes/real-estate-fraud"
+              "label": "FTC: Rental Listing Scams",
+              "url": "https://consumer.ftc.gov/articles/rental-listing-scams",
+              "publisher": "FTC",
+              "accessed": "2026-10-09",
+              "quote": "The fake owner might tell you can only secure the property with a wire transfer through Western Union or MoneyGram, gift cards, or cryptocurrency to pay for an application fee, deposit, or first month's rent."
             }
           ],
           "tags": [
@@ -3632,7 +3956,12 @@
             "real-estate",
             "advance-fee",
             "phantom-goods"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "'secure the property' with 'wire transfer / gift cards' is pretext + demand"
+          }
         },
         {
           "id": "us-015",
@@ -3696,12 +4025,16 @@
           },
           "references": [
             {
-              "label": "VA Benefits Scam Alert",
-              "url": "https://www.va.gov/resources/avoiding-scams-and-fraud/"
+              "label": "VA: Avoiding scams and fraud",
+              "url": "https://www.va.gov/resources/avoiding-scams-and-fraud/",
+              "publisher": "VA",
+              "accessed": "2026-10-09"
             },
             {
-              "label": "FTC Veterans Scams",
-              "url": "https://consumer.ftc.gov/articles/veterans-scams"
+              "label": "FTC: Veterans Scams",
+              "url": "https://consumer.ftc.gov/articles/veterans-scams",
+              "publisher": "FTC",
+              "accessed": "2026-10-09"
             }
           ],
           "tags": [
@@ -3709,7 +4042,12 @@
             "benefits-fraud",
             "impersonation",
             "advance-fee"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "VA official page lists impersonators requesting fees/personal info for benefits"
+          }
         },
         {
           "id": "us-016",
@@ -3772,12 +4110,11 @@
           },
           "references": [
             {
-              "label": "FTC Crypto Scams",
-              "url": "https://consumer.ftc.gov/articles/what-know-about-cryptocurrency-and-scams"
-            },
-            {
-              "label": "SEC Crypto Fraud",
-              "url": "https://www.investor.gov/protect-your-investments/fraud/types-fraud/digital-asset-and-crypto-investment-scams"
+              "label": "FTC: What To Know About Cryptocurrency and Scams",
+              "url": "https://consumer.ftc.gov/articles/what-know-about-cryptocurrency-and-scams",
+              "publisher": "FTC",
+              "accessed": "2026-10-09",
+              "quote": "A scammer pretends to be a celebrity who can multiply any cryptocurrency you send them. But celebrities aren't contacting you through social media. It's a scammer."
             }
           ],
           "tags": [
@@ -3785,7 +4122,12 @@
             "investment-fraud",
             "celebrity-impersonation",
             "FOMO"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "'pretends to be a celebrity who can multiply cryptocurrency' is pretext + request to send crypto"
+          }
         },
         {
           "id": "us-017",
@@ -3849,12 +4191,11 @@
           },
           "references": [
             {
-              "label": "FTC COVID-19 Scams",
-              "url": "https://consumer.ftc.gov/features/coronavirus-scams-what-ftc-doing"
-            },
-            {
-              "label": "CDC Vaccine Scam Warning",
-              "url": "https://www.cdc.gov/vaccines/covid-19/index.html"
+              "label": "FTC: COVID-19 vaccines are in the pipeline. Scammers won't be far behind.",
+              "url": "https://consumer.ftc.gov/consumer-alerts/2020/12/covid-19-vaccines-are-pipeline-scammers-wont-be-far-behind",
+              "publisher": "FTC",
+              "accessed": "2026-10-09",
+              "quote": "No one from a vaccine distribution site or health care payer, like a private insurance company, will call you asking for your Social Security number or your credit card or bank account information to sign you up to get the vaccine."
             }
           ],
           "tags": [
@@ -3862,7 +4203,12 @@
             "healthcare",
             "vaccine-fraud",
             "panic-exploitation"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "'call you' = pretext (vaccine signup call), 'SSN or credit card or bank account information' = demand"
+          }
         },
         {
           "id": "us-018",
@@ -3924,12 +4270,11 @@
           },
           "references": [
             {
-              "label": "FTC Gift Card Scams",
-              "url": "https://consumer.ftc.gov/articles/gift-card-scams"
-            },
-            {
-              "label": "AARP Gift Card Alert",
-              "url": "https://www.aarp.org/money/scams-fraud/info-2021/gift-card.html"
+              "label": "FTC: Gift Card Scams",
+              "url": "https://consumer.ftc.gov/articles/gift-card-scams",
+              "publisher": "FTC",
+              "accessed": "2026-10-09",
+              "quote": "Only scammers will tell you to buy a gift card, like a Google Play or Apple Card, and give them the numbers off the back of the card."
             }
           ],
           "tags": [
@@ -3937,7 +4282,12 @@
             "payment-fraud",
             "impersonation",
             "urgency"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "'tell you to buy a gift card' is the demand/instruction after an impersonation pretext; FTC consistent framing"
+          }
         },
         {
           "id": "us-019",
@@ -4002,12 +4352,11 @@
           },
           "references": [
             {
-              "label": "FTC Fake Check Scams",
-              "url": "https://consumer.ftc.gov/articles/fake-check-scams"
-            },
-            {
-              "label": "USPS Check Fraud",
-              "url": "https://www.uspis.gov/news/scam-article/fake-check-scams"
+              "label": "USPIS: Check Fraud",
+              "url": "https://www.uspis.gov/news/scam-article/check-fraud",
+              "publisher": "USPIS",
+              "accessed": "2026-10-09",
+              "quote": "Have you ever been asked to deposit a check or money order on behalf of someone else? Scammers use sophisticated software, commercial laser printers and scanners, and blank check stock to produce counterfeit checks. Scammers identify people looking for quick cash and offer the opportunity to make money simply by depositing some checks. You are told to deposit the check in your own account and send a portion of it to someone else."
             }
           ],
           "tags": [
@@ -4015,7 +4364,12 @@
             "overpayment",
             "advance-fee",
             "banking-fraud"
-          ]
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "'offer the opportunity to make money by depositing checks' is pretext, 'send a portion to someone else' is the request/result"
+          }
         },
         {
           "id": "us-020",
@@ -4078,12 +4432,16 @@
           },
           "references": [
             {
-              "label": "FTC Identity Theft",
-              "url": "https://consumer.ftc.gov/features/identity-theft"
+              "label": "FTC: Identity Theft",
+              "url": "https://consumer.ftc.gov/features/identity-theft",
+              "publisher": "FTC",
+              "accessed": "2026-10-09"
             },
             {
               "label": "IdentityTheft.gov",
-              "url": "https://www.identitytheft.gov/"
+              "url": "https://www.identitytheft.gov/",
+              "publisher": "FTC",
+              "accessed": "2026-10-09"
             }
           ],
           "tags": [
@@ -4091,7 +4449,12 @@
             "identity-theft",
             "phishing",
             "panic-exploitation"
-          ]
+          ],
+          "verification": {
+            "status": "partial",
+            "checked": "2026-10-09",
+            "note": "Identity-theft hub lists multiple sub-topics but did not yield a single ≤200-char quote covering both the breach-notification pretext and the account-takeover result in one sentence"
+          }
         }
       ]
     }
