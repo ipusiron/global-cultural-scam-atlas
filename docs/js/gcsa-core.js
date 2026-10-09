@@ -123,11 +123,20 @@ export function searchAttackFields(atk, q, locale){
 }
 
 /**
- * Filter attacks by country / vector / target / free-text query. All active
- * filters AND together. Returns `{country, atk, tTitle, tShort, matchedFields}`
- * entries preserving source order.
+ * Return the attack's verification status string, defaulting to 'unverified'.
  */
-export function filterAttacks(data, { country, vector, target, q, locale } = {}){
+export function verificationStatus(atk){
+  const s = atk && atk.verification && atk.verification.status;
+  if(s === 'verified' || s === 'partial' || s === 'unverified') return s;
+  return 'unverified';
+}
+
+/**
+ * Filter attacks by country / vector / target / free-text query / verifiedOnly.
+ * All active filters AND together. Returns `{country, atk, tTitle, tShort,
+ * matchedFields}` entries preserving source order.
+ */
+export function filterAttacks(data, { country, vector, target, q, locale, verifiedOnly } = {}){
   const out = [];
   if(!data || !Array.isArray(data.countries)) return out;
   const cc = country || '__all__';
@@ -135,12 +144,14 @@ export function filterAttacks(data, { country, vector, target, q, locale } = {})
   const tgt = target || '__all__';
   const query = q || '';
   const loc = locale || 'ja';
+  const vOnly = verifiedOnly === true || verifiedOnly === '1';
   for(const c of data.countries){
     if(cc !== '__all__' && c.country_code !== cc) continue;
     if(!Array.isArray(c.attacks)) continue;
     for(const atk of c.attacks){
       if(vec !== '__all__' && !(atk.attack_vector || []).includes(vec)) continue;
       if(tgt !== '__all__' && !(atk.targets || []).includes(tgt)) continue;
+      if(vOnly && verificationStatus(atk) !== 'verified') continue;
       const search = searchAttackFields(atk, query, loc);
       if(!search.matched) continue;
       const tTitle = pickLang(atk.title, loc);
@@ -218,14 +229,15 @@ export const SORT_OPTIONS = ['default', 'risk', 'id'];
 
 /* ----------------------- URL hash state ---------------------------------- */
 
-const HASH_KEYS = ['country', 'vector', 'target', 'q', 'sort', 'lang'];
+const HASH_KEYS = ['country', 'vector', 'target', 'q', 'sort', 'lang', 'verified'];
 const HASH_VALIDATORS = {
-  country: v => /^[A-Z]{2}$/.test(v) || v === '__all__',
-  vector:  v => /^[a-z-]{2,32}$/.test(v) || v === '__all__',
-  target:  v => /^[a-z-]{2,32}$/.test(v) || v === '__all__',
-  q:       v => typeof v === 'string' && v.length <= 200,
-  sort:    v => SORT_KEYS.has(v),
-  lang:    v => v === 'ja' || v === 'en'
+  country:  v => /^[A-Z]{2}$/.test(v) || v === '__all__',
+  vector:   v => /^[a-z-]{2,32}$/.test(v) || v === '__all__',
+  target:   v => /^[a-z-]{2,32}$/.test(v) || v === '__all__',
+  q:        v => typeof v === 'string' && v.length <= 200,
+  sort:     v => SORT_KEYS.has(v),
+  lang:     v => v === 'ja' || v === 'en',
+  verified: v => v === '1'
 };
 
 /**
@@ -254,8 +266,9 @@ export function parseHash(hash){
 }
 
 /**
- * Serialise `{country, vector, target, q, sort, lang}` into `#k=v&...`.
+ * Serialise `{country, vector, target, q, sort, lang, verified}` into `#k=v&...`.
  * Drops defaults so a bare "no filters" state produces an empty string.
+ * `verified` is only serialised when truthy (as `verified=1`).
  */
 export function buildHash(state){
   if(!state || typeof state !== 'object') return '';
@@ -265,9 +278,11 @@ export function buildHash(state){
     if(v == null || v === '') continue;
     if((k === 'country' || k === 'vector' || k === 'target') && v === '__all__') continue;
     if(k === 'sort' && v === 'default') continue;
+    if(k === 'verified' && (v !== true && v !== '1')) continue;
+    const serial = k === 'verified' ? '1' : v;
     const check = HASH_VALIDATORS[k];
-    if(check && !check(v)) continue;
-    parts.push(`${k}=${encodeURIComponent(v)}`);
+    if(check && !check(serial)) continue;
+    parts.push(`${k}=${encodeURIComponent(serial)}`);
   }
   return parts.length ? '#' + parts.join('&') : '';
 }
@@ -286,6 +301,7 @@ export function aggregate(input){
   const byVector = {};
   const byTarget = {};
   const byRisk = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+  const byVerification = { verified: 0, partial: 0, unverified: 0 };
   const countryByVector = {};
   const countryByTarget = {};
   for(const { country, atk } of entries){
@@ -303,8 +319,9 @@ export function aggregate(input){
     }
     const r = clampRisk(atk.risk_score);
     if(r >= 1 && r <= 5) byRisk[r] += 1;
+    byVerification[verificationStatus(atk)] += 1;
   }
-  return { total, byCountry, byVector, byTarget, byRisk, countryByVector, countryByTarget };
+  return { total, byCountry, byVector, byTarget, byRisk, byVerification, countryByVector, countryByTarget };
 }
 
 function normaliseEntries(input){
@@ -359,6 +376,10 @@ export function toCsv(rows, columns){
 export function entriesToCsvRows(entries, locale){
   const loc = locale || 'ja';
   const join = arr => (arr || []).join(' / ');
+  const joinRefs = refs => (refs || [])
+    .map(r => (r && r.url) ? r.url : '')
+    .filter(Boolean)
+    .join(' / ');
   return (entries || []).map(({ country, atk }) => ({
     id: atk.id || '',
     country: country.country_code || '',
@@ -368,7 +389,9 @@ export function entriesToCsvRows(entries, locale){
     risk: String(clampRisk(atk.risk_score)),
     cultural_lever: pickLang(atk.cultural_lever, loc),
     red_flags: pickList(atk.red_flags, loc).join(' / '),
-    mitigations: pickList(atk.mitigations, loc).join(' / ')
+    mitigations: pickList(atk.mitigations, loc).join(' / '),
+    verification: verificationStatus(atk),
+    references: joinRefs(atk.references)
   }));
 }
 

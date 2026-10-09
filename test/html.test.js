@@ -58,7 +58,8 @@ test('required element ids are present', async () => {
   const required = [
     'country', 'vector', 'q', 'searchClear', 'resetFilters',
     'resultCount', 'cards', 'detailDialog', 'dlgClose',
-    'themeToggle', 'localeToggle'
+    'themeToggle', 'localeToggle',
+    'verifiedOnly', 'dlgVerification'
   ];
   for(const id of required){
     assert.ok(new RegExp(`id=["']${id}["']`).test(html), `id="${id}" missing`);

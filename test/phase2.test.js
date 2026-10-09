@@ -190,16 +190,66 @@ test('toCsv builds header + CRLF rows via accessors', () => {
   assert.equal(csv, 'A,B\r\n1,two\r\n3,"with,comma"\r\n');
 });
 
-test('entriesToCsvRows pulls localised strings', () => {
+test('entriesToCsvRows pulls localised strings and includes verification + references', () => {
   const entries = filterAttacks(DATA, { country: 'JP' });
   const rows = entriesToCsvRows(entries, 'ja');
   assert.equal(rows.length, 32);
+  const vocab = new Set(['verified','partial','unverified']);
   for(const r of rows){
     assert.match(r.id, /^jp-\d{3}$/);
     assert.equal(r.country, 'JP');
     assert.ok(r.title.length > 0, `empty title for ${r.id}`);
     assert.match(r.risk, /^[1-5]$/);
+    assert.ok(vocab.has(r.verification), `verification "${r.verification}" out of vocab for ${r.id}`);
+    assert.equal(typeof r.references, 'string');
   }
+});
+
+test('filterAttacks: verifiedOnly keeps only verified entries', () => {
+  const data = {
+    countries: [{
+      country_code: 'JP',
+      attacks: [
+        { id: 'jp-001', title: { ja: 'A' }, short_desc: { ja: '' },
+          scenario: { ja: '' }, cultural_lever: { ja: '' },
+          red_flags: { ja: [] }, mitigations: { ja: [] },
+          attack_vector: ['phone'], targets: ['elderly'], tags: [],
+          verification: { status: 'verified' } },
+        { id: 'jp-002', title: { ja: 'B' }, short_desc: { ja: '' },
+          scenario: { ja: '' }, cultural_lever: { ja: '' },
+          red_flags: { ja: [] }, mitigations: { ja: [] },
+          attack_vector: ['phone'], targets: ['general'], tags: [],
+          verification: { status: 'partial' } },
+        { id: 'jp-003', title: { ja: 'C' }, short_desc: { ja: '' },
+          scenario: { ja: '' }, cultural_lever: { ja: '' },
+          red_flags: { ja: [] }, mitigations: { ja: [] },
+          attack_vector: ['phone'], targets: ['general'], tags: [] }
+      ]
+    }]
+  };
+  assert.equal(filterAttacks(data, { verifiedOnly: false }).length, 3);
+  assert.equal(filterAttacks(data, { verifiedOnly: true }).length, 1);
+  assert.equal(filterAttacks(data, { verifiedOnly: '1' }).length, 1);
+});
+
+test('parseHash / buildHash: verified=1 round-trips', () => {
+  assert.deepEqual(parseHash('#verified=1'), { verified: '1' });
+  assert.deepEqual(parseHash('#verified=0'), {}); // invalid value dropped
+  assert.equal(buildHash({ verified: '1' }), '#verified=1');
+  assert.equal(buildHash({ verified: true }), '#verified=1');
+  assert.equal(buildHash({ verified: '' }), '');
+  // round-trip with other keys
+  const state = { country: 'JP', verified: '1', lang: 'ja' };
+  assert.deepEqual(parseHash(buildHash(state)), state);
+});
+
+test('aggregate includes byVerification totals', () => {
+  const stats = aggregate(DATA);
+  assert.equal(typeof stats.byVerification, 'object');
+  const vSum = (stats.byVerification.verified || 0)
+             + (stats.byVerification.partial  || 0)
+             + (stats.byVerification.unverified || 0);
+  assert.equal(vSum, 53);
 });
 
 /* -------------------- label dictionary ---------------------------------- */
