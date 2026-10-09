@@ -1,0 +1,78 @@
+{
+  "id": "kr-002",
+  "title": {
+    "ja": "モバイル부고（訃告）を装う知人なりすましスミッシング",
+    "en": "Mobile Obituary Impersonation Smishing"
+  },
+  "short_desc": {
+    "ja": "父親の死去を装う부고 SMS で葬儀場 URL をクリックさせる",
+    "en": "Fake obituary SMS pushes click on funeral-hall URL."
+  },
+  "cultural_lever": {
+    "ja": "急な訃報への配慮・返信や香典の慣行",
+    "en": "Expectations around sudden death and condolence practice"
+  },
+  "attack_vector": [
+    "sms"
+  ],
+  "targets": [
+    "general",
+    "business"
+  ],
+  "scenario": {
+    "ja": "1) 『부고』SMS を受信 2) 父の死去と葬儀場 URL 3) URL クリックで悪性アプリが導入 4) 携帯が制御され情報漏洩",
+    "en": "1) 'Obituary' SMS received 2) Father died + hall URL 3) Click installs malware 4) Device hijacked"
+  },
+  "red_flags": {
+    "ja": [
+      "『아버지께서 오늘 별세하셨기에 삼가 알려 드립니다』の定型文",
+      "短縮 URL（http://xx...）",
+      "SMS 内の葬儀場リンクのみ"
+    ],
+    "en": [
+      "Stock '아버지께서 ...' phrasing",
+      "Short URL (http://xx...)",
+      "Only a funeral-hall link in the SMS"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "送信者本人に電話で直接確認",
+      "SMS 内の URL は押さず削除",
+      "疑わしい SMS は『스팸으로 신고』"
+    ],
+    "en": [
+      "Call the sender directly",
+      "Delete the SMS; do not click",
+      "Use the '스팸으로 신고' report"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "bank-transfer"
+  ],
+  "legal_notes": {
+    "ja": "KISA 118상담센터と보이스피싱통합신고대응센터へ通報",
+    "en": "Report to KISA 118 and the Integrated Voice Phishing Center"
+  },
+  "references": [
+    {
+      "label": "KISA 보호나라: 스미싱 주의보 (2024-01-04)",
+      "url": "https://www.boho.or.kr/kr/bbs/view.do?bbsId=B0000030&menuNo=205027&nttId=71280",
+      "publisher": "KISA 보호나라",
+      "accessed": "2026-10-09",
+      "quote": "지인 부고 사칭 '아버지께서 오늘 별세하셨기에 삼가 알려 드립니다. 장례식장 주소 http://xx...'"
+    }
+  ],
+  "tags": [
+    "smishing",
+    "impersonation",
+    "obituary-pretext",
+    "malware"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "KISA の『스미싱 주의보』が、口実（지인 부고 사칭）と定型文、URL 設置を具体的に記述"
+  }
+}

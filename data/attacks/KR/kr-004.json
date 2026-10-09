@@ -1,0 +1,78 @@
+{
+  "id": "kr-004",
+  "title": {
+    "ja": "カード配送を装う보이스피싱＋원격제어アプリ",
+    "en": "Card-Delivery Vishing + Remote-Access App"
+  },
+  "short_desc": {
+    "ja": "新規発行カードの配送を名目に偽カスタマーセンターへ電話させ原격제어 앱 を導入",
+    "en": "'New card delivery' pretext guides victim to fake call center and installs remote-access app."
+  },
+  "cultural_lever": {
+    "ja": "クレジットカード発行・リテール銀行サポートへの信頼",
+    "en": "Trust in credit-card issuance and bank-side support"
+  },
+  "attack_vector": [
+    "phone",
+    "sms"
+  ],
+  "targets": [
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) 『カード配送』『カード発급』の電話や SMS 2) 返送や事実確認名目で偽カスタマーセンターへ誘導 3) 保安点検名目で원격제어 앱 を導入 4) 個人情報・金融情報を奪取",
+    "en": "1) Call/SMS about 'card delivery/issuance' 2) Redirect to fake call center 3) Install remote-access app for 'security check' 4) Harvest banking info"
+  },
+  "red_flags": {
+    "ja": [
+      "新規発行の覚えがないカード配送通知",
+      "原격제어 앱 の自主インストールを促す",
+      "正規ストアに登録されていても疑う"
+    ],
+    "en": [
+      "'New card' notice you did not request",
+      "Instruction to install a remote-access app",
+      "Even store-registered apps can be misused"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "カード会社の公式番号へ自分からかけ直す",
+      "政府機関・金融機関は원격제어 앱 の設置を求めないと認識",
+      "불가피時は 보이스피싱통합신고대응센터へ連絡"
+    ],
+    "en": [
+      "Call back on the card company's official number",
+      "Officials never request remote-access apps",
+      "Report to the Integrated Voice Phishing Center"
+    ]
+  },
+  "risk_score": 5,
+  "mediums": [
+    "bank-transfer"
+  ],
+  "legal_notes": {
+    "ja": "KISA の明記（政府機関と金融회사は電話や SMS で原격제어앱 설치を要求しない）",
+    "en": "KISA states officials do not request remote-access app installs"
+  },
+  "references": [
+    {
+      "label": "KISA 보호나라: 카드 배송 사칭 보이스피싱·스미싱 주의 권고",
+      "url": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=71661",
+      "publisher": "KISA 보호나라",
+      "accessed": "2026-10-09",
+      "quote": "“카드 배송”,“카드 발급” 등의 키워드를 활용한 보이스피싱 및 스미싱 사례 탐지 - 신규 발급 카드 배송을 빌미로 피해자에게 전화한 뒤, 반송 또는 사실 확인 등의 이유로 범죄자가 준비한 가짜 고객센터 전화 유도 ... 보안점검, 악성앱 검사, 사고접수 등을 돕겠다는 명목으로 피해자에게 스스로 원격 제어앱을 정상 스토어에서 찾아 설치하도록 유도"
+    }
+  ],
+  "tags": [
+    "voice-phishing",
+    "remote-access",
+    "impersonation",
+    "banking-fraud"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "KISA 보호나라 が、口実（カード配送・発급）、経路（가짜 고객센터への誘導）、要求（원격 제어앱 설치）を具体的に記述。即時の金融被害に直結し risk_score=5"
+  }
+}
