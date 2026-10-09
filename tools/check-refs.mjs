@@ -59,6 +59,12 @@ async function listUrlsFromDisk(){
   return items;
 }
 
+// Many government and consumer-protection sites reject bare HEAD or custom
+// User-Agent strings via WAF rules. Match a common browser UA and fall back
+// to GET on any HEAD rejection (403/404/405/501) so false positives from
+// method/UA filtering do not drown out real breakage.
+const UA = 'Mozilla/5.0 (compatible; GCSA-check-refs/1.0; +https://github.com/ipusiron/global-cultural-scam-atlas)';
+
 function doRequest(method, url){
   return new Promise(resolve => {
     let parsed;
@@ -66,7 +72,7 @@ function doRequest(method, url){
     const opts = {
       method, hostname: parsed.hostname, port: parsed.port || undefined,
       path: parsed.pathname + parsed.search,
-      headers: { 'User-Agent': 'GCSA-check-refs/1.0', 'Accept': '*/*' },
+      headers: { 'User-Agent': UA, 'Accept': '*/*', 'Accept-Language': 'ja,en;q=0.8' },
       timeout: 20000
     };
     const client = parsed.protocol === 'http:' ? httpRequest : request;
@@ -84,7 +90,10 @@ function doRequest(method, url){
 async function headOrGet(url){
   const h = await doRequest('HEAD', url);
   if(h.ok || typeof h.status !== 'number') return h;
-  if(h.status === 405 || h.status === 501){
+  // Fall back to GET for any HEAD-specific rejection (not only 405). Many
+  // WAFs mark HEAD requests as suspicious and return 403/404 even when the
+  // page is live and returns 200 for GET from the same client.
+  if(h.status === 403 || h.status === 404 || h.status === 405 || h.status === 501){
     return doRequest('GET', url);
   }
   return h;
