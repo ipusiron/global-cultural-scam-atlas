@@ -5,7 +5,7 @@
     "en": "Courier-Impersonation Smishing (Delivery Failure)"
   },
   "short_desc": {
-    "ja": "『物品배송불가』の SMS で住所確認を名目にリンクを踏ませる",
+    "ja": "『配達不可（배송불가）』の SMS で住所確認を名目にリンクを踏ませる",
     "en": "'Delivery failed' SMS pretext pushes a shipping-fix link."
   },
   "cultural_lever": {
@@ -19,7 +19,7 @@
     "general"
   ],
   "scenario": {
-    "ja": "1) 宅配会社を装う SMS 2) 『配達不可・住所不明』を通告 3) 短縮 URL を押させる 4) 悪性アプリ導入で金融情報を奪取",
+    "ja": "1) 宅配会社を装う SMS 2) 『配達不可・住所不明』を通告 3) 短縮 URL を押させる 4) 悪性アプリを導入し金融情報を奪取",
     "en": "1) SMS imitates a courier 2) 'Delivery failed / address unknown' 3) Short URL click 4) Malware steals financial info"
   },
   "red_flags": {
@@ -36,9 +36,9 @@
   },
   "mitigations": {
     "ja": [
-      "配達会社の公式アプリや公式サイトで照合",
-      "URL を踏まず SMS を削除",
-      "출처가 분명한 사이트만 入力"
+      "宅配会社の公式アプリや公式サイトで照合",
+      "URL は押さず SMS を削除",
+      "出所の明らかなサイトにのみ情報を入力"
     ],
     "en": [
       "Check the courier's official app",
@@ -51,7 +51,7 @@
     "bank-transfer"
   ],
   "legal_notes": {
-    "ja": "118 KISA 상담센터と보이스피싱통합신고대응센터へ通報",
+    "ja": "KISA 118 相談センターとボイスフィッシング統合通報対応センター（보이스피싱통합신고대응센터）へ通報",
     "en": "Report to KISA 118 and the Integrated Voice Phishing Center"
   },
   "references": [
@@ -72,6 +72,6 @@
   "verification": {
     "status": "verified",
     "checked": "2026-10-09",
-    "note": "KISA 보호나라 がスミッシングの定義（악성 앱 주소が含まれる SMS を一斉送信し금융정보 탈취）と、택배 사칭 유형の実例文言を併記"
+    "note": "KISA 保護ポータル（보호나라）がスミッシングの定義（악성 앱 주소が含まれる SMS を一斉送信し금융정보 탈취）と、宅配なりすまし類型（택배 사칭 유형）の実例文言を併記"
   }
 }

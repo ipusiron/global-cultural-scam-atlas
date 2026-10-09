@@ -1,7 +1,7 @@
 {
   "id": "gb-002",
   "title": {
-    "ja": "年金の早期引き出しを促す『ペンション解放』詐欺",
+    "ja": "年金の早期引き出しを促す『年金解放（pension liberation）』詐欺",
     "en": "Early Pension Release ('Pension Liberation') Scam"
   },
   "short_desc": {
@@ -21,7 +21,7 @@
     "general"
   ],
   "scenario": {
-    "ja": "1) 55歳未満への引き出し提案 2) 『ペンション解放』『ペンションローン』の名目 3) 海外スキームへ資金移転 4) 高額手数料と55%の税負担",
+    "ja": "1) 55歳未満への引き出し提案 2) 『年金解放（pension liberation）』『年金ローン（pension loan）』の名目 3) 海外スキームへ資金移転 4) 高額手数料と55%の税負担",
     "en": "1) Offer early withdrawal 2) 'pension liberation' or 'pension loan' 3) Move pot to overseas scheme 4) 30% fee + 55% tax"
   },
   "red_flags": {

@@ -1,15 +1,15 @@
 {
   "id": "tw-001",
   "title": {
-    "ja": "LINE 投資群組で名人を装う投資詐欺",
+    "ja": "LINE 投資グループ（投資群組）で有名人を装う投資詐欺",
     "en": "LINE Investment-Group 'Celebrity' Scam"
   },
   "short_desc": {
-    "ja": "有名人や投信顧問を装い LINE グループへ誘い込み専用アプリで有価証券の購入を装う",
+    "ja": "有名人や投資顧問を装い LINE グループへ誘い込み専用アプリで有価証券の購入を装う",
     "en": "Impersonates celebs on LINE groups and pushes a fake trading app."
   },
   "cultural_lever": {
-    "ja": "台湾での LINE 普及と、名人発信情報への信頼",
+    "ja": "台湾での LINE の普及と、有名人発の情報への信頼",
     "en": "Ubiquity of LINE and trust in celebrity-sourced tips"
   },
   "attack_vector": [
@@ -20,14 +20,14 @@
     "general"
   ],
   "scenario": {
-    "ja": "1) 名人の名義で広告・動画を配信 2) 投資経験や高額獲利で LINE 群組へ誘い込む 3) 特定の APP をダウンロードさせる 4) 有価証券の購入を偽装して資金を奪う",
+    "ja": "1) 有名人の名義で広告・動画を配信 2) 投資経験や高額利益で LINE グループへ誘い込む 3) 特定のアプリをダウンロードさせる 4) 有価証券の購入を偽装して資金を奪う",
     "en": "1) Celeb-name ads/videos 2) Lure to LINE group 3) Push to install specific APP 4) Fake 'buying securities'"
   },
   "red_flags": {
     "ja": [
-      "名人・財經專家名義の投資群組",
-      "専用通道で優先申購を謳う",
-      "指定された APP のダウンロード要求"
+      "有名人や金融専門家の名義を使った投資グループ",
+      "専用ルートでの優先申込を謳う",
+      "指定アプリのダウンロード要求"
     ],
     "en": [
       "'Celebrity' or 'expert' investment group",
@@ -37,9 +37,9 @@
   },
   "mitigations": {
     "ja": [
-      "金管會の『防範非法證券期貨業宣導專區』で合法業者か照合",
-      "反詐騙諮詢專線 02-2737-3434 または 165 に照会",
-      "高報酬の虚偽訊息を信じない"
+      "金管会の『非合法証券先物業防止宣導専区（防範非法證券期貨業宣導專區）』で合法業者か照合",
+      "反詐欺相談専線 02-2737-3434 または 165 に照会",
+      "高報酬をうたう虚偽の情報を信じない"
     ],
     "en": [
       "Verify firms on the FSC anti-fraud zone",
@@ -53,7 +53,7 @@
     "cryptocurrency"
   ],
   "legal_notes": {
-    "ja": "165 反詐騙專線または 02-2737-3434 へ通報",
+    "ja": "165 反詐欺専線または 02-2737-3434 へ通報",
     "en": "Report to 165 or the Anti-Fraud Consultation Line 02-2737-3434"
   },
   "references": [

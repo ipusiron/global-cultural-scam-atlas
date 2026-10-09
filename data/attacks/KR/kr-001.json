@@ -1,15 +1,15 @@
 {
   "id": "kr-001",
   "title": {
-    "ja": "モバイル青帖（청첩장）を装う知人なりすましスミッシング",
+    "ja": "モバイル結婚式招待状（청첩장）を装う知人なりすましスミッシング",
     "en": "Mobile Wedding-Invitation Impersonation Smishing"
   },
   "short_desc": {
-    "ja": "結婚式の青帖リンクを知人番号から送り悪性アプリを導入",
+    "ja": "結婚式のモバイル招待状リンクを知人番号から送り悪性アプリを導入",
     "en": "Fake wedding invitation link from a known number installs malware."
   },
   "cultural_lever": {
-    "ja": "韓国で広く用いられるモバイル青帖の慣行と知人への信頼",
+    "ja": "韓国で広く使われるモバイル結婚式招待状（청첩장）の慣行と知人への信頼",
     "en": "Common mobile wedding invitations and trust in acquaintances"
   },
   "attack_vector": [
@@ -20,14 +20,14 @@
     "general"
   ],
   "scenario": {
-    "ja": "1) 既知の連絡先に見える番号から SMS 2) 『결혼』『청첩장』の文言 3) 悪性アプリをインストール 4) 連絡先・金融情報を奪い知人へ再配信",
+    "ja": "1) 連絡先に登録済みに見える番号から SMS 2) 『結婚（결혼）』『招待状（청첩장）』の文言 3) 悪性アプリをインストール 4) 連絡先や金融情報を奪い知人へ再配信",
     "en": "1) SMS from a 'known' number 2) '결혼/청첩장' keywords 3) Install malware 4) Steal contacts/financial info and reshare"
   },
   "red_flags": {
     "ja": [
       "結婚関連 SMS 内の短縮 URL",
       "電話帳の相手を装う発信者番号",
-      "アプリの隠蔽・アイコンの模倣"
+      "アプリのアイコン隠蔽や本物の模倣"
     ],
     "en": [
       "Short URL in wedding SMS",
@@ -37,8 +37,8 @@
   },
   "mitigations": {
     "ja": [
-      "青帖 SMS のリンクを押さず送信者に直接確認",
-      "보호나라の『스미싱 확인서비스』で判別",
+      "招待状の SMS はリンクを押さず送信者に直接確認",
+      "KISA 保護ポータル（보호나라）のスミッシング確認サービス（스미싱 확인서비스）で判別",
       "出所不明の URL は即削除"
     ],
     "en": [
@@ -52,7 +52,7 @@
     "bank-transfer"
   ],
   "legal_notes": {
-    "ja": "보이스피싱통합신고대응센터と보호나라へ通報",
+    "ja": "ボイスフィッシング統合通報対応センター（보이스피싱통합신고대응센터）と KISA 保護ポータル（보호나라）へ通報",
     "en": "Report to the Integrated Voice Phishing Center and KISA Boho"
   },
   "references": [
@@ -73,6 +73,6 @@
   "verification": {
     "status": "verified",
     "checked": "2026-10-09",
-    "note": "KISA 보호나라 の公式告示が、口実（결혼·결혼식·청첩장キーワード）、接触経路（連絡先に見える発信者）、要求（악성앱 설치）を具体的に記述"
+    "note": "KISA 保護ポータル（보호나라）の公式告示が、口実（결혼·결혼식·청첩장キーワード）、接触経路（連絡先に見える発信者）、要求（악성앱 설치）を具体的に記述"
   }
 }

@@ -1,15 +1,15 @@
 {
   "id": "tw-003",
   "title": {
-    "ja": "虛擬資產の現金面交を要求する投資詐欺",
+    "ja": "暗号資産（虛擬資產）の現金手渡し（面交）を要求する投資詐欺",
     "en": "Crypto Cash Face-to-Face Investment Scam"
   },
   "short_desc": {
-    "ja": "未登録の仮想資産業者を名乗り『保證獲利』で誘い、受渡後に解凍金等を追加請求",
+    "ja": "未登録の暗号資産業者を名乗り『元本保証の利益（保證獲利）』で誘い、受け渡し後に解凍金などを追加請求",
     "en": "Unregistered crypto 'firms' lure 'guaranteed returns' then demand extra fees."
   },
   "cultural_lever": {
-    "ja": "暗号資産市場への期待と、現金面交への信頼",
+    "ja": "暗号資産市場への期待と、現金手渡しへの信頼",
     "en": "Interest in crypto and comfort with cash hand-offs"
   },
   "attack_vector": [
@@ -21,14 +21,14 @@
     "general"
   ],
   "scenario": {
-    "ja": "1) 未登録の仮想資産業者を名乗る 2) 『穩賺不賠』『保證獲利』を謳い投資を募る 3) 現金面交や個人口座への入金を要求 4) 解凍金・保證金・税金等を追加請求し失踪",
+    "ja": "1) 未登録の暗号資産業者を名乗る 2) 『絶対に損しない（穩賺不賠）』『元本保証の利益（保證獲利）』を謳い投資を募る 3) 現金手渡しや個人口座への入金を要求 4) 解凍金・保証金・税金などを追加請求して失踪",
     "en": "1) Pose as unregistered crypto firm 2) 'Guaranteed returns' lures 3) Demand cash hand-off or personal-account transfer 4) Demand 'unlock' or 'tax' fees, then vanish"
   },
   "red_flags": {
     "ja": [
-      "『保證獲利』『穩賺不賠』『利潤豐厚』の文言",
-      "虛擬資產業者が現金での受渡しを要求",
-      "払戻し時に追加の解凍金・保證金・稅款を要求"
+      "『元本保証（保證獲利）』『絶対に損しない（穩賺不賠）』『高利回り（利潤豐厚）』の文言",
+      "暗号資産業者が現金での受け渡しを要求",
+      "払い戻し時に追加の解凍金・保証金・税金を要求"
     ],
     "en": [
       "'Guaranteed'/'risk-free'/'high returns'",
@@ -38,9 +38,9 @@
   },
   "mitigations": {
     "ja": [
-      "金管會の『提供虛擬資產服務之事業或人員』專區で合法業者を確認",
-      "合法業者は現金面交や個人口座入金を要求しない",
-      "165 または 02-2737-3434 で照会"
+      "金管会の『暗号資産サービス提供事業者または人員（提供虛擬資產服務之事業或人員）』専区で合法業者を確認",
+      "合法な業者は現金手渡しや個人口座への入金を要求しない",
+      "165 または 02-2737-3434 に照会"
     ],
     "en": [
       "Verify firms in the FSC's crypto service area",
@@ -55,7 +55,7 @@
     "bank-transfer"
   ],
   "legal_notes": {
-    "ja": "洗錢防制法改正により未登録の仮想資産業者は刑事責任",
+    "ja": "資金洗浄防止法（洗錢防制法）の改正により、未登録の暗号資産業者は刑事責任を負う",
     "en": "Unregistered crypto providers face criminal liability under AML law"
   },
   "references": [

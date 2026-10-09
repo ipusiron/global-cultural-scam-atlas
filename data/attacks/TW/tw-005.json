@@ -1,11 +1,11 @@
 {
   "id": "tw-005",
   "title": {
-    "ja": "国税局・地方法院を装う公務機関詐欺",
+    "ja": "国税局・裁判所を装う公的機関なりすまし詐欺",
     "en": "Tax Office / Court Impersonation Scam"
   },
   "short_desc": {
-    "ja": "國稅局・地方法院を装い『退稅』『補稅』『法律案件』で振込を迫る",
+    "ja": "国税局（國稅局）や地方裁判所（地方法院）を装い『税還付（退稅）』『追徴課税（補稅）』『法律案件』で送金を迫る",
     "en": "'Tax office/court' pretext demands transfers over refund/arrears."
   },
   "cultural_lever": {
@@ -21,13 +21,13 @@
     "elderly"
   ],
   "scenario": {
-    "ja": "1) 國稅局・地方法院を装う電話や SMS 2) 退稅・逾期未繳款・法律案件を通知 3) 法的責任免除を名目に振込を要求 4) 個人情報も奪う",
+    "ja": "1) 国税局や地方裁判所を装う電話や SMS 2) 税還付・未納・法律案件を通知 3) 法的責任免除を名目に送金を要求 4) 個人情報も奪う",
     "en": "1) Call/SMS 'tax office' or 'court' 2) Claim refund/arrears/legal case 3) Demand transfer to avoid liability 4) Also harvest IDs"
   },
   "red_flags": {
     "ja": [
-      "公家機関が電話や SMS で振込を要求",
-      "特定の窓口に電話し直すよう指示",
+      "公的機関が電話や SMS で送金を要求",
+      "特定の窓口にかけ直すよう指示",
       "急かすような法律責任の説明"
     ],
     "en": [
@@ -38,7 +38,7 @@
   },
   "mitigations": {
     "ja": [
-      "公家機関は電話や SMS で振込を要求しないと認識",
+      "公的機関は電話や SMS で送金を要求しないと認識",
       "165 または 02-2737-3434 に照会",
       "疑わしい電話はすぐ切る"
     ],
@@ -53,7 +53,7 @@
     "bank-transfer"
   ],
   "legal_notes": {
-    "ja": "165 反詐騙專線に通報",
+    "ja": "165 反詐欺専線に通報",
     "en": "Report to 165 anti-fraud hotline"
   },
   "references": [

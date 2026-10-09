@@ -1,15 +1,15 @@
 {
   "id": "tw-006",
   "title": {
-    "ja": "偽中獎通知で稅金・代投資獲利を装う詐欺",
+    "ja": "偽の当選通知（中獎通知）で税金や代行投資利益を装う詐欺",
     "en": "Fake Prize Notice Demanding 'Tax' or 'Processing'"
   },
   "short_desc": {
-    "ja": "市調・抽獎・中獎通知で税金や代投資獲利の名目で振込を迫る",
+    "ja": "市場調査や抽選（抽獎）、当選通知（中獎通知）で税金や代行投資利益を名目に送金を迫る",
     "en": "'You've won' notice demands tax, deposit, or 'processing' fees."
   },
   "cultural_lever": {
-    "ja": "抽選・プロモーション慣行への親しみと、当選したという期待",
+    "ja": "抽選やプロモーションへの親しみと、当選したという期待",
     "en": "Comfort with lotteries and promotions"
   },
   "attack_vector": [
@@ -21,14 +21,14 @@
     "general"
   ],
   "scenario": {
-    "ja": "1) 市場調査・公開抽獎・通知領獎・繳付稅金・代投資獲利を名目に接触 2) 徐々に信頼させる 3) 指定口座への振込を要求 4) 振込後に音信不通",
+    "ja": "1) 市場調査・公開抽選・当選通知・税金納付・代行投資利益などを名目に接触 2) 徐々に信頼させる 3) 指定口座への送金を要求 4) 送金後に音信不通",
     "en": "1) Approach via survey/draw/'prize' pretext 2) Build trust 3) Demand transfer to designated account 4) Vanish"
   },
   "red_flags": {
     "ja": [
-      "払戻しや受取に『税金』『手数料』が必要と言われる",
-      "受取のため個人情報を要求",
-      "急かされる受取期限"
+      "受け取りや払い戻しに『税金』『手数料』が必要と言われる",
+      "受け取りのため個人情報を要求",
+      "急かされる受け取り期限"
     ],
     "en": [
       "'Tax'/'fees' required to receive",
@@ -39,8 +39,8 @@
   "mitigations": {
     "ja": [
       "165 に照会し判断",
-      "『白吃の午餐』はないと認識",
-      "急かされたら相手の身元を折り返し確認"
+      "『ただより高いものはない（白吃的午餐）』と認識",
+      "急かされたら相手の身元を折り返しで確認"
     ],
     "en": [
       "Verify via 165",

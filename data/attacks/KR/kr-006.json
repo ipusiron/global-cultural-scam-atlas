@@ -5,11 +5,11 @@
     "en": "Public-Agency Impersonation Smishing"
   },
   "short_desc": {
-    "ja": "건강보험공단などの通知を装い悪性アプリをインストールさせる",
+    "ja": "健康保険公団（건강보험공단）などの通知を装い悪性アプリを導入させる",
     "en": "'Health insurance notice' pretext installs malware."
   },
   "cultural_lever": {
-    "ja": "公共機関（건강보험공단・세무서など）への信頼",
+    "ja": "公共機関（健康保険公団・税務署など）への信頼",
     "en": "Trust in public agencies like the National Health Insurance Service"
   },
   "attack_vector": [
@@ -20,12 +20,12 @@
     "elderly"
   ],
   "scenario": {
-    "ja": "1) 공공기관名の SMS 2) 건강검진 통보・과태료 등の口実 3) 内容確認のため URL クリック 4) 悪性アプリ導入",
+    "ja": "1) 公共機関名の SMS 2) 『健康診断通知（건강검진 통보）』『過料（과태료）』などの口実 3) 内容確認のため URL をクリックさせる 4) 悪性アプリを導入",
     "en": "1) SMS as 'Public Agency' 2) 'Health check / fine' pretext 3) 'Open to view' URL 4) Install malware"
   },
   "red_flags": {
     "ja": [
-      "URL 短縮の『내용보기』リンク",
+      "短縮 URL の『内容を見る（내용보기）』リンク",
       "政府機関名の SMS に URL が含まれる",
       "過度な権限を要求するアプリの導入要求"
     ],
@@ -37,9 +37,9 @@
   },
   "mitigations": {
     "ja": [
-      "公共機関サイトは手入力で開く",
-      "118 KISA 상담센터と保호나라で判別",
-      "疑わしい SMS は『스팸으로 신고』"
+      "公共機関のサイトは手入力で開く",
+      "KISA 118 相談センターと 保護ポータル（보호나라）で判別",
+      "疑わしい SMS は迷惑メッセージとして通報（스팸으로 신고）"
     ],
     "en": [
       "Type the agency URL manually",
@@ -52,7 +52,7 @@
     "bank-transfer"
   ],
   "legal_notes": {
-    "ja": "KISA の明記：공공기관 사칭 유형は代表類型",
+    "ja": "KISA の明記：公共機関のなりすまし（공공기관 사칭）は代表的な類型",
     "en": "KISA lists public-agency impersonation among the main patterns"
   },
   "references": [
@@ -73,6 +73,6 @@
   "verification": {
     "status": "verified",
     "checked": "2026-10-09",
-    "note": "KISA 보호나라 が、口실（공공기관의 민원24・백신 등 正常앱 사칭）と要求（악성앱 설치・過度な権限）を具体的に記述。공공기관 사칭 유형を代表類型として明記"
+    "note": "KISA 保護ポータル（보호나라）が、口実（공공기관의 민원24・백신 등 正常앱 사칭）と要求（악성앱 설치・過度な権限）を具体的に記述。公共機関なりすまし類型（공공기관 사칭 유형）を代表類型として明記"
   }
 }

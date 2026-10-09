@@ -1,15 +1,15 @@
 {
   "id": "kr-004",
   "title": {
-    "ja": "カード配送を装う보이스피싱＋원격제어アプリ",
+    "ja": "カード配送を装うボイスフィッシングとリモート制御アプリ導入",
     "en": "Card-Delivery Vishing + Remote-Access App"
   },
   "short_desc": {
-    "ja": "新規発行カードの配送を名目に偽カスタマーセンターへ電話させ原격제어 앱 を導入",
+    "ja": "新規発行カードの配送を名目に偽カスタマーセンターへ電話させリモート制御アプリ（원격제어 앱）を導入",
     "en": "'New card delivery' pretext guides victim to fake call center and installs remote-access app."
   },
   "cultural_lever": {
-    "ja": "クレジットカード発行・リテール銀行サポートへの信頼",
+    "ja": "クレジットカード発行や銀行サポートへの信頼",
     "en": "Trust in credit-card issuance and bank-side support"
   },
   "attack_vector": [
@@ -20,14 +20,14 @@
     "general"
   ],
   "scenario": {
-    "ja": "1) 『カード配送』『カード発급』の電話や SMS 2) 返送や事実確認名目で偽カスタマーセンターへ誘導 3) 保安点検名目で원격제어 앱 を導入 4) 個人情報・金融情報を奪取",
+    "ja": "1) 『カード配送』『カード発行（발급）』の電話や SMS 2) 返送や事実確認の名目で偽カスタマーセンターへ誘導 3) 保安点検の名目でリモート制御アプリを導入 4) 個人情報と金融情報を奪取",
     "en": "1) Call/SMS about 'card delivery/issuance' 2) Redirect to fake call center 3) Install remote-access app for 'security check' 4) Harvest banking info"
   },
   "red_flags": {
     "ja": [
       "新規発行の覚えがないカード配送通知",
-      "原격제어 앱 の自主インストールを促す",
-      "正規ストアに登録されていても疑う"
+      "リモート制御アプリの自主インストール要求",
+      "正規ストアに登録されているアプリでも疑う"
     ],
     "en": [
       "'New card' notice you did not request",
@@ -38,8 +38,8 @@
   "mitigations": {
     "ja": [
       "カード会社の公式番号へ自分からかけ直す",
-      "政府機関・金融機関は원격제어 앱 の設置を求めないと認識",
-      "불가피時は 보이스피싱통합신고대응센터へ連絡"
+      "政府機関や金融機関はリモート制御アプリの導入を求めないと認識",
+      "やむを得ない場合はボイスフィッシング統合通報対応センター（보이스피싱통합신고대응센터）へ連絡"
     ],
     "en": [
       "Call back on the card company's official number",
@@ -52,7 +52,7 @@
     "bank-transfer"
   ],
   "legal_notes": {
-    "ja": "KISA の明記（政府機関と金融회사は電話や SMS で原격제어앱 설치を要求しない）",
+    "ja": "KISA の明記：政府機関や金融会社は電話や SMS でリモート制御アプリの導入を要求しない",
     "en": "KISA states officials do not request remote-access app installs"
   },
   "references": [
@@ -73,6 +73,6 @@
   "verification": {
     "status": "verified",
     "checked": "2026-10-09",
-    "note": "KISA 보호나라 が、口実（カード配送・発급）、経路（가짜 고객센터への誘導）、要求（원격 제어앱 설치）を具体的に記述。即時の金融被害に直結し risk_score=5"
+    "note": "KISA 保護ポータル（보호나라）が、口実（カード配送・発급）、経路（가짜 고객센터への誘導）、要求（원격 제어앱 설치）を具体的に記述。即時の金融被害に直結し risk_score=5"
   }
 }

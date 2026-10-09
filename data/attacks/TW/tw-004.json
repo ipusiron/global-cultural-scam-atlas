@@ -1,15 +1,15 @@
 {
   "id": "tw-004",
   "title": {
-    "ja": "ネット競売の『分期付款設定ミス』ATM 誘導",
+    "ja": "ネットオークションの『分割払い（分期付款）設定ミス』 ATM 誘導",
     "en": "Online-Auction 'Instalment Mistake' ATM Scam"
   },
   "short_desc": {
-    "ja": "拍賣サイト職員を装い『操作ミス』を口実に ATM 修正を迫る",
+    "ja": "オークションサイト（拍賣）の職員を装い『操作ミス』を口実に ATM での修正を迫る",
     "en": "'Auction staff' claim 'instalment mistake' to drive victim to ATM."
   },
   "cultural_lever": {
-    "ja": "ネットオークションの普及と、取引ミスの不安",
+    "ja": "ネットオークションの普及と、取引ミスへの不安",
     "en": "Online auction habits and anxiety over transaction errors"
   },
   "attack_vector": [
@@ -21,14 +21,14 @@
     "general"
   ],
   "scenario": {
-    "ja": "1) 売り手の取引完了情報を盗み見 2) 拍賣サイト職員を装う 3) 『分期付款』『匯款失敗』を口実に 4) 慌てた買い手に ATM で修正操作を指示し送金させる",
+    "ja": "1) 売り手の取引完了情報を盗み見 2) オークションサイトの職員を装う 3) 『分割払い（分期付款）設定』『送金失敗（匯款失敗）』を口実に 4) 慌てた買い手に ATM での修正操作を指示し送金させる",
     "en": "1) Harvest seller's completed-trade info 2) Pose as auction staff 3) Claim 'instalment' or 'transfer failed' 4) Push buyer to ATM for 'fix'"
   },
   "red_flags": {
     "ja": [
-      "拍賣サイトの職員を名乗る電話",
-      "『分期付款設定』『匯款失敗』の説明",
-      "ATM での修正操作指示"
+      "オークションサイトの職員を名乗る電話",
+      "『分割払い設定』『送金失敗』の説明",
+      "ATM での修正操作の指示"
     ],
     "en": [
       "Call from alleged auction-site staff",
@@ -39,8 +39,8 @@
   "mitigations": {
     "ja": [
       "ATM で見知らぬ操作を言われたら必ず止まる",
-      "疑わしい郵件は開かず防毒ソフトを更新",
-      "対面取引・貨到付款など安全な決済を選ぶ"
+      "疑わしいメールは開かず、ウイルス対策ソフトを更新",
+      "対面取引や代引き（貨到付款）など安全な決済を選ぶ"
     ],
     "en": [
       "Stop immediately for unexplained ATM steps",

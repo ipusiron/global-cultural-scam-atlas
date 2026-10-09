@@ -5,11 +5,11 @@
     "en": "Apple ID Theft via Courier Smishing"
   },
   "short_desc": {
-    "ja": "宅配確認を名目にアクセスさせ、iPhone には偽 Apple ID 管理サイトを表示",
+    "ja": "宅配確認を名目にアクセスさせ、iPhone には偽の Apple ID 管理サイトを表示",
     "en": "Courier pretext routes iPhone users to a fake Apple ID site."
   },
   "cultural_lever": {
-    "ja": "宅配照会の習慣と、iPhone / Android ごとの手口切り替えによる誤認",
+    "ja": "宅配照会の習慣と、iPhone と Android で手口を切り替える誤認誘導",
     "en": "Courier-tracking habits and OS-aware impersonation"
   },
   "attack_vector": [
@@ -20,13 +20,13 @@
     "general"
   ],
   "scenario": {
-    "ja": "1) 宅배 수신확인・반송 등の SMS を受信 2) 悪性サイトへ誘導 3) OS 判別し iPhone には偽 Apple ID 管理サイト 4) Apple ID・電話番号・認証コードを奪取",
+    "ja": "1) 『宅配の受信確認・返送（수신확인·반송）』などの SMS を受信 2) 悪性サイトへ誘導 3) OS を判別し iPhone には偽の Apple ID 管理サイト 4) Apple ID・電話番号・認証コードを奪取",
     "en": "1) 'Delivery/return' SMS received 2) Fake site opens 3) Detects iPhone and shows fake Apple ID site 4) Steals Apple ID + OTP"
   },
   "red_flags": {
     "ja": [
-      "宅配 SMS 内の見慣れないドメイン",
-      "iPhone で開くと Apple ID 入力画面",
+      "宅配 SMS に見慣れないドメイン",
+      "iPhone で開くと Apple ID の入力画面",
       "電話番号と認証番号の同時要求"
     ],
     "en": [
@@ -37,9 +37,9 @@
   },
   "mitigations": {
     "ja": [
-      "SMS 内 URL を押さず削除",
+      "SMS 内の URL は押さず削除",
       "Apple ID の2要素認証を有効化",
-      "疑わしい場合は 118 KISA 상담센터に連絡"
+      "疑わしい場合は KISA 118 相談センターに連絡"
     ],
     "en": [
       "Delete the SMS; do not click",
@@ -53,7 +53,7 @@
     "credit"
   ],
   "legal_notes": {
-    "ja": "보이스피싱통합신고대응센터と Apple サポートへ連絡",
+    "ja": "ボイスフィッシング統合通報対応センター（보이스피싱통합신고대응센터）と Apple サポートへ連絡",
     "en": "Report to the Integrated Voice Phishing Center and Apple Support"
   },
   "references": [
@@ -74,6 +74,6 @@
   "verification": {
     "status": "verified",
     "checked": "2026-10-09",
-    "note": "KISA 보호나라 が、口実（택배 수신 확인·반송처리）、分岐（OS 判定）、要求（Apple ID・인증번호 奪取）を具体的に記述"
+    "note": "KISA 保護ポータル（보호나라）が、口実（택배 수신 확인·반송처리）、分岐（OS 判定）、要求（Apple ID・인증번호 奪取）を具体的に記述"
   }
 }
