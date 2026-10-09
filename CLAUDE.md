@@ -113,8 +113,8 @@ Runs via `npm test` (`node --test`, zero extra dependencies). See `README.md` fo
    - AU (Australia): APAC region, en language (7 entries).
    - SG (Singapore): APAC region, en/zh/ms/ta languages (7 entries).
    - KR (South Korea): APAC region, ko/en languages (6 entries).
-   - IN (India): APAC region, hi/en languages (1 entry).
-   - TW: configured in COUNTRY_META, entries pending.
+   - TW (Taiwan): APAC region, zh-TW/en languages (6 entries).
+   - IN (India): APAC region, hi/en languages (1 entry, expansion pending).
 
 ## Content Guidelines (`docs/content-guidelines.md`)
 

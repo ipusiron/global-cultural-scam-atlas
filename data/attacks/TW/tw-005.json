@@ -1,0 +1,79 @@
+{
+  "id": "tw-005",
+  "title": {
+    "ja": "国税局・地方法院を装う公務機関詐欺",
+    "en": "Tax Office / Court Impersonation Scam"
+  },
+  "short_desc": {
+    "ja": "國稅局・地方法院を装い『退稅』『補稅』『法律案件』で振込を迫る",
+    "en": "'Tax office/court' pretext demands transfers over refund/arrears."
+  },
+  "cultural_lever": {
+    "ja": "公的機関への服従と法的手続きへの不安",
+    "en": "Deference to authorities and fear of legal action"
+  },
+  "attack_vector": [
+    "phone",
+    "sms"
+  ],
+  "targets": [
+    "general",
+    "elderly"
+  ],
+  "scenario": {
+    "ja": "1) 國稅局・地方法院を装う電話や SMS 2) 退稅・逾期未繳款・法律案件を通知 3) 法的責任免除を名目に振込を要求 4) 個人情報も奪う",
+    "en": "1) Call/SMS 'tax office' or 'court' 2) Claim refund/arrears/legal case 3) Demand transfer to avoid liability 4) Also harvest IDs"
+  },
+  "red_flags": {
+    "ja": [
+      "公家機関が電話や SMS で振込を要求",
+      "特定の窓口に電話し直すよう指示",
+      "急かすような法律責任の説明"
+    ],
+    "en": [
+      "Officials demanding a transfer by phone/SMS",
+      "Instruction to call a specific line",
+      "Urgent 'legal consequence' talk"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "公家機関は電話や SMS で振込を要求しないと認識",
+      "165 または 02-2737-3434 に照会",
+      "疑わしい電話はすぐ切る"
+    ],
+    "en": [
+      "Officials never demand transfers by phone/SMS",
+      "Verify via 165 or 02-2737-3434",
+      "Hang up on suspicious calls"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "bank-transfer"
+  ],
+  "legal_notes": {
+    "ja": "165 反詐騙專線に通報",
+    "en": "Report to 165 anti-fraud hotline"
+  },
+  "references": [
+    {
+      "label": "金管會 金融智慧網: 常見詐騙手法 - 假冒公務機關詐騙",
+      "url": "https://moneywise.fsc.gov.tw/home.jsp?dataserno=36&id=4&mcustomize=publicizeinfo_view.jsp&parentpath=0",
+      "publisher": "金融監督管理委員會 金融智慧網 (FSC)",
+      "accessed": "2026-10-09",
+      "quote": "詐騙集團假冒國稅局、地方法院等公務機關，宣稱您有退稅、逾期未繳款或涉及法律案件，要求您補稅、轉帳以免除法律責任，藉此騙取您的個人資料。 提醒您： 公家機關絕對不會以電話、電話錄音或以簡訊通知您轉帳，或要您打電話與某單位聯繫"
+    }
+  ],
+  "tags": [
+    "impersonation",
+    "authority-pretext",
+    "government-pretext",
+    "fear-based"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "金管會の宣導資訊が、装う相手（國稅局・地方法院）、口実（退稅・補稅・法律案件）、要求（振込）、公家機関が決してしないこと（電話や SMS で振込要求）を具体的に記述"
+  }
+}

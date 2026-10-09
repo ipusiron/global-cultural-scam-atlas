@@ -1,0 +1,79 @@
+{
+  "id": "tw-006",
+  "title": {
+    "ja": "偽中獎通知で稅金・代投資獲利を装う詐欺",
+    "en": "Fake Prize Notice Demanding 'Tax' or 'Processing'"
+  },
+  "short_desc": {
+    "ja": "市調・抽獎・中獎通知で税金や代投資獲利の名目で振込を迫る",
+    "en": "'You've won' notice demands tax, deposit, or 'processing' fees."
+  },
+  "cultural_lever": {
+    "ja": "抽選・プロモーション慣行への親しみと、当選したという期待",
+    "en": "Comfort with lotteries and promotions"
+  },
+  "attack_vector": [
+    "phone",
+    "email",
+    "sms"
+  ],
+  "targets": [
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) 市場調査・公開抽獎・通知領獎・繳付稅金・代投資獲利を名目に接触 2) 徐々に信頼させる 3) 指定口座への振込を要求 4) 振込後に音信不通",
+    "en": "1) Approach via survey/draw/'prize' pretext 2) Build trust 3) Demand transfer to designated account 4) Vanish"
+  },
+  "red_flags": {
+    "ja": [
+      "払戻しや受取に『税金』『手数料』が必要と言われる",
+      "受取のため個人情報を要求",
+      "急かされる受取期限"
+    ],
+    "en": [
+      "'Tax'/'fees' required to receive",
+      "Requests for personal info to collect",
+      "Deadlines to pressure action"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "165 に照会し判断",
+      "『白吃の午餐』はないと認識",
+      "急かされたら相手の身元を折り返し確認"
+    ],
+    "en": [
+      "Verify via 165",
+      "There is no 'free lunch'",
+      "Call back and verify identity"
+    ]
+  },
+  "risk_score": 3,
+  "mediums": [
+    "bank-transfer"
+  ],
+  "legal_notes": {
+    "ja": "165 または 02-2737-3434 に通報",
+    "en": "Report to 165 or 02-2737-3434"
+  },
+  "references": [
+    {
+      "label": "金管會 金融智慧網: 常見詐騙手法 - 假中獎通知詐騙",
+      "url": "https://moneywise.fsc.gov.tw/home.jsp?dataserno=36&id=4&mcustomize=publicizeinfo_view.jsp&parentpath=0",
+      "publisher": "金融監督管理委員會 金融智慧網 (FSC)",
+      "accessed": "2026-10-09",
+      "quote": "詐騙集團透過市場調查、公開抽獎、通知領獎、繳付稅金、代投資獲利等技倆，讓你完全信任歹徒，而匯款至歹徒指定之帳戶。 提醒您： 戒除貪念，天下沒有白吃的午餐。遇到中獎通知時應冷靜思考，可撥打165專線查證"
+    }
+  ],
+  "tags": [
+    "advance-fee",
+    "lottery-fraud",
+    "social-engineering",
+    "urgency"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "金管會の宣導資訊が、接触経路（市場調查・公開抽獎・通知領獎）、口実（繳付稅金・代投資獲利）、要求（指定口座への匯款）を具体的に記述"
+  }
+}

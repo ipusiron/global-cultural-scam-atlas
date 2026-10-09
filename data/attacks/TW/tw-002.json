@@ -1,0 +1,79 @@
+{
+  "id": "tw-002",
+  "title": {
+    "ja": "偽の違約通知書で ATM 操作を強要する詐欺",
+    "en": "Fake 'Default Notice' and ATM-Transfer Pressure"
+  },
+  "short_desc": {
+    "ja": "LINE 群組で株抽選『当選』を伝え偽の違約通知書で急な匯款を迫る",
+    "en": "'Won stock allocation' + fake default notice push urgent ATM transfer."
+  },
+  "cultural_lever": {
+    "ja": "株式市場への関心と、法的な違約への恐怖",
+    "en": "Interest in stocks and fear of legal default"
+  },
+  "attack_vector": [
+    "social",
+    "in-person"
+  ],
+  "targets": [
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) LINE 群組で優先申購 2) 多数の株に『当選』と通知 3) 違約を避ける名目で指定口座へ匯款要求 4) 偽の金管會違約通知書・現金受取・ATM 操作誘導",
+    "en": "1) LINE priority allocation 2) Announce 'wins' many stocks 3) Demand transfer to avoid default 4) Fake FSC notice + ATM transfer"
+  },
+  "red_flags": {
+    "ja": [
+      "急な匯款と ATM 操作指示",
+      "金管會の違約通知書を提示",
+      "現金を直接受け取りに来る"
+    ],
+    "en": [
+      "Urgent transfer with ATM instructions",
+      "Fake 'FSC default notice'",
+      "Someone collects cash in person"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "金管會は匯款や資金給付を要求しないと認識",
+      "165 または 02-2737-3434 に確認",
+      "合法金融機関は現金・虚擬資産での投資金受領を求めない"
+    ],
+    "en": [
+      "FSC does not demand transfers or funds",
+      "Verify via 165 or 02-2737-3434",
+      "Legal firms do not take cash/crypto for investment"
+    ]
+  },
+  "risk_score": 5,
+  "mediums": [
+    "cash",
+    "bank-transfer"
+  ],
+  "legal_notes": {
+    "ja": "金管會の公式見解：合法金融機関は投資款を個人口座に匯款させない",
+    "en": "FSC confirms legal firms never transfer investment funds to personal accounts"
+  },
+  "references": [
+    {
+      "label": "金管會 新聞稿: 網路投資群組詐騙多，停看聽後再投資",
+      "url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=202501240003&toolsflag=Y&dtable=News",
+      "publisher": "金融監督管理委員會 (FSC Taiwan)",
+      "accessed": "2026-10-09",
+      "quote": "民眾加入後，會通知民眾抽中多張股票，須馬上匯款至指定帳戶，否則將有違約情事，並有出具偽造金管會之違約申報通知書，及派員收取現金或誘導至銀行ATM操作匯款等情事 ... 合法金融機構也不會要求民眾以現金，或虛擬資產等方式交付投資款項，或將投資款項匯至個人銀行帳戶。"
+    }
+  ],
+  "tags": [
+    "investment-fraud",
+    "urgency",
+    "atm-fraud",
+    "authority-pretext"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "金管會の新聞稿が、口実（違約通知書）、要求（匯款・ATM 操作・現金収取）、合法機関が決してしないこと（個人口座への匯款要求）を具体的に記述"
+  }
+}
