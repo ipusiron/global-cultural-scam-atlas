@@ -3,6 +3,1145 @@
   "last_updated": "2026-10-09",
   "countries": [
     {
+      "country_code": "AU",
+      "country_name_local": "Australia",
+      "country_name_en": "Australia",
+      "regions": [
+        "APAC"
+      ],
+      "language_codes": [
+        "en"
+      ],
+      "notes": "Educational use; does not generalize culture.",
+      "attacks": [
+        {
+          "id": "au-001",
+          "title": {
+            "ja": "銀行を装うフィッシング",
+            "en": "Bank Phishing"
+          },
+          "short_desc": {
+            "ja": "本物そっくりのメール・SMS で銀行を装い情報を奪取",
+            "en": "Impersonates banks via lookalike SMS and emails."
+          },
+          "cultural_lever": {
+            "ja": "大手銀行のブランドへの信頼",
+            "en": "Trust in established bank brands"
+          },
+          "attack_vector": [
+            "sms",
+            "email",
+            "social"
+          ],
+          "targets": [
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 信頼される組織を装う 2) 本物そっくりのメッセージ送付 3) リンク・添付クリックや情報入力を促す 4) ログインを窃取",
+            "en": "1) Pose as a trusted org 2) Send lookalike message 3) Push a link or attachment 4) Steal credentials"
+          },
+          "red_flags": {
+            "ja": [
+              "個人名を含む本物らしいメッセージ",
+              "リンクや添付ファイルの誘導",
+              "リワード失効など急かす文言"
+            ],
+            "en": [
+              "Message using your name feels genuine",
+              "Push to click a link or attachment",
+              "Urgency like 'points expiring'"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "リンクを踏まず銀行アプリや公式 URL から入る",
+              "多要素認証を有効化",
+              "疑わしいメッセージは削除"
+            ],
+            "en": [
+              "Open the bank app or type the URL",
+              "Enable multi-factor authentication",
+              "Delete suspicious messages"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "Scamwatch（NASC）へ報告",
+            "en": "Report to Scamwatch (NASC)"
+          },
+          "references": [
+            {
+              "label": "ASIC MoneySmart: Banking scams - Phishing scams",
+              "url": "https://moneysmart.gov.au/financial-scams/banking-scams",
+              "publisher": "ASIC MoneySmart",
+              "accessed": "2026-10-09",
+              "quote": "Phishing is when a scammer tries to get your personal information so they can get access to your online accounts. Scammers may contact you by text, email, social media or messaging apps pretending to be a trusted organisation. The message might look almost exactly like the real thing. They may know your name and other personal details that make the message sound genuine."
+            }
+          ],
+          "tags": [
+            "phishing",
+            "banking-fraud",
+            "impersonation"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "ASIC MoneySmart の銀行詐欺ページが、接触経路（text, email, social media or messaging apps）と、装う相手（a trusted organisation）、要求（personal information）を具体的に記述。本物そっくりで個人名を含む点に対応"
+          }
+        },
+        {
+          "id": "au-002",
+          "title": {
+            "ja": "銀行職員を装い送金を急かす（Bank impersonation）",
+            "en": "Bank Impersonation Scam"
+          },
+          "short_desc": {
+            "ja": "『不審な取引』を口実に、電話・SMS で急かし送金やログイン情報を要求",
+            "en": "'Suspicious activity' pretext pressures victim to transfer funds."
+          },
+          "cultural_lever": {
+            "ja": "銀行の権威と、不正取引への恐怖",
+            "en": "Bank authority and fear of fraud losses"
+          },
+          "attack_vector": [
+            "phone",
+            "sms",
+            "email"
+          ],
+          "targets": [
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 銀行を装う電話・SMS 2) 『不審な取引がある』と告知 3) 緊急を演出 4) 口座情報・ログイン・送金を要求",
+            "en": "1) Call/SMS as 'bank' 2) Claim 'suspicious activity' 3) Urgent tone 4) Demand login or transfer"
+          },
+          "red_flags": {
+            "ja": [
+              "急かす言い回し",
+              "ログインパスワードや認証コードの要求",
+              "ソフトウェアのダウンロード指示"
+            ],
+            "en": [
+              "Urgent language",
+              "Request for online-banking passwords or codes",
+              "Instruction to download software"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "電話を切り、カード裏の番号で銀行に折り返す",
+              "リンクを踏まず銀行アプリから直接ログイン",
+              "正規銀行はパスワードや認証コードを尋ねないと認識"
+            ],
+            "en": [
+              "Hang up and call the number on your card",
+              "Open the bank app directly, not a link",
+              "Know banks will not ask for passwords or codes"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "Scamwatch へ報告。銀行は PIN や認証コードを尋ねないと公式に明示",
+            "en": "Report to Scamwatch; banks never ask for PINs or codes"
+          },
+          "references": [
+            {
+              "label": "ASIC MoneySmart: Banking scams - Bank impersonation scams",
+              "url": "https://moneysmart.gov.au/financial-scams/banking-scams",
+              "publisher": "ASIC MoneySmart",
+              "accessed": "2026-10-09",
+              "quote": "Scammers may pretend to be your bank through phone calls, emails, texts or other online messages. They often use urgent language to pressure you into acting quickly. ... if they suspect a suspicious transaction, they will never ask you: for sensitive information such as online banking passwords or codes to download software to transfer money to log in to online banking through a link sent via text or email."
+            }
+          ],
+          "tags": [
+            "impersonation",
+            "banking-fraud",
+            "urgency",
+            "authority-pretext"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "ASIC MoneySmart が、銀行を装う電話・メール・SMS と、急かす文言、銀行が決してしない要求（パスワードや認証コード、ソフトダウンロード、リンクからのログイン）を明示的に記述"
+          }
+        },
+        {
+          "id": "au-003",
+          "title": {
+            "ja": "遠隔操作詐欺（Remote access scam）",
+            "en": "Remote Access Scam"
+          },
+          "short_desc": {
+            "ja": "銀行やソフト会社を装い、遠隔操作ソフトを入れさせ口座から送金",
+            "en": "Bank/software impersonation installs remote tools to drain account."
+          },
+          "cultural_lever": {
+            "ja": "テクニカルサポートへの信頼・ウイルス警告への不安",
+            "en": "Trust in tech support and fear of malware warnings"
+          },
+          "attack_vector": [
+            "phone",
+            "website"
+          ],
+          "targets": [
+            "general",
+            "elderly"
+          ],
+          "scenario": {
+            "ja": "1) 銀行・ソフト会社を装い連絡 2) 『口座・端末に問題』と伝える 3) 特別なソフトのダウンロードを指示 4) 遠隔操作で銀行口座へ侵入",
+            "en": "1) Pretend to be bank/software vendor 2) Claim account or device issue 3) Push 'special software' install 4) Access banking remotely"
+          },
+          "red_flags": {
+            "ja": [
+              "ウイルス警告のポップアップ",
+              "銀行名義で『特別ソフト』を要求",
+              "ライブチャットからのダウンロード"
+            ],
+            "en": [
+              "Virus-warning pop-up",
+              "'Special software' request in bank's name",
+              "Download via a 'live chat'"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "見知らぬ相手に遠隔操作権を与えない",
+              "ポップアップは閉じ、端末を再起動",
+              "銀行は公式アプリや公式 URL から確認"
+            ],
+            "en": [
+              "Never grant remote access to strangers",
+              "Close pop-ups and restart the device",
+              "Verify via the official bank app or URL"
+            ]
+          },
+          "risk_score": 5,
+          "mediums": [
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "Scamwatch へ報告",
+            "en": "Report to Scamwatch"
+          },
+          "references": [
+            {
+              "label": "ASIC MoneySmart: Banking scams - Remote access scams",
+              "url": "https://moneysmart.gov.au/financial-scams/banking-scams",
+              "publisher": "ASIC MoneySmart",
+              "accessed": "2026-10-09",
+              "quote": "Remote access scams can happen when someone pretends to be from a well‑known company, such as your bank or a software provider. They may claim there’s a problem with your account or device and say they need to fix it for you. Their real aim is to get access to your device so they can access your bank account, steal personal information or install malware."
+            }
+          ],
+          "tags": [
+            "remote-access",
+            "tech-abuse",
+            "banking-fraud",
+            "impersonation"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "ASIC MoneySmart が、装う相手（your bank or a software provider）と口実（problem with your account or device）、目的（access your bank account）を具体的に記述。即時の金融被害に直結するため risk_score=5"
+          }
+        },
+        {
+          "id": "au-004",
+          "title": {
+            "ja": "有名ブランド・著名人を利用した投資詐欺",
+            "en": "Branded Fake-Investment Scam"
+          },
+          "short_desc": {
+            "ja": "既存の金融業者・公人・AI 偽ニュースで装い投資資金を奪う",
+            "en": "Fake brands, celebrity ads, and AI news lure investment funds."
+          },
+          "cultural_lever": {
+            "ja": "著名金融機関と公人の信用への錯覚",
+            "en": "Misplaced trust in known brands and public figures"
+          },
+          "attack_vector": [
+            "social",
+            "website",
+            "email"
+          ],
+          "targets": [
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 広告で既存金融業者や著名人を装う 2) 偽の比較サイト・ニュース記事へ誘導 3) 偽の投資商品で入金させる 4) 送金後に連絡途絶",
+            "en": "1) Ads impersonate known firms or figures 2) Direct to fake comparison sites or news 3) Push fake investment 4) Vanish after deposit"
+          },
+          "red_flags": {
+            "ja": [
+              "著名銀行・著名人の推奨",
+              "AI生成の記事・レビュー・比較サイト",
+              "高利回りの『保証』"
+            ],
+            "en": [
+              "Celebrity endorsements",
+              "AI-generated reviews, articles or comparison sites",
+              "'Guaranteed' high returns"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "ASIC の Investor Alert List で業者を照合",
+              "大きな入金前に信頼できる第三者に確認",
+              "広告リンクを踏まず公式サイトを手入力"
+            ],
+            "en": [
+              "Check ASIC's Investor Alert List",
+              "Have a trusted person review before large deposits",
+              "Type the official URL instead of clicking ads"
+            ]
+          },
+          "risk_score": 5,
+          "mediums": [
+            "bank-transfer",
+            "cryptocurrency"
+          ],
+          "legal_notes": {
+            "ja": "Scamwatch と ASIC へ報告。2025年に豪州で837百万豪ドルの投資詐欺被害",
+            "en": "Report to Scamwatch and ASIC; AU$837M lost in 2025"
+          },
+          "references": [
+            {
+              "label": "ASIC MoneySmart: Investment scams",
+              "url": "https://moneysmart.gov.au/financial-scams/investment-scams",
+              "publisher": "ASIC MoneySmart",
+              "accessed": "2026-10-09",
+              "quote": "Scammers are sophisticated. They use professional-looking websites, social media, advertising and AI technology to make scams appear genuine. Investment scams generally involve fake financial services and products offered by someone who isn’t who they claim to be. ... The scammer may pretend to represent a bank, investment company or financial services business. They may steal the identity of a genuine financial adviser or a well-known public figure."
+            }
+          ],
+          "tags": [
+            "investment-fraud",
+            "impersonation",
+            "ai-abuse",
+            "celebrity-impersonation"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "ASIC MoneySmart が、装う相手（bank, investment company or ... well-known public figure）、経路（social media, advertising）、手法（AI technology）を具体的に記述。NASC の2025年統計で837百万豪ドルの損失のため risk_score=5"
+          }
+        },
+        {
+          "id": "au-005",
+          "title": {
+            "ja": "偽の債券・定期預金（Imposter bond）詐欺",
+            "en": "Imposter Bond Investment Scam"
+          },
+          "short_desc": {
+            "ja": "有名銀行の『低リスク債券』を装い偽の比較サイト経由で入金させる",
+            "en": "Fake 'low-risk bonds' lure deposits via fake comparison sites."
+          },
+          "cultural_lever": {
+            "ja": "『安全資産』『豪州国債』という安心感",
+            "en": "Perceived safety of bonds and government debt"
+          },
+          "attack_vector": [
+            "social",
+            "website",
+            "phone"
+          ],
+          "targets": [
+            "general",
+            "elderly"
+          ],
+          "scenario": {
+            "ja": "1) 有名銀行名で接触 2) 低リスク『Treasury bonds』を提案 3) 偽の比較サイト経由で情報収集 4) 入金後に消失",
+            "en": "1) Contact in a known bank's name 2) Offer low-risk 'Treasury bonds' 3) Collect data via fake comparison site 4) Vanish after deposit"
+          },
+          "red_flags": {
+            "ja": [
+              "既存の有名銀行名を名乗る急な接触",
+              "送金先口座名が運用会社名と一致しない",
+              "偽の比較サイトから入力した個人情報の確認要求"
+            ],
+            "en": [
+              "Unexpected contact in a known bank's name",
+              "Account name differs from investment firm",
+              "Verification requests via a fake comparison site"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "送金先口座名が業者名と一致するか確認",
+              "ASIC の Investor Alert List で業者照合",
+              "BSB コードが提示銀行と一致するか確認"
+            ],
+            "en": [
+              "Check the destination account matches the firm",
+              "Verify on ASIC's Investor Alert List",
+              "Check the BSB matches the stated bank"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "Scamwatch と ASIC へ報告。送金先口座名の照合が重要",
+            "en": "Report to Scamwatch and ASIC; verify destination account name"
+          },
+          "references": [
+            {
+              "label": "ASIC MoneySmart: Imposter bond investment scams",
+              "url": "https://moneysmart.gov.au/financial-scams/imposter-bond-investment-scams",
+              "publisher": "ASIC MoneySmart",
+              "accessed": "2026-10-09",
+              "quote": "A scammer may contact you with an investment offer, claiming to be from a well-known bank or investment company. The people you speak to can seem knowledgeable, offering what appears to be a 'full service' brokerage. ... Scammers commonly set up fake comparison websites to lure investors. ... Be wary of surprise contact and independently verify who you are dealing with."
+            }
+          ],
+          "tags": [
+            "investment-fraud",
+            "impersonation",
+            "authority-pretext"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "ASIC MoneySmart が、装う相手（well-known bank or investment company）、経路（fake comparison websites）、推奨対策（independently verify）を明示"
+          }
+        },
+        {
+          "id": "au-006",
+          "title": {
+            "ja": "偽の暗号資産取引所・ウォレット詐欺",
+            "en": "Fake Crypto Exchange / Wallet Scam"
+          },
+          "short_desc": {
+            "ja": "本物そっくりの取引所・ウォレット・取引アプリへ入金を誘導",
+            "en": "Lookalike exchanges, wallets, and apps absorb crypto deposits."
+          },
+          "cultural_lever": {
+            "ja": "暗号資産市場への期待と、取引アプリ利用の慣れ",
+            "en": "Enthusiasm for crypto and comfort with trading apps"
+          },
+          "attack_vector": [
+            "website",
+            "social",
+            "email"
+          ],
+          "targets": [
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 偽の取引所・ウォレット・アプリへ誘導 2) 当初は利益が出て見える 3) さらなる投資を促す 4) 突然ロックアウトし消失",
+            "en": "1) Point to fake exchange/wallet/app 2) Show paper gains 3) Push further deposits 4) Lock out and disappear"
+          },
+          "red_flags": {
+            "ja": [
+              "アプリを公式ストア以外からダウンロードさせる",
+              "最初は確実に利益が出る",
+              "出金時に追加入金を要求"
+            ],
+            "en": [
+              "App download from the firm's site, not official stores",
+              "Guaranteed initial profits",
+              "Request more deposit at withdrawal"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "取引所の URL と公式アプリを厳密に確認",
+              "メールや DM のリンクを踏まない",
+              "引き出せないならそれ以上入金しない"
+            ],
+            "en": [
+              "Verify exchange URL and official apps",
+              "Avoid links from emails or DMs",
+              "If you cannot withdraw, stop depositing"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "cryptocurrency"
+          ],
+          "legal_notes": {
+            "ja": "Scamwatch と ASIC へ報告。暗号資産は FSCS 相当の補償対象外",
+            "en": "Report to Scamwatch and ASIC; crypto is not covered"
+          },
+          "references": [
+            {
+              "label": "ASIC MoneySmart: Crypto scams - Fake trading platforms, wallets or apps",
+              "url": "https://moneysmart.gov.au/financial-scams/crypto-scams",
+              "publisher": "ASIC MoneySmart",
+              "accessed": "2026-10-09",
+              "quote": "Scammers build fake exchanges or wallet sites that look real. You’re invited to trade, but once you deposit crypto, they disappear with your funds. ... Fake platforms – You use their platform to trade, mine crypto or to earn extra rewards. Initially, your crypto goes up in value, so you invest more. But then they lock you out, close the site and disappear with your money."
+            }
+          ],
+          "tags": [
+            "cryptocurrency",
+            "investment-fraud",
+            "fake-platform"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "ASIC MoneySmart が、装う対象（exchanges or wallet sites）と結果（lock you out, close the site and disappear）を具体的に記述。ASIC が2025-26年度に3,000件以上の暗号詐欺を摘発"
+          }
+        },
+        {
+          "id": "au-007",
+          "title": {
+            "ja": "警察・政府職員を装い暗号資産での送金を要求",
+            "en": "Police-Impersonation Crypto Transfer Demand"
+          },
+          "short_desc": {
+            "ja": "法執行機関・政府職員を名乗り、暗号資産での支払いや『凍結資金の返還』を要求",
+            "en": "Pose as law enforcement to demand crypto or 'release' funds."
+          },
+          "cultural_lever": {
+            "ja": "法執行機関への服従と、資産凍結への不安",
+            "en": "Deference to authorities and fear of asset freezes"
+          },
+          "attack_vector": [
+            "phone",
+            "email",
+            "social"
+          ],
+          "targets": [
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 警察・政府職員を名乗り接触 2) 『凍結した暗号資産を返す』や捜査名目 3) 暗号資産 ATM 等で送金を要求 4) 情報も盗む",
+            "en": "1) Pose as police/gov official 2) Claim seized crypto or investigation 3) Demand crypto ATM payment 4) Also phish account details"
+          },
+          "red_flags": {
+            "ja": [
+              "政府機関が暗号資産での支払いを要求",
+              "暗号資産 ATM への送金指示",
+              "捜査情報を口外しないよう要求"
+            ],
+            "en": [
+              "Government requesting crypto payments",
+              "Instructions to pay at a crypto ATM",
+              "Demand to keep investigation secret"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "豪政府機関は暗号資産やギフトカードで支払いを求めないと認識",
+              "電話を切り公式の電話番号へ折り返す",
+              "家族・銀行員など第三者に相談"
+            ],
+            "en": [
+              "Australian government agencies never ask for crypto or gift cards",
+              "Hang up and call back on an official number",
+              "Consult a trusted third party"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "cryptocurrency"
+          ],
+          "legal_notes": {
+            "ja": "Scamwatch と ReportCyber へ報告",
+            "en": "Report to Scamwatch and ReportCyber"
+          },
+          "references": [
+            {
+              "label": "ASIC MoneySmart: Crypto scams - Recovery and impersonation",
+              "url": "https://moneysmart.gov.au/financial-scams/crypto-scams",
+              "publisher": "ASIC MoneySmart",
+              "accessed": "2026-10-09",
+              "quote": "Recovery – You are contacted by an individual claiming to be a government or law enforcement official who alleges to either have frozen crypto belonging to you or alternatively attempting to phish for account details. ... There have also been examples of scammers impersonating police to trick victims into transferring their cryptocurrency."
+            }
+          ],
+          "tags": [
+            "impersonation",
+            "authority-pretext",
+            "cryptocurrency",
+            "government-pretext"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "ASIC MoneySmart が、装う相手（government or law enforcement official）、要求（crypto transfer）、口実（frozen crypto）を具体的に記述。警察を装う豪州特有の事例"
+          }
+        }
+      ]
+    },
+    {
+      "country_code": "GB",
+      "country_name_local": "United Kingdom",
+      "country_name_en": "United Kingdom",
+      "regions": [
+        "EMEA"
+      ],
+      "language_codes": [
+        "en"
+      ],
+      "notes": "Educational use; does not generalize culture.",
+      "attacks": [
+        {
+          "id": "gb-001",
+          "title": {
+            "ja": "無料年金レビューを装う勧誘",
+            "en": "Free Pension Review Lure"
+          },
+          "short_desc": {
+            "ja": "『無料の年金見直し』を名目に高リスク商品へ資金移転を促す",
+            "en": "'Free pension review' lures funds into high-risk schemes."
+          },
+          "cultural_lever": {
+            "ja": "年金制度への不安と専門助言の無料化への期待",
+            "en": "Anxiety over retirement and the promise of free professional advice"
+          },
+          "attack_vector": [
+            "phone",
+            "email",
+            "sms"
+          ],
+          "targets": [
+            "elderly",
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 突然の電話・メール 2) 無料の年金レビュー提案 3) 保証利回りをうたい海外不動産や森林投資へ資金移転",
+            "en": "1) Cold call/email 2) Offer free pension review 3) Move pot to high-risk overseas schemes"
+          },
+          "red_flags": {
+            "ja": [
+              "突然の連絡（コールドコール）",
+              "『無料』『保証』の強調",
+              "海外投資・森林・保管ユニットへの誘導"
+            ],
+            "en": [
+              "Cold contact",
+              "'Free' or 'guaranteed' claims",
+              "Overseas property or forestry investments"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "年金に関するコールドコールは電話を切る",
+              "FCA Firm Checker で業者を確認",
+              "MoneyHelper や Pension Wise で無料助言を受ける"
+            ],
+            "en": [
+              "Hang up on pension cold calls",
+              "Verify firms via FCA Firm Checker",
+              "Use MoneyHelper / Pension Wise for free guidance"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "年金に関するコールドコールは英国で違法。FCA 0800 111 6768 へ報告",
+            "en": "Pension cold-calling is illegal in the UK; report to FCA 0800 111 6768"
+          },
+          "references": [
+            {
+              "label": "FCA: Pension scams",
+              "url": "https://www.fca.org.uk/consumers/pension-scams",
+              "publisher": "Financial Conduct Authority",
+              "accessed": "2026-10-09",
+              "quote": "If you’re contacted unexpectedly and offered a free pension review, it’s likely to be a scam. ... Free pension reviews are designed to persuade you to move money from your pension pot into a high-risk scheme."
+            }
+          ],
+          "tags": [
+            "pension",
+            "investment-fraud",
+            "cold-call",
+            "authority-pretext"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "FCA が『無料の年金レビュー』が高リスク商品への資金移転を狙うことを具体的に説明。接触の経路（unexpectedly）と結果（move money ... into a high-risk scheme）に対応。英国で年金コールドコール自体が違法のため risk_score=4"
+          }
+        },
+        {
+          "id": "gb-002",
+          "title": {
+            "ja": "年金の早期引き出しを促す『年金解放（pension liberation）』詐欺",
+            "en": "Early Pension Release ('Pension Liberation') Scam"
+          },
+          "short_desc": {
+            "ja": "55歳未満での年金引き出しを約束し、資金を奪取",
+            "en": "Promises pension access before 55 to seize funds."
+          },
+          "cultural_lever": {
+            "ja": "急な資金需要と年金制度の複雑さに対する不安",
+            "en": "Urgent cash needs; confusion over pension rules"
+          },
+          "attack_vector": [
+            "phone",
+            "social",
+            "email"
+          ],
+          "targets": [
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 55歳未満への引き出し提案 2) 『年金解放（pension liberation）』『年金ローン（pension loan）』の名目 3) 海外スキームへ資金移転 4) 高額手数料と55%の税負担",
+            "en": "1) Offer early withdrawal 2) 'pension liberation' or 'pension loan' 3) Move pot to overseas scheme 4) 30% fee + 55% tax"
+          },
+          "red_flags": {
+            "ja": [
+              "55歳未満でも引き出せるという説明",
+              "海外に設定されたスキーム",
+              "手数料として約半額が差し引かれる"
+            ],
+            "en": [
+              "Claims you can access pension before 55",
+              "Scheme based abroad",
+              "Fees take ~half of your pot"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "55歳前の年金引き出しはほぼ詐欺と判断",
+              "Pension Wise で無料助言",
+              "FCA Firm Checker で業者確認"
+            ],
+            "en": [
+              "Treat pre-55 access as a scam",
+              "Use free Pension Wise appointment",
+              "Check firms on FCA Firm Checker"
+            ]
+          },
+          "risk_score": 5,
+          "mediums": [
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "55歳未満の引き出しには最大55%の課税。FCA へ報告",
+            "en": "Early withdrawal attracts up to 55% tax; report to FCA"
+          },
+          "references": [
+            {
+              "label": "FCA: Pension scams - how early pension release scams work",
+              "url": "https://www.fca.org.uk/consumers/pension-scams",
+              "publisher": "Financial Conduct Authority",
+              "accessed": "2026-10-09",
+              "quote": "Offers to access your pension early may be called 'pension liberation' or a 'pension loan', as the scammers often claim you can borrow money from your pension fund. If you take up the offer, your pension funds will be transferred into a scheme set up by the scam, which will often be based abroad."
+            }
+          ],
+          "tags": [
+            "pension",
+            "investment-fraud",
+            "urgency",
+            "fee-fraud"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "FCA が『pension liberation』『pension loan』の名称と、海外スキームへの資金移転を具体的に記述。接触経路（offer to access early）と結果（transferred into a scheme ... based abroad）に対応。手数料30%+税55%の資金損失のため risk_score=5"
+          }
+        },
+        {
+          "id": "gb-003",
+          "title": {
+            "ja": "ローン前払い手数料詐欺（loan fee fraud）",
+            "en": "Loan Fee Fraud"
+          },
+          "short_desc": {
+            "ja": "融資の前に『手数料』『保険料』名目で前払いを要求し融資は実行されない",
+            "en": "Demands upfront 'fees' for loans never delivered."
+          },
+          "cultural_lever": {
+            "ja": "生活困窮・急な資金需要・信用情報への不安",
+            "en": "Financial pressure and bad-credit anxiety"
+          },
+          "attack_vector": [
+            "phone",
+            "email",
+            "social"
+          ],
+          "targets": [
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) オンラインで融資申請した相手に接触 2) 25〜450ポンドの前払い手数料要求 3) 迅速送金・ギフトカード・暗号資産での支払い要求 4) 融資は実行されない",
+            "en": "1) Target online loan applicants 2) Demand £25–£450 upfront fee 3) Pressure to pay via wire, voucher, or crypto 4) No loan delivered"
+          },
+          "red_flags": {
+            "ja": [
+              "融資前の『手数料』要求",
+              "Google Play・Amazon・Ebay などのギフトカード支払い",
+              "急かす電話や連絡"
+            ],
+            "en": [
+              "Upfront 'fee' before loan",
+              "Payment via gift cards (Google Play, Amazon, eBay)",
+              "Pressure to pay quickly"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "融資は FCA 認可業者のみに限定",
+              "FCA Firm Checker で業者を確認",
+              "MoneyHelper で無料の債務相談"
+            ],
+            "en": [
+              "Only use FCA-authorised lenders",
+              "Verify firms on the FCA Firm Checker",
+              "Seek free debt advice via MoneyHelper"
+            ]
+          },
+          "risk_score": 3,
+          "mediums": [
+            "bank-transfer",
+            "gift-cards",
+            "cryptocurrency"
+          ],
+          "legal_notes": {
+            "ja": "FCA 0800 111 6768 へ報告。被害平均は £255 と FCA が公表",
+            "en": "Report to FCA 0800 111 6768; average loss £255 per FCA"
+          },
+          "references": [
+            {
+              "label": "FCA: Loan fee fraud",
+              "url": "https://www.fca.org.uk/consumers/loan-fee-fraud",
+              "publisher": "Financial Conduct Authority",
+              "accessed": "2026-10-09",
+              "quote": "Scammers will often try to target individuals who’ve applied for loans online. They may contact you unexpectedly and will offer you the money you need. But before giving you the loan, they’ll ask for an upfront payment as a deposit, administrative fee or insurance. ... Or they may ask you to buy a voucher, for example from Google Play, Amazon or Ebay."
+            }
+          ],
+          "tags": [
+            "fee-fraud",
+            "advance-fee",
+            "financial-distress",
+            "gift-cards"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "FCA が接触経路（contact unexpectedly）と要求（upfront payment）、支払手段（voucher from Google Play, Amazon or Ebay）を具体的に記述。被害平均は £255 と FCA が記しているため risk_score=3"
+          }
+        },
+        {
+          "id": "gb-004",
+          "title": {
+            "ja": "FCA を装う偽の通信・電話番号なりすまし",
+            "en": "Fake FCA Communications and Caller-ID Spoofing"
+          },
+          "short_desc": {
+            "ja": "金融規制当局 FCA を装い、電話番号を偽装して個人情報を聞き出す",
+            "en": "Impersonates FCA with spoofed caller ID to extract details."
+          },
+          "cultural_lever": {
+            "ja": "金融規制当局への信頼と権威への服従",
+            "en": "Trust in the regulator and deference to authority"
+          },
+          "attack_vector": [
+            "phone",
+            "email",
+            "website"
+          ],
+          "targets": [
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) FCA 社員を名乗る電話 2) FCA の交換台番号を caller ID に偽装 3) 身分証や投資履歴を聞き出す 4) クローン化した偽サイトへ誘導",
+            "en": "1) Caller claims to be FCA 2) Spoofs FCA switchboard caller ID 3) Asks for IDs or investment info 4) Directs to cloned fake site"
+          },
+          "red_flags": {
+            "ja": [
+              "FCA 社員が『身分証を見せる』と言う",
+              "FCA を名乗る WhatsApp や自動発信",
+              "URL が https://www.fca.org.uk から外れている"
+            ],
+            "en": [
+              "'FCA staff' offers to send ID photo",
+              "'FCA' contact via WhatsApp or auto-dialer",
+              "URL not starting with https://www.fca.org.uk"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "FCA 0800 111 6768 へ折り返し確認（相手の提示番号は使わない）",
+              "URL は FCA 公式を手入力で確認",
+              "身分証写真を根拠にしない"
+            ],
+            "en": [
+              "Call 0800 111 6768 directly to verify",
+              "Type the FCA URL manually",
+              "Do not trust ID-photo 'proof'"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "FCA の電話番号偽装は caller ID スプーフィングとして報告対象",
+            "en": "FCA caller-ID spoofing is reportable scam"
+          },
+          "references": [
+            {
+              "label": "FCA: Fake FCA communications",
+              "url": "https://www.fca.org.uk/consumers/fake-fca-communications",
+              "publisher": "Financial Conduct Authority",
+              "accessed": "2026-10-09",
+              "quote": "Scammers can make our switchboard numbers ... appear in your caller ID. This is known as number spoofing. ... FCA employees will not share their photo ID, for example a passport or FCA ID badge, to prove they work for the FCA."
+            }
+          ],
+          "tags": [
+            "impersonation",
+            "authority-pretext",
+            "caller-id-spoofing",
+            "phishing"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "FCA 自身が、交換台番号を caller ID に偽装する手口と、社員が ID 写真を見せると言うことがない点を明示。装う相手（FCA employees）と手口（number spoofing）に対応"
+          }
+        },
+        {
+          "id": "gb-005",
+          "title": {
+            "ja": "画面共有ソフトを悪用した遠隔操作詐欺",
+            "en": "Screen-Sharing Remote-Access Scam"
+          },
+          "short_desc": {
+            "ja": "AnyDesk や TeamViewer を入れさせて銀行口座を操作",
+            "en": "Pushes AnyDesk/TeamViewer to seize online banking."
+          },
+          "cultural_lever": {
+            "ja": "業務で使い慣れた画面共有ソフトへの信頼",
+            "en": "Trust in familiar screen-sharing tools from work"
+          },
+          "attack_vector": [
+            "phone",
+            "social",
+            "website"
+          ],
+          "targets": [
+            "general",
+            "business"
+          ],
+          "scenario": {
+            "ja": "1) 投資話や銀行問い合わせを装い接触 2) AnyDesk・Teams・TeamViewer・Zoom のインストールを指示 3) 画面共有で銀行口座を直接操作 4) 送金を実行",
+            "en": "1) Pose as broker or bank support 2) Push AnyDesk/Teams/TeamViewer/Zoom install 3) Take over screen 4) Transfer funds from account"
+          },
+          "red_flags": {
+            "ja": [
+              "突然の投資や銀行支援の提案",
+              "画面共有や遠隔操作の要求",
+              "急かされ即時の判断を迫られる"
+            ],
+            "en": [
+              "Unsolicited investment or 'support' offer",
+              "Asked to share screen or allow remote access",
+              "Pressured to decide quickly"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "金融業者とは画面共有をしない",
+              "FCA Firm Checker で業者を確認",
+              "緊急を装う依頼は電話を切って折り返す"
+            ],
+            "en": [
+              "Never share screens with a financial firm",
+              "Verify firms on FCA Firm Checker",
+              "Hang up on urgent requests and call back"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "FCA へ 0800 111 6768 で報告",
+            "en": "Report to FCA on 0800 111 6768"
+          },
+          "references": [
+            {
+              "label": "FCA: Screen sharing scams",
+              "url": "https://www.fca.org.uk/consumers/screen-sharing-scams",
+              "publisher": "Financial Conduct Authority",
+              "accessed": "2026-10-09",
+              "quote": "the scammer will typically ask you to download legitimate screen sharing software. This could be software you have heard of or have used before with work, friends or family. This could be software such as AnyDesk, Microsoft Teams, TeamViewer or Zoom. ... Once they have access to your screen, they can access your personal information. This includes any financial accounts, such as your online banking."
+            }
+          ],
+          "tags": [
+            "remote-access",
+            "tech-abuse",
+            "authority-pretext",
+            "banking-fraud"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "FCA が接触経路（contacted out of the blue）と、画面共有ソフト名、要求（download）と結果（access online banking）を具体的に記述。使い慣れた業務用ソフトへの信頼を悪用する"
+          }
+        },
+        {
+          "id": "gb-006",
+          "title": {
+            "ja": "認可されていない業者を使った投資詐欺",
+            "en": "Unauthorised-Firm Investment Scam"
+          },
+          "short_desc": {
+            "ja": "FCA 未認可の『業者』が規制外商品に投資させ、損失時の保護が及ばない",
+            "en": "FCA-unauthorised firms sell unregulated products with no protection."
+          },
+          "cultural_lever": {
+            "ja": "英国の金融規制への信頼と、公式風ロゴ・名称への錯覚",
+            "en": "Trust in UK regulation misled by official-looking names"
+          },
+          "attack_vector": [
+            "phone",
+            "email",
+            "website",
+            "social"
+          ],
+          "targets": [
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 高利回りの投資話を提案 2) 竹・ワイン・海外森林・駐車場など規制外商品 3) FCA 認可を装う 4) 損失時に補償が及ばない",
+            "en": "1) Offer high-return investments 2) In unregulated goods (bamboo, wine, forestry, parking) 3) Pose as FCA-authorised 4) No protection when loss hits"
+          },
+          "red_flags": {
+            "ja": [
+              "規制外の投資対象（竹・ワイン・ダイヤ・学生寮など）",
+              "基本情報を知っていても安心しない",
+              "急かされる即決"
+            ],
+            "en": [
+              "Products outside regulation (bamboo, wine, diamonds, student accommodation)",
+              "'They know some basic info about me' — don't assume genuine",
+              "Pressure to decide quickly"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "FCA Firm Checker で認可を確認",
+              "FCA Warning List で未認可業者を照合",
+              "大きな金融判断の前に独立助言を受ける"
+            ],
+            "en": [
+              "Check firms on FCA Firm Checker",
+              "Cross-check FCA Warning List",
+              "Get independent advice before big decisions"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "bank-transfer",
+            "cryptocurrency"
+          ],
+          "legal_notes": {
+            "ja": "FCA へ 0800 111 6768 で報告。被害金は原則 FSCS で保護されない",
+            "en": "Report to FCA; losses typically not covered by FSCS"
+          },
+          "references": [
+            {
+              "label": "FCA: Protect yourself from scams",
+              "url": "https://www.fca.org.uk/consumers/avoid-scams-unauthorised-firms",
+              "publisher": "Financial Conduct Authority",
+              "accessed": "2026-10-09",
+              "quote": "Treat all unexpected calls, emails and text messages with caution. Don’t assume they’re genuine, even if the person knows some basic information about you. ... Investment scams often involve products we don’t regulate. These could include: bamboo diamonds fine art gold graphene hotels international forestry land for development land overseas overseas agriculture parking precious metals storage student accommodation sustainable energy UK forestry whisky/whiskey wine"
+            }
+          ],
+          "tags": [
+            "investment-fraud",
+            "unauthorised",
+            "authority-pretext"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "FCA が未認可業者が扱う規制外商品の具体リストを明示し、『基本情報を知っていても信じない』という接触手口を記述。接触経路（unexpected calls）と手口（basic information about you）に対応"
+          }
+        },
+        {
+          "id": "gb-007",
+          "title": {
+            "ja": "有名人を悪用した暗号資産投資詐欺",
+            "en": "Celebrity-Lure Crypto Investment Scam"
+          },
+          "short_desc": {
+            "ja": "SNS に有名人画像で広告を出し、偽の暗号資産投資サイトへ誘導",
+            "en": "Celeb-image ads on social media funnel into fake crypto platforms."
+          },
+          "cultural_lever": {
+            "ja": "著名人への親しみと、SNS 広告が規制されているという錯覚",
+            "en": "Trust in celebrities and perceived safety of social ads"
+          },
+          "attack_vector": [
+            "social",
+            "website",
+            "email"
+          ],
+          "targets": [
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) SNS や検索結果で有名人画像の投資広告 2) 専門的な見かけのサイトへ誘導 3) 価格・運用成績を偽装 4) 入金後にアカウント凍結・連絡途絶",
+            "en": "1) Ads with celebrity images on social or search 2) Pro-looking site 3) Fake prices and returns 4) Account closed after deposit"
+          },
+          "red_flags": {
+            "ja": [
+              "有名人の推奨をうたう広告",
+              "非現実的な利回り",
+              "急かされ投資を迫られる"
+            ],
+            "en": [
+              "Ads citing celebrity endorsement",
+              "Unrealistic returns",
+              "Pressure to invest quickly"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "FCA の FS Register で業者を照合",
+              "暗号資産は FSCS や Ombudsman で保護されないと認識",
+              "SNS広告のリンクを踏まない"
+            ],
+            "en": [
+              "Check firms on FCA FS Register",
+              "Know crypto is not covered by FSCS or FOS",
+              "Avoid clicking social-ad links"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "cryptocurrency",
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "英国の暗号関連は多くが規制外。FCA へ 0800 111 6768 で報告",
+            "en": "Most crypto activity is unregulated in UK; report to FCA"
+          },
+          "references": [
+            {
+              "label": "FCA: Crypto investment scams",
+              "url": "https://www.fca.org.uk/consumers/crypto-investment-scams",
+              "publisher": "Financial Conduct Authority",
+              "accessed": "2026-10-09",
+              "quote": "Fraudsters tend to advertise on social media, often using images of celebrities to promote the fake investments. ... The scam adverts often link to professional-looking websites, where fraudsters may manipulate software to fake prices and investment returns. Once you’ve invested, the scammers may act quickly, closing your account and taking your money."
+            }
+          ],
+          "tags": [
+            "investment-fraud",
+            "cryptocurrency",
+            "celebrity-impersonation",
+            "social-ads"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "FCA が接触経路（social media ads with celebrity images）と結果（closing your account and taking your money）を具体的に記述。英国で暗号は規制外のため損失保護がなく risk_score=4"
+          }
+        }
+      ]
+    },
+    {
       "country_code": "IN",
       "country_name_local": "भारत",
       "country_name_en": "India",
@@ -95,6 +1234,716 @@
             "status": "partial",
             "checked": "2026-10-09",
             "note": "I4C (Indian Cyber Crime Coordination Centre) alert on scams impersonating religious institutions and pilgrim services; news-article summary rather than primary government page with a scenario-matching quote"
+          }
+        },
+        {
+          "id": "in-002",
+          "title": {
+            "ja": "ビデオ通話で『デジタル逮捕』を装う詐欺",
+            "en": "'Digital Arrest' via Video Call"
+          },
+          "short_desc": {
+            "ja": "CBI・ED・警察等を装いビデオ通話で逮捕を演出し保釈金を要求",
+            "en": "CBI/ED impersonators 'arrest' victim on video and demand bail."
+          },
+          "cultural_lever": {
+            "ja": "法執行機関の権威と、家族が巻き込まれる不安",
+            "en": "Deference to law enforcement; fear of family involvement"
+          },
+          "attack_vector": [
+            "phone",
+            "social"
+          ],
+          "targets": [
+            "general",
+            "elderly"
+          ],
+          "scenario": {
+            "ja": "1) 警察・CBI・ED 等を装う電話 2) 本人または家族が逮捕と告知 3) モバイルカメラを ON のまま監禁状態に 4) 保釈金・解決金の送金を要求",
+            "en": "1) Call as police/CBI/ED 2) Claim victim or kin 'arrested' 3) Keep phone camera on, confine 4) Demand bail"
+          },
+          "red_flags": {
+            "ja": [
+              "法執行機関を名乗るビデオ通話",
+              "カメラを ON のままにさせる",
+              "家族への影響を強調"
+            ],
+            "en": [
+              "'Officer' on video calls",
+              "Instruction to keep camera on",
+              "Threats about family"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "CBI・ED・警察はビデオ通話で逮捕しないと認識",
+              "1930 ヘルプラインか cybercrime.gov.in へ通報",
+              "家族と事前に合言葉を決める"
+            ],
+            "en": [
+              "CBI/ED/police do not arrest on video calls",
+              "Report to 1930 or cybercrime.gov.in",
+              "Agree a family codeword"
+            ]
+          },
+          "risk_score": 5,
+          "mediums": [
+            "bank-transfer",
+            "e-wallet",
+            "cryptocurrency"
+          ],
+          "legal_notes": {
+            "ja": "I4C の公式助言：CBI・ED・警察・税関・判事はビデオ通話で逮捕しない",
+            "en": "I4C: CBI/ED/police/customs/judges never arrest on video calls"
+          },
+          "references": [
+            {
+              "label": "The Tribune: CBI, ED don't nab via video calls - Advisory to curb 'digital arrest'",
+              "url": "https://www.tribuneindia.com/news/india/cbi-ed-dont-nab-via-video-calls-advisory-to-curb-digital-arrest/amp",
+              "publisher": "The Tribune (reporting I4C advisory)",
+              "accessed": "2026-10-09",
+              "quote": "The CBI, ED, police, customs, or judges do not arrest people through video calls, the Indian Cyber Crime Coordination Centre (I4C) said in a public advisory issued in view of the rising cases of ‘digital arrest’ crimes in the country. ... Digital arrest refers to a cybercrime technique, in which fraudsters, posing as law enforcement officials, claim the victim or their close kin have been arrested. The cyber criminal subsequently confines the person to their premises by asking them to keep their mobile phone cameras on and seek money for bail."
+            }
+          ],
+          "tags": [
+            "impersonation",
+            "authority-pretext",
+            "government-pretext",
+            "fear-based",
+            "video-call"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "Tribune 記事が I4C の公告を逐語で報道。装う相手（CBI, ED, police, customs, or judges）、口実（arrested）、要求（money for bail）、手口（keep mobile phone cameras on）を具体的に記述。インド固有の重大詐欺で risk_score=5"
+          }
+        },
+        {
+          "id": "in-003",
+          "title": {
+            "ja": "結婚紹介プラットフォームを悪用した投資・暗号詐欺",
+            "en": "Matrimonial-Site Investment/Crypto Fraud"
+          },
+          "short_desc": {
+            "ja": "お見合いサイトに偽プロフィールを作成し、信頼構築後に偽の投資機会で入金させる",
+            "en": "Fake matrimonial profiles push 'investment' once trust is built."
+          },
+          "cultural_lever": {
+            "ja": "家族主導の縁談慣行とマッチングアプリへの信頼",
+            "en": "Trust in matrimonial platforms and family-arranged marriage culture"
+          },
+          "attack_vector": [
+            "social",
+            "website"
+          ],
+          "targets": [
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) インドの結婚紹介サイトに偽プロフィール 2) 相手と関係を構築 3) 暗号資産や高利回り投資を提案 4) 入金後に消失",
+            "en": "1) Fake matrimonial profiles 2) Build trust 3) Offer crypto/high-yield investment 4) Vanish after deposit"
+          },
+          "red_flags": {
+            "ja": [
+              "プロフィールに裏付けがない",
+              "交際早期での投資話",
+              "プラットフォーム外への誘導"
+            ],
+            "en": [
+              "Profiles lack verifiable detail",
+              "Investment pitch early in talks",
+              "Move off the platform quickly"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "プラットフォーム内でのやり取りを維持",
+              "投資話が出たら関係を終了",
+              "1930 または cybercrime.gov.in へ通報"
+            ],
+            "en": [
+              "Stay on the platform",
+              "End contact at investment pitch",
+              "Report to 1930 / cybercrime.gov.in"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "bank-transfer",
+            "cryptocurrency",
+            "e-wallet"
+          ],
+          "legal_notes": {
+            "ja": "I4C 公告が 2025 年10月に発出",
+            "en": "I4C advisory issued October 2025"
+          },
+          "references": [
+            {
+              "label": "I4C Advisory: Misuse of Matrimonial Platforms for Investment/Crypto Frauds",
+              "url": "https://cybercrime.gov.in/webform/Advisory.aspx",
+              "publisher": "Indian Cyber Crime Coordination Centre (I4C)",
+              "accessed": "2026-10-09",
+              "quote": "Misuse of Matrimonial Platforms for Investment/Crypto Frauds. October 31 2025 Fraudsters register on Indian matrimonial platforms (including regional ones) by creating profiles with false identities."
+            }
+          ],
+          "tags": [
+            "romance-scam",
+            "investment-fraud",
+            "cryptocurrency",
+            "trust-exploitation"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "I4C 公告が、インドの結婚紹介サイト（regional ones も含む）に偽プロフィールを登録する手口を明示。インド固有の文化的レバー"
+          }
+        },
+        {
+          "id": "in-004",
+          "title": {
+            "ja": "WhatsApp Web アカウントのレンタル詐欺",
+            "en": "WhatsApp Web Account Renting Scam"
+          },
+          "short_desc": {
+            "ja": "Facebook・Instagram で WhatsApp Web を貸し出す副業を募り、犯罪用に悪用",
+            "en": "'Rent your WhatsApp Web' side-gig ads on FB/IG feed into crime."
+          },
+          "cultural_lever": {
+            "ja": "SNS 発の副業・小遣い稼ぎへの関心",
+            "en": "Appetite for side-gigs promoted on social media"
+          },
+          "attack_vector": [
+            "social"
+          ],
+          "targets": [
+            "general",
+            "student"
+          ],
+          "scenario": {
+            "ja": "1) FB・IG で副業広告 2) WhatsApp Web を貸し出す提案 3) 相手がアカウントで犯罪的連絡を発信 4) 本人がマネー・ミュール化",
+            "en": "1) Side-gig ad on FB/IG 2) 'Rent WhatsApp Web' 3) Criminals use account to contact others 4) Owner becomes money mule"
+          },
+          "red_flags": {
+            "ja": [
+              "WhatsApp Web のアクセス提供を要求",
+              "SNS で勧誘される短期副業",
+              "匿名の相手に報酬の約束"
+            ],
+            "en": [
+              "Request access to WhatsApp Web",
+              "Social-ad side-gig solicitation",
+              "Anonymous promise of commission"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "WhatsApp Web のセッションを他人に許可しない",
+              "SNS 広告の副業は慎重に判断",
+              "1930 または cybercrime.gov.in へ通報"
+            ],
+            "en": [
+              "Never share your WhatsApp Web session",
+              "Treat social-ad gigs with caution",
+              "Report to 1930 / cybercrime.gov.in"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "I4C が 2025 年10月の公告で越境詐欺の傾向と警告",
+            "en": "I4C flagged this as an emerging transnational crime trend"
+          },
+          "references": [
+            {
+              "label": "I4C Advisory: WhatsApp Web Account Renting Scam using Facebook & Instagram",
+              "url": "https://cybercrime.gov.in/webform/Advisory.aspx",
+              "publisher": "Indian Cyber Crime Coordination Centre (I4C)",
+              "accessed": "2026-10-09",
+              "quote": "WhatsApp Web Account Renting Scam – using Facebook & Instagram. October 15 2025 The National Cybercrime Threat Analytics Unit of I4C has identified an emerging transnational crime trend where certain Facebook & Instagram accounts...."
+            }
+          ],
+          "tags": [
+            "social-media",
+            "money-mule",
+            "job-scam",
+            "account-takeover"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "I4C 公告が、経路（Facebook & Instagram）、要求（WhatsApp Web renting）、位置づけ（emerging transnational crime trend）を記述"
+          }
+        },
+        {
+          "id": "in-005",
+          "title": {
+            "ja": "電気料金未払いを装う SMS フィッシング",
+            "en": "Unpaid Electricity-Bill SMS Scam"
+          },
+          "short_desc": {
+            "ja": "電力会社を装う SMS で滞納を通知し、不正アプリやリンクで個人情報を奪う",
+            "en": "'Electricity bill unpaid' SMS pushes malicious links/apps."
+          },
+          "cultural_lever": {
+            "ja": "停電リスクへの不安と、料金通知を SMS で受け取る慣行",
+            "en": "Fear of outages; SMS as a billing channel"
+          },
+          "attack_vector": [
+            "sms"
+          ],
+          "targets": [
+            "general",
+            "elderly"
+          ],
+          "scenario": {
+            "ja": "1) 電力会社を装う SMS 2) 『未払いのため停電予告』 3) リンクのクリック・アプリインストールを促す 4) 情報・資金を奪う",
+            "en": "1) Fake 'utility' SMS 2) 'Unpaid - power will be cut' 3) Push link/app 4) Steal info and funds"
+          },
+          "red_flags": {
+            "ja": [
+              "発信者が電力会社名を名乗る SMS",
+              "停電脅迫を伴う URL クリック要求",
+              "不審なアプリのインストール指示"
+            ],
+            "en": [
+              "SMS from a 'utility' sender",
+              "URL click under cut-off threat",
+              "Instructions to install an app"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "電力会社の公式アプリ・公式ウェブで直接確認",
+              "SMS 内のリンクは踏まない",
+              "1930 または cybercrime.gov.in へ通報"
+            ],
+            "en": [
+              "Verify in the utility's official app or site",
+              "Do not click SMS links",
+              "Report to 1930 / cybercrime.gov.in"
+            ]
+          },
+          "risk_score": 3,
+          "mediums": [
+            "bank-transfer",
+            "e-wallet"
+          ],
+          "legal_notes": {
+            "ja": "I4C が 2022 年5月に公告",
+            "en": "I4C advisory issued May 2022"
+          },
+          "references": [
+            {
+              "label": "I4C Advisory: Fake SMSs related to unpaid Electricity Bill to dupe citizens",
+              "url": "https://cybercrime.gov.in/webform/Advisory.aspx",
+              "publisher": "Indian Cyber Crime Coordination Centre (I4C)",
+              "accessed": "2026-10-09",
+              "quote": "Fake SMSs related to unpaid Electricity Bill to dupe citizens May 10 2022 Smishing - Cybercriminals send text messages pretending to be from trusted sources to get targets to click on links that install malware....."
+            }
+          ],
+          "tags": [
+            "smishing",
+            "impersonation",
+            "utility-pretext",
+            "malware"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "I4C 公告が、口実（unpaid Electricity Bill）、経路（text messages pretending to be from trusted sources）、結果（malware install）を記述"
+          }
+        },
+        {
+          "id": "in-006",
+          "title": {
+            "ja": "QR コード改ざんによる決済詐欺",
+            "en": "QR Code Tampering Scam"
+          },
+          "short_desc": {
+            "ja": "店舗や広告の QR コードを貼り替え、偽サイトで情報と資金を奪取",
+            "en": "QR codes swapped to lead to malicious sites that steal data and funds."
+          },
+          "cultural_lever": {
+            "ja": "UPI・PayTM 等 QR 決済の普及",
+            "en": "Widespread UPI/PayTM QR payments"
+          },
+          "attack_vector": [
+            "in-person",
+            "website"
+          ],
+          "targets": [
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 店頭の QR コードを別のステッカーで上書き 2) 利用者がスキャン 3) 偽サイトへ遷移 4) ログイン・支払情報を奪う",
+            "en": "1) Overlay a sticker on a shop's QR code 2) Victim scans 3) Routed to a malicious site 4) Credentials and payment info stolen"
+          },
+          "red_flags": {
+            "ja": [
+              "QR 貼付位置が不自然",
+              "QR から誘導されるページの URL が公式でない",
+              "追加の個人情報入力を促される"
+            ],
+            "en": [
+              "QR sticker looks pasted over",
+              "Landing URL does not match the merchant",
+              "Pushed to enter extra personal info"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "店の QR コードは店員と目視確認",
+              "決済アプリで店名・金額を確認してから承認",
+              "疑わしければ 1930 または cybercrime.gov.in へ通報"
+            ],
+            "en": [
+              "Have the merchant confirm their QR",
+              "Verify payee name and amount before confirming",
+              "Report to 1930 / cybercrime.gov.in"
+            ]
+          },
+          "risk_score": 3,
+          "mediums": [
+            "qr-pay",
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "I4C が 2022 年4月に公告",
+            "en": "I4C advisory issued April 2022"
+          },
+          "references": [
+            {
+              "label": "I4C Advisory: Cybercriminals Tampering with QR Codes to defraud Citizens",
+              "url": "https://cybercrime.gov.in/webform/Advisory.aspx",
+              "publisher": "Indian Cyber Crime Coordination Centre (I4C)",
+              "accessed": "2026-10-09",
+              "quote": "Cybercriminals Tampering with QR Codes to defraud Citizens April 26 2022 Cybercriminals are tampering with Quick Response (QR) codes to redirect victims to malicious sites that steal login and financial information....."
+            }
+          ],
+          "tags": [
+            "qr-fraud",
+            "payment-app",
+            "credential-theft"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "I4C 公告が、手口（tampering with QR codes）、結果（redirect to malicious sites that steal login and financial information）を記述。インドの UPI 普及に対応した代表的手口"
+          }
+        },
+        {
+          "id": "in-007",
+          "title": {
+            "ja": "Caller ID スプーフィングによる成りすまし詐欺",
+            "en": "Caller ID Spoofing Scam"
+          },
+          "short_desc": {
+            "ja": "発信者番号を偽装して銀行や政府機関を装う",
+            "en": "Falsified caller ID impersonates banks or government."
+          },
+          "cultural_lever": {
+            "ja": "電話での本人確認への信頼と、発信者番号への過信",
+            "en": "Belief that caller IDs identify the actual caller"
+          },
+          "attack_vector": [
+            "phone"
+          ],
+          "targets": [
+            "general",
+            "elderly"
+          ],
+          "scenario": {
+            "ja": "1) 発信者 ID を偽装し銀行や政府機関を装う 2) OTP・PIN・口座情報を要求 3) 口座を乗っ取り送金",
+            "en": "1) Spoof caller ID to look like a bank/official 2) Ask for OTP/PIN/account 3) Hijack and transfer"
+          },
+          "red_flags": {
+            "ja": [
+              "発信者番号が正規でも急な情報要求",
+              "OTP・PIN・CVV の電話での要求",
+              "急かす文言"
+            ],
+            "en": [
+              "'Legit' caller ID that still asks for info",
+              "Request for OTP/PIN/CVV by phone",
+              "Urgent pressure"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "電話を切り、公式番号へ折り返す",
+              "OTP・PIN・CVV は電話で絶対共有しない",
+              "1930 または cybercrime.gov.in へ通報"
+            ],
+            "en": [
+              "Hang up and call back on an official number",
+              "Never share OTP/PIN/CVV by phone",
+              "Report to 1930 / cybercrime.gov.in"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "bank-transfer",
+            "credit"
+          ],
+          "legal_notes": {
+            "ja": "I4C が 2022 年8月に公告",
+            "en": "I4C advisory issued August 2022"
+          },
+          "references": [
+            {
+              "label": "I4C Advisory: Cybercriminals using Caller ID Spoofing to perpetrate Cybercrime",
+              "url": "https://cybercrime.gov.in/webform/Advisory.aspx",
+              "publisher": "Indian Cyber Crime Coordination Centre (I4C)",
+              "accessed": "2026-10-09",
+              "quote": "Cybercriminals using Caller ID Spoofing to perpetrate Cybercrime. August 31 2022 Caller ID Spoofing is when a caller deliberately falsifies the information transmitted to your caller ID display to disguise their identity."
+            }
+          ],
+          "tags": [
+            "caller-id-spoofing",
+            "impersonation",
+            "banking-fraud"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "I4C 公告が、手口（falsifies the information transmitted to your caller ID display）を定義として明示"
+          }
+        },
+        {
+          "id": "in-008",
+          "title": {
+            "ja": "軍人を装う『緊急転勤』取引詐欺",
+            "en": "Army-Personnel Impersonation in Trades"
+          },
+          "short_desc": {
+            "ja": "軍人身分で OLX 等の売買に登場し『緊急転勤』を口実に送金を奪う",
+            "en": "'Army officer' pretext on OLX etc. demands advance payment."
+          },
+          "cultural_lever": {
+            "ja": "軍人への敬意と、緊急転勤という現実感",
+            "en": "Respect for the armed forces; plausibility of urgent postings"
+          },
+          "attack_vector": [
+            "marketplace",
+            "social"
+          ],
+          "targets": [
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) OLX 等で軍人を装う売り手・買い手 2) 身分証やユニフォーム画像を提示 3) 緊急転勤・現地受取不可を口実 4) 前払いや UPI 送金を要求",
+            "en": "1) Pose as army seller/buyer on OLX 2) Show ID or uniform photos 3) 'Urgent posting' pretext 4) Demand advance / UPI payment"
+          },
+          "red_flags": {
+            "ja": [
+              "軍人身分と緊急転勤の説明",
+              "対面での現物確認を拒否",
+              "QR や UPI での前払い要求"
+            ],
+            "en": [
+              "'Army officer + urgent posting'",
+              "Refusal to meet in person",
+              "QR / UPI advance payment"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "対面での確認を優先",
+              "身分証画像を信用しない",
+              "1930 または cybercrime.gov.in へ通報"
+            ],
+            "en": [
+              "Meet in person before paying",
+              "Do not trust ID photos",
+              "Report to 1930 / cybercrime.gov.in"
+            ]
+          },
+          "risk_score": 3,
+          "mediums": [
+            "bank-transfer",
+            "qr-pay",
+            "e-wallet"
+          ],
+          "legal_notes": {
+            "ja": "I4C が 2022 年7月に公告",
+            "en": "I4C advisory issued July 2022"
+          },
+          "references": [
+            {
+              "label": "I4C Advisory: Fraudsters using Army personnel details to perpetrate financial cyber frauds",
+              "url": "https://cybercrime.gov.in/webform/Advisory.aspx",
+              "publisher": "Indian Cyber Crime Coordination Centre (I4C)",
+              "accessed": "2026-10-09",
+              "quote": "Fraudsters using Army personnel details to perpetrate financial cyber frauds July 06 2022 As per the analysis of recent complaints reported on NCRP of I4C, a new trend in financial cyber fraud has been observed where fraudsters impersonate....."
+            }
+          ],
+          "tags": [
+            "impersonation",
+            "marketplace-fraud",
+            "military-pretext"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "I4C 公告が、手口（Army personnel details を悪用）、位置づけ（a new trend in financial cyber fraud）を明示。OLX 詐欺はインドで広く注意喚起"
+          }
+        },
+        {
+          "id": "in-009",
+          "title": {
+            "ja": "偽のカスタマーケア番号による詐欺",
+            "en": "Fake Customer Care Number Scam"
+          },
+          "short_desc": {
+            "ja": "Google 検索上位に偽の銀行・業者番号を仕込み、問い合わせ者から情報を奪う",
+            "en": "Fake bank or merchant 'care' numbers planted in Google results."
+          },
+          "cultural_lever": {
+            "ja": "検索上位＝正規という思い込み",
+            "en": "Belief that top search results are official"
+          },
+          "attack_vector": [
+            "website",
+            "phone"
+          ],
+          "targets": [
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) Google や SNS 上に偽カスタマーケア番号を仕込む 2) 利用者がかける 3) 対応者が本人確認と称し OTP・口座情報を要求 4) 口座から送金",
+            "en": "1) Plant fake 'care' numbers on Google/social 2) Victim calls 3) 'Verify' pretext demands OTP/account 4) Drain account"
+          },
+          "red_flags": {
+            "ja": [
+              "検索結果だけに頼る問い合わせ",
+              "初めての担当者が口座・OTP を要求",
+              "顧客ケアでアプリインストールを促す"
+            ],
+            "en": [
+              "Reliance on search-result numbers",
+              "Agent asking for OTP/account first time",
+              "'Install our support app'"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "銀行アプリや公式サイト・カード裏の番号を使う",
+              "OTP・PIN・CVV は電話で絶対共有しない",
+              "1930 または cybercrime.gov.in へ通報"
+            ],
+            "en": [
+              "Use the official app, site, or card",
+              "Never share OTP/PIN/CVV by phone",
+              "Report to 1930 / cybercrime.gov.in"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "bank-transfer",
+            "credit"
+          ],
+          "legal_notes": {
+            "ja": "I4C が 2022 年3月に公告",
+            "en": "I4C advisory issued March 2022"
+          },
+          "references": [
+            {
+              "label": "I4C Advisory: Cybercriminals using Fake Customer Care Numbers / Helplines to defraud citizens",
+              "url": "https://cybercrime.gov.in/webform/Advisory.aspx",
+              "publisher": "Indian Cyber Crime Coordination Centre (I4C)",
+              "accessed": "2026-10-09",
+              "quote": "Cybercriminals using Fake Customer Care Numbers / Helplines to defraud citizens March 21 2022 Google and Social Media are the go-to places for most of us when we want to search for customer care number of a bank/merchant...."
+            }
+          ],
+          "tags": [
+            "impersonation",
+            "banking-fraud",
+            "search-poisoning"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "I4C 公告が、経路（Google や SNS 上の偽番号）、対象（a bank/merchant）、文脈（検索依存）を記述"
+          }
+        },
+        {
+          "id": "in-010",
+          "title": {
+            "ja": "偽の求人 SMS によるマネー・ミュール勧誘",
+            "en": "Fake Job-Offer SMS Mule Recruitment"
+          },
+          "short_desc": {
+            "ja": "簡単な業務を謳う求人 SMS で若者を募り、口座をマネー・ミュール化",
+            "en": "'Easy job' SMS lures young people into money-mule roles."
+          },
+          "cultural_lever": {
+            "ja": "若者の求職プレッシャーと副業への期待",
+            "en": "Job-market pressure on youth and side-gig expectation"
+          },
+          "attack_vector": [
+            "sms",
+            "social"
+          ],
+          "targets": [
+            "student",
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 偽求人 SMS を若者宛てに送る 2) 面接・契約を装い個人情報と銀行口座を取得 3) 送金代行を依頼 4) 口座がマネー・ミュール化",
+            "en": "1) Send fake-job SMS to youth 2) Collect KYC and bank info 3) Request them to forward payments 4) Account used as a mule"
+          },
+          "red_flags": {
+            "ja": [
+              "SMS で届く求人オファー",
+              "個人の銀行口座を業務に使うと説明",
+              "送金代行をお願いされる"
+            ],
+            "en": [
+              "Job offers via SMS",
+              "Instruction to use personal bank account for work",
+              "Request to forward payments"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "個人の銀行口座を業務に提供しない",
+              "SMS 求人は会社に直接電話で裏取り",
+              "I4C と警察へ通報し口座凍結を依頼"
+            ],
+            "en": [
+              "Never use personal accounts for a 'job'",
+              "Verify SMS job offers by calling the firm",
+              "Report to I4C/police and freeze the account"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "マネー・ミュール化は刑事責任の対象になり得る",
+            "en": "Money mule roles may create criminal liability"
+          },
+          "references": [
+            {
+              "label": "I4C Advisory: Fraudsters sending Fake Job Offer SMSs to perpetrate Cybercrime",
+              "url": "https://cybercrime.gov.in/webform/Advisory.aspx",
+              "publisher": "Indian Cyber Crime Coordination Centre (I4C)",
+              "accessed": "2026-10-09",
+              "quote": "Fraudsters sending Fake Job Offer SMSs to perpetrate Cybercrime. August 29 2022 A new trend in financial cyber fraud has been observed where fraudsters send Fake Job Offer SMSs to perpetrate Cybercrime."
+            }
+          ],
+          "tags": [
+            "job-scam",
+            "money-mule",
+            "smishing"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "I4C 公告が、手口（Fake Job Offer SMSs）、位置づけ（a new trend in financial cyber fraud）を明示"
           }
         }
       ]
@@ -2772,6 +4621,1548 @@
             "status": "partial",
             "checked": "2026-10-09",
             "note": "総論の入口ページ。個別事例の詳細（例：国税庁をかたるフィッシング）は jp-003 と jp-018 で引用済み。jp-032 自体は『金融機関・大手企業全般』を扱うため個別裏付けは partial"
+          }
+        }
+      ]
+    },
+    {
+      "country_code": "KR",
+      "country_name_local": "대한민국",
+      "country_name_en": "South Korea",
+      "regions": [
+        "APAC"
+      ],
+      "language_codes": [
+        "ko",
+        "en"
+      ],
+      "notes": "Educational use; does not generalize culture.",
+      "attacks": [
+        {
+          "id": "kr-001",
+          "title": {
+            "ja": "モバイル結婚式招待状（청첩장）を装う知人なりすましスミッシング",
+            "en": "Mobile Wedding-Invitation Impersonation Smishing"
+          },
+          "short_desc": {
+            "ja": "結婚式のモバイル招待状リンクを知人番号から送り悪性アプリを導入",
+            "en": "Fake wedding invitation link from a known number installs malware."
+          },
+          "cultural_lever": {
+            "ja": "韓国で広く使われるモバイル結婚式招待状（청첩장）の慣行と知人への信頼",
+            "en": "Common mobile wedding invitations and trust in acquaintances"
+          },
+          "attack_vector": [
+            "sms",
+            "social"
+          ],
+          "targets": [
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 連絡先に登録済みに見える番号から SMS 2) 『結婚（결혼）』『招待状（청첩장）』の文言 3) 悪性アプリをインストール 4) 連絡先や金融情報を奪い知人へ再配信",
+            "en": "1) SMS from a 'known' number 2) '결혼/청첩장' keywords 3) Install malware 4) Steal contacts/financial info and reshare"
+          },
+          "red_flags": {
+            "ja": [
+              "結婚関連 SMS 内の短縮 URL",
+              "電話帳の相手を装う発信者番号",
+              "アプリのアイコン隠蔽や本物の模倣"
+            ],
+            "en": [
+              "Short URL in wedding SMS",
+              "Caller ID matches contacts",
+              "App hides icon or clones a real one"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "招待状の SMS はリンクを押さず送信者に直接確認",
+              "KISA 保護ポータル（보호나라）のスミッシング確認サービス（스미싱 확인서비스）で判別",
+              "出所不明の URL は即削除"
+            ],
+            "en": [
+              "Verify with sender directly instead of clicking",
+              "Use Boho (KISA) '스미싱 확인서비스'",
+              "Delete SMS with unknown URLs"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "ボイスフィッシング統合通報対応センター（보이스피싱통합신고대응센터）と KISA 保護ポータル（보호나라）へ通報",
+            "en": "Report to the Integrated Voice Phishing Center and KISA Boho"
+          },
+          "references": [
+            {
+              "label": "KISA 보호나라: 청첩장 등 지인 사칭 스미싱 주의 권고",
+              "url": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=1&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=71676",
+              "publisher": "KISA 보호나라",
+              "accessed": "2026-10-09",
+              "quote": "“결혼”, “결혼식”, “청첩장” 등의 키워드를 활용, 결혼식 정보 확인을 위한 악성앱 설치를 유도하는 스미싱 유포 사례 증가 - 특히, 스미싱 문자 발신번호를 수신자 스마트폰에 저장된 연락처나 일반 휴대전화번호로 표기됨에 따라 실제 지인이 보낸 문자로 오인하도록 유도"
+            }
+          ],
+          "tags": [
+            "smishing",
+            "impersonation",
+            "wedding-pretext",
+            "malware"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "KISA 保護ポータル（보호나라）の公式告示が、口実（결혼·결혼식·청첩장キーワード）、接触経路（連絡先に見える発信者）、要求（악성앱 설치）を具体的に記述"
+          }
+        },
+        {
+          "id": "kr-002",
+          "title": {
+            "ja": "モバイル訃報（부고）を装う知人なりすましスミッシング",
+            "en": "Mobile Obituary Impersonation Smishing"
+          },
+          "short_desc": {
+            "ja": "父親の死去を装う訃報 SMS で葬儀場 URL をクリックさせる",
+            "en": "Fake obituary SMS pushes click on funeral-hall URL."
+          },
+          "cultural_lever": {
+            "ja": "急な訃報への配慮と、返信や香典の慣行",
+            "en": "Expectations around sudden death and condolence practice"
+          },
+          "attack_vector": [
+            "sms"
+          ],
+          "targets": [
+            "general",
+            "business"
+          ],
+          "scenario": {
+            "ja": "1) 訃報（부고）の SMS を受信 2) 父の死去と葬儀場 URL 3) URL クリックで悪性アプリを導入 4) 携帯が乗っ取られ情報漏洩",
+            "en": "1) 'Obituary' SMS received 2) Father died + hall URL 3) Click installs malware 4) Device hijacked"
+          },
+          "red_flags": {
+            "ja": [
+              "『父が本日ご逝去されたのでお知らせします（아버지께서 오늘 별세하셨기에 삼가 알려 드립니다）』の定型文",
+              "短縮 URL（http://xx...）",
+              "SMS 内に葬儀場リンクしかない"
+            ],
+            "en": [
+              "Stock '아버지께서 ...' phrasing",
+              "Short URL (http://xx...)",
+              "Only a funeral-hall link in the SMS"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "送信者本人に電話で直接確認",
+              "SMS 内の URL は押さず削除",
+              "疑わしい SMS は迷惑メッセージとして通報（스팸으로 신고）"
+            ],
+            "en": [
+              "Call the sender directly",
+              "Delete the SMS; do not click",
+              "Use the '스팸으로 신고' report"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "KISA 118 相談センターとボイスフィッシング統合通報対応センター（보이스피싱통합신고대응센터）へ通報",
+            "en": "Report to KISA 118 and the Integrated Voice Phishing Center"
+          },
+          "references": [
+            {
+              "label": "KISA 보호나라: 스미싱 주의보 (2024-01-04)",
+              "url": "https://www.boho.or.kr/kr/bbs/view.do?bbsId=B0000030&menuNo=205027&nttId=71280",
+              "publisher": "KISA 보호나라",
+              "accessed": "2026-10-09",
+              "quote": "지인 부고 사칭 '아버지께서 오늘 별세하셨기에 삼가 알려 드립니다. 장례식장 주소 http://xx...'"
+            }
+          ],
+          "tags": [
+            "smishing",
+            "impersonation",
+            "obituary-pretext",
+            "malware"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "KISA の『スミッシング注意報（스미싱 주의보）』が、口実（지인 부고 사칭）と定型文、URL 設置を具体的に記述"
+          }
+        },
+        {
+          "id": "kr-003",
+          "title": {
+            "ja": "宅配会社を装うスミッシング（配達不可）",
+            "en": "Courier-Impersonation Smishing (Delivery Failure)"
+          },
+          "short_desc": {
+            "ja": "『配達不可（배송불가）』の SMS で住所確認を名目にリンクを踏ませる",
+            "en": "'Delivery failed' SMS pretext pushes a shipping-fix link."
+          },
+          "cultural_lever": {
+            "ja": "オンラインショッピングと宅配の普及、注文との照合負担",
+            "en": "High online-shopping use and reliance on couriers"
+          },
+          "attack_vector": [
+            "sms"
+          ],
+          "targets": [
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 宅配会社を装う SMS 2) 『配達不可・住所不明』を通告 3) 短縮 URL を押させる 4) 悪性アプリを導入し金融情報を奪取",
+            "en": "1) SMS imitates a courier 2) 'Delivery failed / address unknown' 3) Short URL click 4) Malware steals financial info"
+          },
+          "red_flags": {
+            "ja": [
+              "注文していないのに届く配達 SMS",
+              "URL が公式ドメインではない",
+              "住所確認・修正を促す文言"
+            ],
+            "en": [
+              "Delivery SMS without an actual order",
+              "URL is not the courier's official domain",
+              "Push to fix the shipping address"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "宅配会社の公式アプリや公式サイトで照合",
+              "URL は押さず SMS を削除",
+              "出所の明らかなサイトにのみ情報を入力"
+            ],
+            "en": [
+              "Check the courier's official app",
+              "Delete the SMS; do not click",
+              "Only submit info on known sites"
+            ]
+          },
+          "risk_score": 3,
+          "mediums": [
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "KISA 118 相談センターとボイスフィッシング統合通報対応センター（보이스피싱통합신고대응센터）へ通報",
+            "en": "Report to KISA 118 and the Integrated Voice Phishing Center"
+          },
+          "references": [
+            {
+              "label": "KISA 보호나라: 스미싱이란?",
+              "url": "https://www.boho.or.kr/kr/bbs/view.do?bbsId=B0000030&menuNo=205027&nttId=70081",
+              "publisher": "KISA 보호나라",
+              "accessed": "2026-10-09",
+              "quote": "스미싱(smishing)은 문자메시지(SMS)와 피싱(Phising)의 합성어로 악성 앱 주소가 포함된 휴대폰 문자(SMS)를 대량으로 전송 후 이용자가 악성 앱을 설치하도록 유도하여 금융정보 등을 탈취하는 신종 사기수법입니다. ... 택배 사칭 유형 유형4. 12_15고객님배송불가 주소불명 주소확인 변경요망"
+            }
+          ],
+          "tags": [
+            "smishing",
+            "impersonation",
+            "delivery-pretext",
+            "malware"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "KISA 保護ポータル（보호나라）がスミッシングの定義（악성 앱 주소が含まれる SMS を一斉送信し금융정보 탈취）と、宅配なりすまし類型（택배 사칭 유형）の実例文言を併記"
+          }
+        },
+        {
+          "id": "kr-004",
+          "title": {
+            "ja": "カード配送を装うボイスフィッシングとリモート制御アプリ導入",
+            "en": "Card-Delivery Vishing + Remote-Access App"
+          },
+          "short_desc": {
+            "ja": "新規発行カードの配送を名目に偽カスタマーセンターへ電話させリモート制御アプリ（원격제어 앱）を導入",
+            "en": "'New card delivery' pretext guides victim to fake call center and installs remote-access app."
+          },
+          "cultural_lever": {
+            "ja": "クレジットカード発行や銀行サポートへの信頼",
+            "en": "Trust in credit-card issuance and bank-side support"
+          },
+          "attack_vector": [
+            "phone",
+            "sms"
+          ],
+          "targets": [
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 『カード配送』『カード発行（발급）』の電話や SMS 2) 返送や事実確認の名目で偽カスタマーセンターへ誘導 3) 保安点検の名目でリモート制御アプリを導入 4) 個人情報と金融情報を奪取",
+            "en": "1) Call/SMS about 'card delivery/issuance' 2) Redirect to fake call center 3) Install remote-access app for 'security check' 4) Harvest banking info"
+          },
+          "red_flags": {
+            "ja": [
+              "新規発行の覚えがないカード配送通知",
+              "リモート制御アプリの自主インストール要求",
+              "正規ストアに登録されているアプリでも疑う"
+            ],
+            "en": [
+              "'New card' notice you did not request",
+              "Instruction to install a remote-access app",
+              "Even store-registered apps can be misused"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "カード会社の公式番号へ自分からかけ直す",
+              "政府機関や金融機関はリモート制御アプリの導入を求めないと認識",
+              "やむを得ない場合はボイスフィッシング統合通報対応センター（보이스피싱통합신고대응센터）へ連絡"
+            ],
+            "en": [
+              "Call back on the card company's official number",
+              "Officials never request remote-access apps",
+              "Report to the Integrated Voice Phishing Center"
+            ]
+          },
+          "risk_score": 5,
+          "mediums": [
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "KISA の明記：政府機関や金融会社は電話や SMS でリモート制御アプリの導入を要求しない",
+            "en": "KISA states officials do not request remote-access app installs"
+          },
+          "references": [
+            {
+              "label": "KISA 보호나라: 카드 배송 사칭 보이스피싱·스미싱 주의 권고",
+              "url": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=71661",
+              "publisher": "KISA 보호나라",
+              "accessed": "2026-10-09",
+              "quote": "“카드 배송”,“카드 발급” 등의 키워드를 활용한 보이스피싱 및 스미싱 사례 탐지 - 신규 발급 카드 배송을 빌미로 피해자에게 전화한 뒤, 반송 또는 사실 확인 등의 이유로 범죄자가 준비한 가짜 고객센터 전화 유도 ... 보안점검, 악성앱 검사, 사고접수 등을 돕겠다는 명목으로 피해자에게 스스로 원격 제어앱을 정상 스토어에서 찾아 설치하도록 유도"
+            }
+          ],
+          "tags": [
+            "voice-phishing",
+            "remote-access",
+            "impersonation",
+            "banking-fraud"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "KISA 保護ポータル（보호나라）が、口実（カード配送・発급）、経路（가짜 고객센터への誘導）、要求（원격 제어앱 설치）を具体的に記述。即時の金融被害に直結し risk_score=5"
+          }
+        },
+        {
+          "id": "kr-005",
+          "title": {
+            "ja": "宅配を装い Apple ID を奪うスミッシング",
+            "en": "Apple ID Theft via Courier Smishing"
+          },
+          "short_desc": {
+            "ja": "宅配確認を名目にアクセスさせ、iPhone には偽の Apple ID 管理サイトを表示",
+            "en": "Courier pretext routes iPhone users to a fake Apple ID site."
+          },
+          "cultural_lever": {
+            "ja": "宅配照会の習慣と、iPhone と Android で手口を切り替える誤認誘導",
+            "en": "Courier-tracking habits and OS-aware impersonation"
+          },
+          "attack_vector": [
+            "sms",
+            "website"
+          ],
+          "targets": [
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 『宅配の受信確認・返送（수신확인·반송）』などの SMS を受信 2) 悪性サイトへ誘導 3) OS を判別し iPhone には偽の Apple ID 管理サイト 4) Apple ID・電話番号・認証コードを奪取",
+            "en": "1) 'Delivery/return' SMS received 2) Fake site opens 3) Detects iPhone and shows fake Apple ID site 4) Steals Apple ID + OTP"
+          },
+          "red_flags": {
+            "ja": [
+              "宅配 SMS に見慣れないドメイン",
+              "iPhone で開くと Apple ID の入力画面",
+              "電話番号と認証番号の同時要求"
+            ],
+            "en": [
+              "Unfamiliar domain in delivery SMS",
+              "iPhone shows an Apple ID login prompt",
+              "Request for phone number + OTP"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "SMS 内の URL は押さず削除",
+              "Apple ID の2要素認証を有効化",
+              "疑わしい場合は KISA 118 相談センターに連絡"
+            ],
+            "en": [
+              "Delete the SMS; do not click",
+              "Enable Apple ID 2FA",
+              "Call KISA 118 if unsure"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "bank-transfer",
+            "credit"
+          ],
+          "legal_notes": {
+            "ja": "ボイスフィッシング統合通報対応センター（보이스피싱통합신고대응센터）と Apple サポートへ連絡",
+            "en": "Report to the Integrated Voice Phishing Center and Apple Support"
+          },
+          "references": [
+            {
+              "label": "KISA 보호나라: 아이폰 계정 탈취 스미싱 문자 주의 권고",
+              "url": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=35143",
+              "publisher": "KISA 보호나라",
+              "accessed": "2026-10-09",
+              "quote": "택배 수신 확인, 상품 파손, 택배 조회, 반송처리 등을 가장하여 스미싱 문자 내 악성 사이트를 클릭하도록 유도 o 해커는 운영체제에 따라 맞춤형 피싱 페이지를 보여주어 사용자 공격 - (안드로이드폰) 전화번호 입력 및 택배 배송 조회 시 악성 앱 설치 후 인증번호 등 정보 유출 - (아이폰) 가짜 애플 계정 관리 사이트로 접속 유도하여 정보* 탈취"
+            }
+          ],
+          "tags": [
+            "smishing",
+            "phishing",
+            "apple-id-theft",
+            "delivery-pretext"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "KISA 保護ポータル（보호나라）が、口実（택배 수신 확인·반송처리）、分岐（OS 判定）、要求（Apple ID・인증번호 奪取）を具体的に記述"
+          }
+        },
+        {
+          "id": "kr-006",
+          "title": {
+            "ja": "健康保険公団など公共機関を装うスミッシング",
+            "en": "Public-Agency Impersonation Smishing"
+          },
+          "short_desc": {
+            "ja": "健康保険公団（건강보험공단）などの通知を装い悪性アプリを導入させる",
+            "en": "'Health insurance notice' pretext installs malware."
+          },
+          "cultural_lever": {
+            "ja": "公共機関（健康保険公団・税務署など）への信頼",
+            "en": "Trust in public agencies like the National Health Insurance Service"
+          },
+          "attack_vector": [
+            "sms"
+          ],
+          "targets": [
+            "general",
+            "elderly"
+          ],
+          "scenario": {
+            "ja": "1) 公共機関名の SMS 2) 『健康診断通知（건강검진 통보）』『過料（과태료）』などの口実 3) 内容確認のため URL をクリックさせる 4) 悪性アプリを導入",
+            "en": "1) SMS as 'Public Agency' 2) 'Health check / fine' pretext 3) 'Open to view' URL 4) Install malware"
+          },
+          "red_flags": {
+            "ja": [
+              "短縮 URL の『内容を見る（내용보기）』リンク",
+              "政府機関名の SMS に URL が含まれる",
+              "過度な権限を要求するアプリの導入要求"
+            ],
+            "en": [
+              "'내용보기' with a short URL",
+              "Gov-named SMS containing a URL",
+              "App requesting excessive permissions"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "公共機関のサイトは手入力で開く",
+              "KISA 118 相談センターと 保護ポータル（보호나라）で判別",
+              "疑わしい SMS は迷惑メッセージとして通報（스팸으로 신고）"
+            ],
+            "en": [
+              "Type the agency URL manually",
+              "Check via KISA 118 or Boho",
+              "Use '스팸으로 신고' to report"
+            ]
+          },
+          "risk_score": 3,
+          "mediums": [
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "KISA の明記：公共機関のなりすまし（공공기관 사칭）は代表的な類型",
+            "en": "KISA lists public-agency impersonation among the main patterns"
+          },
+          "references": [
+            {
+              "label": "KISA 보호나라: 스미싱 - 공공기관 사칭 유형",
+              "url": "https://www.boho.or.kr/kr/bbs/view.do?bbsId=B0000030&menuNo=205027&nttId=70081",
+              "publisher": "KISA 보호나라",
+              "accessed": "2026-10-09",
+              "quote": "휴대전화에 일반적으로 많이 설치된 정상앱(예: 크롬, Play 스토어, 공공기관에서 사용하는 민원24, 유명 모바일 백신 등)을 사칭하여 악성앱 설치를 유도합니다. 전화, 문자메시지 관리, 개인정보 조회, 저장소 조회, 위치정보, 기기관리자 권한 요구 등 정상앱 보다 과도한 권한을 포함하고 있으므로 앱 설치 단계에서 주의해야 합니다."
+            }
+          ],
+          "tags": [
+            "smishing",
+            "government-pretext",
+            "impersonation",
+            "malware"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "KISA 保護ポータル（보호나라）が、口実（공공기관의 민원24・백신 등 正常앱 사칭）と要求（악성앱 설치・過度な権限）を具体的に記述。公共機関なりすまし類型（공공기관 사칭 유형）を代表類型として明記"
+          }
+        }
+      ]
+    },
+    {
+      "country_code": "SG",
+      "country_name_local": "Singapore",
+      "country_name_en": "Singapore",
+      "regions": [
+        "APAC"
+      ],
+      "language_codes": [
+        "en",
+        "zh",
+        "ms",
+        "ta"
+      ],
+      "notes": "Educational use; does not generalize culture.",
+      "attacks": [
+        {
+          "id": "sg-001",
+          "title": {
+            "ja": "政府職員なりすまし詐欺（GOIS）",
+            "en": "Government Officials Impersonation Scam (GOIS)"
+          },
+          "short_desc": {
+            "ja": "SPF や MAS 等を名乗り『捜査』名目で安全口座への送金や貴重品引き渡しを要求",
+            "en": "'SPF' or 'MAS' demand transfers to 'safe accounts' for 'investigations'."
+          },
+          "cultural_lever": {
+            "ja": "政府機関への強い信頼とマネロン捜査への不安",
+            "en": "Deference to authorities and anti-money-laundering anxiety"
+          },
+          "attack_vector": [
+            "phone",
+            "social"
+          ],
+          "targets": [
+            "general",
+            "elderly"
+          ],
+          "scenario": {
+            "ja": "1) 突然の電話や WhatsApp 動画通話 2) SPF や MAS を名乗る 3) 犯罪関与を虚偽通告 4) 『安全口座』への送金や金塊・時計の引き渡しを要求",
+            "en": "1) Unsolicited call/in-app video 2) Claim SPF or MAS 3) False accusation 4) Demand 'safe account' transfer or gold/watches"
+          },
+          "red_flags": {
+            "ja": [
+              "政府職員が送金を要求する",
+              "ビデオ通話で ID・就労許可証・銀行カードを見せろと指示",
+              "WhatsApp 等の非公式経路からの連絡"
+            ],
+            "en": [
+              "Officials asking for a transfer",
+              "Request to show IDs or bank cards on video",
+              "Contact via WhatsApp or similar"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "政府機関は電話で送金を求めないと認識",
+              "ScamShield Helpline 1799 に相談",
+              "政府 SMS は gov.sg Sender ID を確認"
+            ],
+            "en": [
+              "Officials never ask for transfers by phone",
+              "Call the 1799 ScamShield Helpline",
+              "Verify gov SMS uses the gov.sg Sender ID"
+            ]
+          },
+          "risk_score": 5,
+          "mediums": [
+            "bank-transfer",
+            "cash"
+          ],
+          "legal_notes": {
+            "ja": "SPF と ScamShield へ報告。1799 に連絡",
+            "en": "Report to SPF and ScamShield (1799)"
+          },
+          "references": [
+            {
+              "label": "ScamShield (SG): Government Officials Impersonation Scams",
+              "url": "https://www.scamshield.gov.sg/i-want-protection-from-scams/learn-to-recognise-scams/government-officials-impersonation-scams/",
+              "publisher": "ScamShield / Singapore Government",
+              "accessed": "2026-10-09",
+              "quote": "Victims would receive unsolicited phone calls or in-app calls (e.g. WhatsApp video call) allegedly from government agencies such as the Singapore Police Force (SPF) or the Monetary Authority of Singapore (MAS). ... Victims would then be instructed by the scammers to transfer money into a \"safe account\" to assist with \"investigations\"."
+            }
+          ],
+          "tags": [
+            "impersonation",
+            "authority-pretext",
+            "government-pretext",
+            "fear-based"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "ScamShield（シンガポール政府）が、装う相手（SPF or MAS）、経路（WhatsApp video call）、要求（safe account への送金）を具体的に記述。GOIS はシンガポールの代表的な詐欺手口で損失額も大きく risk_score=5"
+          }
+        },
+        {
+          "id": "sg-002",
+          "title": {
+            "ja": "銀行フィッシング（口座不正アクセスを装う SMS）",
+            "en": "Bank Phishing (Fake 'Unauthorised Access' SMS)"
+          },
+          "short_desc": {
+            "ja": "『不正アクセス』通知の SMS で偽銀行サイトへ誘導し認証情報を奪う",
+            "en": "'Unauthorised access' SMS funnels victim to a fake bank site."
+          },
+          "cultural_lever": {
+            "ja": "銀行の権威と不正取引への恐怖",
+            "en": "Bank authority and fear of unauthorised access"
+          },
+          "attack_vector": [
+            "sms",
+            "website"
+          ],
+          "targets": [
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 銀行名の SMS 2) 『不正アクセスの可能性』通知 3) 本文のリンクで偽サイトへ誘導 4) ログイン・OTP を奪う",
+            "en": "1) Bank-branded SMS 2) 'Suspicious access' notice 3) Fake-site link 4) Steal login and OTP"
+          },
+          "red_flags": {
+            "ja": [
+              "銀行名での SMS 内リンク",
+              "ロゴ・URL が本物と微妙に違う（m1cr0soft 等）",
+              "OTP の入力要求"
+            ],
+            "en": [
+              "Clickable link in bank-named SMS",
+              "Spoofed URL (e.g., m1cr0soft)",
+              "Prompt to enter an OTP"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "銀行は SMS でクリック可能なリンクを送らないと認識",
+              "公式アプリから直接ログイン",
+              "送金限度額を設定し 2FA を有効化"
+            ],
+            "en": [
+              "Banks never send clickable links by SMS",
+              "Open the official app directly",
+              "Set transaction limits and enable 2FA"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "bank-transfer",
+            "e-wallet"
+          ],
+          "legal_notes": {
+            "ja": "ScamShield と銀行に報告",
+            "en": "Report to ScamShield and the bank"
+          },
+          "references": [
+            {
+              "label": "ScamShield (SG): Phishing Scams - For bank phishing",
+              "url": "https://www.scamshield.gov.sg/i-want-protection-from-scams/learn-to-recognise-scams/phishing-scams/",
+              "publisher": "ScamShield / Singapore Government",
+              "accessed": "2026-10-09",
+              "quote": "For bank phishing Victims will receive SMS alerts about potential unauthorised access to their bank accounts, prompting them to click on embedded URLs to verify their identity and stop the transactions. ... For bank phishing Banks will never send you any clickable links via SMS. Legitimate SMSes from banks will reflect their officially registered SMS Sender ID."
+            }
+          ],
+          "tags": [
+            "phishing",
+            "banking-fraud",
+            "impersonation",
+            "urgency"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "ScamShield が、接触経路（SMS alerts）、口実（unauthorised access）、結果（verify identity と銀行認証奪取）を具体的に記述。シンガポールでは銀行は SMS でクリック可能リンクを送らないという明確な赤旗を示す"
+          }
+        },
+        {
+          "id": "sg-003",
+          "title": {
+            "ja": "IRAS を装う税還付フィッシング",
+            "en": "IRAS Tax-Refund Phishing"
+          },
+          "short_desc": {
+            "ja": "シンガポール税務当局 IRAS を装い、還付を口実にクレカ情報を奪う",
+            "en": "Fake IRAS 'tax refund' demands credit-card details."
+          },
+          "cultural_lever": {
+            "ja": "税務当局 IRAS への信頼と還付への期待",
+            "en": "Trust in IRAS and anticipation of refunds"
+          },
+          "attack_vector": [
+            "email",
+            "sms"
+          ],
+          "targets": [
+            "general",
+            "expat"
+          ],
+          "scenario": {
+            "ja": "1) IRAS 名のメールで還付通知 2) クレカ情報の入力を要求 3) 偽の還付手続き画面へ誘導 4) 情報を奪取",
+            "en": "1) IRAS-branded 'refund' email 2) Request credit-card details 3) Redirect to fake form 4) Steal information"
+          },
+          "red_flags": {
+            "ja": [
+              "IRAS が『還付をカードに入金する』と連絡",
+              "メールで課税通知書や還付レターを送付",
+              "myTax Portal 以外のサイトでの入力要求"
+            ],
+            "en": [
+              "'Refund credited to your card' from IRAS",
+              "Tax notices or refund letters sent by email",
+              "Form outside of myTax Portal"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "myTax Portal で還付状況を直接確認",
+              "IRAS は税情報をメールで送らないと認識",
+              "ScamShield 1799 に相談"
+            ],
+            "en": [
+              "Check refund status on myTax Portal",
+              "Know IRAS does not email tax info",
+              "Call ScamShield (1799)"
+            ]
+          },
+          "risk_score": 3,
+          "mediums": [
+            "credit"
+          ],
+          "legal_notes": {
+            "ja": "ScamShield と IRAS に報告",
+            "en": "Report to ScamShield and IRAS"
+          },
+          "references": [
+            {
+              "label": "ScamShield (SG): Phishing Scams - For IRAS phishing",
+              "url": "https://www.scamshield.gov.sg/i-want-protection-from-scams/learn-to-recognise-scams/phishing-scams/",
+              "publisher": "ScamShield / Singapore Government",
+              "accessed": "2026-10-09",
+              "quote": "For IRAS phishing IRAS does not process tax refunds to credit/debit cards. IRAS will never send any confidential tax information and tax documents such as tax returns, notices of assessment, tax refund letters via emails. ... Any tax refunds are automatically credited into taxpayers’ bank account registered with IRAS or via PayNow (NRIC/FIN/UEN) accounts."
+            }
+          ],
+          "tags": [
+            "phishing",
+            "impersonation",
+            "government-pretext",
+            "tax-refund"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "ScamShield が IRAS を装う具体的な手口を明示（クレカ還付・税書類のメール送付が偽の兆候）。myTax Portal で確認するという対策も明記"
+          }
+        },
+        {
+          "id": "sg-004",
+          "title": {
+            "ja": "電子商取引詐欺（Carousell 等の偽の売買）",
+            "en": "E-Commerce Buyer/Seller Scam"
+          },
+          "short_desc": {
+            "ja": "SNS や中古マーケットで安値を提示し、プラットフォーム外決済に誘導",
+            "en": "Low prices on marketplaces lure out-of-platform payment."
+          },
+          "cultural_lever": {
+            "ja": "便利な C2C マーケットへの慣れと即売りへの魅力",
+            "en": "Comfort with online marketplaces and love of a deal"
+          },
+          "attack_vector": [
+            "marketplace",
+            "social",
+            "website"
+          ],
+          "targets": [
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 魅力的な価格で商品提示 2) プラットフォーム外の決済を要求 3) 偽の第三者アプリや銀行送金 4) 入金後に音信不通または偽の支払い証明",
+            "en": "1) Attractive-priced listing 2) Push off-platform payment 3) Third-party app or bank transfer 4) Vanish or send fake proof"
+          },
+          "red_flags": {
+            "ja": [
+              "期間限定を強調した魅力的な価格",
+              "プラットフォーム外決済（直接送金）の要求",
+              "取引確定後に『追加の関税・配送料』要求"
+            ],
+            "en": [
+              "'Limited time' low prices",
+              "Push to pay off the platform",
+              "'Extra customs/shipping' after deal"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "プラットフォームの Transaction Safety Rating を確認",
+              "プラットフォーム上の決済のみ使用",
+              "テキストリンクや QR コードの決済を使わない"
+            ],
+            "en": [
+              "Check Transaction Safety Ratings",
+              "Pay only through the platform's secure options",
+              "Avoid payment links or QR codes in texts"
+            ]
+          },
+          "risk_score": 3,
+          "mediums": [
+            "bank-transfer",
+            "e-wallet",
+            "qr-pay"
+          ],
+          "legal_notes": {
+            "ja": "ScamShield とプラットフォームへ報告",
+            "en": "Report to ScamShield and the platform"
+          },
+          "references": [
+            {
+              "label": "ScamShield (SG): E-Commerce Scams",
+              "url": "https://www.scamshield.gov.sg/i-want-protection-from-scams/learn-to-recognise-scams/e-commerce-scams/",
+              "publisher": "ScamShield / Singapore Government",
+              "accessed": "2026-10-09",
+              "quote": "It is likely a scam if the seller: Offers the item/service at an attractive price for a limited time ... Needs you to click on links or install a third-party app sent via text messages to make payment or receive refunds"
+            }
+          ],
+          "tags": [
+            "e-commerce",
+            "marketplace-fraud",
+            "scarcity",
+            "urgency"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "ScamShield が、売り手を装う赤旗（attractive price for a limited time、direct payment、third-party app、追加の関税要求）を具体的に記述。シンガポールの Carousell 等の C2C マーケットが代表例"
+          }
+        },
+        {
+          "id": "sg-005",
+          "title": {
+            "ja": "在宅タスク副業を装う『コミッション』詐欺",
+            "en": "Task-Based Job Commission Scam"
+          },
+          "short_desc": {
+            "ja": "在宅で簡単な作業にコミッションを支払うとして事前送金を奪う",
+            "en": "'Easy home tasks for commission' pretext steals advance funds."
+          },
+          "cultural_lever": {
+            "ja": "副業・簡単に稼げる仕事への期待",
+            "en": "Appeal of side jobs and quick cash"
+          },
+          "attack_vector": [
+            "social",
+            "mixed"
+          ],
+          "targets": [
+            "general",
+            "student"
+          ],
+          "scenario": {
+            "ja": "1) SNS や DM で在宅の『簡単な仕事』を提示 2) いいね・レビュー・暗号資産の『評価上げ』などのタスク 3) 事前購入や振込を要求 4) コミッションを払わず連絡途絶",
+            "en": "1) SNS/DM offers 'easy home job' 2) Like, review, 'boost crypto' tasks 3) Demand advance pay 4) No commission; vanish"
+          },
+          "red_flags": {
+            "ja": [
+              "事前の購入・送金要求",
+              "個人の銀行口座を仕事に使うよう指示",
+              "Singpass 認証情報の要求"
+            ],
+            "en": [
+              "Upfront purchase or transfer",
+              "Use of personal bank account for work",
+              "Request Singpass credentials"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "事前送金・自腹でのタスクは詐欺と判断",
+              "企業に直接問い合わせて求人の実在を確認",
+              "ScamShield 1799 に相談"
+            ],
+            "en": [
+              "Treat upfront payment as a scam",
+              "Contact the company directly",
+              "Call ScamShield (1799)"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "bank-transfer",
+            "cryptocurrency"
+          ],
+          "legal_notes": {
+            "ja": "Singpass の譲渡や QR の提供は違法行為に加担する恐れ",
+            "en": "Sharing Singpass credentials may abet an offence"
+          },
+          "references": [
+            {
+              "label": "ScamShield (SG): Job Scams",
+              "url": "https://www.scamshield.gov.sg/i-want-protection-from-scams/learn-to-recognise-scams/job-scams/",
+              "publisher": "ScamShield / Singapore Government",
+              "accessed": "2026-10-09",
+              "quote": "It is likely a scam if the job requires you to: Pay upfront before starting the job. ... Disclose your Singpass credentials and password or provided with a Singpass QR code for scanning to access your Singpass account in order to apply for a job."
+            }
+          ],
+          "tags": [
+            "job-scam",
+            "advance-fee",
+            "urgency"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "ScamShield が、タスク副業の赤旗（upfront pay、自腹、個人銀行口座の提供、Singpass QR の提供）を具体的に列挙。シンガポール固有の Singpass への言及が本件を国別事例に適合させる"
+          }
+        },
+        {
+          "id": "sg-006",
+          "title": {
+            "ja": "暗号資産投資詐欺（指定ウォレットへの送金）",
+            "en": "Crypto Investment Scam (Deposit to Designated Wallet)"
+          },
+          "short_desc": {
+            "ja": "投資名目で新規口座を開設させ指定ウォレットに暗号資産を送らせる",
+            "en": "'Investment' pretext routes crypto to a scammer's wallet."
+          },
+          "cultural_lever": {
+            "ja": "暗号資産市場への期待と MAS 規制の勘違い",
+            "en": "Appeal of crypto and confusion about MAS oversight"
+          },
+          "attack_vector": [
+            "social",
+            "website"
+          ],
+          "targets": [
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) SNS や DM で高利回りの投資を提案 2) 新規の暗号資産口座を開設させる 3) 指定ウォレットへ送金 4) 口座ごと乗っ取り、資金消失",
+            "en": "1) Social DM pushes high-return investing 2) Open a new crypto account 3) Send to designated wallet 4) Take over the account"
+          },
+          "red_flags": {
+            "ja": [
+              "新規口座の開設と指定ウォレットへの送金",
+              "シードフレーズやログインの共有要求",
+              "高利回りの保証"
+            ],
+            "en": [
+              "New account + designated wallet transfer",
+              "Request for seed phrases or logins",
+              "'Guaranteed' high returns"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "シードフレーズ・パスワード・OTP を絶対に共有しない",
+              "正規の暗号資産業者サイトでログイン状態を確認",
+              "MAS は暗号資産投資の損失を補償しないと認識"
+            ],
+            "en": [
+              "Never share seed phrases, passwords, OTPs",
+              "Verify you are on the official platform",
+              "MAS does not cover crypto losses"
+            ]
+          },
+          "risk_score": 5,
+          "mediums": [
+            "cryptocurrency"
+          ],
+          "legal_notes": {
+            "ja": "ScamShield へ報告。CSA SingCERT へもフィッシングを通報",
+            "en": "Report to ScamShield; phishing to CSA SingCERT"
+          },
+          "references": [
+            {
+              "label": "ScamShield (SG): Cryptocurrency Related Scams - Investment Scam",
+              "url": "https://www.scamshield.gov.sg/i-want-protection-from-scams/learn-to-recognise-scams/cryptocurrency-related-scams/",
+              "publisher": "ScamShield / Singapore Government",
+              "accessed": "2026-10-09",
+              "quote": "In 2025, investment scams accounted for 38.4% of all cryptocurrency losses. Scammers would direct victims to create new cryptocurrency accounts for \"investing\". Victims are then asked to transfer their cryptocurrency to designated wallets or share their login details and seed phrases. This gives scammers full control over the victims' accounts."
+            }
+          ],
+          "tags": [
+            "investment-fraud",
+            "cryptocurrency",
+            "credential-theft"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "ScamShield が、2025年に暗号詐欺損失の38.4%を占めた投資詐欺の具体的な手口（新規口座開設・指定ウォレット・シードフレーズ奪取）を明示"
+          }
+        },
+        {
+          "id": "sg-007",
+          "title": {
+            "ja": "暗号資産を使った『副業ブースト』詐欺",
+            "en": "Crypto 'Boost' Job Scam"
+          },
+          "short_desc": {
+            "ja": "SNS で暗号資産の『価値ブースト』を仕事と称し自腹で購入させる",
+            "en": "'Boost crypto value' task scams buy with own funds for 'commission'."
+          },
+          "cultural_lever": {
+            "ja": "SNS を通じた副業への期待と暗号資産への関心",
+            "en": "Interest in side gigs and crypto via social media"
+          },
+          "attack_vector": [
+            "social"
+          ],
+          "targets": [
+            "general",
+            "student"
+          ],
+          "scenario": {
+            "ja": "1) Facebook・TikTok・Instagram で暗号資産『副業』募集 2) 自腹で暗号資産を購入させる 3) コミッション支払いを約束 4) ログイン共有で口座ごと奪取",
+            "en": "1) Crypto 'jobs' on Facebook/TikTok/Instagram 2) Buy crypto with own funds 3) Promise commission 4) Take over account via shared login"
+          },
+          "red_flags": {
+            "ja": [
+              "SNS 発の『暗号資産ブースト』コミッション",
+              "ログイン情報の共有要求",
+              "受け取れないコミッションの説明"
+            ],
+            "en": [
+              "'Boost crypto' commission from social DMs",
+              "Request to share logins",
+              "Unexplained commission delays"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "自腹での仕事はほぼ詐欺と認識",
+              "ログイン情報は決して共有しない",
+              "ScamShield 1799 に相談"
+            ],
+            "en": [
+              "Treat 'use your own funds' jobs as scams",
+              "Never share logins",
+              "Call ScamShield (1799)"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "cryptocurrency"
+          ],
+          "legal_notes": {
+            "ja": "暗号資産の損失は MAS 規制下でも補償対象外",
+            "en": "Crypto losses are not covered even under MAS oversight"
+          },
+          "references": [
+            {
+              "label": "ScamShield (SG): Cryptocurrency Related Scams - Job scams",
+              "url": "https://www.scamshield.gov.sg/i-want-protection-from-scams/learn-to-recognise-scams/cryptocurrency-related-scams/",
+              "publisher": "ScamShield / Singapore Government",
+              "accessed": "2026-10-09",
+              "quote": "Victims would encounter cryptocurrency-related \"job opportunities\" through social media platforms such as Facebook, TikTok, and Instagram. Scammers would direct victims to buy cryptocurrency using their own money and claim they will earn \"commissions\" for helping to boost cryptocurrency values."
+            }
+          ],
+          "tags": [
+            "job-scam",
+            "cryptocurrency",
+            "social-media"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "ScamShield が、接触経路（Facebook, TikTok, Instagram）、口実（commissions で boost cryptocurrency values）、要求（自腹での購入）を具体的に記述"
+          }
+        }
+      ]
+    },
+    {
+      "country_code": "TW",
+      "country_name_local": "台灣",
+      "country_name_en": "Taiwan",
+      "regions": [
+        "APAC"
+      ],
+      "language_codes": [
+        "zh-TW",
+        "en"
+      ],
+      "notes": "Educational use; does not generalize culture.",
+      "attacks": [
+        {
+          "id": "tw-001",
+          "title": {
+            "ja": "LINE 投資グループ（投資群組）で有名人を装う投資詐欺",
+            "en": "LINE Investment-Group 'Celebrity' Scam"
+          },
+          "short_desc": {
+            "ja": "有名人や投資顧問を装い LINE グループへ誘い込み専用アプリで有価証券の購入を装う",
+            "en": "Impersonates celebs on LINE groups and pushes a fake trading app."
+          },
+          "cultural_lever": {
+            "ja": "台湾での LINE の普及と、有名人発の情報への信頼",
+            "en": "Ubiquity of LINE and trust in celebrity-sourced tips"
+          },
+          "attack_vector": [
+            "social",
+            "website"
+          ],
+          "targets": [
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 有名人の名義で広告・動画を配信 2) 投資経験や高額利益で LINE グループへ誘い込む 3) 特定のアプリをダウンロードさせる 4) 有価証券の購入を偽装して資金を奪う",
+            "en": "1) Celeb-name ads/videos 2) Lure to LINE group 3) Push to install specific APP 4) Fake 'buying securities'"
+          },
+          "red_flags": {
+            "ja": [
+              "有名人や金融専門家の名義を使った投資グループ",
+              "専用ルートでの優先申込を謳う",
+              "指定アプリのダウンロード要求"
+            ],
+            "en": [
+              "'Celebrity' or 'expert' investment group",
+              "'Priority access' narrative",
+              "Request to install a specific app"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "金管会の『非合法証券先物業防止宣導専区（防範非法證券期貨業宣導專區）』で合法業者か照合",
+              "反詐欺相談専線 02-2737-3434 または 165 に照会",
+              "高報酬をうたう虚偽の情報を信じない"
+            ],
+            "en": [
+              "Verify firms on the FSC anti-fraud zone",
+              "Call 02-2737-3434 or 165 to verify",
+              "Treat high-return claims with suspicion"
+            ]
+          },
+          "risk_score": 5,
+          "mediums": [
+            "bank-transfer",
+            "cryptocurrency"
+          ],
+          "legal_notes": {
+            "ja": "165 反詐欺専線または 02-2737-3434 へ通報",
+            "en": "Report to 165 or the Anti-Fraud Consultation Line 02-2737-3434"
+          },
+          "references": [
+            {
+              "label": "金管會 新聞稿: 網路投資群組詐騙多，投資理財應洽合法業者",
+              "url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=202408150002&dtable=News",
+              "publisher": "金融監督管理委員會 (FSC Taiwan)",
+              "accessed": "2026-10-09",
+              "quote": "近期外界頻頻反映，瀏覽網路頁面或影片時，常發現有不肖人士假借名人名義，以投資經驗分享或高額獲利誘使民眾加入投資群組，誘騙民眾下載特定APP，佯裝購買有價證券之詐騙手法。"
+            }
+          ],
+          "tags": [
+            "investment-fraud",
+            "impersonation",
+            "celebrity-impersonation",
+            "social-engineering"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "金管會の新聞稿が、装う相手（假借名人名義）、経路（投資群組）、要求（下載特定 APP）、目的（佯裝購買有價證券）を具体的に記述。台湾で多発し FSC が公式注意喚起しているため risk_score=5"
+          }
+        },
+        {
+          "id": "tw-002",
+          "title": {
+            "ja": "偽の違約通知書で ATM 操作を強要する詐欺",
+            "en": "Fake 'Default Notice' and ATM-Transfer Pressure"
+          },
+          "short_desc": {
+            "ja": "LINE グループで株抽選『当選』を伝え偽の違約通知書で急な送金（匯款）を迫る",
+            "en": "'Won stock allocation' + fake default notice push urgent ATM transfer."
+          },
+          "cultural_lever": {
+            "ja": "株式市場への関心と、法的な債務不履行への恐れ",
+            "en": "Interest in stocks and fear of legal default"
+          },
+          "attack_vector": [
+            "social",
+            "in-person"
+          ],
+          "targets": [
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) LINE グループで優先申込 2) 多数の株に『当選』と通知 3) 違約を避ける名目で指定口座への送金を要求 4) 偽の金管会違約通知書、現金受け取り、ATM 操作への誘導",
+            "en": "1) LINE priority allocation 2) Announce 'wins' many stocks 3) Demand transfer to avoid default 4) Fake FSC notice + ATM transfer"
+          },
+          "red_flags": {
+            "ja": [
+              "急な送金と ATM 操作の指示",
+              "金管会の違約通知書を提示",
+              "現金を直接受け取りに来る"
+            ],
+            "en": [
+              "Urgent transfer with ATM instructions",
+              "Fake 'FSC default notice'",
+              "Someone collects cash in person"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "金管会は送金や資金の授受を要求しないと認識",
+              "165 または 02-2737-3434 に確認",
+              "合法な金融機関は現金や暗号資産（虛擬資產）での投資金受領を求めない"
+            ],
+            "en": [
+              "FSC does not demand transfers or funds",
+              "Verify via 165 or 02-2737-3434",
+              "Legal firms do not take cash/crypto for investment"
+            ]
+          },
+          "risk_score": 5,
+          "mediums": [
+            "cash",
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "金管会の公式見解：合法な金融機関は投資資金を個人口座へ送金させない",
+            "en": "FSC confirms legal firms never transfer investment funds to personal accounts"
+          },
+          "references": [
+            {
+              "label": "金管會 新聞稿: 網路投資群組詐騙多，停看聽後再投資",
+              "url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=202501240003&toolsflag=Y&dtable=News",
+              "publisher": "金融監督管理委員會 (FSC Taiwan)",
+              "accessed": "2026-10-09",
+              "quote": "民眾加入後，會通知民眾抽中多張股票，須馬上匯款至指定帳戶，否則將有違約情事，並有出具偽造金管會之違約申報通知書，及派員收取現金或誘導至銀行ATM操作匯款等情事 ... 合法金融機構也不會要求民眾以現金，或虛擬資產等方式交付投資款項，或將投資款項匯至個人銀行帳戶。"
+            }
+          ],
+          "tags": [
+            "investment-fraud",
+            "urgency",
+            "atm-fraud",
+            "authority-pretext"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "金管會の新聞稿が、口実（違約通知書）、要求（匯款・ATM 操作・現金収取）、合法機関が決してしないこと（個人口座への匯款要求）を具体的に記述"
+          }
+        },
+        {
+          "id": "tw-003",
+          "title": {
+            "ja": "暗号資産（虛擬資產）の現金手渡し（面交）を要求する投資詐欺",
+            "en": "Crypto Cash Face-to-Face Investment Scam"
+          },
+          "short_desc": {
+            "ja": "未登録の暗号資産業者を名乗り『元本保証の利益（保證獲利）』で誘い、受け渡し後に解凍金などを追加請求",
+            "en": "Unregistered crypto 'firms' lure 'guaranteed returns' then demand extra fees."
+          },
+          "cultural_lever": {
+            "ja": "暗号資産市場への期待と、現金手渡しへの信頼",
+            "en": "Interest in crypto and comfort with cash hand-offs"
+          },
+          "attack_vector": [
+            "social",
+            "in-person",
+            "website"
+          ],
+          "targets": [
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 未登録の暗号資産業者を名乗る 2) 『絶対に損しない（穩賺不賠）』『元本保証の利益（保證獲利）』を謳い投資を募る 3) 現金手渡しや個人口座への入金を要求 4) 解凍金・保証金・税金などを追加請求して失踪",
+            "en": "1) Pose as unregistered crypto firm 2) 'Guaranteed returns' lures 3) Demand cash hand-off or personal-account transfer 4) Demand 'unlock' or 'tax' fees, then vanish"
+          },
+          "red_flags": {
+            "ja": [
+              "『元本保証（保證獲利）』『絶対に損しない（穩賺不賠）』『高利回り（利潤豐厚）』の文言",
+              "暗号資産業者が現金での受け渡しを要求",
+              "払い戻し時に追加の解凍金・保証金・税金を要求"
+            ],
+            "en": [
+              "'Guaranteed'/'risk-free'/'high returns'",
+              "Crypto firm demands cash hand-off",
+              "'Unlock fee / margin / tax' required to withdraw"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "金管会の『暗号資産サービス提供事業者または人員（提供虛擬資產服務之事業或人員）』専区で合法業者を確認",
+              "合法な業者は現金手渡しや個人口座への入金を要求しない",
+              "165 または 02-2737-3434 に照会"
+            ],
+            "en": [
+              "Verify firms in the FSC's crypto service area",
+              "Legal firms do not take cash face-to-face",
+              "Verify via 165 or 02-2737-3434"
+            ]
+          },
+          "risk_score": 5,
+          "mediums": [
+            "cash",
+            "cryptocurrency",
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "資金洗浄防止法（洗錢防制法）の改正により、未登録の暗号資産業者は刑事責任を負う",
+            "en": "Unregistered crypto providers face criminal liability under AML law"
+          },
+          "references": [
+            {
+              "label": "金管會 新聞稿: 網路投資群組詐騙多，投資前先停看聽",
+              "url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=202602130008&dtable=News",
+              "publisher": "金融監督管理委員會 (FSC Taiwan)",
+              "accessed": "2026-10-09",
+              "quote": "或冒充名人、合法業者名義誘騙民眾投入資金，嗣後再藉口需支付解凍金、保證金、驗證金或稅款等名義，要求民眾繳納額外款項後方得領回投資報酬 ... 合法虛擬資產服務商提供服務時，不得以現金方式向客戶收取款項，須以可留存金流軌跡之轉帳方式進行。如民眾遇到非合規名單之虛擬資產服務商，或聲稱可提供現金面交服務或要求民眾將交易款項匯至個人帳戶者，除該業者已涉及非法經營之刑事責任外，相關交易極有可能涉及詐騙"
+            }
+          ],
+          "tags": [
+            "investment-fraud",
+            "cryptocurrency",
+            "cash-handover"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "金管會の新聞稿が、口実（保證獲利・名人仿冒）、要求（解凍金・保證金・現金面交）、合法業者が決してしないこと（現金受領）を具体的に記述。被害が重大で risk_score=5"
+          }
+        },
+        {
+          "id": "tw-004",
+          "title": {
+            "ja": "ネットオークションの『分割払い（分期付款）設定ミス』 ATM 誘導",
+            "en": "Online-Auction 'Instalment Mistake' ATM Scam"
+          },
+          "short_desc": {
+            "ja": "オークションサイト（拍賣）の職員を装い『操作ミス』を口実に ATM での修正を迫る",
+            "en": "'Auction staff' claim 'instalment mistake' to drive victim to ATM."
+          },
+          "cultural_lever": {
+            "ja": "ネットオークションの普及と、取引ミスへの不安",
+            "en": "Online auction habits and anxiety over transaction errors"
+          },
+          "attack_vector": [
+            "phone",
+            "email",
+            "marketplace"
+          ],
+          "targets": [
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 売り手の取引完了情報を盗み見 2) オークションサイトの職員を装う 3) 『分割払い（分期付款）設定』『送金失敗（匯款失敗）』を口実に 4) 慌てた買い手に ATM での修正操作を指示し送金させる",
+            "en": "1) Harvest seller's completed-trade info 2) Pose as auction staff 3) Claim 'instalment' or 'transfer failed' 4) Push buyer to ATM for 'fix'"
+          },
+          "red_flags": {
+            "ja": [
+              "オークションサイトの職員を名乗る電話",
+              "『分割払い設定』『送金失敗』の説明",
+              "ATM での修正操作の指示"
+            ],
+            "en": [
+              "Call from alleged auction-site staff",
+              "'Instalment' or 'transfer failed' excuse",
+              "ATM 'fix' instructions"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "ATM で見知らぬ操作を言われたら必ず止まる",
+              "疑わしいメールは開かず、ウイルス対策ソフトを更新",
+              "対面取引や代引き（貨到付款）など安全な決済を選ぶ"
+            ],
+            "en": [
+              "Stop immediately for unexplained ATM steps",
+              "Delete unknown emails; keep antivirus up",
+              "Prefer in-person or COD payment"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "165 または 02-2737-3434 に通報",
+            "en": "Report to 165 or 02-2737-3434"
+          },
+          "references": [
+            {
+              "label": "金管會 金融智慧網: 常見詐騙手法 - 網路拍賣詐騙",
+              "url": "https://moneywise.fsc.gov.tw/home.jsp?dataserno=36&id=4&mcustomize=publicizeinfo_view.jsp&parentpath=0",
+              "publisher": "金融監督管理委員會 金融智慧網 (FSC)",
+              "accessed": "2026-10-09",
+              "quote": "歹徒透過窺視賣家帳號內交易完成的電子郵件資訊，偽裝為拍賣網站服務人員，先取信買家，再佯稱買家匯款操作錯誤（如：誤設為「分期付款」或「轉帳失敗」等說辭），誘騙買家緊急至自動櫃員機修正匯款，使買家在不知情、慌張的情境下，依其指示轉帳致詐騙得逞。"
+            }
+          ],
+          "tags": [
+            "marketplace-fraud",
+            "atm-fraud",
+            "impersonation",
+            "urgency"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "金管會の宣導資訊が、接触経路（拍賣サイト職員を装う）、口実（分期付款設定・轉帳失敗）、要求（ATM 修正）を具体的に記述。台湾で典型的な手口"
+          }
+        },
+        {
+          "id": "tw-005",
+          "title": {
+            "ja": "国税局・裁判所を装う公的機関なりすまし詐欺",
+            "en": "Tax Office / Court Impersonation Scam"
+          },
+          "short_desc": {
+            "ja": "国税局（國稅局）や地方裁判所（地方法院）を装い『税還付（退稅）』『追徴課税（補稅）』『法律案件』で送金を迫る",
+            "en": "'Tax office/court' pretext demands transfers over refund/arrears."
+          },
+          "cultural_lever": {
+            "ja": "公的機関への服従と法的手続きへの不安",
+            "en": "Deference to authorities and fear of legal action"
+          },
+          "attack_vector": [
+            "phone",
+            "sms"
+          ],
+          "targets": [
+            "general",
+            "elderly"
+          ],
+          "scenario": {
+            "ja": "1) 国税局や地方裁判所を装う電話や SMS 2) 税還付・未納・法律案件を通知 3) 法的責任免除を名目に送金を要求 4) 個人情報も奪う",
+            "en": "1) Call/SMS 'tax office' or 'court' 2) Claim refund/arrears/legal case 3) Demand transfer to avoid liability 4) Also harvest IDs"
+          },
+          "red_flags": {
+            "ja": [
+              "公的機関が電話や SMS で送金を要求",
+              "特定の窓口にかけ直すよう指示",
+              "急かすような法律責任の説明"
+            ],
+            "en": [
+              "Officials demanding a transfer by phone/SMS",
+              "Instruction to call a specific line",
+              "Urgent 'legal consequence' talk"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "公的機関は電話や SMS で送金を要求しないと認識",
+              "165 または 02-2737-3434 に照会",
+              "疑わしい電話はすぐ切る"
+            ],
+            "en": [
+              "Officials never demand transfers by phone/SMS",
+              "Verify via 165 or 02-2737-3434",
+              "Hang up on suspicious calls"
+            ]
+          },
+          "risk_score": 4,
+          "mediums": [
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "165 反詐欺専線に通報",
+            "en": "Report to 165 anti-fraud hotline"
+          },
+          "references": [
+            {
+              "label": "金管會 金融智慧網: 常見詐騙手法 - 假冒公務機關詐騙",
+              "url": "https://moneywise.fsc.gov.tw/home.jsp?dataserno=36&id=4&mcustomize=publicizeinfo_view.jsp&parentpath=0",
+              "publisher": "金融監督管理委員會 金融智慧網 (FSC)",
+              "accessed": "2026-10-09",
+              "quote": "詐騙集團假冒國稅局、地方法院等公務機關，宣稱您有退稅、逾期未繳款或涉及法律案件，要求您補稅、轉帳以免除法律責任，藉此騙取您的個人資料。 提醒您： 公家機關絕對不會以電話、電話錄音或以簡訊通知您轉帳，或要您打電話與某單位聯繫"
+            }
+          ],
+          "tags": [
+            "impersonation",
+            "authority-pretext",
+            "government-pretext",
+            "fear-based"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "金管會の宣導資訊が、装う相手（國稅局・地方法院）、口実（退稅・補稅・法律案件）、要求（振込）、公家機関が決してしないこと（電話や SMS で振込要求）を具体的に記述"
+          }
+        },
+        {
+          "id": "tw-006",
+          "title": {
+            "ja": "偽の当選通知（中獎通知）で税金や代行投資利益を装う詐欺",
+            "en": "Fake Prize Notice Demanding 'Tax' or 'Processing'"
+          },
+          "short_desc": {
+            "ja": "市場調査や抽選（抽獎）、当選通知（中獎通知）で税金や代行投資利益を名目に送金を迫る",
+            "en": "'You've won' notice demands tax, deposit, or 'processing' fees."
+          },
+          "cultural_lever": {
+            "ja": "抽選やプロモーションへの親しみと、当選したという期待",
+            "en": "Comfort with lotteries and promotions"
+          },
+          "attack_vector": [
+            "phone",
+            "email",
+            "sms"
+          ],
+          "targets": [
+            "general"
+          ],
+          "scenario": {
+            "ja": "1) 市場調査・公開抽選・当選通知・税金納付・代行投資利益などを名目に接触 2) 徐々に信頼させる 3) 指定口座への送金を要求 4) 送金後に音信不通",
+            "en": "1) Approach via survey/draw/'prize' pretext 2) Build trust 3) Demand transfer to designated account 4) Vanish"
+          },
+          "red_flags": {
+            "ja": [
+              "受け取りや払い戻しに『税金』『手数料』が必要と言われる",
+              "受け取りのため個人情報を要求",
+              "急かされる受け取り期限"
+            ],
+            "en": [
+              "'Tax'/'fees' required to receive",
+              "Requests for personal info to collect",
+              "Deadlines to pressure action"
+            ]
+          },
+          "mitigations": {
+            "ja": [
+              "165 に照会し判断",
+              "『ただより高いものはない（白吃的午餐）』と認識",
+              "急かされたら相手の身元を折り返しで確認"
+            ],
+            "en": [
+              "Verify via 165",
+              "There is no 'free lunch'",
+              "Call back and verify identity"
+            ]
+          },
+          "risk_score": 3,
+          "mediums": [
+            "bank-transfer"
+          ],
+          "legal_notes": {
+            "ja": "165 または 02-2737-3434 に通報",
+            "en": "Report to 165 or 02-2737-3434"
+          },
+          "references": [
+            {
+              "label": "金管會 金融智慧網: 常見詐騙手法 - 假中獎通知詐騙",
+              "url": "https://moneywise.fsc.gov.tw/home.jsp?dataserno=36&id=4&mcustomize=publicizeinfo_view.jsp&parentpath=0",
+              "publisher": "金融監督管理委員會 金融智慧網 (FSC)",
+              "accessed": "2026-10-09",
+              "quote": "詐騙集團透過市場調查、公開抽獎、通知領獎、繳付稅金、代投資獲利等技倆，讓你完全信任歹徒，而匯款至歹徒指定之帳戶。 提醒您： 戒除貪念，天下沒有白吃的午餐。遇到中獎通知時應冷靜思考，可撥打165專線查證"
+            }
+          ],
+          "tags": [
+            "advance-fee",
+            "lottery-fraud",
+            "social-engineering",
+            "urgency"
+          ],
+          "verification": {
+            "status": "verified",
+            "checked": "2026-10-09",
+            "note": "金管會の宣導資訊が、接触経路（市場調查・公開抽獎・通知領獎）、口実（繳付稅金・代投資獲利）、要求（指定口座への匯款）を具体的に記述"
           }
         }
       ]
