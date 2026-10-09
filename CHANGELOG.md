@@ -11,6 +11,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## [Unreleased]
 
 ### Added / 追加
+- GB・AU・SG・KR・TW の国別事例を各6〜7件追加（合計 33 件）し、IN を 1→10 件に拡充。合計 53→95 件、verified 39→81 件。すべて最初から verified で、quote は各国の一次情報源（FCA／ASIC MoneySmart／ScamShield／KISA 보호나라／FSC Taiwan／I4C NCRP）から curl で逐語抽出し、_work/sources/ に保存した本文に実在することを機械検査で確認した。/ Added 33 verified attacks for GB, AU, SG, KR, TW (6–7 each) and expanded IN from 1 to 10. Total 53→95 entries, verified 39→81. All quotes were taken verbatim from each country's primary government source (FCA / ASIC MoneySmart / ScamShield / KISA Boho / FSC Taiwan / I4C NCRP) via `curl` and verified against the saved source body.
+- `tools/build-countries.mjs` の `COUNTRY_META` に GB・AU・SG・KR・TW を追加（既存の JP・US・IN は変更しない）。/ Added `COUNTRY_META` entries for GB, AU, SG, KR, TW (existing JP/US/IN entries unchanged).
+
 - 全53件に `verification{status,checked,note}` を追加（verified 39・partial 13・unverified 1）。WebSearch で各事例2件以上のクエリを探し、ブロックページを除外し、quote が『装う相手・接触経路』と『要求・結果』の両方に対応することを確認した。/ Added verification metadata to all 53 attack files (39 verified, 13 partial, 1 unverified). For every case we ran at least two WebSearches, filtered out blocked / short responses, and required every verified quote to cover both the pretext/contact and the request/outcome.
 - `references[]` 各項目に `publisher` と `accessed`、verified には `quote`（本文からの逐語引用、200字以内）を追加。/ Enriched every reference with `publisher` and `accessed`, and attached a literal `quote` (≤200 chars) to verified items.
 - カードと詳細モーダルに出典確認バッジ（出典確認済み／一部確認／未確認）を表示。/ Added a verification badge (verified/partial/unverified) on cards and the detail modal.
