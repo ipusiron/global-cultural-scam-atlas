@@ -17,7 +17,7 @@
     "sms"
   ],
   "targets": [
-    "elder",
+    "elderly",
     "general"
   ],
   "scenario": {
@@ -52,7 +52,7 @@
   "mediums": [
     "bank-transfer",
     "cash",
-    "gift-card"
+    "gift-cards"
   ],
   "legal_notes": {
     "ja": "",

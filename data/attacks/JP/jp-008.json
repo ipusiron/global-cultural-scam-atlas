@@ -19,7 +19,7 @@
   ],
   "targets": [
     "general",
-    "elder"
+    "elderly"
   ],
   "scenario": {
     "ja": "1) 偽警告表示 → 2) 指定番号へ電話 → 3) 遠隔操作許可 → 4) 有料契約/決済",
@@ -52,7 +52,7 @@
   "risk_score": 3,
   "mediums": [
     "credit",
-    "gift-card",
+    "gift-cards",
     "e-wallet"
   ],
   "legal_notes": {

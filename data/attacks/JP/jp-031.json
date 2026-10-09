@@ -58,7 +58,6 @@
   },
   "risk_score": 4,
   "mediums": [
-    "identity-theft",
     "credit",
     "bank-transfer"
   ],

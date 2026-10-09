@@ -14,7 +14,6 @@
   },
   "attack_vector": [
     "in-person",
-    "street",
     "social"
   ],
   "targets": [

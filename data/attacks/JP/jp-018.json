@@ -19,7 +19,7 @@
   ],
   "targets": [
     "general",
-    "immigrant",
+    "expat",
     "business"
   ],
   "scenario": {

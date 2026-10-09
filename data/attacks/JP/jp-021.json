@@ -17,7 +17,7 @@
     "phone"
   ],
   "targets": [
-    "elder",
+    "elderly",
     "general",
     "expat"
   ],
@@ -51,7 +51,6 @@
   },
   "risk_score": 2,
   "mediums": [
-    "postal",
     "cash",
     "bank-transfer"
   ],

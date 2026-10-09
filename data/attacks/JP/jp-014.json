@@ -53,7 +53,7 @@
   "risk_score": 4,
   "mediums": [
     "bank-transfer",
-    "crypto",
+    "cryptocurrency",
     "e-wallet"
   ],
   "legal_notes": {

@@ -123,9 +123,17 @@ Runs via `npm test` (`node --test`, zero extra dependencies). See `README.md` fo
 ### Controlled Vocabulary
 
 - **attack_vector**: `in-person`, `phone`, `email`, `sms`, `social`, `website`, `payment-app`, `postal`, `door-to-door`, `marketplace`, `mixed`.
-- **targets**: `tourist`, `general`, `elderly`, `business`, `student`.
-- **mediums**: `cash`, `credit`, `bank-transfer`, `cryptocurrency`, `gift-cards`.
+- **targets**: `tourist`, `general`, `elderly`, `business`, `student`, `expat`（在留外国人・駐在員）.
+- **mediums**: `cash`, `credit`, `bank-transfer`, `cryptocurrency`, `gift-cards`, `e-wallet`, `qr-pay`.
+  - `postal` と `identity-theft` は決済手段ではないため mediums から外した。`postal` は attack_vector、`identity-theft` は tags に寄せる。
 - **risk_score**: integer 1-5 (1=lowest, 5=highest).
+- **verification.status**: `verified`（事例の手口を個別ページで裏づけた）／`partial`（総論ページで関連する注意喚起のみ）／`unverified`（出典が見つからなかった）.
+
+### Fact-checking Guide
+
+- 出典は官公庁・警察・消費者機関・金融当局を第一とし、次に大手報道。個別ページを優先する。
+- 候補ページは WebSearch で探し、本文は `curl -sL` で取得して逐語で `quote` に書く。要約や記憶で書かない。
+- 1 ページ 1 秒以上の間隔を空ける。CI には入れない（外部依存で落ちるため）。手動 `npm run check:refs` でリンク生存を確かめる。
 
 ## Public URLs
 - Demo: https://ipusiron.github.io/global-cultural-scam-atlas/
