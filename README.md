@@ -64,8 +64,8 @@ hub: true
 
 ## 📸 スクリーンショット
 
-> ![日本語ライトテーマで初期表示（53件）](assets/screenshot.png)
-> *日本語・ライトテーマで初期表示（全53件、カード右上に出典確認バッジ）*
+> ![日本語ライトテーマで初期表示（60件）](assets/screenshot.png)
+> *日本語・ライトテーマで初期表示（全60件、カード右上に出典確認バッジ）*
 
 > ![日本語ライトテーマで詳細モーダルを開いた状態](assets/screenshot2.png)
 > *jp-001 の詳細モーダル（Red Flags と Mitigations、References の publisher と accessed）*
@@ -244,17 +244,18 @@ python -m http.server 8000 --directory docs
 |----|------|
 | JP（日本） | 32 |
 | US（アメリカ） | 20 |
+| GB（英国） | 7 |
 | IN（インド） | 1 |
-| **合計** | **53** |
+| **合計** | **60** |
 
 ### 出典の確認状態
 
 | 状態 | 件数 |
 |------|------|
-| verified（出典確認済み） | 39 |
+| verified（出典確認済み） | 46 |
 | partial（一部確認） | 13 |
 | unverified（未確認） | 1 |
-| **合計** | **53** |
+| **合計** | **60** |
 
 ---
 
@@ -369,6 +370,9 @@ global-cultural-scam-atlas/
 ├── CLAUDE.md                            # Claude Code 向け開発ガイド
 ├── data/
 │   ├── attacks/                         # 1攻撃=1 JSON のソースデータ
+│   │   ├── GB/                          # 英国の攻撃（7 件、gb-001.json 〜 gb-007.json）
+│   │   │   ├── gb-001.json
+│   │   │   └── …
 │   │   ├── IN/                          # インドの攻撃（1 件）
 │   │   │   └── in-001.json
 │   │   ├── JP/                          # 日本の攻撃（32 件、jp-001.json 〜 jp-032.json）

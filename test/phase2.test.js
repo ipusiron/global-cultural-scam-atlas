@@ -96,9 +96,10 @@ test('extractTargets and countryCounts match the real dataset', () => {
     }
   }
   const { counts, total } = countryCounts(DATA);
-  assert.equal(total, 53);
+  assert.equal(total, 60);
   assert.equal(counts.JP, 32);
   assert.equal(counts.US, 20);
+  assert.equal(counts.GB, 7);
   assert.equal(counts.IN, 1);
 });
 
@@ -146,12 +147,13 @@ test('buildHash drops defaults and round-trips with parseHash', () => {
 
 test('aggregate: totals match countryCounts and risk histogram sums to total', () => {
   const stats = aggregate(DATA);
-  assert.equal(stats.total, 53);
+  assert.equal(stats.total, 60);
   assert.equal(stats.byCountry.JP, 32);
   assert.equal(stats.byCountry.US, 20);
+  assert.equal(stats.byCountry.GB, 7);
   assert.equal(stats.byCountry.IN, 1);
   const riskSum = Object.values(stats.byRisk).reduce((a, b) => a + b, 0);
-  assert.equal(riskSum, 53);
+  assert.equal(riskSum, 60);
   // Every vector/target in the aggregate must appear in at least one country.
   for(const v of Object.keys(stats.byVector)){
     assert.ok(DATA.countries.some(c => c.attacks.some(a => (a.attack_vector || []).includes(v))));
@@ -249,7 +251,7 @@ test('aggregate includes byVerification totals', () => {
   const vSum = (stats.byVerification.verified || 0)
              + (stats.byVerification.partial  || 0)
              + (stats.byVerification.unverified || 0);
-  assert.equal(vSum, 53);
+  assert.equal(vSum, 60);
 });
 
 /* -------------------- label dictionary ---------------------------------- */

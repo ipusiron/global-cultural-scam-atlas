@@ -1,0 +1,81 @@
+{
+  "id": "gb-003",
+  "title": {
+    "ja": "ローン前払い手数料詐欺（loan fee fraud）",
+    "en": "Loan Fee Fraud"
+  },
+  "short_desc": {
+    "ja": "融資の前に『手数料』『保険料』名目で前払いを要求し融資は実行されない",
+    "en": "Demands upfront 'fees' for loans never delivered."
+  },
+  "cultural_lever": {
+    "ja": "生活困窮・急な資金需要・信用情報への不安",
+    "en": "Financial pressure and bad-credit anxiety"
+  },
+  "attack_vector": [
+    "phone",
+    "email",
+    "social"
+  ],
+  "targets": [
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) オンラインで融資申請した相手に接触 2) 25〜450ポンドの前払い手数料要求 3) 迅速送金・ギフトカード・暗号資産での支払い要求 4) 融資は実行されない",
+    "en": "1) Target online loan applicants 2) Demand £25–£450 upfront fee 3) Pressure to pay via wire, voucher, or crypto 4) No loan delivered"
+  },
+  "red_flags": {
+    "ja": [
+      "融資前の『手数料』要求",
+      "Google Play・Amazon・Ebay などのギフトカード支払い",
+      "急かす電話や連絡"
+    ],
+    "en": [
+      "Upfront 'fee' before loan",
+      "Payment via gift cards (Google Play, Amazon, eBay)",
+      "Pressure to pay quickly"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "融資は FCA 認可業者のみに限定",
+      "FCA Firm Checker で業者を確認",
+      "MoneyHelper で無料の債務相談"
+    ],
+    "en": [
+      "Only use FCA-authorised lenders",
+      "Verify firms on the FCA Firm Checker",
+      "Seek free debt advice via MoneyHelper"
+    ]
+  },
+  "risk_score": 3,
+  "mediums": [
+    "bank-transfer",
+    "gift-cards",
+    "cryptocurrency"
+  ],
+  "legal_notes": {
+    "ja": "FCA 0800 111 6768 へ報告。被害平均は £255 と FCA が公表",
+    "en": "Report to FCA 0800 111 6768; average loss £255 per FCA"
+  },
+  "references": [
+    {
+      "label": "FCA: Loan fee fraud",
+      "url": "https://www.fca.org.uk/consumers/loan-fee-fraud",
+      "publisher": "Financial Conduct Authority",
+      "accessed": "2026-10-09",
+      "quote": "Scammers will often try to target individuals who’ve applied for loans online. They may contact you unexpectedly and will offer you the money you need. But before giving you the loan, they’ll ask for an upfront payment as a deposit, administrative fee or insurance. ... Or they may ask you to buy a voucher, for example from Google Play, Amazon or Ebay."
+    }
+  ],
+  "tags": [
+    "fee-fraud",
+    "advance-fee",
+    "financial-distress",
+    "gift-cards"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "FCA が接触経路（contact unexpectedly）と要求（upfront payment）、支払手段（voucher from Google Play, Amazon or Ebay）を具体的に記述。被害平均は £255 と FCA が記しているため risk_score=3"
+  }
+}

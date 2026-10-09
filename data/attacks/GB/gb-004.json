@@ -1,0 +1,79 @@
+{
+  "id": "gb-004",
+  "title": {
+    "ja": "FCA を装う偽の通信・電話番号なりすまし",
+    "en": "Fake FCA Communications and Caller-ID Spoofing"
+  },
+  "short_desc": {
+    "ja": "金融規制当局 FCA を装い、電話番号を偽装して個人情報を聞き出す",
+    "en": "Impersonates FCA with spoofed caller ID to extract details."
+  },
+  "cultural_lever": {
+    "ja": "金融規制当局への信頼と権威への服従",
+    "en": "Trust in the regulator and deference to authority"
+  },
+  "attack_vector": [
+    "phone",
+    "email",
+    "website"
+  ],
+  "targets": [
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) FCA 社員を名乗る電話 2) FCA の交換台番号を caller ID に偽装 3) 身分証や投資履歴を聞き出す 4) クローン化した偽サイトへ誘導",
+    "en": "1) Caller claims to be FCA 2) Spoofs FCA switchboard caller ID 3) Asks for IDs or investment info 4) Directs to cloned fake site"
+  },
+  "red_flags": {
+    "ja": [
+      "FCA 社員が『身分証を見せる』と言う",
+      "FCA を名乗る WhatsApp や自動発信",
+      "URL が https://www.fca.org.uk から外れている"
+    ],
+    "en": [
+      "'FCA staff' offers to send ID photo",
+      "'FCA' contact via WhatsApp or auto-dialer",
+      "URL not starting with https://www.fca.org.uk"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "FCA 0800 111 6768 へ折り返し確認（相手の提示番号は使わない）",
+      "URL は FCA 公式を手入力で確認",
+      "身分証写真を根拠にしない"
+    ],
+    "en": [
+      "Call 0800 111 6768 directly to verify",
+      "Type the FCA URL manually",
+      "Do not trust ID-photo 'proof'"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "bank-transfer"
+  ],
+  "legal_notes": {
+    "ja": "FCA の電話番号偽装は caller ID スプーフィングとして報告対象",
+    "en": "FCA caller-ID spoofing is reportable scam"
+  },
+  "references": [
+    {
+      "label": "FCA: Fake FCA communications",
+      "url": "https://www.fca.org.uk/consumers/fake-fca-communications",
+      "publisher": "Financial Conduct Authority",
+      "accessed": "2026-10-09",
+      "quote": "Scammers can make our switchboard numbers ... appear in your caller ID. This is known as number spoofing. ... FCA employees will not share their photo ID, for example a passport or FCA ID badge, to prove they work for the FCA."
+    }
+  ],
+  "tags": [
+    "impersonation",
+    "authority-pretext",
+    "caller-id-spoofing",
+    "phishing"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "FCA 自身が、交換台番号を caller ID に偽装する手口と、社員が ID 写真を見せると言うことがない点を明示。装う相手（FCA employees）と手口（number spoofing）に対応"
+  }
+}

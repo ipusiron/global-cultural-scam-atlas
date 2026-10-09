@@ -1,0 +1,80 @@
+{
+  "id": "gb-006",
+  "title": {
+    "ja": "認可されていない業者を使った投資詐欺",
+    "en": "Unauthorised-Firm Investment Scam"
+  },
+  "short_desc": {
+    "ja": "FCA 未認可の『業者』が規制外商品に投資させ、損失時の保護が及ばない",
+    "en": "FCA-unauthorised firms sell unregulated products with no protection."
+  },
+  "cultural_lever": {
+    "ja": "英国の金融規制への信頼と、公式風ロゴ・名称への錯覚",
+    "en": "Trust in UK regulation misled by official-looking names"
+  },
+  "attack_vector": [
+    "phone",
+    "email",
+    "website",
+    "social"
+  ],
+  "targets": [
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) 高利回りの投資話を提案 2) 竹・ワイン・海外森林・駐車場など規制外商品 3) FCA 認可を装う 4) 損失時に補償が及ばない",
+    "en": "1) Offer high-return investments 2) In unregulated goods (bamboo, wine, forestry, parking) 3) Pose as FCA-authorised 4) No protection when loss hits"
+  },
+  "red_flags": {
+    "ja": [
+      "規制外の投資対象（竹・ワイン・ダイヤ・学生寮など）",
+      "基本情報を知っていても安心しない",
+      "急かされる即決"
+    ],
+    "en": [
+      "Products outside regulation (bamboo, wine, diamonds, student accommodation)",
+      "'They know some basic info about me' — don't assume genuine",
+      "Pressure to decide quickly"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "FCA Firm Checker で認可を確認",
+      "FCA Warning List で未認可業者を照合",
+      "大きな金融判断の前に独立助言を受ける"
+    ],
+    "en": [
+      "Check firms on FCA Firm Checker",
+      "Cross-check FCA Warning List",
+      "Get independent advice before big decisions"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "bank-transfer",
+    "cryptocurrency"
+  ],
+  "legal_notes": {
+    "ja": "FCA へ 0800 111 6768 で報告。被害金は原則 FSCS で保護されない",
+    "en": "Report to FCA; losses typically not covered by FSCS"
+  },
+  "references": [
+    {
+      "label": "FCA: Protect yourself from scams",
+      "url": "https://www.fca.org.uk/consumers/avoid-scams-unauthorised-firms",
+      "publisher": "Financial Conduct Authority",
+      "accessed": "2026-10-09",
+      "quote": "Treat all unexpected calls, emails and text messages with caution. Don’t assume they’re genuine, even if the person knows some basic information about you. ... Investment scams often involve products we don’t regulate. These could include: bamboo diamonds fine art gold graphene hotels international forestry land for development land overseas overseas agriculture parking precious metals storage student accommodation sustainable energy UK forestry whisky/whiskey wine"
+    }
+  ],
+  "tags": [
+    "investment-fraud",
+    "unauthorised",
+    "authority-pretext"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "FCA が未認可業者が扱う規制外商品の具体リストを明示し、『基本情報を知っていても信じない』という接触手口を記述。接触経路（unexpected calls）と手口（basic information about you）に対応"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "id": "gb-007",
+  "title": {
+    "ja": "有名人を悪用した暗号資産投資詐欺",
+    "en": "Celebrity-Lure Crypto Investment Scam"
+  },
+  "short_desc": {
+    "ja": "SNS に有名人画像で広告を出し、偽の暗号資産投資サイトへ誘導",
+    "en": "Celeb-image ads on social media funnel into fake crypto platforms."
+  },
+  "cultural_lever": {
+    "ja": "著名人への親しみと、SNS 広告が規制されているという錯覚",
+    "en": "Trust in celebrities and perceived safety of social ads"
+  },
+  "attack_vector": [
+    "social",
+    "website",
+    "email"
+  ],
+  "targets": [
+    "general"
+  ],
+  "scenario": {
+    "ja": "1) SNS や検索結果で有名人画像の投資広告 2) 専門的な見かけのサイトへ誘導 3) 価格・運用成績を偽装 4) 入金後にアカウント凍結・連絡途絶",
+    "en": "1) Ads with celebrity images on social or search 2) Pro-looking site 3) Fake prices and returns 4) Account closed after deposit"
+  },
+  "red_flags": {
+    "ja": [
+      "有名人の推奨をうたう広告",
+      "非現実的な利回り",
+      "急かされ投資を迫られる"
+    ],
+    "en": [
+      "Ads citing celebrity endorsement",
+      "Unrealistic returns",
+      "Pressure to invest quickly"
+    ]
+  },
+  "mitigations": {
+    "ja": [
+      "FCA の FS Register で業者を照合",
+      "暗号資産は FSCS や Ombudsman で保護されないと認識",
+      "SNS広告のリンクを踏まない"
+    ],
+    "en": [
+      "Check firms on FCA FS Register",
+      "Know crypto is not covered by FSCS or FOS",
+      "Avoid clicking social-ad links"
+    ]
+  },
+  "risk_score": 4,
+  "mediums": [
+    "cryptocurrency",
+    "bank-transfer"
+  ],
+  "legal_notes": {
+    "ja": "英国の暗号関連は多くが規制外。FCA へ 0800 111 6768 で報告",
+    "en": "Most crypto activity is unregulated in UK; report to FCA"
+  },
+  "references": [
+    {
+      "label": "FCA: Crypto investment scams",
+      "url": "https://www.fca.org.uk/consumers/crypto-investment-scams",
+      "publisher": "Financial Conduct Authority",
+      "accessed": "2026-10-09",
+      "quote": "Fraudsters tend to advertise on social media, often using images of celebrities to promote the fake investments. ... The scam adverts often link to professional-looking websites, where fraudsters may manipulate software to fake prices and investment returns. Once you’ve invested, the scammers may act quickly, closing your account and taking your money."
+    }
+  ],
+  "tags": [
+    "investment-fraud",
+    "cryptocurrency",
+    "celebrity-impersonation",
+    "social-ads"
+  ],
+  "verification": {
+    "status": "verified",
+    "checked": "2026-10-09",
+    "note": "FCA が接触経路（social media ads with celebrity images）と結果（closing your account and taking your money）を具体的に記述。英国で暗号は規制外のため損失保護がなく risk_score=4"
+  }
+}

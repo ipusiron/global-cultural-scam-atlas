@@ -5,8 +5,13 @@ const OUT = "dist/countries.json";
 
 // 最小の国メタ（必要なら将来別ファイル化）
 const COUNTRY_META = {
+  AU: { country_name_local: "Australia", country_name_en: "Australia", regions: ["APAC"], language_codes: ["en"], notes: "Educational use; does not generalize culture." },
+  GB: { country_name_local: "United Kingdom", country_name_en: "United Kingdom", regions: ["EMEA"], language_codes: ["en"], notes: "Educational use; does not generalize culture." },
   IN: { country_name_local: "भारत", country_name_en: "India", regions: ["APAC"], language_codes: ["hi","en"], notes: "Educational use; does not generalize culture." },
   JP: { country_name_local: "日本", country_name_en: "Japan", regions: ["APAC"], language_codes: ["ja","en"], notes: "教育目的。一般化を意図しない注記。" },
+  KR: { country_name_local: "대한민국", country_name_en: "South Korea", regions: ["APAC"], language_codes: ["ko","en"], notes: "Educational use; does not generalize culture." },
+  SG: { country_name_local: "Singapore", country_name_en: "Singapore", regions: ["APAC"], language_codes: ["en","zh","ms","ta"], notes: "Educational use; does not generalize culture." },
+  TW: { country_name_local: "台灣", country_name_en: "Taiwan", regions: ["APAC"], language_codes: ["zh-TW","en"], notes: "Educational use; does not generalize culture." },
   US: { country_name_local: "United States", country_name_en: "United States", regions: ["AMER"], language_codes: ["en"], notes: "Educational use; does not generalize culture." }
 };
 
