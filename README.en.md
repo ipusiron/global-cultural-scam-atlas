@@ -129,6 +129,12 @@ python -m http.server 8000 --directory docs
 
 ## 🎯 Use Cases
 
+### Ways of using this tool in particular
+
+- Choosing the denominator for multiple-answer tallies (survey analysis, statistics classes): an entry can carry several attack vectors, so "Attacks by vector" in the Statistics tab is counted the same way as a multiple-answer survey question. Adding up the All data bars gives 216, more than the 95 entries (2.27 vectors per entry on average). The 48 phone entries are 50.5% when divided by the 95 entries and 22.2% when divided by the 216 total mentions, so the same 48 entries give percentages more than twice apart. People who report multiple-answer results, for example from an internal survey, can confirm on real data why they should state whether the denominator is the number of respondents or the total number of answers. The target counts also add up to 171, more than the 95 entries. The Statistics tab shows counts only, so the percentages have to be computed by hand.
+- Confirming that tie-breaking changes a ranking (league tables, "top 10" articles): "By risk (high first)" puts entries with the same risk in ID order (starting with au and ending with us). There are 20 entries with risk 5, and au-003 (Australia) comes first only because its ID is the first of the 20 tied entries. Cutting the list at the top 10 leaves out the US entirely, although the US has 5 entries with risk 5. People who build league tables or write "top 10" articles can confirm that the tie-break rule and the cut-off together change the apparent ranking. The risk score is a five-level guide, and there is no order of danger within the same score of 5.
+- Finding words that only one language has (translation and localisation): the search looks at both the text in the displayed language and the text in the other language. Searching `家族` (family) and then `family` gives 9 and 7 hits. In the 2 extra entries (au-007, jp-008), the Japanese mitigations `家族・銀行員など第三者に相談` (consult a third party such as family or bank staff) and `決済前に家族/知人へ相談` (consult family or acquaintances before paying) read "Consult a trusted third party" and "Consult before payment" in English, without the word family. `警察` (police) gives 6 hits and `police` gives 7; in the 1 extra entry (jp-010), the Japanese `危険なら110番通報` (dial 110, the police number in Japan, if in danger) reads "Call police if threatened" in English. Translators and translation classes can search the same idea in both languages and take the entries that only one side hits as candidates for places where a word was left out or put another way. The search checks whether the text contains the typed string, so `family` does not hit "families". The English tags are searched too. A difference is not necessarily a mistranslation; whether a free translation is acceptable is for a person to judge.
+
 ### Education
 
 - In information-literacy or security classes, line up attacks from different countries to see how the same psychological levers (authority, urgency, reciprocity, conformity) wear different cultural clothing.
@@ -280,7 +286,7 @@ What the suites cover:
 - `test/html.test.js`: CSP, meta, favicon, noscript, IDs, module script, and absence of full-width brackets in `docs/index.html`.
 - `test/contrast.test.js`: in both light and dark themes, the six key `(fg,bg)(fg,card)(muted,bg)(muted,card)(accent,bg)(accent,card)` pairs meet WCAG 4.5:1.
 - `test/format.test.js`: per-file maximum line length and minimum line count.
-- `test/readme.test.js`: structural checks on `README.md` and `README.en.md`.
+- `test/readme.test.js`: structural checks on `README.md` and `README.en.md`, and the numbers in "Ways of using this tool in particular" recomputed from `gcsa-core.js` and the real data (JA and EN).
 - `test/phase2.test.js`: expanded search, target extraction, per-country counts, sort, URL-hash round-trip (including `verified=1`), aggregates (including `byVerification`), CSV escaping (with formula-injection defusing) and the new `verification` / `references` columns, and `labelFor()` dictionary against the real dataset.
 - `test/new-attack.test.js`: `tools/new-attack.mjs` sequence picking, overwrite refusal, and input validation, all driven through a tmp dir so the repo stays clean.
 - `test/check-refs.test.js`: unit tests for `tools/check-refs.mjs` URL extraction and dedup (no network).
