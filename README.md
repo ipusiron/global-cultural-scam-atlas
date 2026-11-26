@@ -18,7 +18,7 @@ category_en:
   - Social Engineering
   - Database
 
-difficulty: 4
+difficulty: 2
 
 tags:
   - atlas
